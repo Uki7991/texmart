@@ -7,6 +7,8 @@
 
                     <div class="card-body">
                         I'm an example component.
+                        <p>And it is so exciting</p>
+                        <p>{{ message }}</p>
                     </div>
                 </div>
             </div>
@@ -18,6 +20,24 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        data() {
+            return {
+                message: "Hello World!!!"
+            }
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    .card {
+        border: 0;
+
+        > .card-header {
+            text-align: center;
+        }
+        > .card-body {
+            color: #00cc00;
+        }
+    }
+</style>
