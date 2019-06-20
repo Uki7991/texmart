@@ -79,4 +79,5 @@
 
 @push('scripts')
     @include('partials.scripts.submit_btn')
+    @include('partials.scripts.input')
 @endpush
