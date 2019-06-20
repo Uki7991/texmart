@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $productions = \App\Production::all();
+    return view('welcome', [
+        'productions' => $productions,
+    ]);
 });
 
 
@@ -23,3 +26,11 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('productions', 'ProductionController@index')->name('productions.index');
+Route::get('productions/create', 'ProductionController@create')->name('productions.create');
+Route::post('productions', 'ProductionController@store')->name('productions.store');
+Route::get('productions/{slug}', 'ProductionController@show')->name('productions.show');
+Route::get('productions/{production}', 'ProductionController@edit')->name('productions.edit');
+Route::patch('productions/{production}', 'ProductionController@update')->name('productions.update');
+Route::delete('productions/{production}', 'ProductionController@destroy')->name('productions.destroy');

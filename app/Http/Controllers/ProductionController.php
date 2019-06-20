@@ -14,7 +14,7 @@ class ProductionController extends Controller
      */
     public function index()
     {
-        //
+        return view('productions.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ProductionController extends Controller
      */
     public function create()
     {
-        //
+        return view('productions.create');
     }
 
     /**
@@ -44,9 +44,13 @@ class ProductionController extends Controller
      * @param  \App\Production  $production
      * @return \Illuminate\Http\Response
      */
-    public function show(Production $production)
+    public function show($slug)
     {
-        //
+        $production = Production::whereSlug($slug)->firstOrFail();
+
+        return view('productions.show', [
+            'production' => $production,
+        ]);
     }
 
     /**
