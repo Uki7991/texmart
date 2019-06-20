@@ -54,6 +54,9 @@
                                             </a>
                                         @endif
                                 </div>
+                                <div class="form-group small text-dark text-center mt-1">
+                                    Еще нет логина? <a href="{{ route('register') }}" class="text-primary">Регистрация</a>
+                                </div>
                             </form>
                         </div>
                         <div class="col d-flex align-items-center justify-content-center bg-info text-white p-4 rounded-right">

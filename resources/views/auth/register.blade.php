@@ -69,6 +69,9 @@
                                 <div class="form-group mb-0 mx-auto text-center">
                                     @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Регистрация'])
                                 </div>
+                                <div class="form-group small text-dark text-center mt-1">
+                                    Уже есть логин? <a href="{{ route('login') }}" class="text-primary">Вход</a>
+                                </div>
                             </form>
                         </div>
                         <div class="col d-flex align-items-center justify-content-center bg-info text-white p-4 rounded-right">
