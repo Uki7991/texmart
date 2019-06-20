@@ -12,6 +12,19 @@
                                 @csrf
 
                                 <div class="form-group">
+                                    <div class="row justify-content-around">
+                                        <label>
+                                            <input name="user_type" type="radio" value="0" checked>
+                                            <span class="text-dotted text-underline font-weight-bold">Заказчик</span>
+                                        </label>
+                                        <label class="">
+                                            <input name="user_type" type="radio" value="1">
+                                            <span class="text-dotted">Производство</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="name" class="text-md-right"><i class="fas fa-user text-primary"></i> {{ __('ФИО') }}</label>
 
                                         <input id="name" type="text" class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -60,6 +73,9 @@
                         </div>
                         <div class="col d-flex align-items-center justify-content-center bg-info text-white p-4 rounded-right">
                             <div>
+                                <div class="mb-3 mx-auto">
+                                    <a href="{{ url('/') }}" class="h1 text-white text-center">Texmart</a>
+                                </div>
                                 <h2 class="font-weight-bold h1">Преимущества</h2>
                                 <ul class="nav flex-column">
                                     <li class="nav-item"><i class="fas fa-check"></i> Бесплатные консультации</li>
@@ -80,4 +96,5 @@
 @push('scripts')
     @include('partials.scripts.submit_btn')
     @include('partials.scripts.input')
+    @include('partials.scripts.input_radio_check')
 @endpush

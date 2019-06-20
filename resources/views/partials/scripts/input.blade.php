@@ -1,5 +1,5 @@
 <script>
-    $('input').hover(e => {
+    $('input:not(:radio)').hover(e => {
         let btn = $(e.currentTarget)
         btn.removeClass('shadow-sm').addClass('shadow')
     }, e => {
