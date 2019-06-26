@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 20 2019 г., 14:09
+-- Время создания: Июн 26 2019 г., 13:45
 -- Версия сервера: 5.7.23
 -- Версия PHP: 7.2.10
 
@@ -44,7 +44,7 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `title`, `parent_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Мужские', NULL, '2019-06-18 03:45:41', '2019-06-18 03:45:41', NULL),
 (2, 'Женские', NULL, '2019-06-18 03:45:49', '2019-06-18 03:45:49', NULL),
-(3, 'Брюки', NULL, '2019-06-18 03:46:04', '2019-06-18 03:46:04', NULL);
+(3, 'Брюки', 1, '2019-06-18 03:46:04', '2019-06-25 03:38:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -96,11 +96,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (21, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, NULL, 9),
 (36, 5, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (37, 5, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
-(38, 5, 'parent_id', 'text', 'Parent Id', 0, 0, 0, 0, 0, 0, '{}', 3),
+(38, 5, 'parent_id', 'text', 'Parent Id', 0, 1, 1, 1, 1, 1, '{}', 3),
 (39, 5, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 4),
 (40, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
 (41, 5, 'deleted_at', 'timestamp', 'Deleted At', 0, 0, 0, 0, 0, 0, '{}', 6),
-(42, 5, 'category_hasmany_category_relationship', 'relationship', 'Category', 0, 1, 1, 1, 1, 0, '{\"model\":\"App\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"parent_id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 7),
+(42, 5, 'category_hasmany_category_relationship', 'relationship', 'Category', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"parent_id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 7),
 (43, 6, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (44, 6, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
 (45, 6, 'address', 'text', 'Address', 1, 1, 1, 1, 1, 1, '{}', 3),
@@ -117,7 +117,11 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (56, 6, 'production_belongsto_user_relationship', 'relationship', 'users', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"user_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 15),
 (57, 6, 'production_belongstomany_image_relationship', 'relationship', 'images', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Image\",\"table\":\"images\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"0\",\"label\":\"id\",\"pivot_table\":\"image_production\",\"pivot\":\"1\",\"taggable\":\"0\"}', 16),
 (58, 6, 'excerpt', 'text_area', 'Excerpt', 0, 0, 1, 1, 1, 1, '{}', 4),
-(59, 6, 'slug', 'text', 'Slug', 1, 0, 0, 0, 0, 0, '{}', 15);
+(59, 6, 'slug', 'text', 'Slug', 1, 0, 0, 0, 0, 0, '{}', 15),
+(60, 7, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(61, 7, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(62, 7, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 3),
+(63, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 4);
 
 -- --------------------------------------------------------
 
@@ -151,8 +155,9 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2019-06-18 02:39:11', '2019-06-18 02:39:11'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2019-06-18 02:39:11', '2019-06-18 02:39:11'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2019-06-18 02:39:11', '2019-06-18 02:39:11'),
-(5, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'App\\Category', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-06-18 03:43:01', '2019-06-18 03:46:48'),
-(6, 'productions', 'productions', 'Production', 'Productions', 'voyager-shop', 'App\\Production', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-06-18 03:54:02', '2019-06-20 02:22:08');
+(5, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'App\\Category', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-06-18 03:43:01', '2019-06-25 03:38:20'),
+(6, 'productions', 'productions', 'Production', 'Productions', 'voyager-shop', 'App\\Production', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2019-06-18 03:54:02', '2019-06-20 02:22:08'),
+(7, 'tools', 'tools', 'Tool', 'Tools', 'voyager-settings', 'App\\Tool', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2019-06-25 04:56:05', '2019-06-25 04:56:05');
 
 -- --------------------------------------------------------
 
@@ -230,15 +235,16 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 4, '2019-06-18 02:39:11', '2019-06-18 03:06:08', 'voyager.media.index', NULL),
 (3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 3, '2019-06-18 02:39:11', '2019-06-18 02:39:11', 'voyager.users.index', NULL),
 (4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 2, '2019-06-18 02:39:11', '2019-06-18 02:39:11', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 7, '2019-06-18 02:39:11', '2019-06-18 03:43:57', NULL, NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 8, '2019-06-18 02:39:11', '2019-06-25 04:56:35', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2019-06-18 02:39:11', '2019-06-18 03:06:08', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2019-06-18 02:39:11', '2019-06-18 03:06:08', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2019-06-18 02:39:11', '2019-06-18 03:06:08', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2019-06-18 02:39:11', '2019-06-18 03:06:08', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 8, '2019-06-18 02:39:11', '2019-06-18 03:43:57', 'voyager.settings.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 9, '2019-06-18 02:39:11', '2019-06-25 04:56:35', 'voyager.settings.index', NULL),
 (11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2019-06-18 02:39:22', '2019-06-18 03:06:08', 'voyager.hooks', NULL),
-(13, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 5, '2019-06-18 03:43:01', '2019-06-18 03:43:57', 'voyager.categories.index', NULL),
-(14, 1, 'Productions', '', '_self', 'voyager-shop', NULL, NULL, 6, '2019-06-18 03:54:02', '2019-06-18 03:54:51', 'voyager.productions.index', NULL);
+(13, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 6, '2019-06-18 03:43:01', '2019-06-25 04:56:36', 'voyager.categories.index', NULL),
+(14, 1, 'Productions', '', '_self', 'voyager-shop', NULL, NULL, 7, '2019-06-18 03:54:02', '2019-06-25 04:56:36', 'voyager.productions.index', NULL),
+(15, 1, 'Tools', '', '_self', 'voyager-settings', NULL, NULL, 5, '2019-06-25 04:56:06', '2019-06-25 04:56:36', 'voyager.tools.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -346,7 +352,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (38, 'read_productions', 'productions', '2019-06-18 03:54:02', '2019-06-18 03:54:02'),
 (39, 'edit_productions', 'productions', '2019-06-18 03:54:02', '2019-06-18 03:54:02'),
 (40, 'add_productions', 'productions', '2019-06-18 03:54:02', '2019-06-18 03:54:02'),
-(41, 'delete_productions', 'productions', '2019-06-18 03:54:02', '2019-06-18 03:54:02');
+(41, 'delete_productions', 'productions', '2019-06-18 03:54:02', '2019-06-18 03:54:02'),
+(42, 'browse_tools', 'tools', '2019-06-25 04:56:06', '2019-06-25 04:56:06'),
+(43, 'read_tools', 'tools', '2019-06-25 04:56:06', '2019-06-25 04:56:06'),
+(44, 'edit_tools', 'tools', '2019-06-25 04:56:06', '2019-06-25 04:56:06'),
+(45, 'add_tools', 'tools', '2019-06-25 04:56:06', '2019-06-25 04:56:06'),
+(46, 'delete_tools', 'tools', '2019-06-25 04:56:06', '2019-06-25 04:56:06');
 
 -- --------------------------------------------------------
 
@@ -405,7 +416,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (40, 1),
 (40, 3),
 (41, 1),
-(41, 3);
+(41, 3),
+(42, 1),
+(43, 1),
+(44, 1),
+(45, 1),
+(46, 1);
 
 -- --------------------------------------------------------
 
@@ -498,6 +514,19 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', '', '', 'text', 1, 'Admin');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `tools`
+--
+
+CREATE TABLE `tools` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -655,6 +684,12 @@ ALTER TABLE `settings`
   ADD UNIQUE KEY `settings_key_unique` (`key`);
 
 --
+-- Индексы таблицы `tools`
+--
+ALTER TABLE `tools`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `translations`
 --
 ALTER TABLE `translations`
@@ -691,13 +726,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT для таблицы `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `images`
@@ -721,7 +756,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT для таблицы `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
@@ -733,7 +768,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT для таблицы `productions`
@@ -752,6 +787,12 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `tools`
+--
+ALTER TABLE `tools`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `translations`
