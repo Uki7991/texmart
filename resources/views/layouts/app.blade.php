@@ -25,23 +25,19 @@
 
         <div class="container-fluid">
             <div class="row py-4">
-                <div class="col-2 p-0">
-                    <div class="bg-white">hello</div>
-                </div>
+                @include('partials.left_sidebar')
                 <main class="col-8">
                     @yield('content')
                 </main>
-                <div class="col-2 p-0">
-                    <div class="bg-white">hello</div>
-                </div>
+                @include('partials.right_sidebar')
             </div>
         </div>
 
-        <footer class="footer bg-white border-top border-dark shadow-lg">
+        <footer class="footer bg-white shadow-lg">
             <div class="container pt-5 pb-2">
                 <div class="row justify-content-center">
                     <div class="col-auto">
-                        <a href="" class="text-muted small">Made with <span class="text-danger">&hearts;</span> by Mount</a>
+                        <a href="https://mount.kg" target="_blank" class="text-muted small">Made with <span class="text-danger">&hearts;</span> by Mount</a>
                     </div>
                 </div>
             </div>
