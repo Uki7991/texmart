@@ -88,3 +88,19 @@
 .minw-100 {
     min-width: 100% !important;
 }
+
+.shadow-bottom {
+    -webkit-box-shadow: 0px 10px 17px -1px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 10px 17px -1px rgba(0,0,0,0.19);
+    box-shadow: 0px 10px 17px -1px rgba(0,0,0,0.19);
+}
+
+.rounded-right-0 {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.rounded-left-0 {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
