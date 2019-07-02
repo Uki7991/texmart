@@ -35,6 +35,6 @@ Route::get('productions/{production}', 'ProductionController@edit')->name('produ
 Route::patch('productions/{production}', 'ProductionController@update')->name('productions.update');
 Route::delete('productions/{production}', 'ProductionController@destroy')->name('productions.destroy');
 
-Route::get('FeadBack',function (){
-    return view('FeadBack');
+Route::get('/feedback',function (){
+    return view('feadback');
 });
