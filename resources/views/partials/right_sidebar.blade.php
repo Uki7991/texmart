@@ -10,7 +10,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link bg-primary d-flex align-items-center text-light border-bottom px-0">
+                <a href="{{ route('feedback') }}" class="nav-link bg-primary d-flex align-items-center text-light border-bottom px-0">
                     <span class="col-auto">
                         <img src="{{ asset('icons/consulting.png') }}" class="img-fluid pr-2 border-right" width="60" height="60" alt="">
                     </span>
