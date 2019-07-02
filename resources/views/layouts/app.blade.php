@@ -23,15 +23,7 @@
 
         @include('partials.header')
 
-        <div class="container-fluid">
-            <div class="row py-4">
-                @include('partials.left_sidebar')
-                <main class="col-8">
-                    @yield('content')
-                </main>
-                @include('partials.right_sidebar')
-            </div>
-        </div>
+        @yield('content')
 
         <footer class="footer bg-white shadow-lg">
             <div class="container pt-5 pb-2">

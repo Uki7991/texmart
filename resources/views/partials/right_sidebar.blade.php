@@ -1,4 +1,4 @@
-<div class="col-2 bg-white p-0 shadow-sm border rounded h-100">
+<div class="">
     <div class="">
         <ul class="nav flex-column">
             <li class="nav-item">

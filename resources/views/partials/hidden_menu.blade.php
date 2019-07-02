@@ -2,10 +2,10 @@
     <div class="">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Item 1</a>
+                <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Избранное</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Item 2</a>
+                <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Сообщения</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Item 3</a>

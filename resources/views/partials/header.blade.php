@@ -14,12 +14,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mx-auto">
                 <li>
-                    <div class="input-group mr-auto">
-                        <input type="text" class="form-control rounded-pill rounded-right-0" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <a href="" class="input-group-append text-dark">
-                            <span class="input-group-text rounded-pill rounded-left-0" id="basic-addon2"><i class="fas fa-search"></i></span>
-                        </a>
-                    </div>
+                    @include('partials.search')
                 </li>
             </ul>
 
