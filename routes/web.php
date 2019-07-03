@@ -38,3 +38,7 @@ Route::delete('productions/{production}', 'ProductionController@destroy')->name(
 Route::get('/feedback',function (){
     return view('feadback');
 })->name('feedback');
+
+Route::get('/traffic',function (){
+    return view('traffic');
+})->name('traffic');
