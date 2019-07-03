@@ -15,7 +15,7 @@
                                 cum cupiditate earum eius esse eveniet facere fugiat harum illum laborum, libero
                                 molestias mollitia pariatur quisquam, repudiandae sapiente vitae voluptates.</p>
                             <div class="col-lg-12">
-                                <img src="{{ asset('storage/img/geografia-perevozok.jpg') }}" class="img-fluid shadow-sm">
+                                <img src="{{ asset('img/geografia-perevozok.jpg') }}" class="img-fluid shadow-sm">
                             </div>
                         </div>
                     </div>
