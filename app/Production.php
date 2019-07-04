@@ -2,6 +2,7 @@
 
 namespace App;
 
+use ChristianKuri\LaravelFavorite\Traits\Favoriteable;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
@@ -9,6 +10,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Production extends Model
 {
     use Sluggable;
+    use Favoriteable;
 
     /**
      * Return the sluggable configuration array for this model.

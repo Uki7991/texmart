@@ -11,7 +11,7 @@
         </div>
         <div class="card-footer d-flex justify-content-around">
             @include('partials.btn.call', ['class' => 'btn-sm'])
-            @include('partials.btn.favorite', ['class' => 'btn-sm'])
+            @include('partials.btn.favorite', ['class' => 'btn-sm', 'data' => 'data-id='.$production->id.'', 'route' => \Illuminate\Support\Facades\Auth::user() ? '#' : route('login')])
         </div>
     </a>
 </div>

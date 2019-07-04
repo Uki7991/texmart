@@ -13,4 +13,5 @@
     @include('partials.scripts.favorite_btn')
     @include('partials.scripts.call_btn')
     @include('partials.scripts.production_card')
+    @includeWhen(\Illuminate\Support\Facades\Auth::user(), 'partials.scripts.favorite_click')
 @endpush
