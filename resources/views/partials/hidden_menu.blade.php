@@ -2,13 +2,13 @@
     <div class="">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Избранное</a>
+                <a href="{{route('favorite')}}" class="nav-link py-3 bg-secondary text-light border-bottom">Избранное</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Сообщения</a>
+                <a href="{{route('chat')}}" class="nav-link py-3 bg-secondary text-light border-bottom">Сообщения</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link py-3 bg-secondary text-light border-bottom">Item 3</a>
+                <a href="{{route('news')}}" class="nav-link py-3 bg-secondary text-light border-bottom">Новости</a>
             </li>
         </ul>
     </div>

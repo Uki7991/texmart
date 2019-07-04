@@ -42,3 +42,15 @@ Route::get('/feedback',function (){
 Route::get('/traffic',function (){
     return view('traffic');
 })->name('traffic');
+
+Route::get('/news',function (){
+   return view('news');
+})->name('news');
+
+Route::get('/chat',function (){
+   return view('chat');
+})->name('chat');
+
+Route::get('favorite',function(){
+    return view('favorite');
+})->name('favorite');

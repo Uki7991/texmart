@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="col">
-                                        <button type="button" class="btn border border-dark shadow-sm rounded-pill mx-1 call-btn transition-100 ">Отправить</button>
+                                        <button type="button" class="btn border border-dark shadow-sm rounded-pill mx-1 call-btn transition-100 ">Отправить<i class="fas fa-envelope"></i></button>
                                     </div>
                                     @include('partials.btn.call')
                                 </div>
