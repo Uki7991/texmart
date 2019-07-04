@@ -7,13 +7,10 @@
                 <div class="container">
                     <div class="row bg-white p-3">
                         <div class="col-4">
-                            <div class="card bg-dark text-white border-0 shadow">
-                                <img src="{{ asset('img/geografia-perevozok.jpg') }}" class="card-img" alt="...">
-                                <div class="card-img-overlay text-dark">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="m-0 p-0" class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text">Last updated 3 mins ago</p>
+                            <div class="card bg-dark text-white border-0 shadow position-relative d-flex" style="background-image: url('{{ asset('img/geografia-perevozok.jpg') }}'); background-size: cover; min-height: 200px;">
+                                <div class="backdrop"></div>
+                                <div class="card-img-overlay d-flex align-items-end text-white h-100" style="z-index: 9;">
+                                    <h5 class="card-title font-weight-bold">Card title</h5>
                                 </div>
                             </div>
                         </div>
