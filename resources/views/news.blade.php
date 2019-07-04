@@ -16,8 +16,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="card mb-3" style="max-width: 540px;">
+                        <div class="w-100"></div>
+                        <div class="col-5">
+                            <div class="card shadow my-3">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="{{ asset('img/basic.jpg') }}" class="card-img" alt="...">
@@ -31,6 +32,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-12">
+
                             <div class="card-group">
                                 <div class="card">
                                     <img src="{{ asset('img/geografia-perevozok.jpg') }}" class="card-img-top"
