@@ -8,6 +8,7 @@
                     <div class="row">
                         <div class="col-12">
 
+                            <h1>Новости</h1>
                             <div class="card-group">
                                 <div class="card">
                                     <img src="{{ asset('img/geografia-perevozok.jpg') }}" class="card-img-top"
