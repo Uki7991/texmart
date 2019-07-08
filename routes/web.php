@@ -51,6 +51,4 @@ Route::get('/chat',function (){
    return view('chat');
 })->name('chat');
 
-Route::get('favorite',function(){
-    return view('favorite');
-})->name('favorite');
+Route::get('favorite', 'FavoriteController@index')->name('favorite');
