@@ -54,3 +54,7 @@ Route::get('/chat',function (){
 Route::get('favorite',function(){
     return view('favorite');
 })->name('favorite');
+Route::get('profile',function(){
+    return view('profile');
+})->name('profile');
+
