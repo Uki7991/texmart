@@ -57,6 +57,7 @@
                                     </span>
                                 @enderror
                             </div>
+                            <button type="button" class="btn btn-outline-primary shadow-sm rounded-pill mx-1 call-btn transition-100"> {{ __('Редактировать') }} <i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
