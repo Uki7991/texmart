@@ -17,7 +17,7 @@
                         </div>
                         <div class="col-5 border border-dark pb-2">
                             <h1>Обратная связь</h1>
-                            <hr align="center" width="426" size="4" color="black"/>
+                            <hr >
                             <form>
                                 <div class="form-row">
                                     <div class="col">
