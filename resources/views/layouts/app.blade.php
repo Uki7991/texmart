@@ -18,13 +18,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
-<body>
+<body class="bg-white">
     <div id="app">
         @include('partials.header')
 
         @yield('content')
 
-        <footer class="footer bg-white shadow-lg">
+        <footer class="footer border-top border-danger bg-white">
             <div class="container pt-5 pb-2">
                 <div class="row justify-content-center">
                     <div class="col-auto">
