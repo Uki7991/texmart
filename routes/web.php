@@ -52,7 +52,7 @@ Route::get('/chat',function (){
 })->name('chat');
 
 Route::get('profile',function(){
-    return view('profile');
+    return view('profile.profile');
 })->name('profile');
 
 Route::get('favorite', 'FavoriteController@index')->name('favorite');
