@@ -21,43 +21,41 @@
                                    aria-selected="false">Settings</a>
                             </div>
                         </div>
-                        <div class="container">
-                            <div class="col-12">
-                                <h2>Личный кабинет</h2>
-                                <div class="form-group">
-                                    <label for="name" class="text-md-right"><i class="fas fa-user text-primary"></i> {{ __('ФИО') }}</label>
+                        <div class="col">
+                            <h2>Личный кабинет</h2>
+                            <div class="form-group">
+                                <label for="name" class="text-md-right"><i class="fas fa-user text-primary"></i> {{ __('ФИО') }}</label>
 
-                                    <input id="name" type="text" class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                    @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email" class="col-form-label text-md-right"><i class="fas fa-envelope text-primary"></i> {{ __('E-Mail') }}</label>
-
-                                    <input id="email" type="email" class="form-control rounded-pill shadow-sm @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
                                     </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="password" class="col-form-label text-md-right"><i class="fas fa-key text-primary"></i> {{ __('Пароль') }}</label>
+                                @enderror
+                            </div>
 
-                                    <input id="password" type="password" class="form-control rounded-pill shadow-sm @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <div class="form-group">
+                                <label for="email" class="col-form-label text-md-right"><i class="fas fa-envelope text-primary"></i> {{ __('E-Mail') }}</label>
 
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
+                                <input id="email" type="email" class="form-control rounded-pill shadow-sm @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-form-label text-md-right"><i class="fas fa-key text-primary"></i> {{ __('Пароль') }}</label>
+
+                                <input id="password" type="password" class="form-control rounded-pill shadow-sm @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                     </div>
