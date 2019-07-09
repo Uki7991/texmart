@@ -22,7 +22,7 @@
                                 <div class="col-12 align-self-end">
                                     <div class="d-flex">
                                         @include('partials.btn.call')
-                                        @include('partials.btn.favorite')
+                                        @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])
                                     </div>
                                 </div>
 
@@ -91,5 +91,6 @@
 
 @push('scripts')
     @include('partials.scripts.favorite_btn')
+    @includeWhen(\Illuminate\Support\Facades\Auth::user(), 'partials.scripts.favorite_click')
     @include('partials.scripts.call_btn')
 @endpush
