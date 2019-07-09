@@ -15,7 +15,7 @@
                                    role="tab" aria-controls="v-pills-announcement" aria-selected="false">Объявления</a>
                                 <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
                                    href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
-                                   aria-selected="false">Messages</a>
+                                   aria-selected="false">Сообщения</a>
                                 <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
                                    href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
                                    aria-selected="false">Settings</a>
@@ -25,7 +25,7 @@
                             <div class="tab-content" id="v-pills-tabContent">
                                 @include('profile.tabs.edit_profile')
                                 @include('profile.tabs.add_announcement')
-                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                                @include('profile.tabs.message')
                                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
                             </div>
                         </div>
