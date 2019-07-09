@@ -55,4 +55,8 @@ Route::get('profile',function(){
     return view('profile.profile');
 })->name('profile');
 
+Route::get('announcement',function(){
+    return view('announcement.announcement');
+})->name('announcement');
+
 Route::get('favorite', 'FavoriteController@index')->name('favorite');
