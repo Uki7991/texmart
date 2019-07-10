@@ -21,6 +21,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
+    Route::get('/message', 'HomeController@message')->name('message');
+
+    Route::get('favorite', 'FavoriteController@index')->name('favorite');
 });
 
 Auth::routes();
@@ -59,8 +63,3 @@ Route::get('announcement',function(){
     return view('announcement.announcement');
 })->name('announcement');
 
-Route::get('message',function(){
-    return view('message.message');
-})->name('message');
-
-Route::get('favorite', 'FavoriteController@index')->name('favorite');

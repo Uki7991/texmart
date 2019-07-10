@@ -1,7 +1,7 @@
 <div class="card border-0 shadow-sm production-card transition-500">
     <a href="{{ route('productions.show', $production->slug) }}" class="text-dark text-decoration-none">
         <div class="card-img-top">
-            <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" class="img-fluid" alt="">
+            <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" class="img-fluid img-responsive" alt="">
         </div>
         <div class="card-body">
             <h6 class="font-weight-bold card-title">{{ Str::limit($production->title ?? 'ОсОО "Швея на час"', 18) }}</h6>

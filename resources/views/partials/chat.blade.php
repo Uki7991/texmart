@@ -1,4 +1,4 @@
-<div class="col-2">
+<div class="col-md-2">
     <div class="list-group">
         <a class="list-group-item text-dark" href="">Item</a>
         <a class="list-group-item text-dark" href="">Item</a>
@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<div class="col">
+<div class="col-md-10">
     <div class="card">
         <div class="card-body conversations">
             <div class="row">

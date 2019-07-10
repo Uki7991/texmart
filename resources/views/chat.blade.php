@@ -1,10 +1,6 @@
-@extends('layouts.app')
+@extends('voyager::master')
 
 @section('content')
 
-    <div class="container">
-        <div class="row py-4">
-            @include('partials.chat')
-        </div>
-    </div>
+    @include('partials.chat')
 @endsection

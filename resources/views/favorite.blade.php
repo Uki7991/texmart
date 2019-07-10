@@ -1,9 +1,14 @@
-@extends('layouts.app')
+@extends('voyager::master')
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <script src="https://kit.fontawesome.com/eb6e8d4dc3.js"></script>
+@stop
 
 @section('content')
     <div class="container">
         <div class="row py-4">
-            <div class="col-12">
+            <div class="col-md-12">
                 @if($productions)
                     @include('productions.list')
                 @else
