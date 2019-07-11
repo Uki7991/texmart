@@ -51,14 +51,6 @@ Route::get('/news',function (){
    return view('news');
 })->name('news');
 
-Route::get('/chat',function (){
-   return view('chat');
-})->name('chat');
-
-Route::get('profile',function(){
-    return view('profile.profile');
-})->name('profile');
-
 Route::get('announcement',function(){
     return view('announcement.announcement');
 })->name('announcement');

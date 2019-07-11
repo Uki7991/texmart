@@ -10,7 +10,7 @@
         <div class="row py-4">
             <div class="col-md-12">
                 @if($productions)
-                    @include('productions.list')
+                    @include('productions.list', ['bootstrap3' => true])
                 @else
                     <div class="text-center py-5">
                         <h5>Избранных производителей нет</h5>

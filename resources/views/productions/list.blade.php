@@ -2,7 +2,7 @@
     @foreach($productions as $production)
 
         <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
-            @include('productions.single')
+            @include('productions.single', ['bootstrap3' => isset($bootstrap3) ? true : false])
         </div>
 
     @endforeach
