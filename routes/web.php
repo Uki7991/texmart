@@ -24,7 +24,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/message', 'HomeController@message')->name('message');
 
-    Route::get('favorite', 'FavoriteController@index')->name('favorite');
+    Route::get('/favorite', 'FavoriteController@index')->name('favorite');
 });
 
 Auth::routes();
