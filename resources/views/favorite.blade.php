@@ -21,3 +21,9 @@
         </div>
     </div>
 @endsection
+
+@section('javascript')
+    @include('partials.scripts.favorite_click')
+    @include('partials.scripts.favorite_btn')
+    @include('partials.scripts.call_btn')
+@stop

@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome', [
         'productions' => $productions,
     ]);
-});
+})->name('homepage');
 
 
 Route::group(['prefix' => 'admin'], function () {
