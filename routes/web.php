@@ -27,6 +27,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/favorite', 'FavoriteController@index')->name('favorite');
 });
 
+Route::get('/search', 'MainController@search')->name('search');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

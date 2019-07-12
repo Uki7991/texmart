@@ -5,8 +5,7 @@
         @endif
 
         @foreach($items as $value)
-            $value instanceof \App\
-                <a class="nav-link py-0" href="{{ route('doctor.show', $value->id) }}">{{ $value->fullName }}</a>
+            <a class="nav-link py-0" href="{{ route('productions.show', $value->slug) }}">{{ $value->title }}</a>
         @endforeach
     @endforeach
 
