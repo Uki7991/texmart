@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-{{ $theme ?? 'light' }} {{ $shadow ?? '' }} bg-transparent">
     <div class="container-fluid">
-        <a href="#" id="menu-btn" class="text-dark mr-5">
-            <i class="fas fa-bars"></i>
+        <a href="#" id="menu-btn" class="mr-5">
+            <i class="fas fa-bars text-{{ $color ?? 'dark' }}"></i>
         </a>
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -24,16 +24,16 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a>
+                        <a class="nav-link text-{{ $color ?? 'dark' }}" href="{{ route('login') }}">{{ __('Вход') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
+                            <a class="nav-link text-{{ $color ?? 'dark' }}" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
                         </li>
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-{{ $color ?? 'dark' }}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 

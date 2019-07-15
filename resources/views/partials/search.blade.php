@@ -1,8 +1,8 @@
 <div class="input-group mr-auto">
-    <input type="text" id="search-input-select2" class="form-control rounded-pill rounded-right-0" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon2">
+    <input type="text" id="search-input-select2" class="form-control rounded-pill rounded-right-0 border-right-0 bg-transparent text-white width-300" aria-label="Найти..." aria-describedby="basic-addon2">
     <div id="search-result" class="position-absolute bg-white rounded border border-dark d-none" style="left: 0px; top: 35px; z-index: 9;"></div>
     <a href="{{ route('search') }}" class="input-group-append text-dark">
-        <span class="input-group-text rounded-pill rounded-left-0" id="basic-addon2"><i class="fas fa-search"></i></span>
+        <span class="input-group-text rounded-pill rounded-left-0 bg-transparent border-left-0" id="basic-addon2"><i class="fas fa-search text-{{ $color ?? 'dark' }}"></i></span>
     </a>
 </div>
 

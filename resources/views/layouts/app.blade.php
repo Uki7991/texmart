@@ -21,8 +21,6 @@
 </head>
 <body class="bg-white">
     <div id="app">
-        @include('partials.header')
-
         @yield('content')
 
         <footer class="footer border-top border-danger bg-white">
