@@ -1,8 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-{{ $theme ?? 'light' }} {{ $shadow ?? '' }} bg-transparent">
     <div class="container-fluid">
-        <a href="#" id="menu-btn" class="mr-5">
-            <i class="fas fa-bars text-{{ $color ?? 'dark' }}"></i>
-        </a>
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
@@ -11,13 +8,27 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mx-auto">
+
+            <ul class="navbar-nav ml-auto">
                 <li>
                     @include('partials.search')
                 </li>
             </ul>
 
+            <ul class="navbar-nav mx-auto">
+                <li>
+                    <a href="#" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">цеха</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Продукции</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">О нас</a>
+                </li>
+                <li>
+                    <a href="tel:+996700700700" class="nav-link text-light h5 font-weight-bold bg-primary">+996 (700) 700-700</a>
+                </li>
+            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav">
@@ -57,15 +68,5 @@
         </div>
     </div>
 </nav>
-@include('partials.hidden_menu')
 @push('scripts')
-    <script>
-        $('#menu-btn').click(e => {
-            e.preventDefault(e);
-            let btn = $(e.target);
-            let hiddenMenu = $('#hidden-menu');
-
-            hiddenMenu.toggleClass('slided-menu');
-        })
-    </script>
 @endpush

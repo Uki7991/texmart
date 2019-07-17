@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row bg-white p-3">
                         <div class="col-5">
-                            <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" class="img-fluid shadow-sm"
+                            <img src="{{ asset('img/2 lg.jpg') }}" class="img-fluid shadow-sm"
                                  alt="">
 
                         </div>

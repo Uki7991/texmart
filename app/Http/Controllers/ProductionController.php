@@ -14,7 +14,11 @@ class ProductionController extends Controller
      */
     public function index()
     {
-        return view('productions.index');
+        $productions = Production::all();
+
+        return view('productions.index', [
+            'productions' => $productions,
+        ]);
     }
 
     /**
