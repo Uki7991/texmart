@@ -1,7 +1,7 @@
 <div class="content">
     <div class="card-deck align-content-md-center">
         <div class="card border-0">
-            <img src="{{ asset('icons/shipped.png') }}" class="img-fluid" alt="...">
+            <img src="{{ asset('img/898714.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
