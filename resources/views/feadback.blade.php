@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('partials.header', ['shadow' => 'shadow'])
     <div class="container-fluid">
         <div class="row py-4">
-            <div class="col-2 p-0">
-                @include('partials.left_sidebar')
-            </div>
             <div class="col">
                 <div class="container">
                     <div class="row bg-white p-3">

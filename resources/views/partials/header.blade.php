@@ -23,7 +23,7 @@
                     <a href="#" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Продукции</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">О нас</a>
+                    <a href="http://texmart/about" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">О нас</a>
                 </li>
                 <li>
                     <a href="tel:+996700700700" class="nav-link text-light h5 font-weight-bold bg-primary">+996 (700) 700-700</a>
