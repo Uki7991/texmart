@@ -4,11 +4,13 @@
 
     @include('partials.promo')
 
+
     <div class="container my-5">
         <div class="row">
             @include('partials.feature')
         </div>
     </div>
+
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-auto">
@@ -18,6 +20,15 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ws65T4DPuT0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row justify-content-center py-4">
             <main class="col-8">
@@ -29,7 +40,8 @@
                         @include('productions.list')
                     </div>
                     <div class="col-12 mt-3 text-center">
-                        <a href="{{ route('productions.index') }}" class="btn text-dark text-dotted rounded-0">Больше продукций...</a>
+                        <a href="{{ route('productions.index') }}" class="btn text-dark text-dotted rounded-0">Больше
+                            продукций...</a>
                     </div>
                 </div>
             </main>
