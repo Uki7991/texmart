@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Production;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductionController extends Controller
 {
@@ -94,5 +95,14 @@ class ProductionController extends Controller
     public function destroy(Production $production)
     {
         //
+    }
+
+    public function rate(Request $request) {
+        $production = Production::find($request->id);
+        $rating = $request->rating;
+
+        $production->rate()->give($rating)->by(Auth::user());
+
+        return response()->json(['production' => $production]);
     }
 }

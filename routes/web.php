@@ -36,6 +36,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('productions', 'ProductionController@index')->name('productions.index');
 Route::get('productions/create', 'ProductionController@create')->name('productions.create');
 Route::post('productions', 'ProductionController@store')->name('productions.store');
+Route::get('productions/rate', 'ProductionController@rate')->name('productions.rate');
 Route::get('productions/{slug}', 'ProductionController@show')->name('productions.show');
 Route::get('productions/{production}', 'ProductionController@edit')->name('productions.edit');
 Route::patch('productions/{production}', 'ProductionController@update')->name('productions.update');

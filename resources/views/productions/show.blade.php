@@ -17,6 +17,7 @@
                             <div class="row h-100">
                                 <div class="col-12">
                                     <h1 class="font-weight-bold h2">{{ $production->title }}</h1>
+                                    @include('partials.btn.rateYo')
                                 </div>
 
                                 <div class="col-12">
@@ -105,7 +106,43 @@
 
 @endsection
 
+@push('styles')
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+@endpush
+
 @push('scripts')
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script>
+        $(function () {
+
+            $("#rateYo").rateYo({
+                rating: 2,
+                halfStar: true
+            }).on("rateyo.set", function (e, data) {
+
+                let rating = data.rating;
+                console.log(rating);
+                $.ajax({
+                    url: '{{ route('productions.rate') }}',
+                    method: 'get',
+                    data: {
+                        id: '{{ $production->id }}',
+                        rating: rating,
+                        _csrf: '{{ csrf_token() }}'
+                    },
+                    success: data => {
+                        console.log(data);
+                    },
+                    error: () => {
+                        console.log('error');
+                    }
+                })
+            });
+        });
+    </script>
     @include('partials.scripts.favorite_btn')
     @includeWhen(\Illuminate\Support\Facades\Auth::user(), 'partials.scripts.favorite_click')
     @include('partials.scripts.call_btn')

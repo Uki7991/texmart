@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a9b73c66cc3e7ef0a44e408411fa2f0",
+    "content-hash": "39fb165972a7f0434159e4cc158f685c",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -954,6 +954,58 @@
                 "php"
             ],
             "time": "2019-06-08T11:03:04+00:00"
+        },
+        {
+            "name": "dorvidas/laravel-ratings",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dorvidas/laravel-ratings.git",
+                "reference": "cb27dc9337add0e87f4ea7d73d5c8cb94b5412c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dorvidas/laravel-ratings/zipball/cb27dc9337add0e87f4ea7d73d5c8cb94b5412c2",
+                "reference": "cb27dc9337add0e87f4ea7d73d5c8cb94b5412c2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/database": "^3.5",
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dorvidas\\Ratings\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Darius Orvidas",
+                    "email": "dorvidas@gmail.com"
+                }
+            ],
+            "description": "Laravel package for rating users, posts or other models with ease. You can even give a rating to a user for their role on other models i.e., post author or post illustrator.",
+            "keywords": [
+                "Rate",
+                "Rating",
+                "fivestar",
+                "laravel",
+                "rateable",
+                "vote"
+            ],
+            "time": "2018-02-02T08:51:18+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",

@@ -175,7 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         ChristianKuri\LaravelFavorite\FavoriteServiceProvider::class,
-
+        Dorvidas\Ratings\RatingsServiceProvider::class,
     ],
 
     /*
