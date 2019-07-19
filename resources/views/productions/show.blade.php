@@ -26,7 +26,7 @@
                                                 @if(count($category->childs))
                                                     <i class="fas fa-plus"></i>
                                                 @endif
-                                                {{ $category->title }}
+                                                    <a href="#" class="text-dark">{{ $category->title }}</a>
                                                 @if(count($category->childs))
                                                     @include('partials.manageChilds',['childs' => $category->childs])
                                                 @endif

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Production;
 use Illuminate\Http\Request;
 
@@ -15,9 +16,11 @@ class ProductionController extends Controller
     public function index()
     {
         $productions = Production::all();
+        $categories = Category::all(['id', 'title']);
 
         return view('productions.index', [
             'productions' => $productions,
+            'categories' => $categories,
         ]);
     }
 
