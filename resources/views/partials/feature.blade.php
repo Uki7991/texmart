@@ -1,15 +1,15 @@
 <div class="content">
     <div class="card-deck align-content-md-center">
         <div class="card border-0">
-            <img src="{{ asset('img/traffic.jpg') }}" class="card-img-top" alt="...">
-            <div class="card-body">
+            <img src="{{ asset('icons/truck.png') }}" width="110" height="auto" class="" alt="...">
+            <div class="card-body pt-0">
                 <h5 class="card-title">Перевозки</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                     additional content. This content is a little bit longer.</p>
             </div>
         </div>
         <div class="card border-0">
-            <img src="{{ asset('img/woman with telephone.jpg') }}" class="card-img-top" alt="...">
+            <img src="{{ asset('icons/consultant.png') }}" width="110" height="auto" class="" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Консультации</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="card border-0">
-            <img src="{{ asset('img/proverka-kachestva1-300x188.jpg') }}" class="card-img-top" alt="...">
+            <img src="{{ asset('icons/shield.png') }}" width="110" height="auto" class="" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Оценка качества</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
