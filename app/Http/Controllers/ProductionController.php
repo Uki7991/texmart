@@ -51,9 +51,11 @@ class ProductionController extends Controller
     public function show($slug)
     {
         $production = Production::whereSlug($slug)->firstOrFail();
+        $categories = $production->categories->where('parent_id', 'is', null);
 
         return view('productions.show', [
             'production' => $production,
+            'categories' => $categories,
         ]);
     }
 
