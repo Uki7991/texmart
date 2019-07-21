@@ -12,9 +12,6 @@
             <div class="col">
                 @include('productions.list')
             </div>
-            <div class="col-2">
-                @include('partials.right_sidebar')
-            </div>
         </div>
     </div>
 
