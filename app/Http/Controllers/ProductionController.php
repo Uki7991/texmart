@@ -17,7 +17,7 @@ class ProductionController extends Controller
     public function index()
     {
         $productions = Production::all();
-        $categories = Category::all(['id', 'title']);
+        $categories = Category::all()->where('parent_id', 'is', null);
 
         return view('productions.index', [
             'productions' => $productions,
@@ -56,6 +56,11 @@ class ProductionController extends Controller
     {
         $production = Production::whereSlug($slug)->firstOrFail();
         $categories = $production->categories->where('parent_id', 'is', null);
+//        $categories2 = $production->categories->has('productions');
+
+//        $categories->map(function ($item, $index) {
+//            $item->childs = $item->childs->has('productions');
+//        });
 
         return view('productions.show', [
             'production' => $production,

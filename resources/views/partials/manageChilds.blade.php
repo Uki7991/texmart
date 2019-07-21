@@ -1,11 +1,11 @@
-<ul class="nav">
+<ul class="nav flex-column">
     @if(isset($input) && $input === true)
         @foreach($childs as $child)
             <li>
                 @if(count($child->childs))
                     <i class="fas fa-plus"></i>
                 @endif
-                    <label>
+                    <label class="m-0 p-0">
                         <input type="checkbox" class="">
                         {{ $child->title }}
                     </label>
