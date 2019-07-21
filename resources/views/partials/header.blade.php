@@ -17,10 +17,10 @@
 
             <ul class="navbar-nav mx-auto">
                 <li>
-                    <a href="#" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">цеха</a>
+                    <a href="http://texmart/workshop" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Цеха</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Продукции</a>
+                    <a href="http://texmart/product" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Продукции</a>
                 </li>
                 <li>
                     <a href="http://texmart/about" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">О нас</a>

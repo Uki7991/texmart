@@ -61,3 +61,11 @@ Route::get('announcement',function(){
 Route::get('/about',function(){
     return view('about_us');
 })->name('about_us');
+
+Route::get('/product',function(){
+    return view('products');
+})->name('products');
+
+Route::get('/workshop',function(){
+    return view('workshops');
+})->name('workshops');
