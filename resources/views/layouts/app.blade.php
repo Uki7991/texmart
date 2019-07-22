@@ -20,24 +20,29 @@
     @stack('styles')
 </head>
 <body class="bg-white">
-    <div id="app">
-        @yield('content')
+<div id="app">
+    @yield('content')
 
-        <footer class="footer border-top border-danger bg-white">
-            <div class="container pt-5 pb-2">
-                <div class="row justify-content-center">
-                    <div class="col-auto">
-                        <a href="https://mount.kg" target="_blank" class="text-muted small">Made with <span class="text-danger">&hearts;</span> by Mount</a>
-                    </div>
-                </div>
+    <footer class="footer border-top border-danger bg-white">
+        <div class="container pt-5 pb-2">
+            <div>
+                @include('partials.footer')
             </div>
-        </footer>
-    </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                @include('partials.socialnetworks')
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                <a href="https://mount.kg" target="_blank" class="text-muted small">Made with <span
+                        class="text-danger">&hearts;</span> by Mount</a>
+            </div>
+        </div>
+    </footer>
+</div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 
-    @stack('scripts')
+@stack('scripts')
 
 </body>
 </html>
