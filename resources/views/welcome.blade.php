@@ -22,8 +22,8 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-4 col-md-10 col-lg-12 col-xl-12">
-                <iframe class="w-100 h-auto" src="https://www.youtube.com/embed/Ws65T4DPuT0" frameborder="0"
+            <div class="col-12 col-sm-10 col-lg-10">
+                <iframe class="w-100 youtube-player" src="https://www.youtube.com/embed/Ws65T4DPuT0" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
             </div>
