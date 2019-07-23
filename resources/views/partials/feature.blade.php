@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="card-deck align-content-md-center">
+    <div class="card-deck align-content-md-center col-12 col-sm-4 col-md-10 col-lg-12 col-xl-12">
         <div class="card border-0">
             <img src="{{ asset('icons/truck (1).png') }}" style="width: 110px; height: auto;" class="mx-auto" alt="...">
             <div class="card-body">

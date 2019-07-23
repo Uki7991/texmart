@@ -22,8 +22,8 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-4 col-md-10 col-lg-6 col-xl-6">
-                <iframe class="w-100" src="https://www.youtube.com/embed/Ws65T4DPuT0" frameborder="0"
+            <div class="col-12 col-sm-4 col-md-10 col-lg-12 col-xl-12">
+                <iframe class="w-100 h-auto" src="https://www.youtube.com/embed/Ws65T4DPuT0" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
             </div>
@@ -34,7 +34,7 @@
             <main class="col-8">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h2 class="font-weight-bold text-underline">Продукции и цеха</h2>
+                        <h2 class="font-weight-bold text-underline pb-3">Продукции и цеха</h2>
                     </div>
                     <div class="col-12 mt-3">
                         @include('productions.list')
