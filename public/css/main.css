@@ -22,6 +22,10 @@
     transform: translateX(0) !important;
 }
 
+.text-juice {
+    color: #f39c12 !important;
+}
+
 .transition-100 {
     -webkit-transition: .1s;
     -moz-transition: .1s;
