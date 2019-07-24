@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row justify-content-center py-4">
             <div class="col-12 text-center">
                 <h2 class="font-weight-bold text-underline pb-3">Продукции и цеха</h2>
