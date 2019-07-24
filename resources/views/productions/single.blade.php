@@ -10,10 +10,11 @@
 {{--            </p>--}}
         </div>
         <div class="card-footer d-flex justify-content-end bg-white border-0 pt-0">
-            <div class="mr-auto">
-                <p class="m-0 p-0 small text-muted font-italic font-weight-bold">+996 700 700 700</p>
-            </div>
+{{--            <div class="mr-auto">--}}
+{{--                <p class="m-0 p-0 small text-muted font-italic font-weight-bold">+996 700 700 700</p>--}}
+{{--            </div>--}}
             <div class="ml-auto">
+                @include('partials.btn.share', ['class' => 'btn-sm'])
                 @include('partials.btn.call', ['class' => 'btn-sm'])
                 @include('partials.btn.favorite', ['class' => 'btn-sm', 'data' => 'data-id='.$production->id.'', 'route' => \Illuminate\Support\Facades\Auth::user() ? '#' : route('login')])
             </div>

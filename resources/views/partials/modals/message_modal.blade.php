@@ -4,17 +4,26 @@
             <div class="backdrop"></div>
             <div class="position-relative">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title" id="callToProductionTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="col-12">
+                        <h5 class="modal-title text-center" id="callToProductionTitle">Связаться с производителем</h5>
+                    </div>
+                    <button type="button" class="close position-absolute" style="right:10px;top: 10px;" data-dismiss="modal" aria-label="Close">
                         <i class="fas fa-times text-white" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="modal-body">
-                    Hello MotherFucker
+                    <form action="" class="">
+                        <input type="hidden">
+                        <div class="form-group">
+                            <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                        </div>
+                    </form>
                 </div>
+
                 <div class="modal-footer border-0">
+
                     <button type="button" class="btn btn-sm text-white" data-dismiss="modal">Отмена</button>
-                    <button type="button" class="btn btn-sm btn-primary rounded-0">Save changes</button>
+                    <button type="button" class="btn btn-sm btn-primary rounded-0">Отправить</button>
                 </div>
             </div>
         </div>
