@@ -7,7 +7,36 @@
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-8 shadow-lg">
                     <div class="row">
-                        <div class="col-6 shadow-lg rounded-left bg-white p-4">
+                        <div class="col-auto bg-light rounded-left py-3 text-secondary">
+                            <ul class="nav flex-column">
+                                <li class="nav-item my-2">
+                                    <a href="#" class="text-secondary">
+                                        <i class="fab fa-facebook fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item my-2">
+                                    <a href="#" class="text-secondary">
+                                        <i class="fab fa-vk fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item my-2">
+                                    <a href="#" class="text-secondary">
+                                        <i class="fab fa-google fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item my-2">
+                                    <a href="#" class="text-secondary">
+                                        <i class="fab fa-twitter fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item my-2">
+                                    <a href="#" class="text-secondary">
+                                        <i class="fab fa-odnoklassniki-square fa-lg"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 shadow-lg bg-white p-4">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
 
