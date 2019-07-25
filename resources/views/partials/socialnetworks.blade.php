@@ -18,6 +18,6 @@
         <i class="fab fa-weixin mr-3 fa-lg"></i>
     </a>
     <a href="#">
-        <i class="fab fa-google-plus-g mr-3 fa-lg"></i>
+        <i class="fab fa-google mr-3 fa-lg"></i>
     </a>
 </div>

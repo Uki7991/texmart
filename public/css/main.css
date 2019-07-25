@@ -26,6 +26,32 @@
     color: #f39c12 !important;
 }
 
+.shadow-left {
+    -webkit-box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.21) !important;
+    -moz-box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.21) !important;
+    box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.21) !important;
+}
+
+.fa-odnoklassniki-square:hover {
+    color: #ee8208 !important;
+}
+
+.fa-vk:hover {
+    color: #4a76a8 !important;
+}
+
+.fa-facebook:hover {
+    color: #4267b2 !important;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2 !important;
+}
+
+.fa-google:hover {
+    color: #ea4335 !important;
+}
+
 .animation-hover:hover {
     -webkit-transform: scale(1.3);
     -moz-transform: scale(1.3);

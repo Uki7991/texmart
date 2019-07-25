@@ -37,7 +37,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-6 shadow-lg bg-white p-4">
+                        <div class="col-6 shadow-left bg-white p-4">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div class="form-group">
