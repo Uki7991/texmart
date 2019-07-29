@@ -47,6 +47,6 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_KEY'),
         'client_secret' => env('GOOGLE_SECRET'),
-        'redirect' => route('google.callback'),
+        'redirect' => env('GOOGLE_REDIRECT'),
     ],
 ];
