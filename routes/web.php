@@ -19,6 +19,9 @@ Route::get('/', function () {
 })->name('homepage');
 
 
+Route::get('/login/google', 'Auth\LoginController@redirectToProvider')->name('google.redirect');
+Route::get('/login/google/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
