@@ -69,6 +69,8 @@ class LoginController extends Controller
             $newUser = new User();
             $newUser->name = $user->name;
             $newUser->email = $user->email;
+            $newUser->social_id = $user->id;
+            $newUser->social_type = $provider;
             $newUser->password = Hash::make($user->email);
             $newUser->save();
 
