@@ -6,9 +6,9 @@
         <div class="backdrop"></div>
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-8 shadow-lg">
+                <div class="col-12 col-lg-8 shadow-lg">
                     <div class="row">
-                        <div class="col-auto bg-light rounded-left py-3 text-secondary">
+                        <div class="col-md-auto col-2 bg-light rounded-left py-3 text-secondary">
                             <ul class="nav flex-column">
                                 <li class="nav-item my-2">
                                     <a href="#" class="text-secondary">
@@ -37,7 +37,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-6 shadow-left bg-white p-4">
+                        <div class="col-10 col-md-6 shadow-left bg-white p-4">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div class="form-group">
@@ -98,7 +98,7 @@
                             </form>
                         </div>
                         <div
-                            class="col d-flex align-items-center justify-content-center bg-info text-white p-4 rounded-right">
+                            class="col d-flex align-items-center justify-content-center bg-info text-white p-2 rounded-right">
                             <div>
                                 <h2 class="font-weight-bold h1">Преимущества</h2>
                                 <ul class="nav flex-column">

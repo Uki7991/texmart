@@ -5,9 +5,9 @@
         <div class="backdrop"></div>
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-8 shadow-lg">
+                <div class="col-12 col-lg-10 shadow-lg">
                     <div class="row">
-                        <div class="col-auto bg-light rounded-left py-3 text-secondary">
+                        <div class="col-md-auto col-2 bg-light rounded-left py-3 text-secondary">
                             <ul class="nav flex-column">
                                 <li class="nav-item my-2">
                                     <a href="#" class="text-secondary">
@@ -36,7 +36,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-6 shadow-lg bg-white p-4">
+                        <div class="col-10 col-md-6 shadow-lg bg-white p-4">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
 
@@ -103,7 +103,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col d-flex align-items-center justify-content-center bg-info text-white p-4 rounded-right">
+                        <div class="col d-flex align-items-center justify-content-center bg-info text-white p-2 rounded-right">
                             <div>
                                 <div class="mb-3 mx-auto">
                                     <a href="{{ url('/') }}" class="h1 text-white text-center">Texmart</a>
