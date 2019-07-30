@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @includeWhen(\Illuminate\Support\Facades\Session::has('flash'), 'partials.alerts.login_email')
+
     <div class="promo-register">
         <div class="backdrop"></div>
         <div class="container h-100">
@@ -11,27 +13,27 @@
                         <div class="col-auto bg-light rounded-left py-3 text-secondary">
                             <ul class="nav flex-column">
                                 <li class="nav-item my-2">
-                                    <a href="#" class="text-secondary">
+                                    <a href="{{ route('google.redirect', 'facebook') }}" class="text-secondary">
                                         <i class="fab fa-facebook fa-lg"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item my-2">
-                                    <a href="#" class="text-secondary">
+                                    <a href="{{ route('google.redirect', 'vk') }}" class="text-secondary">
                                         <i class="fab fa-vk fa-lg"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item my-2">
-                                    <a href="{{ route('google.redirect') }}" class="text-secondary">
+                                    <a href="{{ route('google.redirect', 'google') }}" class="text-secondary">
                                         <i class="fab fa-google fa-lg"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item my-2">
-                                    <a href="#" class="text-secondary">
+                                    <a href="{{ route('google.redirect', 'twitter') }}" class="text-secondary">
                                         <i class="fab fa-twitter fa-lg"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item my-2">
-                                    <a href="#" class="text-secondary">
+                                    <a href="{{ route('google.redirect', 'odnoklassniki') }}" class="text-secondary">
                                         <i class="fab fa-odnoklassniki-square fa-lg"></i>
                                     </a>
                                 </li>

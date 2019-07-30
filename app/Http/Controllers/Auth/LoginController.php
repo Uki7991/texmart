@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
@@ -38,15 +41,40 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function redirectToProvider()
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
-    public function handleProviderCallback()
+    public function handleProviderCallback($provider)
     {
-        $user = Socialite::driver('google')->user();
+        $user = Socialite::driver($provider)->user();
 
-        dd($user);
+
+        $existingUser = User::where('email', $user->email)->where('social_type', $provider)->where('social_id', $user->id)->get()->first();
+
+        if ($existingUser) {
+            auth()->login($existingUser, true);
+        } else {
+            $emailUser = User::where('email', $user->email)->get()->first();
+            if ($emailUser) {
+                $session = [
+                    'status' => 'error',
+                    'message' => 'Пользователь с таким e-mail уже существует',
+                ];
+                Session::flash('flash', $session);
+                return redirect()->route('login');
+            }
+
+            $newUser = new User();
+            $newUser->name = $user->name;
+            $newUser->email = $user->email;
+            $newUser->password = Hash::make($user->email);
+            $newUser->save();
+
+            auth()->login($newUser, true);
+        }
+
+        return redirect()->route('homepage');
     }
 }
