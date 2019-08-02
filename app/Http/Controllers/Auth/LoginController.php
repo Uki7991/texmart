@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
@@ -50,13 +51,21 @@ class LoginController extends Controller
     {
         $user = Socialite::driver($provider)->user();
 
+        if ($user->email) {
+            $existingUser = User::where('email', $user->email)->where('social_type', $provider)->where('social_id', $user->id)->get()->first();
+        } else {
+            $existingUser = User::where('email', Str::slug($user->name))->where('social_type', $provider)->where('social_id', $user->id)->get()->first();
+        }
 
-        $existingUser = User::where('email', $user->email)->where('social_type', $provider)->where('social_id', $user->id)->get()->first();
 
         if ($existingUser) {
             auth()->login($existingUser, true);
         } else {
-            $emailUser = User::where('email', $user->email)->get()->first();
+            if ($user->email) {
+                $emailUser = User::where('email', $user->email)->get()->first();
+            } else {
+                $emailUser = User::where('email', Str::slug($user->name))->get()->first();
+            }
             if ($emailUser) {
                 $session = [
                     'status' => 'error',
@@ -68,7 +77,7 @@ class LoginController extends Controller
 
             $newUser = new User();
             $newUser->name = $user->name;
-            $newUser->email = $user->email;
+            $newUser->email = $user->email ? $user->email : Str::slug($user->name);
             $newUser->social_id = $user->id;
             $newUser->social_type = $provider;
             $newUser->password = Hash::make($user->email);
