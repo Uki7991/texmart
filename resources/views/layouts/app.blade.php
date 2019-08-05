@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/eb6e8d4dc3.js"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     @stack('styles')
 </head>
