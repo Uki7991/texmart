@@ -72,3 +72,6 @@ Route::get('/product',function(){
 Route::get('/workshop',function(){
     return view('workshops');
 })->name('workshops');
+Route::get('/about_us',function(){
+    return view('about_us');
+})->name('about_us');

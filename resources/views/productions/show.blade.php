@@ -4,7 +4,6 @@
     @include('partials.header', ['shadow' => 'shadow'])
     <div class="container-fluid">
         <div class="row py-4">
-
             <div class="col">
                 <div class="container">
                     <div class="row bg-white p-3">
@@ -102,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="col-2 p-0 shadow-sm border rounded h-100">
+            <div class="d-none d-lg-block col-2 p-0 shadow-sm border rounded h-100">
                 @include('partials.right_sidebar')
             </div>
 
