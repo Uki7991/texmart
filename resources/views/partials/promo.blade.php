@@ -7,7 +7,7 @@
 {{--    </div>--}}
 {{--</div>--}}
 
-<div class="">
+<div class="" style="">
     <div class="backdrop"></div>
     @include('partials.header', ['theme' => 'dark', 'color' => 'white'])
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
