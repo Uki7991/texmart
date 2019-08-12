@@ -20,21 +20,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/898714.jpg" class="d-block w-100" alt="...">
+                <img src="img/tkani.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Найдите свое производство</h1>
                     <p>Texmart - список производств на любой вкус!</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/898714.jpg" class="d-block w-100" alt="...">
+                <img src="img/ocenka.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/898714.jpg" class="d-block w-100" alt="...">
+                <img src="img/kolsunting.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
