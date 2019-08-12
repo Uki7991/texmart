@@ -9,7 +9,9 @@
 
 <div class="" style="">
     <div class="backdrop"></div>
+
     @include('partials.header', ['theme' => 'dark', 'color' => 'white'])
+
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>

@@ -44,6 +44,46 @@
         </div>
     </div>
 
+{{--    <div class="col tender">--}}
+{{--        <div class="container">--}}
+{{--            <h2>--}}
+{{--                <span class=""></span>--}}
+{{--                "Задайте вопрос!?"--}}
+{{--            </h2>--}}
+{{--            <div class="inner">--}}
+{{--                <div class="left">--}}
+{{--                    <div class="text">--}}
+{{--                        <span>Задай один вопрос.</span>--}}
+{{--                        <span>Получи несколько предложений.</span>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+
+    <div class="container">
+        <div class="row justify-content-center py-4">
+            <h2>
+                         <span class=""></span>
+                          "Задайте вопрос!?"
+                       </h2>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="services--service">
+            <p>Texmart <span>Quality </span></p>
+        </div>
+        <div class="services--service">
+            <p>Texmart <span>Quality </span></p>
+        </div>
+        <div class="services--service">
+            <p>Texmart <span>Quality </span></p>
+        </div>
+
+    </div>
+
     @include('partials.modals.message_modal')
 
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md fixed-top navbar-{{ $theme ?? 'light' }} {{ $shadow ?? '' }} bg-transparent">
+<nav class="navbar navbar-expand-md fixed-top navbar-{{ $theme ?? 'light' }} {{ $shadow ?? '' }}" id="header">
     <div class="container-fluid">
         <a class="navbar-brand position-relative" href="{{ url('/') }}">
             <img src="{{ asset('img/logo.png') }}" class="img-fluid" width="200" height="auto" alt="">
@@ -68,5 +68,23 @@
         </div>
     </div>
 </nav>
+
+
+
 @push('scripts')
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Фикмированная шапка при скролле
+            $("#header").removeClass("bg-dark");
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 50) {
+                    console.log($("#header"))
+                    $("#header").addClass("bg-dark").fadeIn();
+                } else {
+                    console.log($("#header"))
+                    $("#header").removeClass("bg-dark").fadeIn();
+                };
+            });
+        });
+    </script>
 @endpush
