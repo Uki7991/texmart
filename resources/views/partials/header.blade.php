@@ -79,10 +79,10 @@
             $(window).scroll(function(){
                 if ($(this).scrollTop() > 50) {
                     console.log($("#header"))
-                    $("#header").addClass("bg-dark").fadeIn();
+                    $("#header").addClass("bg-dark");
                 } else {
                     console.log($("#header"))
-                    $("#header").removeClass("bg-dark").fadeIn();
+                    $("#header").removeClass("bg-dark");
                 };
             });
         });
