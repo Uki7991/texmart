@@ -71,10 +71,7 @@
 
     <div class="container">
         <div class="row justify-content-center py-4">
-            <h2>
-                         <span class=""></span>
-                          "Задайте вопрос!?"
-                       </h2>
+
         </div>
     </div>
 
