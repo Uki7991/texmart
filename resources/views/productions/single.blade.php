@@ -1,4 +1,4 @@
-<div class="card border-0 shadow-sm production-card transition-500">
+<div class="card border shadow-sm production-card transition-500">
     <a href="{{ route('productions.show', $production->slug) }}" class="text-dark text-decoration-none">
         <div class="card-img-top position-relative">
             <img src="{{ asset('img/2 lg.jpg') }}" class="img-fluid img-responsive" alt="">

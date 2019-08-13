@@ -35,11 +35,18 @@
                 <h2 class="font-weight-bold text-underline pb-3">Продукции и цеха</h2>
             </div>
             <div class="col-12 mt-3">
-                @include('productions.list')
+                @include('productions.carousel')
             </div>
             <div class="col-12 mt-3 text-center">
                 <a href="{{ route('productions.index') }}" class="btn text-dark text-dotted rounded-0">Больше
                     продукций...</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                @include('partials.pre_register')
             </div>
         </div>
     </div>
@@ -64,10 +71,7 @@
 
     <div class="container">
         <div class="row justify-content-center py-4">
-            <h2>
-                         <span class=""></span>
-                          "Задайте вопрос!?"
-                       </h2>
+
         </div>
     </div>
 
@@ -88,3 +92,30 @@
 
 
 @endsection
+@push("scripts")
+    <script src="{{ asset("js/owl.carousel.min.js") }}">
+
+    </script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+    </script>
+@endpush
+
+@push("styles")
+    <link rel="stylesheet" href="{{ asset("css/owl.carousel.min.css") }}">
+@endpush
