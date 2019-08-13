@@ -20,21 +20,23 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/odezhda-veshalka-ruka.jpg" class="d-block w-100" alt="...">
+
+                <img src="img/odezhda-veshalka-ruka (2).jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
+
                     <h1>Найдите свое производство</h1>
                     <p>Первая интернет платформа швейной и текстильной промышленности Кыргызстана</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/business-document-signing.jpg" class="d-block w-100" alt="...">
+                <img src="img/business-document-signing (1).jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Колсантинг</h1>
                     <p>Оформление всех бухгалтерских и юридических документов.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/quality control.jpg" class="d-block w-100" alt="...">
+                <img src="img/867519228d1d5325856fc61d710ded0e_XL.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Качество</h1>
                     <p>Оценка качества пошива одежды и производства Texmart.kg.</p>

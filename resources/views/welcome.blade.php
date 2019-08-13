@@ -22,6 +22,14 @@
 
     <div class="container">
         <div class="row justify-content-center">
+            <div class="col-auto">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-lg-10">
                 <iframe class="w-100 youtube-player" src="https://www.youtube.com/embed/Ws65T4DPuT0" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -43,13 +51,17 @@
             </div>
         </div>
     </div>
+    <div>
+        @include('partials.pre_register')
+    </div>
+
+
     <div class="container">
         <div class="row">
-            <div class="col-4">
-                @include('partials.pre_register')
-            </div>
+
         </div>
     </div>
+
 
 {{--    <div class="col tender">--}}
 {{--        <div class="container">--}}

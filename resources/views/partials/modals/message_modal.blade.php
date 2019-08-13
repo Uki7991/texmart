@@ -19,9 +19,14 @@
                         </div>
                     </form>
                 </div>
+                <div class="modal-phone">
+                    <span>
+                            <p class="text-center">По юридическим вопросам звоните на телефон:</p>
+                            <a href="tel:+996700700700" class="nav-link text-light h5 font-weight-bold text-center">+996 (700) 700-700</a>
+                    </span>
+                </div>
 
                 <div class="modal-footer border-0">
-
                     <button type="button" class="btn btn-sm text-white" data-dismiss="modal">Отмена</button>
                     <button type="button" class="btn btn-sm btn-primary rounded-0">Отправить</button>
                 </div>
