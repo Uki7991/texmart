@@ -93,14 +93,6 @@ p, h1, h2, h3, h4, h5, h6{
     box-shadow: 0 2px 2px #444;
 }
 
-.animation-hover:hover {
-    -webkit-transform: scale(1.3);
-    -moz-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -o-transform: scale(1.3);
-    transform: scale(1.3);
-}
-
 .transition-100 {
     -webkit-transition: .1s;
     -moz-transition: .1s;
