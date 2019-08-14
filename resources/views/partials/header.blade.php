@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md fixed-top navbar-{{ $theme ?? 'light' }} {{ $shadow ?? '' }}" id="header">
+<nav class="navbar navbar-expand-md fixed-top navbar-{{ $theme ?? 'light' }} {{ $shadow ?? '' }} " id="header">
     <div class="container-fluid">
         <a class="navbar-brand position-relative" href="{{ url('/') }}">
             <img src="{{ asset('img/logo.png') }}" class="img-fluid" width="200" height="auto" alt="">
@@ -26,7 +26,7 @@
                     <a href="http://texmart/about" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">О нас</a>
                 </li>
                 <li>
-                    <a href="tel:+996700700700" class="nav-link text-light h5 font-weight-bold">+996 (700) 700-700</a>
+                    <a href="http://texmart/contacts" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Контакты</a>
                 </li>
             </ul>
 
@@ -75,14 +75,14 @@
     <script type="text/javascript">
         $(document).ready(function(){
             // Фикмированная шапка при скролле
-            $("#header").removeClass("bg-dark");
+            $("#header").removeClass("bg-warning");
             $(window).scroll(function(){
                 if ($(this).scrollTop() > 50) {
                     console.log($("#header"))
-                    $("#header").addClass("bg-dark");
+                    $("#header").addClass("bg-warning");
                 } else {
                     console.log($("#header"))
-                    $("#header").removeClass("bg-dark");
+                    $("#header").removeClass("bg-warning");
                 };
             });
         });

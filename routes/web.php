@@ -72,6 +72,27 @@ Route::get('/product',function(){
 Route::get('/workshop',function(){
     return view('workshops');
 })->name('workshops');
+
 Route::get('/about_us',function(){
     return view('about_us');
 })->name('about_us');
+
+Route::get('/consulting',function(){
+    return view('consulting');
+})->name('consulting');
+
+Route::get('/consulting',function(){
+    return view('consulting');
+})->name('consulting');
+
+Route::get('/logistic',function(){
+    return view('logistic');
+})->name('logistic');
+
+Route::get('/quality',function(){
+    return view('quality');
+})->name('quality');
+
+Route::get('/contacts',function(){
+    return view('contacts');
+})->name('contacts');

@@ -55,6 +55,34 @@
         @include('partials.pre_register')
     </div>
 
+    <div class="pt-5">
+        <div class="card-group">
+            <div class="card">
+                <img src="{{ asset('img/business-document-signing (2).jpg') }}" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <div class="services--service">
+                        <h2><a href="http://texmart/consulting">Консалтинг</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ asset('img/daf-xf105-460-truck-white-daf.jpg') }}" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <div class="services--service">
+                        <h2><a href="http://texmart/logistic">Логистика</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ asset('img/checklist.jpg') }}" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <div class="services--service" style="">
+                        <h2><a href="http://texmart/quality">Контроль качества</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -63,42 +91,6 @@
     </div>
 
 
-{{--    <div class="col tender">--}}
-{{--        <div class="container">--}}
-{{--            <h2>--}}
-{{--                <span class=""></span>--}}
-{{--                "Задайте вопрос!?"--}}
-{{--            </h2>--}}
-{{--            <div class="inner">--}}
-{{--                <div class="left">--}}
-{{--                    <div class="text">--}}
-{{--                        <span>Задай один вопрос.</span>--}}
-{{--                        <span>Получи несколько предложений.</span>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-    <div class="container">
-        <div class="row justify-content-center py-4">
-
-        </div>
-    </div>
-
-    <div class="services">
-        <div class="services--service">
-            <p>Texmart <span>Quality </span></p>
-        </div>
-        <div class="services--service">
-            <p>Texmart <span>Quality </span></p>
-        </div>
-        <div class="services--service">
-            <p>Texmart <span>Quality </span></p>
-        </div>
-
-    </div>
 
     @include('partials.modals.message_modal')
 
