@@ -14,6 +14,84 @@
     width: 300px;
 }
 
+.btn-texmart-orange {
+    background-color: #F5B935!important;
+}
+
+.text-texmart-orange {
+    color: #F5B935 !important;
+}
+
+.bg-texmart-orange {
+    background-color: #F5B935 !important;
+}
+
+.border-texmart-orange {
+    border-color: #F5B935 !important;
+}
+
+
+.btn-texmart-blue {
+    background-color: #11ABC1!important;
+}
+
+.text-texmart-blue {
+    color: #11ABC1 !important;
+}
+
+.bg-texmart-blue {
+    background-color: #11ABC1 !important;
+}
+
+.border-texmart-blue {
+    border-color: #11ABC1 !important;
+}
+
+
+.btn-texmart-red {
+    background-color: #DF3062!important;
+}
+
+.text-texmart-red {
+    color: #DF3062 !important;
+}
+
+.bg-texmart-red {
+    background-color: #DF3062 !important;
+}
+
+.border-texmart-red {
+    border-color: #DF3062 !important;
+}
+
+
+.btn-texmart-green {
+    background-color: #4BAC3F!important;
+}
+
+.text-texmart-green {
+    color: #4BAC3F !important;
+}
+
+.bg-texmart-green {
+    background-color: #4BAC3F !important;
+}
+
+.border-texmart-green {
+    border-color: #4BAC3F !important;
+}
+
+.feature-logo {
+    width: 40px;
+    height: auto;
+}
+.feature {
+    width: 60px;
+    height: 60px;
+}
+
+
+
 p, h1, h2, h3, h4, h5, h6{
     font-family: 'Roboto', sans-serif;
 }
@@ -67,9 +145,6 @@ p, h1, h2, h3, h4, h5, h6{
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     height: 350px;
     color: white;
 }
@@ -264,7 +339,7 @@ p, h1, h2, h3, h4, h5, h6{
     }
 
     .youtube-player {
-        height: 300px !important;
+        height: 200px !important;
     }
 }
 
@@ -274,7 +349,7 @@ p, h1, h2, h3, h4, h5, h6{
     }
 
     .youtube-player {
-        height: 300px !important;
+        height: 200px !important;
     }
 }
 
@@ -284,7 +359,7 @@ p, h1, h2, h3, h4, h5, h6{
     }
 
     .youtube-player {
-        height: 400px !important;
+        height: 300px !important;
     }
 }
 
@@ -294,6 +369,6 @@ p, h1, h2, h3, h4, h5, h6{
     }
 
     .youtube-player {
-        height: 600px !important;
+        height: 300px !important;
     }
 }
