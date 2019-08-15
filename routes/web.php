@@ -19,6 +19,8 @@ Route::get('/', function () {
 })->name('homepage');
 
 
+Route::get('/profile', 'UserController@index')->name('profile');
+
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('google.redirect');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
 

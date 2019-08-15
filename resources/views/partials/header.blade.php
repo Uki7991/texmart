@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md fixed-top navbar-{{ $theme ?? 'light' }} {{ $shadow ?? '' }} " id="header">
+<nav class="navbar navbar-expand-md fixed-top navbar-{{ $theme ?? 'light' }} bg-texmart-orange shadow-sm " id="header">
     <div class="container-fluid">
         <a class="navbar-brand position-relative" href="{{ url('/') }}">
             <img src="{{ asset('img/logo.png') }}" class="img-fluid" width="200" height="auto" alt="">
@@ -17,16 +17,16 @@
 
             <ul class="navbar-nav mx-auto">
                 <li>
-                    <a href="http://texmart/workshop" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Цеха</a>
+                    <a href="http://texmart/workshop" class="nav-link text-white text-capitalize">Цеха</a>
                 </li>
                 <li>
-                    <a href="http://texmart/product" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Продукции</a>
+                    <a href="http://texmart/product" class="nav-link text-white text-capitalize">Продукции</a>
                 </li>
                 <li>
-                    <a href="http://texmart/about" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">О нас</a>
+                    <a href="http://texmart/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
                 <li>
-                    <a href="http://texmart/contacts" class="nav-link text-{{ $color ?? 'dark' }} text-capitalize">Контакты</a>
+                    <a href="http://texmart/contacts" class="nav-link text-white text-capitalize">Контакты</a>
                 </li>
             </ul>
 
@@ -35,21 +35,21 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link text-{{ $color ?? 'dark' }}" href="{{ route('login') }}">{{ __('Вход') }}</a>
+                        <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Вход') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link text-{{ $color ?? 'dark' }}" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
+                            <a class="nav-link btn btn-danger text-white rounded-0" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
                         </li>
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-{{ $color ?? 'dark' }}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('voyager.profile') }}">
+                            <a class="dropdown-item" href="{{ route('profile') }}">
                                 {{ __('Profile') }}
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -71,20 +71,20 @@
 
 
 
-@push('scripts')
-    <script type="text/javascript">
-        $(document).ready(function(){
-            // Фикмированная шапка при скролле
-            $("#header").removeClass("bg-warning");
-            $(window).scroll(function(){
-                if ($(this).scrollTop() > 50) {
-                    console.log($("#header"))
-                    $("#header").addClass("bg-warning");
-                } else {
-                    console.log($("#header"))
-                    $("#header").removeClass("bg-warning");
-                };
-            });
-        });
-    </script>
-@endpush
+{{--@push('scripts')--}}
+    {{--<script type="text/javascript">--}}
+        {{--$(document).ready(function(){--}}
+            {{--// Фикмированная шапка при скролле--}}
+            {{--$("#header").removeClass("bg-warning");--}}
+            {{--$(window).scroll(function(){--}}
+                {{--if ($(this).scrollTop() > 50) {--}}
+                    {{--console.log($("#header"))--}}
+                    {{--$("#header").addClass("bg-warning");--}}
+                {{--} else {--}}
+                    {{--console.log($("#header"))--}}
+                    {{--$("#header").removeClass("bg-warning");--}}
+                {{--};--}}
+            {{--});--}}
+        {{--});--}}
+    {{--</script>--}}
+{{--@endpush--}}

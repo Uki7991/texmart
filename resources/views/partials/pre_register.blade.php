@@ -1,13 +1,13 @@
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            <h2>
-                <span class=""></span>
-                <i class="fas fa-check-square"></i> Задайте вопрос
-            </h2>
+<div class="container py-5">
+    <h2 class="text-center">
+        <i class="fas fa-check text-texmart-orange"></i> Задайте вопрос
+    </h2>
+    <div class="row justify-content-center align-items-center py-2">
+        <div class="col-4 p-0">
             <div class="card border-0">
-                <img src="{{ asset("img/priazha-nitki-dereviannyi-fon-raznotsvetie.jpg") }}" class="card-img" alt="...">
-                <div class="card-img-overlay text-black-50 text-center">
+                <img src="{{ asset("img/priazha-nitki-dereviannyi-fon-raznotsvetie.jpg") }}" class="card-img rounded-0" alt="...">
+                <div class="backdrop"></div>
+                <div class="card-img-overlay text-white text-center">
                     <h5 class="card-title">Заполните форму.</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text">Last updated 3 mins ago</p>
@@ -15,7 +15,7 @@
             </div>
 
         </div>
-        <div class="col-6 border border-dark pb-2">
+        <div class="col-5 pb-2">
             <form>
                 <div class="form-row">
                     <div class="col">
