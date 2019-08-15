@@ -38,11 +38,11 @@
                 </div>
                 <div class="col">
                     <div class="tab-content">
-                        @include('user.profile-tabs.settings')
-                        @include('user.profile-tabs.messages')
-                        @include('user.profile-tabs.favorite')
-                        @include('user.profile-tabs.announce')
-                        @include('user.profile-tabs.announce_create')
+                        @include('user-production.profile-tabs.settings')
+                        @include('user-production.profile-tabs.messages')
+                        @include('user-production.profile-tabs.favorite')
+                        @include('user-production.profile-tabs.announce')
+                        @include('user-production.profile-tabs.announce_create')
                     </div>
                 </div>
             </div>

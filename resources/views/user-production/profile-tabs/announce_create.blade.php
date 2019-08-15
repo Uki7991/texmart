@@ -14,8 +14,8 @@
     </ul>
 
     <div class="tab-content py-5">
-        @include('user.form-tabs.production-create')
-        @include('user.form-tabs.product-create')
-        @include('user.form-tabs.service-create')
+        @include('user-production.form-tabs.production-create')
+        @include('user-production.form-tabs.product-create')
+        @include('user-production.form-tabs.service-create')
     </div>
 </div>

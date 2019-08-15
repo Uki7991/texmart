@@ -43,7 +43,18 @@ class ProductionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $lng = 0;
+        $lat = 0;
+
+        if ($request->latitude && $request->longtitude) {
+            $lat = (float) $request->latitude;
+            $lng = (float) $request->longtitude;
+
+        } else {
+            return redirect()->back();
+        }
+
+        return DB::raw("ST_GeomFromText('POINT({$lng} {$lat})')");
     }
 
     /**

@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index()
     {
         $user = auth()->user();
-        return view('user.profile', [
+        return view('user-production.profile', [
             'user' => $user,
         ]);
     }
