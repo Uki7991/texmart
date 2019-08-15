@@ -5,7 +5,7 @@
     @include('partials.promo')
 
 
-    <div class="container my-5">
+    <div class="container-fluid my-5">
         <div class="row">
             @include('partials.feature')
         </div>
