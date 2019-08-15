@@ -21,16 +21,16 @@
         <ul class="nav flex-column">
             <li class="nav-item ">
                 <a href="" class="nav-link text-dark small d-flex ">
-                    <i class="fas fa-phone p-1"></i>&nbsp;
+                    <i class="fas fa-phone-alt p-1"></i>&nbsp;
                     <div>
-                        <p class="mb-1 font-weight-bold">07009345345</p>
-                        <p class="m-0 text-muted">Пн. – Вс.: с 10:00 до 20:00 (+6 GMT)</p>
+                        <p class="mb-1 font-weight-bold">0508900500</p>
+                        <p class="m-0 text-muted">Пн. – Вc.: с 10:00 до 20:00 (+6 GMT)</p>
                     </div>
                 </a>
             </li>
             <li class="nav-item ">
                 <a href="" class="nav-link text-dark small d-flex ">
-                    <i class="fas fa-map p-1"></i>&nbsp;
+                    <i class="fas fa-map-marker-alt p-1"></i>&nbsp;
                     <div>
                         <p class="mb-1 font-weight-bold">Кыргызстан, г. Бишкек,
                             ул. Тоголока Молдо 104</p>
