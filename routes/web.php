@@ -98,3 +98,11 @@ Route::get('/quality',function(){
 Route::get('/contacts',function(){
     return view('contacts');
 })->name('contacts');
+
+Route::get('/privacy',function(){
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/conditions',function(){
+    return view('conditions');
+})->name('conditions');

@@ -3,7 +3,7 @@
         <i class="fas fa-check text-texmart-orange"></i> Задайте вопрос
     </h2>
     <div class="row justify-content-center align-items-center py-2">
-        <div class="col-4 p-0">
+        <div class="col-5">
             <div class="card border-0">
                 <img src="{{ asset("img/priazha-nitki-dereviannyi-fon-raznotsvetie.jpg") }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
@@ -15,7 +15,7 @@
             </div>
 
         </div>
-        <div class="col-5 pb-2">
+        <div class="col-5 py-5 border shadow-sm">
             <form>
                 <div class="form-row">
                     <div class="col">

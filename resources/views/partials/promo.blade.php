@@ -31,7 +31,7 @@
             <div class="carousel-item">
                 <img src="img/business-document-signing (1).jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>Колсантинг</h1>
+                    <h1>Консалтинг</h1>
                     <p>Оформление всех бухгалтерских и юридических документов.</p>
                 </div>
             </div>

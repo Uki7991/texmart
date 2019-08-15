@@ -37,16 +37,19 @@
             </div>
             <div class="col">
                 <h3 class="text-texmart-orange font-weight-bold">Преимущества работы с нами</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga iste, sapiente. Accusamus alias amet consequatur ea error esse eveniet libero mollitia nemo, nostrum omnis porro qui, quo soluta vel voluptas!
-                </p>
+                <ul>
+                    <li>Новая платформа ориентированная на поиске заказчиков и производителей текстильной и швейной продукции.</li>
+                    <li>Технология отслеживания контроля качества продукций</li>
+                    <li>Рыночный проект от дешевого до качественного, дорогого продукта швейной и текстильной индустрии</li>
+                    <li>Реальные отзывы и рейтинги участников.</li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row justify-content-center py-4">
             <div class="col-12 text-center">
-                <h2 class="font-weight-bold text-underline pb-3">Производственные цеха</h2>
+                <h2 class="font-weight-bold text-underline pb-3">Производственные цеха и фабрики</h2>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
