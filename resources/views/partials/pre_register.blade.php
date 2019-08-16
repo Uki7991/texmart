@@ -2,19 +2,21 @@
     <h2 class="text-center">
         <i class="fas fa-check text-texmart-orange"></i> Задайте вопрос
     </h2>
-    <div class="row justify-content-center align-items-center py-2">
-        <div class="col-5">
+    <div class="question--row justify-content-center align-items-center py-2">
+        <div class="question--section">
             <div class="card border-0">
                 <img src="{{ asset("img/priazha-nitki-dereviannyi-fon-raznotsvetie.jpg") }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
-                <div class="card-img-overlay text-white text-center">
-                    <h5 class="card-title">Заполните форму.</h5>
-                    <p class="card-text">Менеджеры компании с радостью ответят на ваши вопросы.</p>
+                <div class="card-img-overlay text-white text-center center-content">
+                    <div>
+                      <h5 class="card-title">Заполните форму.</h5>
+                      <p class="card-text">Менеджеры компании с радостью ответят на ваши вопросы.</p>
+                    </div>
                 </div>
             </div>
 
         </div>
-        <div class="col-5 py-5 border shadow-sm">
+        <div class="question--section py-5 border shadow-sm col-sm-12">
             <form>
                 <div class="form-row">
                     <div class="col">

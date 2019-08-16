@@ -366,6 +366,23 @@ p {
   transform: scale(1.04);
 }
 
+.question--row {
+  display: flex;
+  flex-direction: row;
+}
+
+.question--section {
+  flex: 1;
+  align-self: stretch;
+  margin: 1rem;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 576px) {
 
     .about-us--block p {
