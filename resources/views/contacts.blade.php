@@ -11,12 +11,12 @@
                         Aut cum doloribus laboriosam natus suscipit? Fugit iure labore perspiciatis sequi tenetur!</p>
                 </div>
                 <div>
-                    <p>Офис компании Tex.KG находится в г. Бишкек. Texmart.kg является информационным порталом, объединяющий текстильную промышленность Кыргызстана.
+                    <p>Офис компании Texmart.kg находится в г. Бишкек. Texmart.kg является информационным порталом, объединяющий текстильную промышленность Кыргызстана.
                         На этом портале Вы найдете долгосрочного партнера в швейно-текстильной сфере!</p>
                 </div>
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A95d8395382f6f742cb4d5dca4a8aa599cc96f478858d19aa2106e15d67bd6cd0&amp;source=constructor" width="700" height="400" frameborder="0"></iframe>
             </div>
-            <div class="container">
+            <div class="flex-column">
                 <table>
                     <tbody>
                     <tr>
