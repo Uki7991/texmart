@@ -358,6 +358,14 @@ p {
   transform: translateY(-50%);
 }
 
+.scale-on-hover {
+  transition: transform .2s ease-in;
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.04);
+}
+
 @media (min-width: 576px) {
 
     .about-us--block p {

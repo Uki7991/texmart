@@ -14,7 +14,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-auto">
-                <a href="{{ route('register') }}" class="btn btn-danger text-white rounded-0 btn-lg px-5 py-3 shadow-lg">Зарегистрируйтесь</a>
+                <a href="{{ route('register') }}" class="btn btn-danger text-white rounded-0 btn-lg px-5 py-3 shadow-lg scale-on-hover">Зарегистрируйтесь</a>
                 <p class="small mt-2 text-center font-italic text-muted">Для подробной информации свяжитесь с нами</p>
             </div>
         </div>
