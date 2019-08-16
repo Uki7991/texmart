@@ -16,16 +16,16 @@
             </ul>
 
             <ul class="navbar-nav mx-auto">
-                <li>
+                <li class="nav-scale">
                     <a href="http://texmart/workshop" class="nav-link text-white text-capitalize">Цеха</a>
                 </li>
-                <li>
+                <li class="nav-scale">
                     <a href="http://texmart/product" class="nav-link text-white text-capitalize">Продукции</a>
                 </li>
-                <li>
+                <li class="nav-scale">
                     <a href="http://texmart/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
-                <li>
+                <li class="nav-scale">
                     <a href="http://texmart/contacts" class="nav-link text-white text-capitalize">Контакты</a>
                 </li>
             </ul>
