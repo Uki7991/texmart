@@ -121,9 +121,7 @@
 
 @endsection
 @push("scripts")
-    <script src="{{ asset("js/owl.carousel.min.js") }}">
-
-    </script>
+    <script src="{{ asset("js/owl.carousel.min.js") }}"></script>
     <script>
         $('.owl-carousel').owlCarousel({
             loop:true,
@@ -140,7 +138,7 @@
                     items:5
                 }
             }
-        })
+        });
     </script>
 @endpush
 

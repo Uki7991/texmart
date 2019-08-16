@@ -337,7 +337,33 @@ body {
   padding-top: 80px;
 }
 
+p {
+  margin: 5px 0;
+}
+
+.about-us--image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.promo-container {
+  height: 100%;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
 @media (min-width: 576px) {
+
+    .about-us--block p {
+      flex: 1;
+    }
+
     .search-input {
         width: 100%;
     }
@@ -348,6 +374,17 @@ body {
 }
 
 @media (min-width: 768px) {
+    .about-us--block {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0;
+    }
+
+    .about-us--block--image-container {
+      flex: 1;
+      margin-right: 10px;
+    }
+
     .search-input {
         width: 100%;
     }
@@ -358,6 +395,10 @@ body {
 }
 
 @media (min-width: 992px) {
+    .about-us--block p {
+      flex: 2;
+    }
+
     .search-input {
         width: 200px !important;
     }
