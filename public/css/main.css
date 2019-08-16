@@ -366,6 +366,13 @@ p {
   transform: scale(1.04);
 }
 
+.nav-scale {
+    transition: transform .2s ease-in;
+}
+.nav-scale:hover{
+    transform: scale(1.1);
+}
+
 @media (min-width: 576px) {
 
     .about-us--block p {
