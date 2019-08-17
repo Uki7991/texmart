@@ -38,7 +38,7 @@
                         <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Вход') }}</a>
                     </li>
                     @if (Route::has('register'))
-                        <li class="nav-item">
+                        <li class="nav-item scale-on-hover">
                             <a class="nav-link btn btn-danger text-white rounded-0" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
                         </li>
                     @endif
