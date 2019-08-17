@@ -5,7 +5,7 @@
     <div class="question--row justify-content-center align-items-center py-2">
         <div class="question--section">
             <div class="card border-0">
-                <img src="{{ asset("img/priazha-nitki-dereviannyi-fon-raznotsvetie.jpg") }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset("img/sharon-mccutcheon-tn57JI3CewI-unsplash.jpg") }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay text-white text-center center-content">
                     <div>
@@ -51,9 +51,9 @@
                             class="fas fa-pencil-alt text-primary"></i> {{ __('Описание') }}</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Сотавте подробное описание"></textarea>
                 </div>
-                <div class="form-row">
-                    <div class="col">
-                        <button type="button" class="btn border border-dark shadow-sm rounded-pill mx-1 call-btn"> {{ __('Отправить') }} <i class="fas fa-envelope"></i></button>
+                <div class="btn-reg-form">
+                    <div class="col" >
+                        <button type="button" class="btn btn-danger text-white rounded-0 btn-lg px-5 py-2 shadow-lg scale-on-hover"> {{ __('Отправить') }}</button>
                     </div>
                 </div>
             </form>

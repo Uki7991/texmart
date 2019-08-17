@@ -44,26 +44,6 @@
 
                             </div>
                         </div>
-
-                        <div class="col-12 pt-5">
-                            <div class="description">
-                                {!! $production->description !!}
-                            </div>
-                        </div>
-
-                        <div class="col-12 pt-3">
-                            <h2 class="font-weight-light h4">Оборудование</h2>
-                            <div class="tools">
-                                <ul>
-                                    <li>Швейная машина: maestro 13</li>
-                                    <li>Закройная машина: model fr-12</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-12 pt-3">
-
-                            <div id="map" style="width: 600px; height: 400px"></div>
-                        </div>
                         <div class="col-12 pt-3">
                             <h2 class="font-weight-light h4">Галерея</h2>
                             <div class="gallery">
@@ -96,6 +76,25 @@
                                          alt="">
                                 </a>
                             </div>
+                        </div>
+
+                        <div class="col-12 pt-5">
+                            <div class="description">
+                                {!! $production->description !!}
+                            </div>
+                        </div>
+
+                        <div class="col-12 pt-3">
+                            <h2 class="font-weight-light h4">Оборудование</h2>
+                            <div class="tools">
+                                <ul>
+                                    <li>Швейная машина: maestro 13</li>
+                                    <li>Закройная машина: model fr-12</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <div id="map" style="width: 600px; height: 400px"></div>
                         </div>
                     </div>
                 </div>
