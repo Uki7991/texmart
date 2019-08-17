@@ -27,9 +27,6 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-primary scroll-top" data-scroll="up" type="button">
-        <i class="fa fa-chevron-up text-center"></i>
-    </button>
 
     <div class="container py-5">
         <div class="row align-items-center">
@@ -117,6 +114,9 @@
         </div>
     </div>
 
+    <button class="btn btn-danger scroll-top" data-scroll="up" type="button">
+        <i class="fa fa-chevron-up text-center"></i>
+    </button>
 
 
     @include('partials.modals.message_modal')
