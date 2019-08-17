@@ -389,6 +389,9 @@ p {
   align-self: stretch;
   margin: 1rem;
 }
+.info-contacts{
+    float:right;
+}
 
 .btn-reg-form{
     position: absolute;
