@@ -366,7 +366,6 @@ p {
   transform: scale(1.04);
 }
 
-<<<<<<< HEAD
 .question--row {
   display: flex;
   flex-direction: row;
@@ -382,13 +381,13 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-=======
+}
+
 .nav-scale {
     transition: transform .2s ease-in;
 }
 .nav-scale:hover{
     transform: scale(1.1);
->>>>>>> 41eeaea6210227e1b08f29198cd80290b67d3071
 }
 
 @media (min-width: 576px) {
