@@ -156,6 +156,16 @@ p, h1, h2, h3, h4, h5, h6{
     background-color: #ffed4a !important;
 }
 
+.promo-carousel-text {
+    bottom: -1px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
 .shadow-left {
     -webkit-box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.21) !important;
     -moz-box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.21) !important;

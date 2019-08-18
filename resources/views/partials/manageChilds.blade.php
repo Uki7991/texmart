@@ -6,7 +6,7 @@
                     <i class="fas fa-plus"></i>
                 @endif
                     <label class="m-0 p-0">
-                        <input type="checkbox" class="">
+                        <input type="checkbox" class="" data-id="{{ $child->id }}" data-title="{{ $child->title }}">
                         {{ $child->title }}
                     </label>
                 @if(count($child->childs))
@@ -20,7 +20,7 @@
                 @if(count($child->childs))
                     <i class="fas fa-plus"></i>
                 @endif
-                <a href="#" class="text-dark">{{ $child->title }}</a>
+                <a href="#{{ $child->title }}" class="text-dark">{{ $child->title }}</a>
                 @if(count($child->childs))
                     @include('manageChild',['childs' => $child->childs])
                 @endif
