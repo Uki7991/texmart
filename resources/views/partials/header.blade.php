@@ -23,11 +23,14 @@
                     <a href="/product" class="nav-link text-white text-capitalize">Продукции</a>
                 </li>
                 <li class="nav-scale">
+                    <a href="" class="nav-link text-white text-capitalize">Услуги</a>
+                </li>
+                <li class="nav-scale">
                     <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
-{{--                <li class="nav-scale">--}}
-{{--                    <a href="/contacts" class="nav-link text-white text-capitalize">Контакты</a>--}}
-{{--                </li>--}}
+                <li class="nav-scale">
+                    <a href="" class="nav-link text-white text-capitalize">Форум</a>
+                </li>
                 <li class="nav-scale" style="background-color: #e3342f;">
                     <a href="tel:+996 508 900 500" class="nav-link text-white text-capitalize">+996 508 900 500</a>
                 </li>
