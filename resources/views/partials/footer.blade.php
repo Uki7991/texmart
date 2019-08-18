@@ -23,7 +23,7 @@
                 <a href="" class="nav-link text-dark small d-flex ">
                     <i class="fas fa-phone-alt fa-lg p-1">&nbsp;</i>&nbsp;
                     <div>
-                        <p class="mb-1 font-weight-bold">0508900500</p>
+                        <p class="mb-1 font-weight-bold">+996508900500</p>
                         <p class="m-0 text-muted">Пн. – Вc.: с 10:00 до 20:00 (+6 GMT)</p>
                     </div>
                 </a>
