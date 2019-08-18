@@ -25,7 +25,7 @@
                         <input type="text"
                                class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror"
                                name="name" value="{{ old('name') }}" required autocomplete="name"
-                               autofocus id="firstName" placeholder="Иван">
+                               id="firstName" placeholder="Иван">
                     </div>
                 </div>
                 <div class="form-group">

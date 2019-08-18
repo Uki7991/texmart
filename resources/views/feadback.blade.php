@@ -23,8 +23,8 @@
                                         </label>
                                         <input type="text"
                                                class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror"
-                                               name="name" value="{{ old('name') }}" required autocomplete="name"
-                                               autofocus id="firstName" placeholder="Иван">
+                                               name="name" value="{{ old('name') }}" required
+                                               id="firstName" placeholder="Иван">
                                     </div>
                                     <div class="col">
                                         <label for="firstName"><i
@@ -32,7 +32,7 @@
                                         <input type="text"
                                                class="form-control rounded-pill shadow-sm @error('lastname') is-invalid @enderror"
                                                name="lastname" value="{{ old('lastname') }}" required
-                                               autocomplete="lastname" id="lastName" placeholder="Медведев">
+                                               id="lastName" placeholder="Медведев">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -41,7 +41,7 @@
                                     </label>
                                     <input type="text"
                                            class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
-                                           name="phone" value="{{ old('phone') }}" required autocomplete="phone"
+                                           name="phone" value="{{ old('phone') }}" required
                                            id="phone-number" placeholder="Phone Number">
                                 </div>
                                 <div class="form-group">
@@ -49,7 +49,7 @@
                                             class="fas fa-envelope text-primary"></i> {{ __('E-Mail') }}</label>
                                     <input type="email"
                                            class="form-control rounded-pill shadow-sm @error('email') is-invalid @enderror"
-                                           name="email" value="{{ old('email') }}" required autocomplete="email"
+                                           name="email" value="{{ old('email') }}" required
                                            id="exampleFormControlInput1"
                                            placeholder="name@example.com">
                                 </div>
