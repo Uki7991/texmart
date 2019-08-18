@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Requests\ProductionStoreRequest;
 use App\Production;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ProductionController extends Controller
 {
@@ -41,20 +43,18 @@ class ProductionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductionStoreRequest $request)
     {
+        $validated = $request->validated();
+//        dd($request);
         $lng = 0;
         $lat = 0;
 
-        if ($request->latitude && $request->longtitude) {
-            $lat = (float) $request->latitude;
-            $lng = (float) $request->longtitude;
+        $production = Production::create($validated);
 
-        } else {
-            return redirect()->back();
-        }
+        return redirect()->back();
 
-        return DB::raw("ST_GeomFromText('POINT({$lng} {$lat})')");
+//        return DB::raw("ST_GeomFromText('POINT({$lng} {$lat})')");
     }
 
     /**

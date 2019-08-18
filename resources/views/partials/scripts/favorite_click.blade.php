@@ -3,6 +3,7 @@
         e.preventDefault();
         let btn = $(e.currentTarget);
         let id = btn.data('id');
+        console.log(id);
         $.ajax({
             method: "POST",
             url: '{{ route('production.favorite') }}',

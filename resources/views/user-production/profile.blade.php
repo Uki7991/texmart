@@ -49,4 +49,11 @@
         </div>
     </div>
 
-@stop
+@endsection
+
+@push('scripts')
+
+    @include('partials.scripts.favorite_click')
+    @include('partials.scripts.favorite_btn')
+    @include('partials.scripts.call_btn')
+@endpush
