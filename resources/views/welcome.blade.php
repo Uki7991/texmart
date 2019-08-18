@@ -59,19 +59,25 @@
     <div class="container">
         <div class="row justify-content-center py-4">
             <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 pl-4 ">Производственные цеха и фабрики</p>
+                <p class="font-weight-bold text-uppercase m-0 pl-4 ">
+                    <a href="{{ route('productions.index') }}" class="text-dark">Производственные цеха и фабрики</a>
+                </p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
             </div>
             <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 pl-4">Товары</p>
+                <p class="font-weight-bold text-uppercase m-0 pl-4">
+                    <a href="{{ route('productions.index') }}" class="text-dark">Товары</a>
+                </p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
             </div>
             <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 pl-4 ">Услуги</p>
+                <p class="font-weight-bold text-uppercase m-0 pl-4">
+                    <a href="{{ route('productions.index') }}" class="text-dark">Услуги</a>
+                </p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
