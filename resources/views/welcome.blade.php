@@ -135,7 +135,27 @@
 @push("scripts")
     <script src="{{ asset("js/owl.carousel.min.js") }}"></script>
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('.promo-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            },
+            dots:false,
+            navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>']
+        });
+        $('.productions').owlCarousel({
             loop: true,
             autoplay: true,
             autoplayTimeout:2000,
