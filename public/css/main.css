@@ -416,6 +416,10 @@ p {
 .info-contacts{
     float:right;
 }
+.border-25{
+    border-left-width: 25px !important;
+}
+
 
 .btn-reg-form{
     position: absolute;
