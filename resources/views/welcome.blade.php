@@ -149,7 +149,8 @@
                 1000: {
                     items: 5
                 }
-            }
+            },
+            navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>']
         });
     </script>
 
