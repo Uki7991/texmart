@@ -28,6 +28,9 @@
                 <li class="nav-scale">
                     <a href="http://texmart/contacts" class="nav-link text-white text-capitalize">Контакты</a>
                 </li>
+                <li class="nav-scale ">
+                    <a href="tel:+996508900500" class="nav-link text-white text-capitalize">+996508900500</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
