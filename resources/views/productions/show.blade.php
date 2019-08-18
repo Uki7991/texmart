@@ -93,9 +93,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-12 pt-3">
-                            <div id="map" style="width: 600px; height: 400px"></div>
-                        </div>
+                        @if(count($production->getCoordinates()))
+                            <div class="col-12 pt-3">
+                                <div id="map" style="width: 600px; height: 400px"></div>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -117,24 +119,25 @@
 @endpush
 
 @push('scripts')
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU" type="text/javascript">
-    </script>
-    <script type="text/javascript">
-        ymaps.ready(init);
-        function init(){
-            let production= new ymaps.Placemark(['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
-                {}, {
-                    preset: 'islands#icon',
-                    color: '#0095b6'
+    @if(count($production->getCoordinates()))
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU" type="text/javascript"></script>
+        <script type="text/javascript">
+            ymaps.ready(init);
+            function init(){
+                let production= new ymaps.Placemark(['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
+                    {}, {
+                        preset: 'islands#icon',
+                        color: '#0095b6'
+                    });
+                var myMap = new ymaps.Map("map", {
+                    center: [42.865388923088396, 74.60104350048829],
+                    zoom: 13
                 });
-            var myMap = new ymaps.Map("map", {
-                center: [42.865388923088396, 74.60104350048829],
-                zoom: 13
-            });
-            myMap.geoObjects.add(production);
-            myMap.setBounds(myMap.geoObjects().getBounds());
-        }
-    </script>
+                myMap.geoObjects.add(production);
+                myMap.setBounds(myMap.geoObjects().getBounds());
+            }
+        </script>
+    @endif
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script>
