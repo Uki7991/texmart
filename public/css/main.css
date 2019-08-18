@@ -374,10 +374,6 @@ body {
   padding-top: 80px;
 }
 
-p {
-  margin: 5px 0;
-}
-
 .about-us--image {
   object-fit: cover;
   height: 100%;
