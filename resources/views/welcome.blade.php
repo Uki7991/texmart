@@ -85,7 +85,7 @@
     <div class="pt-5">
         <div class="card-group">
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/business-document-signing (2).jpg') }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset('img/evaluation-quality-control-wine-taster-wine-alcoholic-drink.jpg') }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
