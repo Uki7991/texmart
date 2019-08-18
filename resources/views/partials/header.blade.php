@@ -17,18 +17,18 @@
 
             <ul class="navbar-nav mx-auto">
                 <li class="nav-scale">
-                    <a href="http://texmart/workshop" class="nav-link text-white text-capitalize">Цеха</a>
+                    <a href="/workshop" class="nav-link text-white text-capitalize">Цеха</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="http://texmart/product" class="nav-link text-white text-capitalize">Продукции</a>
+                    <a href="/product" class="nav-link text-white text-capitalize">Продукции</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="http://texmart/about" class="nav-link text-white text-capitalize">О нас</a>
+                    <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="http://texmart/contacts" class="nav-link text-white text-capitalize">Контакты</a>
+                    <a href="/contacts" class="nav-link text-white text-capitalize">Контакты</a>
                 </li>
-                <li class="nav-scale ">
+                <li class="nav-scale" style="background-color: #e3342f;">
                     <a href="tel:+996508900500" class="nav-link text-white text-capitalize">+996508900500</a>
                 </li>
             </ul>
