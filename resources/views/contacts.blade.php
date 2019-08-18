@@ -33,7 +33,7 @@
                             <i class="fas fa-clock p-1"></i>
                             <div>
                                 <p class="m-0 p-0 ml-2 font-weight-bold">Режим работы</p>
-                                <p class="m-0 p-0 ml-2 text-muted">12:00 - 18:00</p>
+                                <p class="m-0 p-0 ml-2 text-muted">9:00 - 18:00</p>
                             </div>
                     </div>
                 </div>

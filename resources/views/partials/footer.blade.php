@@ -24,7 +24,7 @@
                     <i class="fas fa-phone-alt fa-lg p-1">&nbsp;</i>&nbsp;
                     <div>
                         <p class="mb-1 font-weight-bold">+996508900500</p>
-                        <p class="m-0 text-muted">Пн. – Вc.: с 10:00 до 20:00 (+6 GMT)</p>
+                        <p class="m-0 text-muted">Пн. – Вc.: с 9:00 до 18:00 (+6 GMT)</p>
                     </div>
                 </a>
             </li>
