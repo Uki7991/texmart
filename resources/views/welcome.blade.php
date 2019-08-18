@@ -89,8 +89,8 @@
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
-                        <a class="font-weight-bold h3 text-white position-absolute text-center w-100 nav-scale"
-                           style="bottom: 10%;" href="http://texmart/consulting">Консалтинг</a>
+                        <a class="h3 text-white position-absolute text-center w-75 bg-warning px-2 py-2 m-0 "
+                           style="bottom: 20%;" href="http://texmart/consulting">Консалтинг</a>
                     </div>
                 </div>
             </div>
@@ -99,8 +99,8 @@
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
-                        <a class="font-weight-bold h3 text-white position-absolute text-center w-100 nav-scale"
-                           style="bottom: 10%;" href="http://texmart/logistic">Логистика</a>
+                        <a class="h3 text-white position-absolute text-center w-75 bg-texmart-blue px-2 py-2 m-0"
+                           style="bottom: 20%;" href="http://texmart/logistic">Логистика</a>
                     </div>
                 </div>
             </div>
@@ -109,8 +109,8 @@
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
-                        <a class="font-weight-bold h3 text-white position-absolute text-center w-100 nav-scale"
-                           style="bottom: 10%;" href="http://texmart/quality">Контроль качества</a>
+                        <a class="h3 text-white position-absolute text-center w-75 bg-texmart-green px-2 py-2 m-0"
+                           style="bottom: 20%;" href="http://texmart/quality">Контроль качества</a>
                     </div>
                 </div>
             </div>
