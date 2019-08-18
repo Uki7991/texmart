@@ -416,6 +416,16 @@ body.bg-white {
 /*    border-left-width: 25px !important;*/
 /*}*/
 
+.bg-warning-50 {
+    background-color: #ffed4a75 !important;
+}
+
+.bg-texmart-blue-50{
+    background-color: #11ABC175 !important;
+}
+.bg-texmart-green-50{
+    background-color: #4BAC3F75 !important;
+}
 
 .btn-reg-form{
     position: absolute;

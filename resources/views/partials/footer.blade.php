@@ -2,17 +2,17 @@
     <div class="col-12 col-sm-4 col-md-3 col-lg-2 col-xl-2">
         <h5>О компании</h5>
         <nav class="nav flex-column">
-            <a class="nav-link text-dark small nav-scale" href="http://texmart/about"><i class="fa fa-angle-double-right"></i> О нас</a>
+            <a class="nav-link text-dark small nav-scale" href="/about"><i class="fa fa-angle-double-right"></i> О нас</a>
             <a class="nav-link text-dark small nav-scale" href="#"><i class="fa fa-angle-double-right"></i> Отзывы</a>
             <a class="nav-link text-dark small nav-scale" href="#"><i class="fa fa-angle-double-right"></i> Преимущества</a>
-            <a class="nav-link text-dark small nav-scale" href="http://texmart/contacts"><i class="fa fa-angle-double-right"></i> Контакты</a>
+            <a class="nav-link text-dark small nav-scale" href="/contacts"><i class="fa fa-angle-double-right"></i> Контакты</a>
         </nav>
     </div>
     <div class="col-12 col-sm-4 col-md-3">
         <h5>Сервис и поддержка</h5>
         <nav class="nav flex-column">
-            <a class="nav-link text-dark small nav-scale" href="http://texmart/privacy"><i class="fa fa-angle-double-right"></i> Политика Конфидециальности</a>
-            <a class="nav-link text-dark small nav-scale" href="http://texmart/conditions"><i class="fa fa-angle-double-right"></i> Условия использования сайта</a>
+            <a class="nav-link text-dark small nav-scale" href="/privacy"><i class="fa fa-angle-double-right"></i> Политика Конфидециальности</a>
+            <a class="nav-link text-dark small nav-scale" href="/conditions"><i class="fa fa-angle-double-right"></i> Условия использования сайта</a>
             <a class="nav-link text-dark small nav-scale" href="#"><i class="fa fa-angle-double-right"></i> Link</a>
         </nav>
     </div>
