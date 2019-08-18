@@ -57,8 +57,6 @@ class LoginController extends Controller
             $existingUser = User::where('email', Str::slug($user->name))->where('social_type', $provider)->where('social_id', $user->id)->get()->first();
         }
 
-        dd([$user, $existingUser]);
-
         if ($existingUser) {
             auth()->login($existingUser, true);
         } else {
