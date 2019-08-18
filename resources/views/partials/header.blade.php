@@ -25,11 +25,11 @@
                 <li class="nav-scale">
                     <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
-                <li class="nav-scale">
-                    <a href="/contacts" class="nav-link text-white text-capitalize">Контакты</a>
-                </li>
+{{--                <li class="nav-scale">--}}
+{{--                    <a href="/contacts" class="nav-link text-white text-capitalize">Контакты</a>--}}
+{{--                </li>--}}
                 <li class="nav-scale" style="background-color: #e3342f;">
-                    <a href="tel:+996508900500" class="nav-link text-white text-capitalize">+996508900500</a>
+                    <a href="tel:+996 508 900 500" class="nav-link text-white text-capitalize">+996 508 900 500</a>
                 </li>
             </ul>
 
