@@ -55,19 +55,19 @@
     <div class="container">
         <div class="row justify-content-center py-4">
             <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 border-left pl-4 ">Производственные цеха и фабрики</p>
+                <p class="font-weight-bold text-uppercase m-0 pl-4 ">Производственные цеха и фабрики</p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
             </div>
             <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 border-left pl-4">Товары</p>
+                <p class="font-weight-bold text-uppercase m-0 pl-4">Товары</p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
             </div>
             <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 border-left pl-4 ">Услуги</p>
+                <p class="font-weight-bold text-uppercase m-0 pl-4 ">Услуги</p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
