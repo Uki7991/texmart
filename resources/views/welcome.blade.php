@@ -54,20 +54,20 @@
     </div>
     <div class="container">
         <div class="row justify-content-center py-4">
-            <div class="col-12 text-center">
-                <h2 class="font-weight-bold text-underline pb-3">Производственные цеха и фабрики</h2>
+            <div class="col-12">
+                <p class="font-weight-bold text-uppercase m-0 border-left pl-4 border-warning border-25">Производственные цеха и фабрики</p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
             </div>
-            <div class="col-12 text-center">
-                <h2 class="font-weight-bold text-underline pb-3">Товары</h2>
+            <div class="col-12">
+                <p class="font-weight-bold text-uppercase m-0 border-left pl-4 border-texmart-green border-25">Товары</p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
             </div>
-            <div class="col-12 text-center">
-                <h2 class="font-weight-bold text-underline pb-3">Услуги</h2>
+            <div class="col-12">
+                <p class="font-weight-bold text-uppercase m-0 border-left pl-4 border-texmart-blue border-25">Услуги</p>
             </div>
             <div class="col-12 mt-3">
                 @include('productions.carousel')
