@@ -20,7 +20,7 @@ class ProductionObserver
         $production->user_id = auth()->user()->id;
 
         $production->coordinates = null;
-        if ($longtitude = request('latitude') && $latitude = request('longtitude')) {
+        if (($longtitude = request('latitude')) && ($latitude = request('longtitude'))) {
             $lat = (float) $latitude;
             $lng = (float) $longtitude;
             $production->coordinates = DB::raw("ST_GeomFromText('POINT({$lng} {$lat})')");
@@ -33,7 +33,7 @@ class ProductionObserver
                 $image = ImageManagerStatic::make($image)
                     ->stream('jpg', 40);
 
-                Storage::disk('local')->put('productions/'.$fileName, $image);
+                Storage::disk('local')->put('public/productions/'.$fileName, $image);
                 $imagesArray[] = $fileName;
             }
         }

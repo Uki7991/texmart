@@ -49,6 +49,8 @@
         </div>
     </div>
 
+    @include('partials.modals.message_modal')
+
 @endsection
 
 @push('scripts')

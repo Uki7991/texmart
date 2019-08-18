@@ -122,7 +122,7 @@
     <script type="text/javascript">
         ymaps.ready(init);
         function init(){
-            let production= new ymaps.Placemark(['{{ $production->getCoordinates()[0]["lat"] }}', '{{ $production->getCoordinates()[0]["lng"] }}'],
+            let production= new ymaps.Placemark(['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
                 {}, {
                     preset: 'islands#icon',
                     color: '#0095b6'
