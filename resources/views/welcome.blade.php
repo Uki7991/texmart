@@ -32,8 +32,12 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-12 col-sm-8 col-lg-7">
-                <iframe class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/Ws65T4DPuT0"
-                        frameborder="0"
+{{--                <iframe class="w-100 youtube-player" height="200"--}}
+{{--                        src="https://www.youtube.com/watch?v=xTYkmWnwLvg&t=31s"--}}
+{{--                        frameborder="0"--}}
+{{--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"--}}
+{{--                        allowfullscreen></iframe>--}}
+                <iframe class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/xTYkmWnwLvg" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
             </div>
@@ -85,7 +89,8 @@
     <div class="pt-5">
         <div class="card-group">
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/evaluation-quality-control-wine-taster-wine-alcoholic-drink.jpg') }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset('img/evaluation-quality-control-wine-taster-wine-alcoholic-drink.jpg') }}"
+                     class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -138,8 +143,8 @@
         $('.promo-carousel').owlCarousel({
             loop: true,
             autoplay: true,
-            autoplayTimeout:2000,
-            autoplayHoverPause:true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
             nav: true,
             responsive: {
                 0: {
@@ -152,14 +157,14 @@
                     items: 1
                 }
             },
-            dots:false,
-            navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>']
+            dots: false,
+            navText: ['<i class="fas fa-arrow-left" aria-hidden="true"></i>', '<i class="fas fa-arrow-right" aria-hidden="true"></i>']
         });
         $('.productions').owlCarousel({
             loop: true,
             autoplay: true,
-            autoplayTimeout:2000,
-            autoplayHoverPause:true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
             margin: 10,
             nav: true,
             responsive: {
@@ -173,7 +178,7 @@
                     items: 5
                 }
             },
-            navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>']
+            navText: ['<i class="fas fa-arrow-left" aria-hidden="true"></i>', '<i class="fas fa-arrow-right" aria-hidden="true"></i>']
         });
     </script>
 
