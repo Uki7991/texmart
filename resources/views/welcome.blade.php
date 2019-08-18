@@ -95,7 +95,7 @@
                 <div class="card-img-overlay p-0">
                     <div class="">
                         <a class="h3 text-white position-absolute text-center w-75 bg-warning-50 px-2 py-2 m-0 "
-                           style="bottom: 20%;" href="http://texmart/consulting">Консалтинг</a>
+                           style="bottom: 20%;" href="/consulting">Консалтинг</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                 <div class="card-img-overlay p-0">
                     <div class="">
                         <a class="h3 text-white position-absolute text-center w-75 bg-texmart-blue-50 px-2 py-2 m-0"
-                           style="bottom: 20%;" href="http://texmart/logistic">Логистика</a>
+                           style="bottom: 20%;" href="/logistic">Логистика</a>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                 <div class="card-img-overlay p-0">
                     <div class="">
                         <a class="h3 text-white position-absolute text-center w-75 bg-texmart-green-50 px-2 py-2 m-0"
-                           style="bottom: 20%;" href="http://texmart/quality">Контроль качества</a>
+                           style="bottom: 20%;" href="/quality">Контроль качества</a>
                     </div>
                 </div>
             </div>
