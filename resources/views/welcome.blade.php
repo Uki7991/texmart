@@ -32,7 +32,7 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-12 col-sm-8 col-lg-7">
-                <iframe class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/Ws65T4DPuT0"
+                <iframe class="w-100 youtube-player" height="200" src="https://youtu.be/xTYkmWnwLvg"
                         frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
