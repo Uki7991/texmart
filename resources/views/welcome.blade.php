@@ -135,9 +135,11 @@
 
     @include('partials.modals.message_modal')
 
-
 @endsection
 @push("scripts")
+    @include('partials.scripts.favorite_click')
+    @include('partials.scripts.favorite_btn')
+    @include('partials.scripts.call_btn')
     <script src="{{ asset("js/owl.carousel.min.js") }}"></script>
     <script>
         $('.promo-carousel').owlCarousel({
