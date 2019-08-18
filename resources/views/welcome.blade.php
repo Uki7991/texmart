@@ -85,7 +85,7 @@
     <div class="pt-5">
         <div class="card-group">
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/business-document-signing (2).jpg') }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset('img/evaluation-quality-control-wine-taster-wine-alcoholic-drink.jpg') }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -135,7 +135,27 @@
 @push("scripts")
     <script src="{{ asset("js/owl.carousel.min.js") }}"></script>
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('.promo-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            },
+            dots:false,
+            navText : ['<i class="fas fa-arrow-left" aria-hidden="true"></i>','<i class="fas fa-arrow-right" aria-hidden="true"></i>']
+        });
+        $('.productions').owlCarousel({
             loop: true,
             autoplay: true,
             autoplayTimeout:2000,

@@ -108,7 +108,7 @@ p, h1, h2, h3, h4, h5, h6{
     color: #f39c12 !important;
 }
 
-.owl-prev {
+.productions .owl-prev {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -120,12 +120,36 @@ p, h1, h2, h3, h4, h5, h6{
     background-color: #ffed4a !important;
 }
 
-.owl-next {
+.productions .owl-next {
     width: 30px;
     height: 30px;
     position: absolute;
     top: 40%;
     right: -40px;
+    display: block !important;
+    border:1px solid #ffed4a !important;
+    border-radius: 50%;
+    background-color: #ffed4a !important;
+}
+
+.promo-carousel .owl-prev {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    display: block !important;
+    border:1px solid #ffed4a !important;
+    border-radius: 50%;
+    background-color: #ffed4a !important;
+}
+
+.promo-carousel .owl-next {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40%;
+    right: 30px;
     display: block !important;
     border:1px solid #ffed4a !important;
     border-radius: 50%;
