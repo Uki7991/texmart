@@ -16,27 +16,26 @@
                         На этом портале Вы найдете долгосрочного партнера в швейно-текстильной сфере!
                         <br>
                     </p>
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td><i class="fa fa-phone-alt fa-2x">&nbsp;</i></td>
-                            <td><p>0508900500</p></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-map-marker-alt fa-2x" aria-hidden="true">&nbsp;</i></td>
-                            <td><p>Кыргызстан, г. Бишкек,
-                                    ул. Тоголока Молдо 104</p></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-envelope fa-2x" aria-hidden="true">&nbsp;</i></td>
-                            <td><p>support@texmart.kg</p></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa fa-clock fa-2x" aria-hidden="true">&nbsp;</i></td>
-                            <td><p>Режим работы</p></td>
-                        </tr>
-                        </tbody>
-                    </table>
+
+                    <div class="col-12 d-flex mb-3">
+                            <i class="fas fa-phone p-1"></i>
+                            <p class="m-0 p-0 ml-2">+996 508 900 500</p>
+                    </div>
+                    <div class="col-12 d-flex mb-3">
+                            <i class="fas fa-map-marker-alt p-1"></i>
+                            <p class="m-0 p-0 ml-2">Кыргызстан, г. Бишкек, ул. Тоголока Молдо 104</p>
+                    </div>
+                    <div class="col-12 d-flex mb-3">
+                            <i class="fas fa-envelope p-1"></i>
+                            <p class="m-0 p-0 ml-2">support@texmart.kg</p>
+                    </div>
+                    <div class="col-12 d-flex mb-3">
+                            <i class="fas fa-clock p-1"></i>
+                            <div>
+                                <p class="m-0 p-0 ml-2 font-weight-bold">Режим работы</p>
+                                <p class="m-0 p-0 ml-2 text-muted">12:00 - 18:00</p>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
