@@ -81,6 +81,10 @@
     border-color: #4BAC3F !important;
 }
 
+.bg-white-75 {
+    background-color: #ffffffbf !important;
+}
+
 .feature-logo {
     width: 40px;
     height: auto;
