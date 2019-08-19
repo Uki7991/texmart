@@ -35,7 +35,7 @@
                     <input type="text"
                            class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
                            name="phone" value="{{ old('phone') }}" required autocomplete="phone"
-                           id="phone-number" placeholder="Phone Number">
+                           id="phone-number" placeholder="+996707400200">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1"><i
@@ -49,10 +49,10 @@
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1"><i
                             class="fas fa-pencil-alt text-primary"></i> {{ __('Описание') }}</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Сотавте подробное описание"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Соcтавьте подробное описание"></textarea>
                 </div>
                 <div class="btn-reg-form">
-                    <div class="col" >
+                    <div class="col-12">
                         <button type="button" class="btn btn-danger text-white rounded-0 btn-lg px-5 py-2 shadow-lg scale-on-hover"> {{ __('Отправить') }}</button>
                     </div>
                 </div>

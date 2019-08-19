@@ -22,7 +22,7 @@
             <li class="nav-item ">
                 <a href="" class="nav-link text-dark small d-flex ">
                     <i class="fas fa-phone-alt fa-lg p-1">&nbsp;</i>&nbsp;
-                    <div>
+                    <div class="col-12">
                         <p class="mb-1 font-weight-bold">+996508900500</p>
                         <p class="m-0 text-muted">Пн. – Вc.: с 9:00 до 18:00 (+6 GMT)</p>
                     </div>
@@ -31,7 +31,7 @@
             <li class="nav-item ">
                 <a href="" class="nav-link text-dark small d-flex ">
                     <i class="fas fa-map-marker-alt fa-lg p-1">&nbsp;</i>&nbsp;
-                    <div>
+                    <div class="col-12">
                         <p class="mb-1 font-weight-bold">Кыргызстан, г. Бишкек,
                             ул. Тоголока Молдо 104</p>
                     </div>
@@ -39,8 +39,9 @@
             </li>
             <li class="nav-item ">
                 <a href="" class="nav-link text-dark small d-flex ">
-                    <i class="fas fa-envelope fa-lg p-1">&nbsp;</i>&nbsp;
-                    <div>
+
+                        <i class="col fas fa-envelope fa-lg p-1">&nbsp;</i>&nbsp;
+                    <div class="col-12">
                         <p class="mb-1 font-weight-bold">support@texmart.kg</p>
                     </div>
                 </a>

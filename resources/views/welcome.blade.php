@@ -4,7 +4,6 @@
 
     @include('partials.promo')
 
-
     <div class="container-fluid my-5">
         <div class="row">
             @include('partials.feature')
@@ -32,11 +31,6 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-12 col-sm-8 col-lg-7">
-{{--                <iframe class="w-100 youtube-player" height="200"--}}
-{{--                        src="https://www.youtube.com/watch?v=xTYkmWnwLvg&t=31s"--}}
-{{--                        frameborder="0"--}}
-{{--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"--}}
-{{--                        allowfullscreen></iframe>--}}
                 <iframe class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/xTYkmWnwLvg" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -134,7 +128,7 @@
         </div>
     </div>
 
-    <button class="btn btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
+    <button class="col-12 btn btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
         <i class="fa fa-chevron-up text-center"></i>
     </button>
 
