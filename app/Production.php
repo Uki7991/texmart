@@ -16,7 +16,7 @@ class Production extends Model
     use RateableTrait;
     use Spatial;
 
-    protected $fillable = ['title', 'address', 'excerpt', 'description', 'phone1', 'phone2', 'email', 'site'];
+    protected $fillable = ['title', 'address', 'excerpt', 'description', 'phone1', 'phone2', 'email', 'site', 'type'];
 
     protected $spatial = ['coordinates'];
     protected $casts = ['images'];

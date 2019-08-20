@@ -53,8 +53,23 @@
 
 @endsection
 
-@push('scripts')
+@push('styles')
+{{--    <link rel="stylesheet" href="{{ asset('css/selectize.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('css/selectize.default.css') }}">
+@endpush
 
+@push('scripts')
+    <script src="{{ asset('js/standalone/selectize.min.js') }}"></script>
+    <script src="{{ asset('js/selectize.min.js') }}"></script>
+    <script>
+        $('#categories-multi').selectize({
+            plugins: ['remove_button']
+        });
+        $('#categories-service').selectize({
+        });
+        $('#categories-product').selectize({
+        });
+    </script>
     @include('partials.scripts.favorite_click')
     @include('partials.scripts.favorite_btn')
     @include('partials.scripts.call_btn')

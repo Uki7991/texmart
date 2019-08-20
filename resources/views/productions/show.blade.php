@@ -128,7 +128,7 @@
         $(function () {
 
             $("#rateYo").rateYo({
-                rating: 2,
+                rating: '{{ $production->rating }}',
                 halfStar: true,
                 starWidth: "20px"
             }).on("rateyo.set", function (e, data) {

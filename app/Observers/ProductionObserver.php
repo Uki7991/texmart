@@ -48,7 +48,9 @@ class ProductionObserver
      */
     public function created(Production $production)
     {
-        //
+        if ($categories = request('categories')) {
+            $production->categories()->sync($categories);
+        }
     }
 
     /**

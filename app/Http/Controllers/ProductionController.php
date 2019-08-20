@@ -46,15 +46,10 @@ class ProductionController extends Controller
     public function store(ProductionStoreRequest $request)
     {
         $validated = $request->validated();
-//        dd($request);
-        $lng = 0;
-        $lat = 0;
 
         $production = Production::create($validated);
 
         return redirect()->back();
-
-//        return DB::raw("ST_GeomFromText('POINT({$lng} {$lat})')");
     }
 
     /**
@@ -116,9 +111,12 @@ class ProductionController extends Controller
     public function rate(Request $request) {
         $production = Production::find($request->id);
         $rating = $request->rating;
+        $production->rating = $rating;
+        $production->save();
 
         $production->rate()->give($rating)->by(Auth::user());
+        $production->save();
 
-        return response()->json(['production' => $production]);
+        return response()->json(['production' => $production->only(['id', 'title', 'rating'])]);
     }
 }
