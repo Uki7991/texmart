@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md fixed-top navbar-{{ $theme ?? 'light' }} bg-texmart-orange shadow-sm " id="header">
+<nav class="navbar navbar-expand-xl fixed-top navbar-{{ $theme ?? 'light' }} bg-texmart-orange shadow-sm " id="header">
     <div class="container-fluid">
         <a class="navbar-brand position-relative" href="{{ url('/') }}">
             <img src="{{ asset('img/logo.png') }}" class="img-fluid" width="200" height="auto" alt="">
@@ -17,13 +17,13 @@
 
             <ul class="navbar-nav mx-auto">
                 <li class="nav-scale">
-                    <a href="/workshop" class="nav-link text-white text-capitalize">Цеха</a>
+                    <a href="{{ route('productions.index', ['filter' => 'productions']) }}" class="nav-link text-white text-capitalize">Цеха</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="/product" class="nav-link text-white text-capitalize">Продукции</a>
+                    <a href="{{ route('productions.index', ['filter' => 'products']) }}" class="nav-link text-white text-capitalize">Продукции</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="" class="nav-link text-white text-capitalize">Услуги</a>
+                    <a href="{{ route('productions.index', ['filter' => 'service']) }}" class="nav-link text-white text-capitalize">Услуги</a>
                 </li>
                 <li class="nav-scale">
                     <a href="/about" class="nav-link text-white text-capitalize">О нас</a>

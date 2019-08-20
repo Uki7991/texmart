@@ -20,7 +20,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item my-2">
-                                    <a href="#" class="text-secondary">
+                                    <a href="{{ route('google.redirect', 'google') }}" class="text-secondary">
                                         <i class="fab fa-google fa-lg"></i>
                                     </a>
                                 </li>

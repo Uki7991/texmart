@@ -44,17 +44,21 @@
 
                             </div>
                         </div>
+                        @if(json_decode($production->images))
+
                         <div class="col-12 pt-3">
                             <h2 class="font-weight-light h4">Галерея</h2>
                             <div class="gallery">
-                                @foreach(json_decode($production->images) as $image)
-                                    <a href="{{ asset('storage/productions/'.$image) }}" data-lightbox="gallery">
-                                        <img src="{{ asset('storage/productions/'.$image) }}" height="80" width="auto"
-                                             alt="">
-                                    </a>
-                                @endforeach
+                                    @foreach(json_decode($production->images) as $image)
+                                        <a href="{{ asset('storage/productions/'.$image) }}" data-lightbox="gallery">
+                                            <img src="{{ asset('storage/productions/'.$image) }}" height="80" width="auto"
+                                                 alt="">
+                                        </a>
+                                    @endforeach
                             </div>
                         </div>
+                        @endif
+
 
                         <div class="col-12 pt-5">
                             <div class="description">

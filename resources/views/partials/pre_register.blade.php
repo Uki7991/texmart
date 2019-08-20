@@ -2,8 +2,8 @@
     <h2 class="text-center">
         <i class="fas fa-check text-texmart-orange"></i> Задайте вопрос
     </h2>
-    <div class="question--row justify-content-center align-items-center py-2">
-        <div class="question--section">
+    <div class="row justify-content-center align-items-center py-2">
+        <div class="col-12 col-lg-6">
             <div class="card border-0">
                 <img src="{{ asset("img/sharon-mccutcheon-tn57JI3CewI-unsplash.jpg") }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
@@ -16,7 +16,7 @@
             </div>
 
         </div>
-        <div class="question--section py-5 border shadow-sm col-sm-12">
+        <div class="col-12 col-lg-6 py-5 border shadow-sm col-sm-12">
             <form>
                 <div class="form-row">
                     <div class="col">
@@ -51,11 +51,7 @@
                             class="fas fa-pencil-alt text-primary"></i> {{ __('Описание') }}</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Соcтавьте подробное описание"></textarea>
                 </div>
-                <div class="btn-reg-form">
-                    <div class="col-12">
-                        <button type="button" class="btn btn-danger text-white rounded-0 btn-lg px-5 py-2 shadow-lg scale-on-hover"> {{ __('Отправить') }}</button>
-                    </div>
-                </div>
+                <button type="button" class="btn btn-danger text-white rounded-0 btn-lg px-5 py-2 shadow-lg scale-on-hover"> {{ __('Отправить') }}</button>
             </form>
         </div>
     </div>

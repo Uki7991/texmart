@@ -73,6 +73,6 @@ class FavoriteController extends Controller
             return response()->json(['status' => 'error', 'message' => 'Production not found']);
         }
 
-        return response()->json(['status' => 'success', 'production' => $production, 'isFavorited' => $production->isFavorited($request->user_id), 'message' => 'You have successfully added to favorites']);
+        return response()->json(['status' => 'success', 'production' => $production->only(['id', 'title', 'phone1', 'phone2', 'email',]), 'isFavorited' => $production->isFavorited($request->user_id), 'message' => 'You have successfully added to favorites']);
     }
 }

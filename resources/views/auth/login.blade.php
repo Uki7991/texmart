@@ -102,6 +102,11 @@
                         <div
                             class="col d-flex align-items-center justify-content-center bg-info text-white p-2 rounded-right">
                             <div>
+                                <div class="mb-3 mx-auto">
+                                    <a href="{{ url('/') }}" class="h1 text-white text-center">
+                                        <img src="{{ asset('img/logo.png') }}" width="200px" height="auto" alt="">
+                                    </a>
+                                </div>
                                 <h2 class="font-weight-bold h1">Преимущества</h2>
                                 <ul class="nav flex-column">
                                     <li class="nav-item"><i class="fas fa-check"></i> Бесплатные консультации</li>
