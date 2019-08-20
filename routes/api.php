@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::post('/favorite', 'Api\FavoriteController@favorite')->name('production.favorite');
+Route::get('/production/{id}', 'Api\ProductionController@show')->name('api.production.show');

@@ -1,35 +1,41 @@
 <div class="modal fade" id="callToProduction" tabindex="-1" role="dialog" aria-labelledby="callToProduction" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content position-relative rounded-0 border-0 text-white" style="background-image: url({{ asset('storage/img/wallpaper-1.jpg') }}); background-size: cover;">
-            <div class="backdrop"></div>
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content position-relative rounded-0 border-0 text-dark bg-white" style="">
             <div class="position-relative">
                 <div class="modal-header border-0">
                     <div class="col-12">
-                        <h5 class="modal-title text-center" id="callToProductionTitle">Связаться с производителем</h5>
+                        <h3 class="modal-title text-center" id="callToProductionTitle">Связаться с производителем <span id="title_production_modal"></span></h3>
                     </div>
                     <button type="button" class="close position-absolute" style="right:10px;top: 10px;" data-dismiss="modal" aria-label="Close">
-                        <i class="fas fa-times text-white" aria-hidden="true"></i>
+                        <i class="fas fa-times text-dark" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" class="">
-                        <input type="hidden">
-                        <div class="form-group">
-                            <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                    <div class="row align-items-center">
+                        <div class="col-6 order-1">
+                            <p id="mobile_phone_modal"></p>
+                            @auth
+                                <form action="" class="">
+                                    <input type="hidden">
+                                    <div class="form-group">
+                                        <label for="message">Сообщение обьявлению</label>
+                                        <textarea class="form-control" name="message" id="message" cols="30" rows="5"></textarea>
+                                    </div>
+                                    <button type="button" class="btn btn-sm text-muted" data-dismiss="modal">Отмена</button>
+                                    <button type="submit" class="btn btn-sm btn-primary rounded-0">Отправить</button>
+                                </form>
+                            @endauth
                         </div>
-                    </form>
-                </div>
-                <div class="modal-phone">
-                    <span>
-                            <p class="text-center">По юридическим вопросам звоните на телефон:</p>
-                            <a href="tel:+996700700700" class="nav-link text-light h5 font-weight-bold text-center">+996 (700) 700-700</a>
-                    </span>
+                        <div class="col-6 bg-warning py-5">
+                            <div class="modal-phone">
+                                <p class="text-center">По юридическим вопросам звоните на телефон:</p>
+                                <a href="tel:+996700700700" class="nav-link text-dark h5 font-weight-bold text-center">+996 (700) 700-700</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-sm text-white" data-dismiss="modal">Отмена</button>
-                    <button type="button" class="btn btn-sm btn-primary rounded-0">Отправить</button>
-                </div>
+
             </div>
         </div>
     </div>

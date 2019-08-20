@@ -13,8 +13,8 @@
                         </div>
                         <div class="col">
                             <div class="row h-100">
-                                <div class="col-12">
-                                    <h1 class="font-weight-bold h2">{{ $production->title }}</h1>
+                                <div class="col-12 d-flex h-25 align-items-center">
+                                    <h1 class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</h1>
                                     @include('partials.btn.rateYo')
                                 </div>
 
@@ -37,7 +37,7 @@
                                 <div class="col-12 align-self-end">
                                     <div class="d-flex">
                                         @include('partials.btn.share')
-                                        @include('partials.btn.call')
+                                        @include('partials.btn.call', ['id' => $production->id])
                                         @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])
                                     </div>
                                 </div>
@@ -47,34 +47,12 @@
                         <div class="col-12 pt-3">
                             <h2 class="font-weight-light h4">Галерея</h2>
                             <div class="gallery">
-                                <a href="">
-                                    <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" height="30" width="auto"
-                                         alt="">
-                                </a>
-                                <a href="">
-                                    <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" height="30" width="auto"
-                                         alt="">
-                                </a>
-                                <a href="">
-                                    <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" height="30" width="auto"
-                                         alt="">
-                                </a>
-                                <a href="">
-                                    <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" height="30" width="auto"
-                                         alt="">
-                                </a>
-                                <a href="">
-                                    <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" height="30" width="auto"
-                                         alt="">
-                                </a>
-                                <a href="">
-                                    <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" height="30" width="auto"
-                                         alt="">
-                                </a>
-                                <a href="">
-                                    <img src="{{ asset('storage/img/16-9-dummy-image6.jpg') }}" height="30" width="auto"
-                                         alt="">
-                                </a>
+                                @foreach(json_decode($production->images) as $image)
+                                    <a href="{{ asset('storage/productions/'.$image) }}" data-lightbox="gallery">
+                                        <img src="{{ asset('storage/productions/'.$image) }}" height="80" width="auto"
+                                             alt="">
+                                    </a>
+                                @endforeach
                             </div>
                         </div>
 
@@ -116,9 +94,11 @@
 @push('styles')
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}">
 @endpush
 
 @push('scripts')
+    <script src="{{ asset('js/lightbox.min.js') }}"></script>
     @if(count($production->getCoordinates()))
         <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU" type="text/javascript"></script>
         <script type="text/javascript">
@@ -145,7 +125,8 @@
 
             $("#rateYo").rateYo({
                 rating: 2,
-                halfStar: true
+                halfStar: true,
+                starWidth: "20px"
             }).on("rateyo.set", function (e, data) {
 
                 let rating = data.rating;

@@ -44,6 +44,36 @@
 <script src="{{ asset('js/app.js') }}"></script>
 
 @stack('scripts')
+<script>
+    $('#callToProduction').on('show.bs.modal', e => {
+        let btn = $(e.relatedTarget);
+        let id = btn.data('id');
+
+        $.ajax({
+            url: '/api/production/' + id,
+            success: data => {
+                $('#title_production_modal').html(data.title);
+                let html = '';
+                if (data.phone1 || data.phone2 || data.email) {
+                    html += '<h5 class="border-bottom">Контакты Обьявления</h5>'
+                }
+                if (data.phone1) {
+                    html += '<p class="m-0 mb-1"><i class="fas fa-phone"></i>&nbsp;<a class="text-dark" href="tel:'+data.phone1+'">'+data.phone1+'</a></p>';
+                }
+                if (data.phone2) {
+                    html += '<p class="m-0 mb-1"><i class="fas fa-phone"></i>&nbsp;<a class="text-dark" href="tel:'+data.phone2+'">'+data.phone2+'</a></p>';
+                }
+                if (data.email) {
+                    html += '<p class="m-0 mb-1"><i class="fas fa-envelope"></i>&nbsp;<a class="text-dark" href="mailto:'+data.email+'">'+data.email+'</a></p>';
+                }
+                $('#mobile_phone_modal').html(html);
+            },
+            error: () => {
+                console.log('error');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
