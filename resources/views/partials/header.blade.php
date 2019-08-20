@@ -28,12 +28,19 @@
                 <li class="nav-scale">
                     <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
+                <li>
+                    <a class="nav-link text-white" href="">Добавить объявление</a>
+                </li>
                 <li class="nav-scale">
                     <a href="" class="nav-link text-white text-capitalize">Форум</a>
                 </li>
                 <li class="nav-scale" >
                     <a href="tel:+996 508 900 500" class="nav-link btn btn-danger text-white text-capitalize">+996 508 900 500</a>
                 </li>
+            </ul>
+
+            <ul class="navbar-nav text-center">
+
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -56,12 +63,12 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('profile') }}">
-                                {{ __('Profile') }}
+                                {{ __('Профиль') }}
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Выход') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
