@@ -10,48 +10,6 @@
         </div>
     </div>
 
-    @guest
-        <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <a href="{{ route('register') }}"
-                       class="btn btn-danger text-white rounded-0 btn-lg px-5 py-3 shadow-lg scale-on-hover">Зарегистрируйтесь</a>
-                    <p class="small mt-2 text-center font-italic text-muted">Для подробной информации свяжитесь с нами</p>
-                </div>
-            </div>
-        </div>
-    @endguest
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-auto">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-12 col-sm-8 col-lg-7">
-                <iframe class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/xTYkmWnwLvg" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-            </div>
-            <div class="col">
-                <h3 class="text-texmart-orange font-weight-bold">Преимущества работы с нами</h3>
-                <ul>
-                    <li>Новая платформа ориентированная на поиске заказчиков и производителей текстильной и швейной
-                        продукции.
-                    </li>
-                    <li>Технология отслеживания контроля качества продукций</li>
-                    <li>Рыночный проект от дешевого до качественного, дорогого продукта швейной и текстильной
-                        индустрии
-                    </li>
-                    <li>Реальные отзывы и рейтинги участников.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div class="row justify-content-center py-4">
             <div class="col-12">
@@ -84,6 +42,42 @@
             {{--</div>--}}
         </div>
     </div>
+
+    @guest
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <a href="{{ route('register') }}"
+                       class="btn btn-danger text-white rounded-0 btn-lg px-5 py-3 shadow-lg scale-on-hover">Зарегистрируйтесь</a>
+                    <p class="small mt-2 text-center font-italic text-muted">Для подробной информации свяжитесь с нами</p>
+                </div>
+            </div>
+        </div>
+    @endguest
+
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-8 col-lg-7">
+                <iframe class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/xTYkmWnwLvg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="col">
+                <h3 class="text-texmart-orange font-weight-bold">Преимущества работы с нами</h3>
+                <ul>
+                    <li>Новая платформа ориентированная на поиске заказчиков и производителей текстильной и швейной
+                        продукции.
+                    </li>
+                    <li>Технология отслеживания контроля качества продукций</li>
+                    <li>Рыночный проект от дешевого до качественного, дорогого продукта швейной и текстильной
+                        индустрии
+                    </li>
+                    <li>Реальные отзывы и рейтинги участников.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div>
         @include('partials.pre_register')
     </div>
