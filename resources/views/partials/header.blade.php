@@ -15,7 +15,7 @@
                 </li>
             </ul>
 
-            <ul class="navbar-nav mx-auto">
+            <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-scale">
                     <a href="{{ route('productions.index', ['filter' => 'productions']) }}" class="nav-link text-white text-capitalize">Цеха</a>
                 </li>
@@ -31,13 +31,13 @@
                 <li class="nav-scale">
                     <a href="" class="nav-link text-white text-capitalize">Форум</a>
                 </li>
-                <li class="nav-scale" style="background-color: #e3342f;">
-                    <a href="tel:+996 508 900 500" class="nav-link text-white text-capitalize">+996 508 900 500</a>
+                <li class="nav-scale" >
+                    <a href="tel:+996 508 900 500" class="nav-link btn btn-danger text-white text-capitalize">+996 508 900 500</a>
                 </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav">
+            <ul class="navbar-nav text-center">
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
