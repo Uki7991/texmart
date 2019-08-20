@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Production;
 use Illuminate\Http\Request;
 
@@ -20,6 +21,7 @@ class UserController extends Controller
         return view('user-production.profile', [
             'user' => $user,
             'productions' => $productions,
+            'categories' => Category::all(),
         ]);
     }
 }

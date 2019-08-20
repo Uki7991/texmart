@@ -6,6 +6,7 @@
             <div class="col-10">
                 <form action="{{ route('productions.store') }}" enctype="multipart/form-data" method="POST">
                     @csrf
+                    <input type="hidden" name="type" value="service">
                     <div class="form-group">
                         <label>
                             Название обьявления
@@ -58,7 +59,14 @@
                     </div>
                     <h3>Map</h3>
                     @include('user-production.formFields.coordinates')
-
+                    <div class="form-group">
+                        <label for="categories-service">Categories</label>
+                        <select name="categories[]" class="" id="categories-service">
+                            @foreach($categories as $cat)
+                                <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="images">Images</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
