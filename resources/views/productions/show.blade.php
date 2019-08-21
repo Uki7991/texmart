@@ -84,10 +84,6 @@
                 </div>
             </div>
 
-            <div class="d-none d-lg-block col-2 p-0 shadow-sm border rounded h-100">
-                @include('partials.right_sidebar')
-            </div>
-
         </div>
     </div>
 
