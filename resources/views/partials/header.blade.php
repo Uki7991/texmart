@@ -26,18 +26,22 @@
                     <a href="{{ route('productions.index', ['filter' => 'service']) }}" class="nav-link text-white text-capitalize">Услуги</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="" class="nav-link text-white text-capitalize">Добавить объявление</a>
-                </li>
-                <li class="nav-scale">
                     <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
-                <li class="nav-scale" >
-                    <a href="tel:+996 508 900 500" class="nav-link btn btn-danger text-white text-capitalize">+996 508 900 500</a>
+                @guest
+                <li class="nav-scale">
+                    <a href="{{ route('login') }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
                 </li>
-            </ul>
+                @else
+                <li class="nav-scale">
+                    <a href="{{ route('profile') }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
+                </li>
+                @endguest
 
-            <ul class="navbar-nav text-center">
 
+{{--                <li class="nav-scale" >--}}
+{{--                    <a href="tel:+996 508 900 500" class="nav-link btn btn-danger text-white text-capitalize">+996 508 900 500</a>--}}
+{{--                </li>--}}
             </ul>
 
             <!-- Right Side Of Navbar -->
