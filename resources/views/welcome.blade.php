@@ -8,6 +8,9 @@
         <div class="row">
             @include('partials.feature')
         </div>
+        <div>
+            <img src="{{ asset('img/ornamentos.png') }}" style="width: 100%;padding-top: 10px;" alt="">
+        </div>
     </div>
 
     <div class="container">
