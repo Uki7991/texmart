@@ -26,13 +26,10 @@
                     <a href="{{ route('productions.index', ['filter' => 'service']) }}" class="nav-link text-white text-capitalize">Услуги</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
-                </li>
-                <li>
-                    <a class="nav-link text-white" href="">Добавить объявление</a>
+                    <a href="" class="nav-link text-white text-capitalize">Добавить объявление</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="" class="nav-link text-white text-capitalize">Форум</a>
+                    <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
                 <li class="nav-scale" >
                     <a href="tel:+996 508 900 500" class="nav-link btn btn-danger text-white text-capitalize">+996 508 900 500</a>
