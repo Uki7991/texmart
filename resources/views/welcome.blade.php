@@ -8,11 +8,11 @@
         <div class="row">
             @include('partials.feature')
         </div>
-        <div>
-            <img src="{{ asset('img/ornamentos.png') }}" style="width: 100%;padding-top: 10px;" alt="">
-        </div>
-    </div>
 
+    </div>
+    <div>
+        <img src="{{ asset('img/ornamentos.png') }}"  style="width: 100vw;" alt="">
+    </div>
     <div class="container">
         <div class="row justify-content-center py-4">
             <div class="col-12">
