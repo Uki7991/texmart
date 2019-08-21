@@ -58,16 +58,25 @@
                         </div>
                     </div>
                     <h3>Map</h3>
-                    @include('user-production.formFields.coordinates')
+                    @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
 
 
                     <div class="form-group">
                         <label for="categories-multi">Categories</label>
-                        <select name="categories[]" class="" id="categories-multi" multiple="multiple">
-                            @foreach($categories as $cat)
-                                <option value="{{ $cat->id }}">{{ $cat->title }}</option>
-                            @endforeach
-                        </select>
+{{--                        <select name="categories[]" class="form-control w-100" id="categories-multi" multiple="multiple">--}}
+{{--                            @foreach($categories as $cat)--}}
+{{--                                @if(count($cat->childs) > 0)--}}
+{{--                                    <optgroup label="{{ $cat->title }}" data-id="{{ $cat->id }}" data-toggle="collapse" data-target="#multiCollapse{{ $cat->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $cat->id }}">--}}
+{{--                                        @include('user-production.partials.manageChildsSelect', ['childs' => $cat->childs])--}}
+{{--                                    </optgroup>--}}
+{{--                                @else--}}
+{{--                                    <optgroup label="{{ $cat->title }}" data-id="{{ $cat->id }}"  class="collapse collapse-multi" id="multiCollapse{{ $cat->id }}" data-toggle="collapse" data-target="#multiCollapse{{ $cat->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $cat->id }}">--}}
+{{--                                        <option value="{{ $cat->id }}">{{ $cat->title }}</option>--}}
+{{--                                    </optgroup>--}}
+{{--                                @endif--}}
+{{--                            @endforeach--}}
+{{--                        </select>--}}
+                        <select name="categories[]" class="form-control" multiple id="categories-multi"></select>
                     </div>
                     <div class="form-group">
                         <label for="images">Images</label>
@@ -86,11 +95,6 @@
 {{--    <link rel="stylesheet" href="http://texmart/admin/voyager-assets?path=js/skins/voyager/skin.min.css">--}}
 @endpush
 @push('scripts')
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>
-        tinymce.init({
-            selector: '#richtextDescription'
-        });
-    </script>
+
 {{--    <script src="{{ voyager_asset('js/app.js') }}"></script>--}}
 @endpush

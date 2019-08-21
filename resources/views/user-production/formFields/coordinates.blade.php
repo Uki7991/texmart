@@ -1,28 +1,27 @@
 <div class="form-row">
     <div class="col-3">
         <div class="form-group">
-            <label for="latitude">Latitude</label>
-            <input type="text" id="latitude" name="latitude" class="form-control">
+            <label for="latitude{{ $idMap ?? 'map' }}">Latitude</label>
+            <input type="text" id="latitude{{ $idMap ?? 'map' }}" name="latitude" class="form-control">
         </div>
         <div class="form-group">
-            <label for="longtitude">Longtitude</label>
-            <input type="text" id="longtitude" name="longtitude" class="form-control">
+            <label for="longtitude{{ $idMap ?? 'map' }}">Longtitude</label>
+            <input type="text" id="longtitude{{ $idMap ?? 'map' }}" name="longtitude" class="form-control">
         </div>
     </div>
     <div class="col-9">
         <div class="form-group">
-            <div id="map" style="width: 100%; height: 400px;"></div>
+            <div id="{{ $idMap ?? 'map' }}" style="width: 100%; height: 400px;"></div>
         </div>
     </div>
 </div>
 
 @push('scripts')
-    <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU" type="text/javascript"></script>
     <script>
         ymaps.ready(init);
         function init() {
             var myPlacemark,
-                myMap = new ymaps.Map('map', {
+                myMap = new ymaps.Map('{{ $idMap ?? 'map' }}', {
                     center: [42.865388923088396, 74.60104350048829],
                     zoom: 12
                 }, {
@@ -31,8 +30,8 @@
             // Слушаем клик на карте.
             myMap.events.add('click', function (e) {
                 var coords = e.get('coords');
-                $('#latitude').val(coords[0]);
-                $('#longtitude').val(coords[1]);
+                $('#latitude{{ $idMap ?? 'map' }}').val(coords[0]);
+                $('#longtitude{{ $idMap ?? 'map' }}').val(coords[1]);
                 // Если метка уже создана – просто передвигаем ее.
                 if (myPlacemark) {
                     myPlacemark.geometry.setCoordinates(coords);
