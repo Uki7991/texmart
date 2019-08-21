@@ -85,7 +85,7 @@
     <div class="pt-5">
         <div class="card-group">
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/evaluation-quality-control-wine-taster-wine-alcoholic-drink.jpg') }}"
+                <img src="{{ asset('img/cons.jpg') }}"
                      class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/daf-xf105-460-truck-white-daf.jpg') }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset('img/contr.jpg') }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/checklist.jpg') }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset('img/logi.jpg') }}" class="card-img rounded-0" alt="...">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
