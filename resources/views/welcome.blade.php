@@ -129,11 +129,11 @@
     </button>
 
 
-    <!-- RedConnect -->
+{{--    <!-- RedConnect -->--}}
 
-    <div style="display: none"><a class="rc-copyright"
-                                  href="http://redconnect.ru">Сервис обратного звонка RedConnect</a></div>
-    <!--/RedConnect -->
+{{--    <div style="display: none"><a class="rc-copyright"--}}
+{{--                                  href="http://redconnect.ru">Сервис обратного звонка RedConnect</a></div>--}}
+{{--    <!--/RedConnect -->--}}
 
 
     @include('partials.modals.message_modal')
@@ -187,8 +187,8 @@
         });
     </script>
 
-    <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
-            src="https://web.redhelper.ru/service/main.js?c=khusan590"></script>
+{{--    <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"--}}
+{{--            src="https://web.redhelper.ru/service/main.js?c=khusan590"></script>--}}
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
