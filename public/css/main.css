@@ -390,6 +390,9 @@ p, h1, h2, h3, h4, h5, h6{
     text-decoration: none;
     color:#369;
 }
+.mce-notification-warning {
+    display: none!important;
+}
 .tree li button, .tree li button:active, .tree li button:focus {
     text-decoration: none;
     color:#369;

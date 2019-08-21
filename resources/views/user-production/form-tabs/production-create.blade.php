@@ -17,13 +17,13 @@
                         <div class="col-6">
                             <div class="form-froup">
                                 <label for="site">Сайт</label>
-                                <input type="text" class="form-control" name="site" id="site" required>
+                                <input type="text" class="form-control" name="site" id="site">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-froup">
                                 <label for="address">Адрес</label>
-                                <input type="text" class="form-control" name="address" id="address" required>
+                                <input type="text" class="form-control" name="address" id="address">
                             </div>
                         </div>
                     </div>
@@ -83,8 +83,14 @@
 </div>
 
 @push('styles')
-    <link rel="stylesheet" href="http://texmart/admin/voyager-assets?path=js/skins/voyager/skin.min.css">
+{{--    <link rel="stylesheet" href="http://texmart/admin/voyager-assets?path=js/skins/voyager/skin.min.css">--}}
 @endpush
 @push('scripts')
-    <script src="{{ voyager_asset('js/app.js') }}"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#richtextDescription'
+        });
+    </script>
+{{--    <script src="{{ voyager_asset('js/app.js') }}"></script>--}}
 @endpush
