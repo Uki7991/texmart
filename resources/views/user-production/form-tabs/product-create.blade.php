@@ -58,13 +58,21 @@
                         </div>
                     </div>
                     <h3>Map</h3>
-                    @include('user-production.formFields.coordinates')
+                    @include('user-production.formFields.coordinates', ['idMap' => 'map3'])
 
                     <div class="form-group">
                         <label for="categories-product">Categories</label>
                         <select name="categories" class="" id="categories-product">
                             @foreach($categories as $cat)
-                                <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                                @if(count($cat->childs) > 0)
+                                    <optgroup label="{{ $cat->title }}">
+                                        @include('user-production.partials.manageChildsSelect', ['childs' => $cat->childs])
+                                    </optgroup>
+                                @else
+                                    <optgroup label="{{ $cat->title }}">
+                                        <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                                    </optgroup>
+                                @endif
                             @endforeach
                         </select>
                     </div>

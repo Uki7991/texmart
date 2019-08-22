@@ -27,7 +27,7 @@
                                                 @endif
                                                     <a href="#" class="text-dark">{{ $category->title }}</a>
                                                 @if(count($category->childs))
-                                                    @include('partials.manageChilds',['childs' => $category->childs])
+                                                    @include('partials.manage_childs',['childs' => $category->childs])
                                                 @endif
                                             </li>
                                         @endforeach

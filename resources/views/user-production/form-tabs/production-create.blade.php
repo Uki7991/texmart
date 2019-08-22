@@ -37,13 +37,13 @@
                         <div class="col-6">
                             <div class="form-froup">
                                 <label for="site">Сайт</label>
-                                <input type="text" class="form-control" name="site" id="site" required>
+                                <input type="text" class="form-control" name="site" id="site">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-froup">
                                 <label for="address">Адрес</label>
-                                <input type="text" class="form-control" name="address" id="address" required>
+                                <input type="text" class="form-control" name="address" id="address">
                             </div>
                         </div>
                     </div>
@@ -78,16 +78,37 @@
                         </div>
                     </div>
                     <h3>Карта</h3>
-                    @include('user-production.formFields.coordinates')
+                    @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
 
 
                     <div class="form-group">
                         <label for="categories-multi">Категории</label>
-                        <select name="categories[]" class="" id="categories-multi" multiple="multiple">
-                            @foreach($categories as $cat)
-                                <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+{{--                        <select name="categories[]" class="form-control w-100" id="categories-multi" multiple="multiple">--}}
+{{--                            @foreach($categories as $cat)--}}
+{{--                                @if(count($cat->childs) > 0)--}}
+{{--                                    <optgroup label="{{ $cat->title }}" data-id="{{ $cat->id }}" data-toggle="collapse" data-target="#multiCollapse{{ $cat->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $cat->id }}">--}}
+{{--                                        @include('user-production.partials.manageChildsSelect', ['childs' => $cat->childs])--}}
+{{--                                    </optgroup>--}}
+{{--                                @else--}}
+{{--                                    <optgroup label="{{ $cat->title }}" data-id="{{ $cat->id }}"  class="collapse collapse-multi" id="multiCollapse{{ $cat->id }}" data-toggle="collapse" data-target="#multiCollapse{{ $cat->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $cat->id }}">--}}
+{{--                                        <option value="{{ $cat->id }}">{{ $cat->title }}</option>--}}
+{{--                                    </optgroup>--}}
+{{--                                @endif--}}
+{{--                            @endforeach--}}
+{{--                        </select>--}}
+                        <ul id="tree1">
+                            @foreach($categories as $category)
+                                <li>
+                                    @if(count($category->childs))
+                                        <i class="fas fa-plus"></i>
+                                    @endif
+                                    <a href="#" class="text-dark">{{ $category->title }}</a>
+                                    @if(count($category->childs))
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => true])
+                                    @endif
+                                </li>
                             @endforeach
-                        </select>
+                        </ul>
                     </div>
                     <div class="form-group">
                         <label for="images">Images</label>
@@ -104,10 +125,10 @@
 
 @push('styles')
     <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
-    <link rel="stylesheet" href="http://texmart/admin/voyager-assets?path=js/skins/voyager/skin.min.css">
+    {{--<link rel="stylesheet" href="http://texmart/admin/voyager-assets?path=js/skins/voyager/skin.min.css">--}}
 @endpush
 @push('scripts')
-    <script src="{{ voyager_asset('js/app.js') }}"></script>
+    {{--<script src="{{ voyager_asset('js/app.js') }}"></script>--}}
 
     <script src="js/intlTelInput.js"></script>
 
@@ -138,4 +159,5 @@
             utilsScript: "js/utils.js"
         });
     </script>
+
 @endpush
