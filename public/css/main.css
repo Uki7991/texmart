@@ -108,6 +108,9 @@ p, h1, h2, h3, h4, h5, h6{
     transform: translateX(0) !important;
 }
 
+
+
+
 .text-juice {
     color: #f39c12 !important;
 }
@@ -335,6 +338,11 @@ p, h1, h2, h3, h4, h5, h6{
     border-bottom-left-radius: 0 !important;
 }
 
+.iti__flag {background-image: url("../img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti__flag {background-image: url("../img/flags@2x.png");}
+}
 
 .tree, .tree ul {
     margin:0;

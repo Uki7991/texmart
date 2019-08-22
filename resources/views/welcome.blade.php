@@ -4,6 +4,8 @@
 
     @include('partials.promo')
 
+
+
     <div class="container-fluid my-5">
         <div class="row">
             @include('partials.feature')
@@ -132,13 +134,6 @@
     </button>
 
 
-{{--    <!-- RedConnect -->--}}
-
-{{--    <div style="display: none"><a class="rc-copyright"--}}
-{{--                                  href="http://redconnect.ru">Сервис обратного звонка RedConnect</a></div>--}}
-{{--    <!--/RedConnect -->--}}
-
-
     @include('partials.modals.message_modal')
 
 @endsection
@@ -190,8 +185,6 @@
         });
     </script>
 
-{{--    <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"--}}
-{{--            src="https://web.redhelper.ru/service/main.js?c=khusan590"></script>--}}
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
@@ -216,3 +209,4 @@
 @push("styles")
     <link rel="stylesheet" href="{{ asset("css/owl.carousel.min.css") }}">
 @endpush
+

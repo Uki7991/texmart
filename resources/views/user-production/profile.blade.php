@@ -55,6 +55,7 @@
 
 @push('styles')
 {{--    <link rel="stylesheet" href="{{ asset('css/selectize.css') }}">--}}
+
     <link rel="stylesheet" href="{{ asset('css/selectize.default.css') }}">
 @endpush
 

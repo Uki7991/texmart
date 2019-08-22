@@ -9,9 +9,15 @@
                     <input type="hidden" name="type" value="productions">
                     <div class="form-group">
                         <label>
-                            Название обьявления
+                            Название объявления
                         </label>
                         <input type="text" name="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Бренд/Наименование предприятия
+                        </label>
+                        <input type="text" name="title" class="form-control">
                     </div>
                     <div class="form-row">
                         <div class="col-6">
@@ -20,7 +26,7 @@
                                 <input type="text" class="form-control" name="site" id="site" required>
                             </div>
                         </div>
-                        <div class="col-6">
+                                                <div class="col-6">
                             <div class="form-froup">
                                 <label for="address">Адрес</label>
                                 <input type="text" class="form-control" name="address" id="address" required>
@@ -36,18 +42,18 @@
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>
                     </div>
-                    <h3>Contacts</h3>
+                    <h3>Контакты</h3>
                     <div class="form-row">
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="phone1">Phone #1</label>
-                                <input type="text" name="phone1" class="form-control" id="phone1">
+                                <label for="phone1">Телефон #1</label>
+                                <input type="tel" name="phone1" class="form-control" id="phone1">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="phone2">Phone #2</label>
-                                <input type="text" name="phone2" class="form-control" id="phone2">
+                                <label for="phone2">Телефон #2</label>
+                                <input type="tel" name="phone2" class="form-control" id="phone2">
                             </div>
                         </div>
                         <div class="col-4">
@@ -57,12 +63,12 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Map</h3>
+                    <h3>Карта</h3>
                     @include('user-production.formFields.coordinates')
 
 
                     <div class="form-group">
-                        <label for="categories-multi">Categories</label>
+                        <label for="categories-multi">Категории</label>
                         <select name="categories[]" class="" id="categories-multi" multiple="multiple">
                             @foreach($categories as $cat)
                                 <option value="{{ $cat->id }}">{{ $cat->title }}</option>
@@ -83,8 +89,39 @@
 </div>
 
 @push('styles')
+    <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
     <link rel="stylesheet" href="http://texmart/admin/voyager-assets?path=js/skins/voyager/skin.min.css">
 @endpush
 @push('scripts')
     <script src="{{ voyager_asset('js/app.js') }}"></script>
+
+    <script src="js/intlTelInput.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var input = document.querySelector("#phone1");
+        intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(success, failure) {
+                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    success(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js"
+        });
+    </script>
+    <script>
+        var input = document.querySelector("#phone2");
+        intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(success, failure) {
+                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    success(countryCode);
+                });
+            },
+            utilsScript: "js/utils.js"
+        });
+    </script>
 @endpush
