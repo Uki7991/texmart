@@ -16,7 +16,7 @@
                 <div id="collapse{{ $category->id }}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         @if(count($category->childs))
-                            @include('partials.manageChilds', ['childs' => $category->childs, 'input' => true])
+                            @include('partials.manage_childs', ['childs' => $category->childs, 'input' => [true,'checkbox']])
                         @endif
                     </div>
                 </div>

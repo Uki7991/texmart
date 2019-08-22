@@ -19,6 +19,22 @@
                         </label>
                         <input type="text" name="title" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label for="categories-multi">Категории</label>
+                    <ul id="tree1">
+                        @foreach($categories as $category)
+                            <li>
+                                @if(count($category->childs))
+                                    <i class="fas fa-plus"></i>
+                                @endif
+                                <a href="#" class="text-dark">{{ $category->title }}</a>
+                                @if(count($category->childs))
+                                    @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])
+                                @endif
+                            </li>
+                        @endforeach
+                    </ul>
+                    </div>
                     <div class="form-row">
                         <div class="col-6">
                             <div class="form-froup">
@@ -81,8 +97,8 @@
                     @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
 
 
-                    <div class="form-group">
-                        <label for="categories-multi">Категории</label>
+{{--                    <div class="form-group">/--}}
+{{--                        <label for="categories-multi">Категории</label>/--}}
 {{--                        <select name="categories[]" class="form-control w-100" id="categories-multi" multiple="multiple">--}}
 {{--                            @foreach($categories as $cat)--}}
 {{--                                @if(count($cat->childs) > 0)--}}
@@ -96,20 +112,20 @@
 {{--                                @endif--}}
 {{--                            @endforeach--}}
 {{--                        </select>--}}
-                        <ul id="tree1">
-                            @foreach($categories as $category)
-                                <li>
-                                    @if(count($category->childs))
-                                        <i class="fas fa-plus"></i>
-                                    @endif
-                                    <a href="#" class="text-dark">{{ $category->title }}</a>
-                                    @if(count($category->childs))
-                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])
-                                    @endif
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
+{{--                        <ul id="tree1">//--}}
+{{--                            @foreach($categories as $category)//--}}
+{{--                                <li>//--}}
+{{--                                    @if(count($category->childs))//--}}
+{{--                                        <i class="fas fa-plus"></i>//--}}
+{{--                                    @endif/--}}
+{{--                                    <a href="#" class="text-dark">{{ $category->title }}</a>/--}}
+{{--                                    @if(count($category->childs))/--}}
+{{--                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])/--}}
+{{--                                    @endif/--}}
+{{--                                </li>/--}}
+{{--                            @endforeach/--}}
+{{--                        </ul>/--}}
+{{--                    </div>/--}}
                     <div class="form-group">
                         <label for="images">Images</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
