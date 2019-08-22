@@ -17,9 +17,9 @@
     <div class="col-12 col-sm-4 col-md-3 mb-4 mb-md-0">
         <h5>Объявления</h5>
         <nav class="nav flex-column">
-            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['filter' => 'productions']) }}"><i class="fa fa-angle-double-right"></i>Цеха</a>
-            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['filter' => 'products']) }}"><i class="fa fa-angle-double-right"></i>Продукции</a>
-            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['filter' => 'service']) }}"><i class="fa fa-angle-double-right"></i>Услуги</a>
+            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['filter' => 'productions']) }}"><i class="fa fa-angle-double-right"></i> Цеха</a>
+            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['filter' => 'products']) }}"><i class="fa fa-angle-double-right"></i> Продукции</a>
+            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['filter' => 'service']) }}"><i class="fa fa-angle-double-right"></i> Услуги</a>
         </nav>
     </div>
     <div class="col-12 col-sm-4 ml-auto col-md-3 mb-4 mb-md-0">

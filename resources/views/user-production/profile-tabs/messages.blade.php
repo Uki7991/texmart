@@ -1,5 +1,5 @@
 <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-    <h1>Messages</h1>
+    <h1>Чат</h1>
 
     <div class="container">
         <div class="row">

@@ -1,11 +1,11 @@
 <div class="form-row">
     <div class="col-3">
         <div class="form-group">
-            <label for="latitude">Latitude</label>
+            <label for="latitude">Широта</label>
             <input type="text" id="latitude" name="latitude" class="form-control">
         </div>
         <div class="form-group">
-            <label for="longtitude">Longtitude</label>
+            <label for="longtitude">Долгота</label>
             <input type="text" id="longtitude" name="longtitude" class="form-control">
         </div>
     </div>

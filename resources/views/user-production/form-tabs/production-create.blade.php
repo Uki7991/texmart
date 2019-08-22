@@ -22,11 +22,25 @@
                     <div class="form-row">
                         <div class="col-6">
                             <div class="form-froup">
+                                <label for="employee">Количество сотрудников</label>
+                                <input type="text" class="form-control" name="" id="employee" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-froup">
+                                <label for="equipment">Оборудование</label>
+                                <input type="text" class="form-control" name="" id="equipment" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-6">
+                            <div class="form-froup">
                                 <label for="site">Сайт</label>
                                 <input type="text" class="form-control" name="site" id="site" required>
                             </div>
                         </div>
-                                                <div class="col-6">
+                        <div class="col-6">
                             <div class="form-froup">
                                 <label for="address">Адрес</label>
                                 <input type="text" class="form-control" name="address" id="address" required>

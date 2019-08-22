@@ -20,13 +20,13 @@
                 <div class="col-auto">
                     <ul class="nav flex-column">
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="#settings" class="nav-link text-light" id="settings-tab" data-toggle="tab" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+                            <a href="#settings" class="nav-link text-light" id="settings-tab" data-toggle="tab" role="tab" aria-controls="settings" aria-selected="false">Настройки</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="#favorite" class="nav-link text-light" id="favorite-tab" data-toggle="tab" role="tab" aria-controls="favorite" aria-selected="false">Favorite</a>
+                            <a href="#favorite" class="nav-link text-light" id="favorite-tab" data-toggle="tab" role="tab" aria-controls="favorite" aria-selected="false">Избранные</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Message</a>
+                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Чат</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
                             <a href="#announce" class="nav-link text-light" id="announce-tab" data-toggle="tab" role="tab" aria-controls="announce" aria-selected="false">Мои обьявления</a>
