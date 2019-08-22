@@ -17,15 +17,26 @@ class UserController extends Controller
     {
         if (count($item->childs)) {
             $subs = [];
-            foreach ($item->childs as $child) {
+            foreach ($item->childs->only(['id', 'title']) as $child) {
                 if (count($child->childs)) {
                     $this->children($child);
                 }
                 $subs[] = $child->only(['id', 'title']);
             }
-            return $item;
+            return $item->only(['id', 'title']);
         }
-        return $item;
+        return $item->only(['id', 'title']);
+    }
+
+    public function getCategories()
+    {
+        $categories = Category::where('parent_id', null)->get(['id', 'title']);
+
+        $categories = $categories->each(function ($item) {
+            $this->children($item);
+        });
+
+        return response()->json($categories);
     }
 
     public function index()
@@ -33,9 +44,7 @@ class UserController extends Controller
         $productions = Production::where('user_id', auth()->user()->id)->get();
         $categories = Category::where('parent_id', null)->get(['id', 'title']);
 
-        $categories = $categories->each(function ($item) {
-            $this->children($item);
-        });
+
 
         $user = auth()->user();
         return view('user-production.profile', [

@@ -1,5 +1,153 @@
 @extends('layouts.app')
 
+
+@push('scripts')
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="{{ asset('js/comboTreePlugin.js') }}"></script>
+    <script src="{{ asset('js/icontains.js') }}"></script>
+    <script>
+        $.fn.extend({
+            treed: function (o) {
+
+                var openedClass = 'fa-plus';
+                var closedClass = 'fa-minus';
+
+                if (typeof o != 'undefined'){
+                    if (typeof o.openedClass != 'undefined'){
+                        openedClass = o.openedClass;
+                    }
+                    if (typeof o.closedClass != 'undefined'){
+                        closedClass = o.closedClass;
+                    }
+                }
+
+                /* initialize each of the top levels */
+                var tree = $(this);
+                tree.addClass("tree");
+                tree.find('li').has("ul").each(function () {
+                    var branch = $(this);
+                    branch.prepend("");
+                    branch.addClass('branch');
+                    branch.on('click', function (e) {
+                        if (this == e.target) {
+                            var icon = $(this).children('i:first');
+                            icon.toggleClass(openedClass + " " + closedClass);
+                            $(this).children().children().toggle();
+                        }
+                    });
+                    branch.children().children().toggle();
+                });
+                /* fire event from the dynamically added icon */
+                tree.find('.branch .indicator').each(function(){
+                    $(this).on('click', function () {
+                        $(this).closest('li').click();
+                    });
+                });
+                /* fire event to open branch if the li contains an anchor instead of text */
+                tree.find('.branch>a').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+                /* fire event to open branch if the li contains a button instead of text */
+                tree.find('.branch>button').each(function () {
+                    $(this).on('click', function (e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+            }
+        });
+        /* Initialization of treeviews */
+        $('#tree1').treed();
+        $.ajax({
+            url: '{{ route('get.categories') }}',
+            success: data => {
+                console.log(data);
+            },
+            error: () => {
+                console.log('error');
+            }
+        });
+        var myData = '{{ json_encode($categories, true) }}';
+        console.log(myData);
+        $("#categories-multi").comboTree({
+            source : myData,
+            isMultiple: true
+        });
+        $("body").on('click', '.select2-results__group', function() {
+            $(this).siblings().toggle();
+        });
+        // $('#categories-multi').multipleSelect({
+        //     multiple: true,
+        //     hideOptgroupCheckboxes: true,
+        //     width: 460,
+        //     multipleWidth: 150
+        // });
+
+        // $('.collapse.collapse-multi').each((e, i) => {
+        //     let collapse = $(i).data('toggle');
+        //     let id = $(i).attr('id');
+        //     let target = $(i).data('target');
+        //
+        //     console.log(collapse, id, target);
+        // });
+        // $('#categories-multi').selectize({
+        //     plugins: ['remove_button', 'optgroup_columns'],
+        //     options: [
+        //         {id: 'tsirt', make: 'man', model: 'Мужские Футболки'},
+        //         {id: 'tsirt2', make: 'child', model: 'Детские Футболки'},
+        //         {id: 'tsirt1', make: 'female', model: 'Женские Футболки'},
+        //         {id: 'caliber', make: 'man', model: 'Мужские Рубашки'},
+        //         {id: 'caliber2', make: 'child', model: 'Детские Рубашки'},
+        //         {id: 'caliber1', make: 'female', model: 'Женские Рубашки'},
+        //         {id: 'ties', make: 'man', model: 'Мужские Галстуки'},
+        //         {id: 'shoes', make: 'man', model: 'Мужская Обувь'},
+        //         {id: 'shorts', make: '1pants', model: 'Мужские Шорты'},
+        //         {id: 'pants', make: '1pants', model: 'Мужские Брюки'},
+        //         {id: 'costum', make: '1smokings', model: 'Мужские Костюмы'},
+        //         {id: 'smoking', make: '1smokings', model: 'Мужские Смокинги'},
+        //     ],
+        //     optgroups: [
+        //         {id: 'man', name: 'Мужские'},
+        //         {id: '1smokings', name: 'Мужские костюмы'},
+        //         {id: '1pants', name: 'Мужкие брюки'},
+        //         {id: 'female', name: 'Женские'},
+        //         {id: 'child', name: 'Детские'},
+        //     ],
+        //     labelField: 'model',
+        //     valueField: 'id',
+        //     optgroupField: 'make',
+        //     optgroupLabelField: 'name',
+        //     optgroupValueField: 'id',
+        //     optgroupOrder: ['chevrolet', 'dodge', 'audi'],
+        //     searchField: ['model']
+        // });
+        // $('#categories-service').multipleSelect({
+        //     single: true,
+        //     width: 460,
+        //     multipleWidth: 150
+        // });
+        // $('#categories-product').multipleSelect({
+        //     single: true,
+        //     width: 460,
+        //     multipleWidth: 150
+        // });
+    </script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '.richTextBox'
+        });
+    </script>
+    @include('partials.scripts.favorite_click')
+    @include('partials.scripts.favorite_btn')
+    @include('partials.scripts.call_btn')
+@endpush
+
+
 @section('content')
     @include('partials.header')
     <div class="py-5 mt-5">
@@ -63,85 +211,4 @@
 
 @push('styles')
 
-@endpush
-
-@push('scripts')
-
-    <script src="{{ asset('js/comboTreePlugin.js') }}"></script>
-    <script src="{{ asset('js/icontains.js') }}"></script>
-    <script>
-        var myData = '{{ json_encode($categories, true) }}';
-        console.log(myData);
-        $("#categories-multi").comboTree({
-            source : myData,
-            isMultiple: true
-        });
-        $("body").on('click', '.select2-results__group', function() {
-            $(this).siblings().toggle();
-        });
-        // $('#categories-multi').multipleSelect({
-        //     multiple: true,
-        //     hideOptgroupCheckboxes: true,
-        //     width: 460,
-        //     multipleWidth: 150
-        // });
-
-        // $('.collapse.collapse-multi').each((e, i) => {
-        //     let collapse = $(i).data('toggle');
-        //     let id = $(i).attr('id');
-        //     let target = $(i).data('target');
-        //
-        //     console.log(collapse, id, target);
-        // });
-        // $('#categories-multi').selectize({
-        //     plugins: ['remove_button', 'optgroup_columns'],
-        //     options: [
-        //         {id: 'tsirt', make: 'man', model: 'Мужские Футболки'},
-        //         {id: 'tsirt2', make: 'child', model: 'Детские Футболки'},
-        //         {id: 'tsirt1', make: 'female', model: 'Женские Футболки'},
-        //         {id: 'caliber', make: 'man', model: 'Мужские Рубашки'},
-        //         {id: 'caliber2', make: 'child', model: 'Детские Рубашки'},
-        //         {id: 'caliber1', make: 'female', model: 'Женские Рубашки'},
-        //         {id: 'ties', make: 'man', model: 'Мужские Галстуки'},
-        //         {id: 'shoes', make: 'man', model: 'Мужская Обувь'},
-        //         {id: 'shorts', make: '1pants', model: 'Мужские Шорты'},
-        //         {id: 'pants', make: '1pants', model: 'Мужские Брюки'},
-        //         {id: 'costum', make: '1smokings', model: 'Мужские Костюмы'},
-        //         {id: 'smoking', make: '1smokings', model: 'Мужские Смокинги'},
-        //     ],
-        //     optgroups: [
-        //         {id: 'man', name: 'Мужские'},
-        //         {id: '1smokings', name: 'Мужские костюмы'},
-        //         {id: '1pants', name: 'Мужкие брюки'},
-        //         {id: 'female', name: 'Женские'},
-        //         {id: 'child', name: 'Детские'},
-        //     ],
-        //     labelField: 'model',
-        //     valueField: 'id',
-        //     optgroupField: 'make',
-        //     optgroupLabelField: 'name',
-        //     optgroupValueField: 'id',
-        //     optgroupOrder: ['chevrolet', 'dodge', 'audi'],
-        //     searchField: ['model']
-        // });
-        $('#categories-service').multipleSelect({
-            single: true,
-            width: 460,
-            multipleWidth: 150
-        });
-        $('#categories-product').multipleSelect({
-            single: true,
-            width: 460,
-            multipleWidth: 150
-        });
-    </script>
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>
-        tinymce.init({
-            selector: '.richTextBox'
-        });
-    </script>
-    @include('partials.scripts.favorite_click')
-    @include('partials.scripts.favorite_btn')
-    @include('partials.scripts.call_btn')
 @endpush

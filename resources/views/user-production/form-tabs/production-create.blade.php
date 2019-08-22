@@ -76,7 +76,19 @@
 {{--                                @endif--}}
 {{--                            @endforeach--}}
 {{--                        </select>--}}
-                        <select name="categories[]" class="form-control" multiple id="categories-multi"></select>
+                        <ul id="tree1">
+                            @foreach($categories as $category)
+                                <li>
+                                    @if(count($category->childs))
+                                        <i class="fas fa-plus"></i>
+                                    @endif
+                                    <a href="#" class="text-dark">{{ $category->title }}</a>
+                                    @if(count($category->childs))
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => true])
+                                    @endif
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                     <div class="form-group">
                         <label for="images">Images</label>

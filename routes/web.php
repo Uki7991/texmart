@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/profile', 'UserController@index')->name('profile');
+Route::get('/get-categories', 'UserController@getCategories')->name('get.categories');
 
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('google.redirect');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
