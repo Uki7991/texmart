@@ -13,7 +13,7 @@
                 @endif
 
                 @if(count($child->childs))
-                    @include('partials.manage_childs',['childs' => $child->childs, 'input' => true])
+                    @include('partials.manage_childs',['childs' => $child->childs, 'input' => [true, $input[1]]])
                 @endif
             </li>
         @endforeach
