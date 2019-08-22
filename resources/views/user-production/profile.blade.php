@@ -62,6 +62,8 @@
         });
         /* Initialization of treeviews */
         $('#tree1').treed();
+        $('#tree2').treed();
+        $('#tree3').treed();
         $.ajax({
             url: '{{ route('get.categories') }}',
             success: data => {

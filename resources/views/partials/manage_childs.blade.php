@@ -1,5 +1,5 @@
 <ul class="nav flex-column">
-    @if(isset($input) && $input === true)
+    @if(isset($input) && isset($input[0]) && $input[0] === true)
         @foreach($childs as $child)
             <li>
                 @if(count($child->childs))
@@ -7,7 +7,7 @@
                     <a href="#{{ $child->title }}" class="text-dark">{{ $child->title }}</a>
                 @else
                     <label class="m-0 p-0">
-                        <input type="checkbox" name="categories[]" value="{{ $child->id }}" class="" data-id="{{ $child->id }}" data-title="{{ $child->title }}">
+                        <input type="{{ $input[1] }}" name="categories[]" value="{{ $child->id }}" class="" data-id="{{ $child->id }}" data-title="{{ $child->title }}">
                         {{ $child->title }}
                     </label>
                 @endif

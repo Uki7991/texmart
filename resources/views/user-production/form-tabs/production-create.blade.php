@@ -104,7 +104,7 @@
                                     @endif
                                     <a href="#" class="text-dark">{{ $category->title }}</a>
                                     @if(count($category->childs))
-                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => true])
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])
                                     @endif
                                 </li>
                             @endforeach

@@ -61,19 +61,19 @@
                     @include('user-production.formFields.coordinates', ['idMap' => 'map2'])
                     <div class="form-group">
                         <label for="categories-service">Categories</label>
-                        <select name="categories[]" class="" id="categories-service">
-                            @foreach($categories as $cat)
-                                @if(count($cat->childs) > 0)
-                                    <optgroup label="{{ $cat->title }}">
-                                        @include('user-production.partials.manageChildsSelect', ['childs' => $cat->childs])
-                                    </optgroup>
-                                @else
-                                    <optgroup label="{{ $cat->title }}">
-                                        <option value="{{ $cat->id }}">{{ $cat->title }}</option>
-                                    </optgroup>
-                                @endif
+                        <ul id="tree3">
+                            @foreach($categories as $category)
+                                <li>
+                                    @if(count($category->childs))
+                                        <i class="fas fa-plus"></i>
+                                    @endif
+                                    <a href="#" class="text-dark">{{ $category->title }}</a>
+                                    @if(count($category->childs))
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
+                                    @endif
+                                </li>
                             @endforeach
-                        </select>
+                        </ul>
                     </div>
                     <div class="form-group">
                         <label for="images">Images</label>
