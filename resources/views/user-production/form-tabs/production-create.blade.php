@@ -21,19 +21,19 @@
                     </div>
                     <div class="form-group">
                         <label for="categories-multi">Категории</label>
-                    <ul id="tree1">
-                        @foreach($categories as $category)
-                            <li>
-                                @if(count($category->childs))
-                                    <i class="fas fa-plus"></i>
-                                @endif
-                                <a href="#" class="text-dark">{{ $category->title }}</a>
-                                @if(count($category->childs))
-                                    @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])
-                                @endif
-                            </li>
-                        @endforeach
-                    </ul>
+                        <ul id="tree1">
+                            @foreach($categories as $category)
+                                <li>
+                                    @if(count($category->childs))
+                                        <i class="fas fa-plus"></i>
+                                    @endif
+                                    <a href="#" class="text-dark">{{ $category->title }}</a>
+                                    @if(count($category->childs))
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])
+                                    @endif
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                     <div class="form-row">
                         <div class="col-6">
@@ -97,35 +97,6 @@
                     @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
 
 
-{{--                    <div class="form-group">/--}}
-{{--                        <label for="categories-multi">Категории</label>/--}}
-{{--                        <select name="categories[]" class="form-control w-100" id="categories-multi" multiple="multiple">--}}
-{{--                            @foreach($categories as $cat)--}}
-{{--                                @if(count($cat->childs) > 0)--}}
-{{--                                    <optgroup label="{{ $cat->title }}" data-id="{{ $cat->id }}" data-toggle="collapse" data-target="#multiCollapse{{ $cat->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $cat->id }}">--}}
-{{--                                        @include('user-production.partials.manageChildsSelect', ['childs' => $cat->childs])--}}
-{{--                                    </optgroup>--}}
-{{--                                @else--}}
-{{--                                    <optgroup label="{{ $cat->title }}" data-id="{{ $cat->id }}"  class="collapse collapse-multi" id="multiCollapse{{ $cat->id }}" data-toggle="collapse" data-target="#multiCollapse{{ $cat->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $cat->id }}">--}}
-{{--                                        <option value="{{ $cat->id }}">{{ $cat->title }}</option>--}}
-{{--                                    </optgroup>--}}
-{{--                                @endif--}}
-{{--                            @endforeach--}}
-{{--                        </select>--}}
-{{--                        <ul id="tree1">//--}}
-{{--                            @foreach($categories as $category)//--}}
-{{--                                <li>//--}}
-{{--                                    @if(count($category->childs))//--}}
-{{--                                        <i class="fas fa-plus"></i>//--}}
-{{--                                    @endif/--}}
-{{--                                    <a href="#" class="text-dark">{{ $category->title }}</a>/--}}
-{{--                                    @if(count($category->childs))/--}}
-{{--                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])/--}}
-{{--                                    @endif/--}}
-{{--                                </li>/--}}
-{{--                            @endforeach/--}}
-{{--                        </ul>/--}}
-{{--                    </div>/--}}
                     <div class="form-group">
                         <label for="images">Images</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>

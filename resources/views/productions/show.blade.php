@@ -98,6 +98,9 @@
 @endpush
 
 @push('scripts')
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5f9a88a6c2d02d"></script>
+
     <script src="{{ asset('js/lightbox.min.js') }}"></script>
     @if(count($production->getCoordinates()))
         <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU" type="text/javascript"></script>

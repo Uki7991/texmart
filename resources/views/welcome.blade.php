@@ -137,6 +137,11 @@
     @include('partials.modals.message_modal')
 
 @endsection
+@push('scripts')
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5f9a88a6c2d02d"></script>
+
+@endpush
 @push("scripts")
     @includeWhen(auth()->check(), 'partials.scripts.favorite_click')
     @include('partials.scripts.favorite_btn')
