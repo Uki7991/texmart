@@ -107,3 +107,7 @@ Route::get('/privacy',function(){
 Route::get('/conditions',function(){
     return view('conditions');
 })->name('conditions');
+
+Route::get('/offer',function(){
+    return view('offer');
+})->name('offer');
