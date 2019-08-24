@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                @include('_partials.search-result-ajax')
+                @include('search-result-ajax')
             </div>
         </div>
     </div>
