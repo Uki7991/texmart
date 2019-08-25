@@ -61,19 +61,21 @@
 
 
                         <div class="col-12 pt-5">
+                            <h5>Описание:</h5>
                             <div class="description">
                                 {!! $production->description !!}
                             </div>
                         </div>
 
                         <div class="col-12 pt-3">
-                            <h2 class="font-weight-light h4">Оборудование</h2>
+                            <h2 class="font-weight-light h4">Оборудование:</h2>
                             <div class="tools">
                                 {!! $production->tools !!}
                             </div>
                         </div>
                         @if(count($production->getCoordinates()))
                             <div class="col-12 col-lg-8 pt-3">
+                                <h3>Местонахождение на карте:</h3>
                                 <div id="map" style="width: auto; height: 200px;"></div>
                             </div>
                         @endif
