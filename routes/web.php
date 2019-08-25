@@ -48,6 +48,7 @@ Route::get('productions/{slug}', 'ProductionController@show')->name('productions
 Route::get('productions/{production}', 'ProductionController@edit')->name('productions.edit');
 Route::patch('productions/{production}', 'ProductionController@update')->name('productions.update');
 Route::delete('productions/{production}', 'ProductionController@destroy')->name('productions.destroy');
+Route::post('bid', 'MainController@storeBid')->name('bid.store');
 
 Route::get('/feedback',function (){
     return view('feadback');

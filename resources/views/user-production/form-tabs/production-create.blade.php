@@ -77,12 +77,14 @@
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone1">Телефон #1</label>
+                                <input type="hidden" name="code">
                                 <input type="tel" name="phone1" class="form-control phone1">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone2">Телефон #2</label>
+                                <input type="hidden" name="code2">
                                 <input type="tel" name="phone2" class="form-control phone2">
                             </div>
                         </div>
@@ -133,7 +135,10 @@
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
         });
-        $('.phone1').on('focus', function(){
+        $('.phone1').on('focus', function(e){
+            let input = $(e.currentTarget);
+            let code = input.siblings('.iti__flag-container').find('.iti__selected-dial-code').html();
+            input.parent().siblings('input[name="code"]').val(code);
             var $this = $(this),
                 // Get active country's phone number format from input placeholder attribute
                 activePlaceholder = $this.attr('placeholder'),
@@ -167,7 +172,10 @@
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
         });
-        $('.phone2').on('focus', function(){
+        $('.phone2').on('focus', function(e){
+            let input = $(e.currentTarget);
+            let code = input.siblings('.iti__flag-container').find('.iti__selected-dial-code').html();
+            input.parent().siblings('input[name="code2"]').val(code);
             var $this = $(this),
                 // Get active country's phone number format from input placeholder attribute
                 activePlaceholder = $this.attr('placeholder'),
