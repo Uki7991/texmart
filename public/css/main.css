@@ -297,7 +297,7 @@ p, h1, h2, h3, h4, h5, h6{
 }
 
 .promo-register {
-    background: url('../storage/img/wallpaper-1.jpg');
+    background: url('/../img/back1.jpg');
     background-size: cover;
     background-position: center center;
     height: 100vh;
