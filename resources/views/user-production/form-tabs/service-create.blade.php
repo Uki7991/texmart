@@ -13,6 +13,22 @@
                         </label>
                         <input type="text" name="title" class="form-control" required>
                     </div>
+                    <div class="form-group">
+                        <label for="categories-service">Категории</label>
+                        <ul id="tree3">
+                            @foreach($serviceCats as $category)
+                                <li>
+                                    @if(count($category->childs))
+                                        <i class="fas fa-plus"></i>
+                                    @endif
+                                    <a href="#" class="text-dark">{{ $category->title }}</a>
+                                    @if(count($category->childs))
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
+                                    @endif
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
                     <div class="form-row">
                         <div class="col-6">
                             <div class="form-froup">
@@ -40,13 +56,13 @@
                     <div class="form-row">
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="phone1">Phone #1</label>
+                                <label for="phone1">Телефон #1</label>
                                 <input type="text" name="phone1" class="form-control" id="phone1">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
-                                <label for="phone2">Phone #2</label>
+                                <label for="phone2">Телефон #2</label>
                                 <input type="text" name="phone2" class="form-control" id="phone2">
                             </div>
                         </div>
@@ -59,24 +75,9 @@
                     </div>
                     <h3>Map</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map2'])
+
                     <div class="form-group">
-                        <label for="categories-service">Categories</label>
-                        <ul id="tree3">
-                            @foreach($serviceCats as $category)
-                                <li>
-                                    @if(count($category->childs))
-                                        <i class="fas fa-plus"></i>
-                                    @endif
-                                    <a href="#" class="text-dark">{{ $category->title }}</a>
-                                    @if(count($category->childs))
-                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
-                                    @endif
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="form-group">
-                        <label for="images">Images</label>
+                        <label for="images">Картинки</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
                     </div>
 
