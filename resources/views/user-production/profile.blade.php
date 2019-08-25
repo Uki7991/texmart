@@ -76,66 +76,14 @@
         $("body").on('click', '.select2-results__group', function() {
             $(this).siblings().toggle();
         });
-        // $('#categories-multi').multipleSelect({
-        //     multiple: true,
-        //     hideOptgroupCheckboxes: true,
-        //     width: 460,
-        //     multipleWidth: 150
-        // });
-
-        // $('.collapse.collapse-multi').each((e, i) => {
-        //     let collapse = $(i).data('toggle');
-        //     let id = $(i).attr('id');
-        //     let target = $(i).data('target');
-        //
-        //     console.log(collapse, id, target);
-        // });
-        // $('#categories-multi').selectize({
-        //     plugins: ['remove_button', 'optgroup_columns'],
-        //     options: [
-        //         {id: 'tsirt', make: 'man', model: 'Мужские Футболки'},
-        //         {id: 'tsirt2', make: 'child', model: 'Детские Футболки'},
-        //         {id: 'tsirt1', make: 'female', model: 'Женские Футболки'},
-        //         {id: 'caliber', make: 'man', model: 'Мужские Рубашки'},
-        //         {id: 'caliber2', make: 'child', model: 'Детские Рубашки'},
-        //         {id: 'caliber1', make: 'female', model: 'Женские Рубашки'},
-        //         {id: 'ties', make: 'man', model: 'Мужские Галстуки'},
-        //         {id: 'shoes', make: 'man', model: 'Мужская Обувь'},
-        //         {id: 'shorts', make: '1pants', model: 'Мужские Шорты'},
-        //         {id: 'pants', make: '1pants', model: 'Мужские Брюки'},
-        //         {id: 'costum', make: '1smokings', model: 'Мужские Костюмы'},
-        //         {id: 'smoking', make: '1smokings', model: 'Мужские Смокинги'},
-        //     ],
-        //     optgroups: [
-        //         {id: 'man', name: 'Мужские'},
-        //         {id: '1smokings', name: 'Мужские костюмы'},
-        //         {id: '1pants', name: 'Мужкие брюки'},
-        //         {id: 'female', name: 'Женские'},
-        //         {id: 'child', name: 'Детские'},
-        //     ],
-        //     labelField: 'model',
-        //     valueField: 'id',
-        //     optgroupField: 'make',
-        //     optgroupLabelField: 'name',
-        //     optgroupValueField: 'id',
-        //     optgroupOrder: ['chevrolet', 'dodge', 'audi'],
-        //     searchField: ['model']
-        // });
-        // $('#categories-service').multipleSelect({
-        //     single: true,
-        //     width: 460,
-        //     multipleWidth: 150
-        // });
-        // $('#categories-product').multipleSelect({
-        //     single: true,
-        //     width: 460,
-        //     multipleWidth: 150
-        // });
     </script>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
     <script>
         tinymce.init({
             selector: '.richTextBox'
+        });
+        tinymce.init({
+            selector: '#equipment'
         });
     </script>
     @include('partials.scripts.favorite_click')

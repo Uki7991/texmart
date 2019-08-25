@@ -17,7 +17,13 @@
                         <label>
                             Бренд/Наименование предприятия
                         </label>
-                        <input type="text" name="title" class="form-control">
+                        <input type="text" name="brand" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Картинка для объявления
+                        </label>
+                        <input type="file" name="logo" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="categories-multi">Категории</label>
@@ -35,29 +41,23 @@
                             @endforeach
                         </ul>
                     </div>
-                    <div class="form-row">
-                        <div class="col-6">
-                            <div class="form-froup">
-                                <label for="employee">Количество сотрудников</label>
-                                <input type="text" class="form-control" name="" id="employee" required>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-froup">
-                                <label for="equipment">Оборудование</label>
-                                <input type="text" class="form-control" name="" id="equipment" required>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="employee">Количество сотрудников</label>
+                        <input type="text" class="form-control" name="amount_production" id="employee">
+                    </div>
+                    <div class="form-group">
+                        <label for="equipment">Оборудование</label>
+                        <input type="text" class="form-control" name="tools" id="equipment">
                     </div>
                     <div class="form-row">
                         <div class="col-6">
-                            <div class="form-froup">
+                            <div class="form-group">
                                 <label for="site">Сайт</label>
                                 <input type="text" class="form-control" name="site" id="site">
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-froup">
+                            <div class="form-group">
                                 <label for="address">Адрес</label>
                                 <input type="text" class="form-control" name="address" id="address">
                             </div>
@@ -77,13 +77,13 @@
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone1">Телефон #1</label>
-                                <input type="tel" name="phone1" class="form-control" id="phone1">
+                                <input type="tel" name="phone1" class="form-control phone1">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone2">Телефон #2</label>
-                                <input type="tel" name="phone2" class="form-control" id="phone2">
+                                <input type="tel" name="phone2" class="form-control phone2">
                             </div>
                         </div>
                         <div class="col-4">
@@ -112,38 +112,76 @@
 
 @push('styles')
     <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
-    {{--<link rel="stylesheet" href="http://texmart/admin/voyager-assets?path=js/skins/voyager/skin.min.css">--}}
 @endpush
 @push('scripts')
-    {{--<script src="{{ voyager_asset('js/app.js') }}"></script>--}}
-
-    <script src="js/intlTelInput.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+    <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
     <script>
-        var input = document.querySelector("#phone1");
-        intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(success, failure) {
-                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
+
+        $(".phone1").intlTelInput({
+            initialCountry: "ru",
+            preferredCountries: ["ru", "kg", "kz"],
+            separateDialCode: true,
+            excludeCountries: ["xk"],
+            geoIpLookup: function (callback) {
+                $.get('https://ipinfo.io', function () {
+                }, "jsonp").always(function (resp) {
                     var countryCode = (resp && resp.country) ? resp.country : "";
-                    success(countryCode);
+                    callback(countryCode);
                 });
             },
-            utilsScript: "js/utils.js"
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+        });
+        $('.phone1').on('focus', function(){
+            var $this = $(this),
+                // Get active country's phone number format from input placeholder attribute
+                activePlaceholder = $this.attr('placeholder'),
+                // Convert placeholder as exploitable mask by replacing all 1-9 numbers with 0s
+                newMask = activePlaceholder.replace(/[1-9]/g, "0");
+            // console.log(activePlaceholder + ' => ' + newMask);
+
+            // Init new mask for focused input
+            $this.mask(newMask);
+        });
+
+        $('.phone1').on('countrychange', (e, c) => {
+            let $this = $(e.currentTarget);
+            $this.removeAttr('maxlength');
         });
     </script>
     <script>
-        var input = document.querySelector("#phone2");
-        intlTelInput(input, {
-            initialCountry: "auto",
-            geoIpLookup: function(success, failure) {
-                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
+
+        $(".phone2").intlTelInput({
+            initialCountry: "ru",
+            preferredCountries: ["ru", "kg", "kz"],
+            separateDialCode: true,
+            excludeCountries: ["xk"],
+            geoIpLookup: function (callback) {
+                $.get('https://ipinfo.io', function () {
+                }, "jsonp").always(function (resp) {
                     var countryCode = (resp && resp.country) ? resp.country : "";
-                    success(countryCode);
+                    callback(countryCode);
                 });
             },
-            utilsScript: "js/utils.js"
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+        });
+        $('.phone2').on('focus', function(){
+            var $this = $(this),
+                // Get active country's phone number format from input placeholder attribute
+                activePlaceholder = $this.attr('placeholder'),
+                // Convert placeholder as exploitable mask by replacing all 1-9 numbers with 0s
+                newMask = activePlaceholder.replace(/[1-9]/g, "0");
+            // console.log(activePlaceholder + ' => ' + newMask);
+
+            // Init new mask for focused input
+            $this.mask(newMask);
+        });
+
+        $('.phone2').on('countrychange', (e, c) => {
+            let $this = $(e.currentTarget);
+            $this.removeAttr('maxlength');
         });
     </script>
 

@@ -8,7 +8,7 @@
                 <div class="container">
                     <div class="row bg-white p-3">
                         <div class="col-5 col-sm-2  col-md-4">
-                            <img src="{{ asset('img/2 lg.jpg') }}" class="img-fluid shadow-sm"
+                            <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" class="img-fluid shadow-sm"
                                  alt="">
                         </div>
                         <div class="col">
@@ -50,8 +50,8 @@
                             <h2 class="font-weight-light h4">Галерея</h2>
                             <div class="gallery">
                                     @foreach(json_decode($production->images) as $image)
-                                        <a href="{{ asset('storage/productions/'.$image) }}" data-lightbox="gallery">
-                                            <img src="{{ asset('storage/productions/'.$image) }}" height="80" width="auto"
+                                        <a href="{{ asset('storage/'.$image) }}" data-lightbox="gallery">
+                                            <img src="{{ asset('storage/'.$image) }}" height="80" width="auto"
                                                  alt="">
                                         </a>
                                     @endforeach
@@ -69,10 +69,7 @@
                         <div class="col-12 pt-3">
                             <h2 class="font-weight-light h4">Оборудование</h2>
                             <div class="tools">
-                                <ul>
-                                    <li>Швейная машина: maestro 13</li>
-                                    <li>Закройная машина: model fr-12</li>
-                                </ul>
+                                {!! $production->tools !!}
                             </div>
                         </div>
                         @if(count($production->getCoordinates()))
