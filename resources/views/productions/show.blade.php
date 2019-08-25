@@ -8,7 +8,7 @@
                 <div class="container">
                     <div class="row bg-white p-3">
                         <div class="col-5 col-sm-2  col-md-4">
-                            <img src="{{ asset('storage/'.$production->logo) }}" class="img-fluid shadow-sm"
+                            <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" class="img-fluid shadow-sm"
                                  alt="">
                         </div>
                         <div class="col">
