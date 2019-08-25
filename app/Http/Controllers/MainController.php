@@ -8,6 +8,7 @@ use App\Production;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+use Intervention\Image\ImageManagerStatic;
 
 class MainController extends Controller
 {
@@ -38,6 +39,49 @@ class MainController extends Controller
         Mail::to('texmartcompanykg@gmail.com')->send(new BidAccept($bid));
 
         Session::flash('bid_success', 'Ваша заявка была отправлена');
+        return redirect()->back();
+    }
+
+    public function imageResize(Request $request)
+    {
+        if ($request->image) {
+            $fileName = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME).'.'.$request->image->getClientOriginalExtension();
+
+            $file = ImageManagerStatic::make($request->image);
+
+            if ($width = $request->width) {
+                $file = $file->resize($width, null, function ($constraint) {
+                    return $constraint->aspectRatio();
+                });
+            } elseif ($height = $request->height) {
+                $file = $file->resize(null, $height, function ($constraint) {
+                    return $constraint->aspectRatio();
+                });
+            }
+
+            $file->save(public_path('img/'.$fileName), 40);
+        }
+
+        if ($request->images) {
+            foreach ($request->images as $image) {
+                $fileName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME).'.'.$image->getClientOriginalExtension();
+
+                $file = ImageManagerStatic::make($image);
+
+                if ($width = $request->width) {
+                    $file = $file->resize($width, null, function ($constraint) {
+                        return $constraint->aspectRatio();
+                    });
+                } elseif ($height = $request->height) {
+                    $file = $file->resize(null, $height, function ($constraint) {
+                        return $constraint->aspectRatio();
+                    });
+                }
+
+                $file->save(public_path('img/'.$fileName), 40);
+            }
+        }
+
         return redirect()->back();
     }
 }

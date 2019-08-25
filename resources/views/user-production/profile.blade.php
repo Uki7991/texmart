@@ -2,6 +2,7 @@
 
 
 @push('scripts')
+    <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU" type="text/javascript"></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="{{ asset('js/comboTreePlugin.js') }}"></script>
