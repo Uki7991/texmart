@@ -63,7 +63,7 @@
                                         <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
-                                    </div>
+                                </div>
 
                                 <div class="form-group">
                                     <label for="email" class="col-form-label text-md-right"><i class="fas fa-envelope text-primary"></i> {{ __('E-Mail') }}</label>
