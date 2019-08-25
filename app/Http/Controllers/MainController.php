@@ -14,9 +14,9 @@ class MainController extends Controller
 {
     public function index()
     {
-        $productions = Production::where('type', 'productions')->get('id', 'title', 'slug');
-        $services = Production::where('type', 'service')->get('id', 'title', 'slug');
-        $products = Production::where('type', 'product')->get('id', 'title', 'slug');
+        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo']);
+        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo']);
+        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo']);
 
         return view('welcome', [
             'productions' => $productions,
