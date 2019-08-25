@@ -73,12 +73,6 @@
                 console.log('error');
             }
         });
-        var myData = '{{ json_encode($categories, true) }}';
-        console.log(myData);
-        $("#categories-multi").comboTree({
-            source : myData,
-            isMultiple: true
-        });
         $("body").on('click', '.select2-results__group', function() {
             $(this).siblings().toggle();
         });

@@ -22,7 +22,7 @@
                     <div class="form-group">
                         <label for="categories-multi">Категории</label>
                         <ul id="tree1">
-                            @foreach($categories as $category)
+                            @foreach($productionCats as $category)
                                 <li>
                                     @if(count($category->childs))
                                         <i class="fas fa-plus"></i>

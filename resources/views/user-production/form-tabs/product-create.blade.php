@@ -63,7 +63,7 @@
                     <div class="form-group">
                         <label for="categories-product">Categories</label>
                         <ul id="tree2">
-                            @foreach($categories as $category)
+                            @foreach($productCats as $category)
                                 <li>
                                     @if(count($category->childs))
                                         <i class="fas fa-plus"></i>
