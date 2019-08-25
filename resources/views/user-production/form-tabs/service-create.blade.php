@@ -14,6 +14,12 @@
                         <input type="text" name="title" class="form-control" required>
                     </div>
                     <div class="form-group">
+                        <label>
+                            Картинка для объявления
+                        </label>
+                        <input type="file" name="logo" class="form-control" required>
+                    </div>
+                    <div class="form-group">
                         <label for="categories-service">Категории</label>
                         <ul id="tree3">
                             @foreach($serviceCats as $category)
@@ -57,13 +63,13 @@
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone1">Телефон #1</label>
-                                <input type="text" name="phone1" class="form-control" id="phone1">
+                                <input type="text" name="phone1" class="form-control phone1">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone2">Телефон #2</label>
-                                <input type="text" name="phone2" class="form-control" id="phone2">
+                                <input type="text" name="phone2" class="form-control phone2">
                             </div>
                         </div>
                         <div class="col-4">

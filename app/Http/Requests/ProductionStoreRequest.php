@@ -35,6 +35,9 @@ class ProductionStoreRequest extends FormRequest
             'longtitude' => '',
             'images' => '',
             'type' => 'required',
+            'logo' => '',
+            'tools' => '',
+            'amount_production' => '',
         ];
     }
 }

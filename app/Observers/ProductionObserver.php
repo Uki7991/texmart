@@ -29,15 +29,26 @@ class ProductionObserver
         $imagesArray = [];
         if ($images = request('images')) {
             foreach ($images as $image) {
-                $fileName = uniqid('production_').'.jpg';
+                $fileName = 'productions/'.uniqid('production_').'.jpg';
                 $image = ImageManagerStatic::make($image)
                     ->stream('jpg', 40);
 
-                Storage::disk('local')->put('public/productions/'.$fileName, $image);
+                Storage::disk('local')->put('public/'.$fileName, $image);
                 $imagesArray[] = $fileName;
             }
         }
         $production->images = json_encode($imagesArray, true);
+
+        if ($images = request('images')) {
+            foreach ($images as $image) {
+                $fileName = 'productions/'.uniqid('production_logo_').'.jpg';
+                $image = ImageManagerStatic::make($image)
+                    ->stream('jpg', 40);
+
+                Storage::disk('local')->put('public/'.$fileName, $image);
+                $production->logo = $fileName;
+            }
+        }
     }
 
     /**
