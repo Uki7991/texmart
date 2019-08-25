@@ -7,7 +7,7 @@
             <div class="col">
                 <div class="container">
                     <div class="row bg-white p-3">
-                        <div class="col-5">
+                        <div class="col-5 col-sm-2  col-md-4">
                             <img src="{{ asset('img/2 lg.jpg') }}" class="img-fluid shadow-sm"
                                  alt="">
                         </div>
