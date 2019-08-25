@@ -17,7 +17,10 @@ Route::get('/', function () {
         'productions' => $productions,
     ]);
 })->name('homepage');
-
+Route::get('/image', function () {
+    return view('image-resizer');
+});
+Route::post('/image/resize', 'MainController@imageResize')->name('image.resize');
 
 Route::get('/profile', 'UserController@index')->name('profile');
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
