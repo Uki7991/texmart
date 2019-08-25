@@ -1,15 +1,13 @@
 <div class="form-row">
-    <div class="col-3">
+    <div class="">
         <div class="form-group">
-            <label for="latitude{{ $idMap ?? 'map' }}">Latitude</label>
-            <input type="text" id="latitude{{ $idMap ?? 'map' }}" name="latitude" class="form-control">
+            <input type="hidden" id="latitude{{ $idMap ?? 'map' }}" name="latitude" class="form-control">
         </div>
         <div class="form-group">
-            <label for="longtitude{{ $idMap ?? 'map' }}">Longtitude</label>
-            <input type="text" id="longtitude{{ $idMap ?? 'map' }}" name="longtitude" class="form-control">
+            <input type="hidden" id="longtitude{{ $idMap ?? 'map' }}" name="longtitude" class="form-control">
         </div>
     </div>
-    <div class="col-9">
+    <div class="col-12 pt-3">
         <div class="form-group">
             <div id="{{ $idMap ?? 'map' }}" style="width: 100%; height: 400px;"></div>
         </div>
