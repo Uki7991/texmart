@@ -62,12 +62,14 @@
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone1">Телефон #1</label>
+                                <input type="hidden" name="code">
                                 <input type="text" name="phone1" class="form-control phone1">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="phone2">Телефон #2</label>
+                                <input type="hidden" name="code2">
                                 <input type="text" name="phone2" class="form-control phone2">
                             </div>
                         </div>
