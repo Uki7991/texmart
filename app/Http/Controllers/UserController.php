@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Production;
+use App\Type;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -43,14 +44,29 @@ class UserController extends Controller
     {
         $productions = Production::where('user_id', auth()->user()->id)->get();
         $categories = Category::where('parent_id', null)->get(['id', 'title']);
-
-
+        $types = Type::all();
+        $productionCats = collect();
+        $productCats = collect();
+        $serviceCats = collect();
+        foreach ($types as $type) {
+            if ($type->title == 'Производство') {
+                $productionCats = $productionCats->merge($type->categories);
+            }
+            if ($type->title == 'Услуги') {
+                $serviceCats = $serviceCats->merge($type->categories);
+            }
+            if ($type->title == 'Товары') {
+                $productCats = $productCats->merge($type->categories);
+            }
+        }
 
         $user = auth()->user();
         return view('user-production.profile', [
             'user' => $user,
             'productions' => $productions,
-            'categories' => $categories,
+            'productionCats' => $productionCats,
+            'productCats' => $productCats,
+            'serviceCats' => $serviceCats,
         ]);
     }
 }
