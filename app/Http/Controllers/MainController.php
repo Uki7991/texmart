@@ -12,6 +12,19 @@ use Intervention\Image\ImageManagerStatic;
 
 class MainController extends Controller
 {
+    public function index()
+    {
+        $productions = Production::where('type', 'productions')->get('id', 'title', 'slug');
+        $services = Production::where('type', 'service')->get('id', 'title', 'slug');
+        $products = Production::where('type', 'product')->get('id', 'title', 'slug');
+
+        return view('welcome', [
+            'productions' => $productions,
+            'services' => $services,
+            'products' => $products,
+        ]);
+    }
+
     public function search(Request $request)
     {
         $search = $request->search;

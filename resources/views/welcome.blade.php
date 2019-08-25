@@ -17,30 +17,36 @@
     </div>
     <div class="container">
         <div class="row justify-content-center py-4">
-            <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 pl-4 ">
-                    <a href="{{ route('productions.index') }}" class="text-dark">Производственные цеха и фабрики</a>
-                </p>
-            </div>
-            <div class="col-12 mt-3">
-                @include('productions.carousel')
-            </div>
-            <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 pl-4">
-                    <a href="{{ route('productions.index') }}" class="text-dark">Товары</a>
-                </p>
-            </div>
-            <div class="col-12 mt-3">
-                @include('productions.carousel')
-            </div>
-            <div class="col-12">
-                <p class="font-weight-bold text-uppercase m-0 pl-4">
-                    <a href="{{ route('productions.index') }}" class="text-dark">Услуги</a>
-                </p>
-            </div>
-            <div class="col-12 mt-3">
-                @include('productions.carousel')
-            </div>
+            @if(count($productions))
+                <div class="col-12">
+                    <p class="font-weight-bold text-uppercase m-0 pl-4 ">
+                        <a href="{{ route('productions.index') }}" class="text-dark">Производственные цеха и фабрики</a>
+                    </p>
+                </div>
+                <div class="col-12 mt-3">
+                    @include('productions.carousel', ['productions' => $productions])
+                </div>
+            @endif
+            @if(count($products))
+                <div class="col-12">
+                    <p class="font-weight-bold text-uppercase m-0 pl-4">
+                        <a href="{{ route('productions.index') }}" class="text-dark">Товары</a>
+                    </p>
+                </div>
+                <div class="col-12 mt-3">
+                    @include('productions.carousel', ['productions' => $products])
+                </div>
+            @endif
+            @if(count($services))
+                <div class="col-12">
+                    <p class="font-weight-bold text-uppercase m-0 pl-4">
+                        <a href="{{ route('productions.index') }}" class="text-dark">Услуги</a>
+                    </p>
+                </div>
+                <div class="col-12 mt-3">
+                    @include('productions.carousel', ['productions' => $services])
+                </div>
+            @endif
             {{--<div class="col-12 mt-3 text-center">--}}
             {{--<a href="{{ route('productions.index') }}" class="btn text-dark text-dotted rounded-0">Больше--}}
             {{--продукций...</a>--}}

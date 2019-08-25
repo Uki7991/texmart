@@ -11,12 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    $productions = \App\Production::all();
-    return view('welcome', [
-        'productions' => $productions,
-    ]);
-})->name('homepage');
+Route::get('/', 'MainController@index')->name('homepage');
 Route::get('/image', function () {
     return view('image-resizer');
 });
