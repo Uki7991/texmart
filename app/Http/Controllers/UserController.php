@@ -3,9 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Requests\UpdateUserPassword;
 use App\Production;
 use App\Type;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic;
 
 class UserController extends Controller
 {
@@ -68,5 +73,31 @@ class UserController extends Controller
             'productCats' => $productCats,
             'serviceCats' => $serviceCats,
         ]);
+    }
+
+    public function edit(Request $request, User $user)
+    {
+        $user->name = $request->name;
+        if ($request->avatar) {
+            $fileName = 'users/'.uniqid('user_').'.jpg';
+
+            $file = ImageManagerStatic::make($request->avatar)->stream('jpg', 40);
+            Storage::disk('local')->put('public/'.$fileName, $file);
+            $user->avatar = $fileName;
+        }
+
+        $user->save();
+
+        return redirect()->back();
+    }
+
+    public function editPassword(UpdateUserPassword $request, User $user)
+    {
+        $validated = $request->validated();
+
+        $user->password = Hash::make($validated['password']);
+        $user->save();
+
+        return redirect()->back();
     }
 }

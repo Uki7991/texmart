@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 
 Route::get('/profile', 'UserController@index')->name('profile');
+Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
+Route::put('/user/password/edit/{user}', 'UserController@editPassword')->name('user.password.edit');
 Route::get('/get-categories', 'UserController@getCategories')->name('get.categories');
 
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('google.redirect');
