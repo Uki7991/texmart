@@ -85,6 +85,14 @@
 
     <div>
         @include('partials.pre_register')
+        @if(\Illuminate\Support\Facades\Session::has('bid_success'))
+            <div class="alert alert-danger alert-dismissible w-25 fixed-bottom fade show" style="left: unset;" role="alert">
+                <strong>Ваша заявка была отправлена!</strong> Ожидайте ответа или звонка
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
     </div>
 
     <div class="pt-5">

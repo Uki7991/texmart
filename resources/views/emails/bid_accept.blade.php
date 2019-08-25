@@ -5,7 +5,7 @@
 
     Имя: {{ $bid->name }}
     E-mail: {{ $bid->email }}
-    Номер телефона: {{ $bid->code.$bid->phone }}
+    Номер телефона: {{ $bid->code. ' ' .$bid->phone }}
     Заявка: {{ $bid->bid }}
 
 @endcomponent
