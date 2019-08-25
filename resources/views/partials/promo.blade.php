@@ -15,20 +15,20 @@
     <div class="promo-carousel owl-carousel owl-theme">
         <div class="item">
             <img src="img/slide1.jpg" class="img-fluid" alt="...">
-            <div class="position-absolute" style="bottom: 15%; left: 15%;">
-                <h2 class="text-uppercase text-white" style="font-size: 290%!important;">Первая интернет платформа <br> швейной и текстильной <br> промышленности Кыргызстана</h2>
+            <div class="position-absolute slider-text-position">
+                <h2 class="text-uppercase text-white slider-text">Первая интернет платформа <br> швейной и текстильной <br> промышленности Кыргызстана</h2>
             </div>
         </div>
         <div class="item">
             <img src="img/slide2.jpg" class="img-fluid" alt="...">
-            <div class="position-absolute" style="bottom: 15%; left: 15%;">
-                <h2 class="text-uppercase text-white" style="font-size: 290%!important;">Консалтинг, <br> оформление всех бухгалтерских <br> и юридических документов</h2>
+            <div class="position-absolute slider-text-position">
+                <h2 class="text-uppercase text-white slider-text">Консалтинг, <br> оформление всех бухгалтерских <br> и юридических документов</h2>
             </div>
         </div>
         <div class="item">
             <img src="img/slide3.jpg" class="img-fluid" alt="...">
-            <div class="position-absolute" style="bottom: 15%; left: 15%;">
-                <h2 class="text-uppercase text-white" style="font-size: 290%!important;">Оценка качества пошива одежды <br> и производства от Texmart.kg <br> для уверенности на расстоянии</h2>
+            <div class="position-absolute slider-text-position">
+                <h2 class="text-uppercase text-white slider-text">Оценка качества пошива одежды <br> и производства от Texmart.kg <br> для уверенности на расстоянии</h2>
             </div>
         </div>
     </div>
