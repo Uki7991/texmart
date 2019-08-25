@@ -124,7 +124,10 @@ class ProductionController extends Controller
     public function filter(Request $request)
     {
         $params = $request->params;
-        $cats = Category::all()->whereIn('id', $params);
+        $cats = Category::all();
+        if ($params) {
+            $cats = $cats->whereIn('id', $params);
+        }
         $productions = collect();
         foreach ($cats as $cat) {
             $productions = $productions->merge($cat->productions);
