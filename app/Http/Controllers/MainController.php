@@ -14,11 +14,9 @@ class MainController extends Controller
     public function search(Request $request)
     {
         $search = $request->search;
-        $result = collect(['Обьявления' => Production::where(function($query) use ($search) {
-            $query->where('title', 'like', "%$search%");
-        })->get(['id', 'title', 'slug'])]);
-//        $result = $result->merge(collect(['Клиники' => Clinic::where('clinic_name', 'like', '%' . $search. '%')->get(['id', 'clinic_name'])]));
-//        $result = $result->merge(collect(['Услуги' => Service::where('name', 'like', '%' . $search. '%')->get(['id', 'name'])]));
+        $result = collect(['Производственные фабрики  и цеха' => Production::where('title', 'like', "%$search%")->where('type', 'productions')->get(['id', 'title', 'slug'])]);
+        $result = $result->merge(collect(['Товары' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'product')->get(['id', 'title', 'slug'])]));
+        $result = $result->merge(collect(['Услуги' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'service')->get(['id', 'title', 'slug'])]));
         if ($request->ajax()) {
             return response()->json(view('search-result-ajax', [
                 'result' => $result,
