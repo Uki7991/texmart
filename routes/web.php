@@ -40,6 +40,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('productions', 'ProductionController@index')->name('productions.index');
+Route::get('productions/filter', 'ProductionController@filter')->name('productions.filter');
 Route::get('productions/create', 'ProductionController@create')->name('productions.create');
 Route::post('productions', 'ProductionController@store')->name('productions.store');
 Route::get('productions/rate', 'ProductionController@rate')->name('productions.rate');

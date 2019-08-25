@@ -8,6 +8,7 @@ use App\Production;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Builder;
 
 class ProductionController extends Controller
 {
@@ -118,5 +119,20 @@ class ProductionController extends Controller
         $production->save();
 
         return response()->json(['production' => $production->only(['id', 'title', 'rating'])]);
+    }
+
+    public function filter(Request $request)
+    {
+        $params = $request->params;
+        $cats = Category::all()->whereIn('id', $params);
+        $productions = collect();
+        foreach ($cats as $cat) {
+            $productions = $productions->merge($cat->productions);
+        }
+        $productions = $productions->unique('id');
+
+        return response()->json(view('productions.list', [
+            'productions' => $productions,
+        ])->render());
     }
 }
