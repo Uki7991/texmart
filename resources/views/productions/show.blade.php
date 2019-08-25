@@ -6,8 +6,8 @@
         <div class="row py-4">
             <div class="col">
                 <div class="container">
-                    <div class="row bg-white p-3">
-                        <div class="col-5 col-sm-2  col-md-4">
+                    <div class="row bg-white p-md-3">
+                        <div class="col-12 col-md-5 mb-4 mb-lg-0">
                             <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" class="img-fluid shadow-sm"
                                  alt="">
                         </div>
@@ -18,7 +18,7 @@
                                     @include('partials.btn.rateYo')
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 my-4 my-lg-0">
                                     <ul id="tree1">
                                         @foreach($categories as $category)
                                             <li>
@@ -73,8 +73,8 @@
                             </div>
                         </div>
                         @if(count($production->getCoordinates()))
-                            <div class="col-12 pt-3">
-                                <div id="map" style="width: 600px; height: 400px"></div>
+                            <div class="col-12 col-lg-8 pt-3">
+                                <div id="map" style="width: auto; height: 200px;"></div>
                             </div>
                         @endif
                     </div>

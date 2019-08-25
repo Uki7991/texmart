@@ -28,12 +28,17 @@
             isChecked ? params.push(id) : params.splice($.inArray(id, params), 1);
             console.log(params);
 
+            fetchProductions(params);
+        });
+
+        function fetchProductions(params) {
             $.ajax({
                 url: '{{ route('productions.filter') }}',
                 data: {
                     params: params
                 },
                 success: data => {
+                    console.log(data);
                     let result = $('#productions-list').hide().html(data).fadeIn('fast');
                     result.find('.favorite').each((e, i) => {
                         registerFavoriteButton(i);
@@ -49,7 +54,9 @@
                     console.log('error');
                 }
             })
-        });
+        }
+
+        fetchProductions(params);
     </script>
     <script>
         $.fn.extend({
