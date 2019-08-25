@@ -74,21 +74,21 @@
                     </div>
                     <h3>Контакты</h3>
                     <div class="form-row">
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="phone1">Телефон #1</label>
                                 <input type="hidden" name="code">
                                 <input type="tel" name="phone1" class="form-control phone1">
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="phone2">Телефон #2</label>
                                 <input type="hidden" name="code2">
                                 <input type="tel" name="phone2" class="form-control phone2">
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="email">E-mail</label>
                                 <input type="text" name="email" class="form-control" id="email">
@@ -97,13 +97,10 @@
                     </div>
                     <h3>Карта</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
-
-
                     <div class="form-group">
-                        <label for="images">Images</label>
+                        <label for="images">Картинки</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
                     </div>
-
                     <button type="submit" class="btn btn-texmart-green text-white">Подать</button>
                     <a href="{{ route('profile') }}" class="btn">Назад</a>
                 </form>
