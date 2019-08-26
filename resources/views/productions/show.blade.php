@@ -67,6 +67,13 @@
                             </div>
                         </div>
 
+                        <div class="col-12 pt-5">
+                            <h5>Бренд:</h5>
+                            <div class="brand">
+                                {!! $production->brand !!}
+                            </div>
+                        </div>
+
                         <div class="col-12 pt-3">
                             <h2 class="font-weight-light h4">Оборудование:</h2>
                             <div class="tools">
