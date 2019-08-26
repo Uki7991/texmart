@@ -36,7 +36,6 @@
 
                                 <div class="col-12 align-self-end">
                                     <div class="d-flex">
-                                        @include('partials.btn.share')
                                         @include('partials.btn.call', ['id' => $production->id])
                                         @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])
                                     </div>
@@ -59,25 +58,64 @@
                         </div>
                         @endif
 
-
+                        <div class="col-12 pt-5">
+                            <h5>Бренд:</h5> 
+                            <div class="brand">
+                                {!! $production->brand !!}
+                            </div>
+                        </div>
+                        <div class="col-12 pt-5">
+                            <h5>Адрес:</h5>
+                            <div class="address">
+                                {!! $production->address !!}
+                            </div>
+                        </div>
+                        <div class="col-12 pt-5">
+                            <h5>Количество сотрудников:</h5>
+                            <div class="amount_production">
+                                {!! $production->amount_production !!}
+                            </div>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <h2 class="font-weight-light h4">Оборудование:</h2>
+                            <div class="tools">
+                                {!! $production->tools !!}
+                            </div>
+                        </div>
                         <div class="col-12 pt-5">
                             <h5>Описание:</h5>
                             <div class="description">
                                 {!! $production->description !!}
                             </div>
                         </div>
-
                         <div class="col-12 pt-5">
-                            <h5>Бренд:</h5>
-                            <div class="brand">
-                                {!! $production->brand !!}
+                            <h5>Мини описание:</h5>
+                            <div class="excerpt">
+                                {!! $production->excerpt !!}
                             </div>
                         </div>
-
-                        <div class="col-12 pt-3">
-                            <h2 class="font-weight-light h4">Оборудование:</h2>
-                            <div class="tools">
-                                {!! $production->tools !!}
+                        <div class="col-12 pt-5">
+                            <h5>E-mail:</h5>
+                            <div class="email">
+                                {!! $production->email !!}
+                            </div>
+                        </div>
+                        <div class="col-12 pt-5">
+                            <h5>Телефон №1:</h5>
+                            <div class="phone1">
+                                {!! $production->phone1 !!}
+                            </div>
+                        </div>
+                        <div class="col-12 pt-5">
+                            <h5>Телефон №2:</h5>
+                            <div class="phone2">
+                                {!! $production->phone2 !!}
+                            </div>
+                        </div>
+                        <div class="col-12 pt-5">
+                            <h5>Личный сайт:</h5>
+                            <div class="site">
+                                {!! $production->site !!}
                             </div>
                         </div>
                         @if(count($production->getCoordinates()))
