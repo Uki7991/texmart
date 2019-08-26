@@ -38,6 +38,7 @@ class ProductionStoreRequest extends FormRequest
             'logo' => '',
             'tools' => '',
             'amount_production' => '',
+            'brand' => '',
         ];
     }
 }
