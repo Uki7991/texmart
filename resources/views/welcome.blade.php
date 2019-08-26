@@ -23,7 +23,7 @@
                         <a href="{{ route('productions.index') }}" class="text-dark">Производственные цеха и фабрики</a>
                     </p>
                 </div>
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-3 {{ count($productions) <= 5 ? 'd-flex' : '' }}">
                     @include('productions.carousel', ['productions' => $productions])
                 </div>
             @endif
@@ -33,7 +33,7 @@
                         <a href="{{ route('productions.index') }}" class="text-dark">Товары</a>
                     </p>
                 </div>
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-3 {{ count($products) <= 5 ? 'd-flex' : '' }}">
                     @include('productions.carousel', ['productions' => $products])
                 </div>
             @endif
@@ -43,7 +43,7 @@
                         <a href="{{ route('productions.index') }}" class="text-dark">Услуги</a>
                     </p>
                 </div>
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-3 {{ count($services) <= 5 ? 'd-flex' : '' }}">
                     @include('productions.carousel', ['productions' => $services])
                 </div>
             @endif
