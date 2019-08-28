@@ -1,4 +1,4 @@
-@if(count($productions) > 5)
+@if(count($productions) > 4)
     <div class="{{ count($productions) > 4 ? 'productions' : '' }} owl-carousel owl-theme">
         @foreach($productions as $production)
             <div class="item">
