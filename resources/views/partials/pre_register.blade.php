@@ -74,7 +74,7 @@
         /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
 
         $("#phone-number").intlTelInput({
-            initialCountry: "ru",
+            initialCountry: "kg",
             preferredCountries: ["ru", "kg", "kz"],
             separateDialCode: true,
             excludeCountries: ["xk"],
