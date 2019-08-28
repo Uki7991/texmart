@@ -58,7 +58,7 @@
                         </div>
                         @endif
 
-                        <div class="col-12 pt-3">
+                        <div class="col-12 pt-5">
                             <h5>Бренд:</h5> 
                             <div class="brand">
                                 {!! $production->brand !!}

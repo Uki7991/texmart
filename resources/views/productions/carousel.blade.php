@@ -1,5 +1,5 @@
 @if(count($productions) > 5)
-    <div class="{{ count($productions) > 5 ? 'productions' : '' }} owl-carousel owl-theme">
+    <div class="{{ count($productions) > 4 ? 'productions' : '' }} owl-carousel owl-theme">
         @foreach($productions as $production)
             <div class="item">
                 @include('productions.single', ['bootstrap3' => isset($bootstrap3) ? true : false, 'id' => $production->id])
