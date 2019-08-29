@@ -60,7 +60,7 @@
 
                         <div class="col-12 pt-5">
                             <h5>Бренд:</h5> 
-                            <div class="brand">
+                            <div class="brand" style="font-weight: bold">
                                 {!! $production->brand !!}
                             </div>
                         </div>
