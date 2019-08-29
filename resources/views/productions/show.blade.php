@@ -83,15 +83,15 @@
                             </div>
                         </div>
                         <div class="col-12 pt-3">
-                            <h5>Описание:</h5>
-                            <div class="description">
-                                {!! $production->description !!}
-                            </div>
-                        </div>
-                        <div class="col-12 pt-3">
                             <h5>Мини описание:</h5>
                             <div class="excerpt">
                                 {!! $production->excerpt !!}
+                            </div>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <h5>Описание:</h5>
+                            <div class="description">
+                                {!! $production->description !!}
                             </div>
                         </div>
                         <div class="col-12 pt-3">
