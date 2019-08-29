@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label for="employee">Количество сотрудников</label>
-                        <input type="text" class="form-control" name="amount_production" id="employee">
+                        <input type="number" min="1" max="1000" class="form-control" name="amount_production" id="employee">
                     </div>
                     <div class="form-group">
                         <label for="equipment">Оборудование</label>
@@ -52,8 +52,8 @@
                     <div class="form-row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="site">Сайт</label>
-                                <input type="text" class="form-control" name="site" id="site">
+                                <label for="site">Личный сайт</label>
+                                <input type="url" class="form-control" name="url" id="url" placeholder="Сайт">
                             </div>
                         </div>
                         <div class="col-6">
@@ -71,6 +71,10 @@
                         <label for="richtextDescription">Описание</label>
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="employee">Объем производства</label>
+                        <input type="number" min="1" max="1000" class="form-control" name="amount_production" id="employee">
                     </div>
                     <h3>Контакты</h3>
                     <div class="form-row">
@@ -91,7 +95,7 @@
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="email">E-mail</label>
-                                <input type="text" name="email" class="form-control" id="email">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                             </div>
                         </div>
                     </div>

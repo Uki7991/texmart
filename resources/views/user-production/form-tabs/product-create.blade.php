@@ -44,14 +44,14 @@
                     <div class="form-row">
                         <div class="col-6">
                             <div class="form-froup">
-                                <label for="site">Сайт</label>
-                                <input type="text" class="form-control" name="site" id="site" required>
+                                <label for="site">Личный сайт</label>
+                                <input type="text" class="form-control" name="site" id="site">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-froup">
                                 <label for="address">Адрес</label>
-                                <input type="text" class="form-control" name="address" id="address" required>
+                                <input type="text" class="form-control" name="address" id="address">
                             </div>
                         </div>
                     </div>

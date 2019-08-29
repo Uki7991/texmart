@@ -114,8 +114,8 @@
                         </div>
                         <div class="col-12 pt-3">
                             <h5>Личный сайт:</h5>
-                            <div class="site">
-                                {!! $production->site !!}
+                            <div class="url">
+                                {!! $production->url !!}
                             </div>
                         </div>
                         @if(count($production->getCoordinates()))
