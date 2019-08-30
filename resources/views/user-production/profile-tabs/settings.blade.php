@@ -1,4 +1,4 @@
-<div class="tab-pane active" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+<div class="tab-pane {{ request('sharp') ? '' : 'active' }}" id="settings" role="tabpanel" aria-labelledby="settings-tab">
     <h1>Настройки профиля</h1>
     <div class="container">
         <div class="row">

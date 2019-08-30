@@ -82,6 +82,7 @@
                 $.get('https://ipinfo.io', function () {
                 }, "jsonp").always(function (resp) {
                     var countryCode = (resp && resp.country) ? resp.country : "";
+                    console.log(countryCode);
                     callback(countryCode);
                 });
             },

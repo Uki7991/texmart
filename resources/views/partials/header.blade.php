@@ -34,7 +34,7 @@
                 </li>
                 @else
                 <li class="nav-scale">
-                    <a href="{{ route('profile') }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
+                    <a href="{{ route('profile', ['sharp' => true]) }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
                 </li>
                 @endguest
 
