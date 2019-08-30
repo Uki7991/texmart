@@ -23,19 +23,16 @@
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" class="form-control" required>
+                        <input type="file" name="logo" id="logo_announce" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <div>
-                            <img id="image" class="w-100" src="{{ asset('img/898714.jpg') }}">
-                            <a onclick="cropper.rotate(90)"><i class="fa fa-minus-circle"></i></a>
-                            <button type="button" class="btn btn-primary" data-method="rotate" data-option="45" title="Rotate Right">
-                        <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="cropper.rotate(90)">
-                          <span class="fa fa-redo-alt"></span>
-                        </span>
-                            </button>
+                            <img id="image" class="w-100 img-preview" src="{{ asset('img/2 lg.jpg') }}">
+                            <a id="rotate" class="btn btn-success"><i class="fa fa-redo-alt"></i></a>
+                            <a id="crop" class="btn btn-success"><i class="fas fa-crop"></i></a>
 
-
+                            <input type="text" id="dataImage">
+                            <div id="cropped" class="position-relative"></div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -207,4 +204,64 @@
         });
     </script>
 
+@endpush
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/cropper.min.css') }}">
+@endpush
+
+@push('scripts')
+    <script src="{{ asset('js/cropper.min.js') }}"></script>
+    {{--    <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
+    <script>
+        let image = $('#image');
+        image.cropper({
+            aspectRatio: NaN,
+            crop: function(event) {
+            }
+        });
+        // Get the Cropper.js instance after initialized
+        var cropper = image.data('cropper');
+        $('#logo_announce').change(e => {
+            previewFile();
+            image = $('#image');
+            image.cropper({
+                aspectRatio: NaN,
+                crop: function(event) {
+                }
+            });
+            // Get the Cropper.js instance after initialized
+            cropper = image.data('cropper');
+            console.log(cropper.getImageData());
+        });
+
+        $('#crop').click(e => {
+            let imageCropped = $(cropper.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped').html(imageCropped);
+        });
+        $('#rotate').click(e => {
+            let btn = $(e.currentTarget);
+
+            cropper.rotate(90);
+            $('#dataImage').val(cropper.getImageData().rotate);
+        });
+
+
+        function previewFile() {
+            var preview = $('#image');
+            var file    = $('#logo_announce')[0].files[0];
+            var reader  = new FileReader();
+
+            reader.onloadend = function () {
+                preview.attr('src', reader.result);
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.attr('src', '');
+            }
+
+        }
+
+    </script>
 @endpush

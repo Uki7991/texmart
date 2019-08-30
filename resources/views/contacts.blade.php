@@ -7,14 +7,11 @@
             <div class="col-12">
                 <div>
                     <img id="image" class="w-100" src="{{ asset('img/898714.jpg') }}">
-                    <a onclick="cropper.rotate(90)"><i class="fa fa-minus-circle"></i></a>
-                    <button type="button" class="btn btn-primary" data-method="rotate" data-option="45" title="Rotate Right">
-                        <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="cropper.rotate(90)">
-                          <span class="fa fa-redo-alt"></span>
-                        </span>
-                    </button>
+                    <a id="rotate" class="btn btn-success"><i class="fa fa-redo-alt"></i></a>
+                    <a id="crop" class="btn btn-success"><i class="fas fa-crop"></i></a>
 
-
+                    <input type="text" id="dataImage">
+                    <div id="cropped" class="position-relative"></div>
                 </div>
             </div>
         </div>
@@ -68,18 +65,24 @@
         var image = $('#image');
 
         image.cropper({
-            aspectRatio: 16 / 9,
+            aspectRatio: NaN,
             crop: function(event) {
-                console.log(event.detail.x);
-                console.log(event.detail.y);
-                console.log(event.detail.width);
-                console.log(event.detail.height);
-                console.log(event.detail.rotate);
-                console.log(event.detail.scaleX);
-                console.log(event.detail.scaleY);
             }
         });
         // Get the Cropper.js instance after initialized
         var cropper = image.data('cropper');
+
+        $('#crop').click(e => {
+            let image = $(cropper.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped').html(image);
+        });
+        $('#rotate').click(e => {
+            let btn = $(e.currentTarget);
+
+            cropper.rotate(90);
+            console.log(cropper.getImageData(), cropper.getCroppedCanvas());
+            $('#dataImage').val(cropper.getImageData().toString());
+        });
+
     </script>
 @endpush
