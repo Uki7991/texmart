@@ -2,8 +2,8 @@
     <h1>Производственный цех</h1>
 
     <div class="container">
-        <div class="row">
-            <div class="col-10">
+        <div class="row justify-content-center justify-content-lg-start">
+            <div class="col-12 col-sm-10 col-lg-10 col-md-10">
                 <form action="{{ route('productions.store') }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     <input type="hidden" name="type" value="productions">
@@ -50,13 +50,13 @@
                         <input type="text" class="form-control" name="tools" id="equipment">
                     </div>
                     <div class="form-row">
-                        <div class="col-6">
+                        <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-group">
                                 <label for="site">Личный сайт</label>
                                 <input type="url" class="form-control" name="url" id="url" placeholder="Сайт">
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-group">
                                 <label for="address">Адрес</label>
                                 <input type="text" class="form-control" name="address" id="address">
