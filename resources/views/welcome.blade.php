@@ -20,7 +20,7 @@
             @if(count($productions))
                 <div class="col-12">
                     <p class="font-weight-bold text-uppercase m-0 pl-4 ">
-                        <a href="{{ route('productions.index') }}" class="text-dark">Производственные цеха и фабрики</a>
+                        <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="text-dark">Производственные цеха и фабрики</a>
                     </p>
                 </div>
                 <div class="col-12 mt-3 {{ count($productions) <= 5 ? 'row' : '' }}">
@@ -30,7 +30,7 @@
             @if(count($products))
                 <div class="col-12">
                     <p class="font-weight-bold text-uppercase m-0 pl-4">
-                        <a href="{{ route('productions.index') }}" class="text-dark">Товары</a>
+                        <a href="{{ route('productions.index', ['type' => 'product']) }}" class="text-dark">Товары</a>
                     </p>
                 </div>
                 <div class="col-12 mt-3 {{ count($products) <= 5 ? 'row' : '' }}">
@@ -40,7 +40,7 @@
             @if(count($services))
                 <div class="col-12">
                     <p class="font-weight-bold text-uppercase m-0 pl-4">
-                        <a href="{{ route('productions.index') }}" class="text-dark">Услуги</a>
+                        <a href="{{ route('productions.index', ['type' => 'service']) }}" class="text-dark">Услуги</a>
                     </p>
                 </div>
                 <div class="col-12 mt-3 {{ count($services) <= 5 ? 'row' : '' }}">

@@ -20,6 +20,7 @@
 @push('scripts')
     <script>
         let params = [];
+
         $('input[name="categories[]"]').change(e => {
             let input = $(e.currentTarget);
             let isChecked = input.is(':checked') ? true : false;
@@ -35,7 +36,8 @@
             $.ajax({
                 url: '{{ route('productions.filter') }}',
                 data: {
-                    params: params
+                    params: params,
+                    type: '{{ request('type') }}'
                 },
                 success: data => {
                     console.log(data);

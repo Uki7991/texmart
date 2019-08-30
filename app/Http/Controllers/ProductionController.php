@@ -17,9 +17,17 @@ class ProductionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productions = Production::all();
+        if ($request->type == 'productions') {
+            $productions = Production::where('type', 'productions')->get();
+        } else if ($request->type == 'service') {
+            $productions = Production::where('type', 'service')->get();
+        } else if ($request->type == 'product') {
+            $productions = Production::where('type', 'product')->get();
+        } else {
+            $productions = Production::all();
+        }
         $categories = Category::all()->where('parent_id', 'is', null);
 
         return view('productions.index', [
@@ -124,6 +132,7 @@ class ProductionController extends Controller
     public function filter(Request $request)
     {
         $params = $request->params;
+        $type = $request->type;
         $cats = Category::all();
         if ($params) {
             $cats = $cats->whereIn('id', $params);
@@ -133,6 +142,17 @@ class ProductionController extends Controller
             $productions = $productions->merge($cat->productions);
         }
         $productions = $productions->unique('id');
+
+        if ($type == 'productions') {
+            $productions = $productions->where('type', $type);
+        }
+        if ($type == 'service') {
+            $productions = $productions->where('type', $type);
+        }
+        if ($type == 'product') {
+            $productions = $productions->where('type', $type);
+        }
+
 
         return response()->json(view('productions.list', [
             'productions' => $productions,
