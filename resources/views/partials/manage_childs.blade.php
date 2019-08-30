@@ -13,7 +13,7 @@
                 @endif
 
                 @if(count($child->childs))
-                    @include('partials.manage_childs',['childs' => $child->childs, 'input' => [true, $input[1]]])
+                    @include('partials.manage_childs',['childs' => $child->childs->sortBy('order'), 'input' => [true, $input[1]]])
                 @endif
             </li>
         @endforeach
@@ -25,7 +25,7 @@
                 @endif
                 <a href="#{{ $child->title }}" class="text-dark">{{ $child->title }}</a>
                 @if(count($child->childs))
-                    @include('partials.manage_childs',['childs' => $child->childs])
+                    @include('partials.manage_childs',['childs' => $child->childs->sortBy('order')])
                 @endif
             </li>
         @endforeach
