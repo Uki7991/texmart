@@ -32,7 +32,10 @@ class MainController extends Controller
         $result = collect(['Производственные фабрики  и цеха' => Production::where('title', 'like', "%$search%")->where('type', 'productions')->get(['id', 'title', 'slug'])]);
         $result = $result->merge(collect(['Товары' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'product')->get(['id', 'title', 'slug'])]));
         $result = $result->merge(collect(['Услуги' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'service')->get(['id', 'title', 'slug'])]));
-        $result = $result->merge(collect([Category::where('title', 'like', '%' . $search . '%')->get()->first()->title => Category::where('title', 'like', '%' . $search . '%')->get()->first()->productions]));
+        $categories = Category::where('title', 'like', '%'.$search.'%')->get();
+        foreach ($categories as $category) {
+            $result = $result->merge(collect([$category->title => $category->productions]));
+        }
         if ($request->ajax()) {
             return response()->json(view('search-result-ajax', [
                 'result' => $result,
