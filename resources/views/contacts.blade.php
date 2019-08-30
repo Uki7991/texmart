@@ -7,6 +7,14 @@
             <div class="col-12">
                 <div>
                     <img id="image" class="w-100" src="{{ asset('img/898714.jpg') }}">
+                    <a onclick="cropper.rotate(90)"><i class="fa fa-minus-circle"></i></a>
+                    <button type="button" class="btn btn-primary" data-method="rotate" data-option="45" title="Rotate Right">
+                        <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="cropper.rotate(90)">
+                          <span class="fa fa-redo-alt"></span>
+                        </span>
+                    </button>
+
+
                 </div>
             </div>
         </div>
@@ -71,7 +79,6 @@
                 console.log(event.detail.scaleY);
             }
         });
-
         // Get the Cropper.js instance after initialized
         var cropper = image.data('cropper');
     </script>
