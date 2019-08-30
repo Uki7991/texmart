@@ -821,3 +821,9 @@ body.bg-white {
         background-color: #ffed4a !important;
     }
 }
+
+.height-carusel{
+    width: 212px;
+    height: 150px;
+}
+
