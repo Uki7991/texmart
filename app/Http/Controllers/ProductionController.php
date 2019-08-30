@@ -7,8 +7,10 @@ use App\Http\Requests\ProductionStoreRequest;
 use App\Production;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
+use Torann\GeoIP\Facades\GeoIP;
 
 class ProductionController extends Controller
 {
@@ -59,10 +61,10 @@ class ProductionController extends Controller
      * @param  \App\Production  $production
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show(Request $request, $slug)
     {
         $production = Production::whereSlug($slug)->firstOrFail();
-        $categories = $production->categories->where('parent_id', 'is', null);
+        $categories = $production->categories;
 //        $categories2 = $production->categories->has('productions');
 
 //        $categories->map(function ($item, $index) {

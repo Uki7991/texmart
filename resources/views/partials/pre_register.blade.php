@@ -74,7 +74,7 @@
         /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
 
         $("#phone-number").intlTelInput({
-            initialCountry: "kg",
+            initialCountry: "{{ \geoip()->getLocation(\geoip()->getClientIP())->getAttribute('iso_code') }}",
             preferredCountries: ["ru", "kg", "kz"],
             separateDialCode: true,
             excludeCountries: ["xk"],
