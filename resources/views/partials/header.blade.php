@@ -20,7 +20,7 @@
                     <a href="{{ route('productions.index', ['filter' => 'productions']) }}" class="nav-link text-white text-capitalize">Цеха</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="{{ route('productions.index', ['filter' => 'products']) }}" class="nav-link text-white text-capitalize">Продукции</a>
+                    <a href="{{ route('productions.index', ['filter' => 'products']) }}" class="nav-link text-white text-capitalize">Товары</a>
                 </li>
                 <li class="nav-scale">
                     <a href="{{ route('productions.index', ['filter' => 'service']) }}" class="nav-link text-white text-capitalize">Услуги</a>

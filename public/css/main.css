@@ -823,7 +823,7 @@ body.bg-white {
 }
 
 .height-carusel{
-    width: 212px;
+    width: auto;
     height: 150px;
 }
 

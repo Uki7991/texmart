@@ -1,6 +1,6 @@
 <div class="card border shadow-sm production-card transition-500">
     <a href="{{ route('productions.show', $production->slug) }}" class="text-dark text-decoration-none">
-        <div class="card-img-top position-relative">
+        <div class="card-img-top position-relative text-center">
             <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" class="img-fluid img-responsive height-carusel" alt="">
         </div>
         <div class="card-body pb-0">
