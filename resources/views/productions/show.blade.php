@@ -118,6 +118,12 @@
                                 {!! $production->url !!}
                             </div>
                         </div>
+                        <div class="col-12 pt-3">
+                            <h5>Дата создания:</h5>
+                            <div>
+                                {{ \Illuminate\Support\Carbon::make($production->created_at)->locale('ru')->format('d.m.Y H:i') }}
+                            </div>
+                        </div>
                         @if(count($production->getCoordinates()))
                             <div class="col-12 col-lg-8 pt-3">
                                 <h3>Местонахождение на карте:</h3>
