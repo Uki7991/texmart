@@ -69,9 +69,9 @@ class UserController extends Controller
         return view('user-production.profile', [
             'user' => $user,
             'productions' => $productions,
-            'productionCats' => $productionCats,
-            'productCats' => $productCats,
-            'serviceCats' => $serviceCats,
+            'productionCats' => $productionCats->sortBy('order'),
+            'productCats' => $productCats->sortBy('order'),
+            'serviceCats' => $serviceCats->sortBy('order'),
         ]);
     }
 
