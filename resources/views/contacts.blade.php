@@ -4,6 +4,13 @@
     @include('partials.header', ['shadow' => 'shadow'])
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <div>
+                    <img id="image" class="w-100" src="{{ asset('img/898714.jpg') }}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col">
                 <h1>Контакты</h1>
                 <iframe
@@ -42,6 +49,30 @@
     </div>
 @endsection
 
-@push('scripts')
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/cropper.min.css') }}">
+@endpush
 
+@push('scripts')
+    <script src="{{ asset('js/cropper.min.js') }}"></script>
+{{--    <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
+    <script>
+        var image = $('#image');
+
+        image.cropper({
+            aspectRatio: 16 / 9,
+            crop: function(event) {
+                console.log(event.detail.x);
+                console.log(event.detail.y);
+                console.log(event.detail.width);
+                console.log(event.detail.height);
+                console.log(event.detail.rotate);
+                console.log(event.detail.scaleX);
+                console.log(event.detail.scaleY);
+            }
+        });
+
+        // Get the Cropper.js instance after initialized
+        var cropper = image.data('cropper');
+    </script>
 @endpush
