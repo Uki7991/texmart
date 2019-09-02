@@ -1,6 +1,71 @@
 @extends('layouts.app')
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/cropper.min.css') }}">
+@endpush
 
+@push('scripts')
+    <script src="{{ asset('js/cropper.min.js') }}"></script>
+    {{--    <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
+    <script>
+        let input = $('#image-input');
+        let container = $('#image');
+
+        container.cropper({
+            aspectRatio: 1,
+            viewMode: 1
+        });
+
+        let cropper = container.data('cropper');
+        input.change(e => {
+            let oFReader = new FileReader();
+
+            oFReader.readAsDataURL(input[0].files[0]);
+
+            oFReader.onload = function (oFREvent) {
+
+                // Destroy the old cropper instance
+                container.cropper('destroy');
+
+                // Replace url
+                container.attr('src', this.result);
+
+                // Start cropper
+                container.cropper({
+                    aspectRatio: 1,
+                    viewMode: 1
+                });
+                cropper = container.data('cropper');
+                setTimeout(rotateImage, 1000);
+            };
+        });
+
+        function rotateImage() {
+            cropper.rotate(0);
+            $('#dataImage').val(cropper.getImageData().rotate);
+        }
+
+
+        $('#crop').click(e => {
+            let image = $(cropper.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped').html(image);
+        });
+        $('#rotate-right').click(e => {
+            let btn = $(e.currentTarget);
+
+            cropper.rotate(90);
+            console.log(cropper.getCropBoxData());
+            $('#dataImage').val(cropper.getImageData().rotate);
+        });
+        $('#rotate-left').click(e => {
+            let btn = $(e.currentTarget);
+
+            cropper.rotate(-90);
+            console.log(cropper.getImageData());
+            $('#dataImage').val(cropper.getImageData().rotate);
+        });
+    </script>
+@endpush
 @push('styles')
     <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
 @endpush
@@ -203,7 +268,18 @@
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" class="form-control">
+                        <input type="file" name="logo" id="image-input" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <img id="image" class="w-100 img-preview" src="{{ asset('storage/'.$production->logo) }}">
+                            <a id="rotate-left" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
+                            <a id="rotate-right" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
+                            <a id="crop" class="btn btn-success"><i class="fas fa-crop"></i></a>
+
+                            <input type="text" name="rotate" id="dataImage">
+                            <div id="cropped" class="position-relative"></div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="categories-multi">Категории</label>

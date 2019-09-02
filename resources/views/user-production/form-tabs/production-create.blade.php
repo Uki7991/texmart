@@ -262,8 +262,16 @@
                     viewMode: 1
                 });
                 cropper = container.data('cropper');
+                setTimeout(rotateImage, 1000);
+
             };
+
         });
+
+        function rotateImage() {
+            cropper.rotate(0);
+            $('#dataImage').val(cropper.getImageData().rotate);
+        }
 
         $('#crop').click(e => {
             let image = $(cropper.getCroppedCanvas()).addClass('img-fluid');
@@ -313,8 +321,13 @@
                     viewMode: 1
                 });
                 cropper2 = container2.data('cropper');
+                setTimeout(rotateImage2, 1000);
             };
         });
+        function rotateImage2() {
+            cropper2.rotate(0);
+            $('#dataImage2').val(cropper2.getImageData().rotate);
+        }
 
         $('#crop2').click(e => {
             let image2 = $(cropper2.getCroppedCanvas()).addClass('img-fluid');
@@ -364,8 +377,13 @@
                     viewMode: 1
                 });
                 cropper3 = container3.data('cropper');
+                setTimeout(rotateImage3, 1000);
             };
         });
+        function rotateImage3() {
+            cropper3.rotate(0);
+            $('#dataImage3').val(cropper3.getImageData().rotate);
+        }
 
         $('#crop3').click(e => {
             let image3 = $(cropper3.getCroppedCanvas()).addClass('img-fluid');
