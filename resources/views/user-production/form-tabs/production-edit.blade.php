@@ -89,9 +89,9 @@
             selector: '#equipment'
         });
     </script>
-    @include('partials.scripts.favorite_click')
-    @include('partials.scripts.favorite_btn')
-    @include('partials.scripts.call_btn')
+{{--    @include('partials.scripts.favorite_click')--}}
+{{--    @include('partials.scripts.favorite_btn')--}}
+{{--    @include('partials.scripts.call_btn')--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
     <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
     <script>
@@ -183,8 +183,9 @@
         </div>
         <div class="row">
             <div class="col-10">
-                <form action="{{ route('productions.store') }}" enctype="multipart/form-data" method="POST">
+                <form action="{{ route('productions.update', $production) }}" enctype="multipart/form-data" method="POST">
                     @csrf
+                    @method('PUT')
                     <input type="hidden" name="type" value="productions">
                     <div class="form-group">
                         <label>
@@ -202,7 +203,7 @@
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" class="form-control" required>
+                        <input type="file" name="logo" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="categories-multi">Категории</label>

@@ -46,7 +46,7 @@ Route::post('productions', 'ProductionController@store')->name('productions.stor
 Route::get('productions/rate', 'ProductionController@rate')->name('productions.rate');
 Route::get('productions/{slug}', 'ProductionController@show')->name('productions.show');
 Route::get('productions/{production}/edit', 'ProductionController@edit')->name('productions.edit');
-Route::patch('productions/{production}', 'ProductionController@update')->name('productions.update');
+Route::put('productions/{production}', 'ProductionController@update')->name('productions.update');
 Route::delete('productions/{production}', 'ProductionController@destroy')->name('productions.destroy');
 Route::post('bid', 'MainController@storeBid')->name('bid.store');
 

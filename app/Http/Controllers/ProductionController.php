@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Http\Requests\ProductionStoreRequest;
+use App\Http\Requests\ProductionUpdateRequest;
 use App\Production;
 use App\Type;
 use Illuminate\Http\Request;
@@ -114,9 +115,12 @@ class ProductionController extends Controller
      * @param  \App\Production  $production
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Production $production)
+    public function update(ProductionUpdateRequest $request, Production $production)
     {
-        //
+        $validated = $request->validated();
+        $production->update($validated);
+
+        return redirect()->route('profile');
     }
 
     /**
