@@ -165,7 +165,7 @@
         $('.promo-carousel').owlCarousel({
             loop: true,
             autoplay: true,
-            autoplayTimeout: 2000,
+            autoplayTimeout: 7000,
             autoplayHoverPause: true,
             nav: true,
             responsive: {
