@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Observers\ProductionObserver;
 use ChristianKuri\LaravelFavorite\Traits\Favoriteable;
 use Dorvidas\Ratings\Models\RateableTrait;
 use Illuminate\Database\Eloquent\Model;

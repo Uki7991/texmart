@@ -75,7 +75,7 @@ class ProductionObserver
         }
     }
 
-    public function updating(Production $production)
+    public function saving(Production $production)
     {
         $production->user_id = auth()->user()->id;
 
@@ -120,6 +120,9 @@ class ProductionObserver
             Storage::disk('local')->put('public/'.$fileName, $image);
             $production->logo = $fileName;
         }
+        if ($categories = request('categories')) {
+            $production->categories()->sync($categories);
+        }
     }
 
     /**
@@ -130,9 +133,7 @@ class ProductionObserver
      */
     public function updated(Production $production)
     {
-        if ($categories = request('categories')) {
-            $production->categories()->sync($categories);
-        }
+
     }
 
     /**
