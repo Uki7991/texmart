@@ -65,15 +65,7 @@
         $('#tree1').treed();
         $('#tree2').treed();
         $('#tree3').treed();
-        $.ajax({
-            url: '{{ route('get.categories') }}',
-            success: data => {
-                console.log(data);
-            },
-            error: () => {
-                console.log('error');
-            }
-        });
+
         $("body").on('click', '.select2-results__group', function() {
             $(this).siblings().toggle();
         });
