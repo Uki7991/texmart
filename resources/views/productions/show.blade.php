@@ -17,7 +17,14 @@
                                     <h1 class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</h1>
                                     @include('partials.btn.rateYo')
                                 </div>
-
+                                <div class="col-12 ">
+                                    <div class="phone1 d-flex">
+                                        <p>Телефон №1:</p><a href="tel:" class="text-dark" >{!! $production->phone1 !!}</a>
+                                    </div>
+                                    <div class="phone2 d-flex">
+                                        <p>Телефон №2:</p><a href="tel:" class="text-dark" >{!! $production->phone2 !!}</a>
+                                    </div>
+                                </div>
                                 <div class="col-12 my-4 my-lg-0">
                                     <ul id="tree1">
                                         @foreach($categories as $category)
@@ -103,13 +110,13 @@
                         <div class="col-12 pt-3 d-flex">
                             <h5>Телефон №1:</h5>
                             <div class="phone1">
-                                {!! $production->phone1 !!}
+                               <a href="tel:" class="text-dark">{!! $production->phone1 !!}</a>
                             </div>
                         </div>
                         <div class="col-12 pt-3 d-flex">
                             <h5>Телефон №2:</h5>
                             <div class="phone2">
-                                {!! $production->phone2 !!}
+                                <a href="tel:" class="text-dark">{!! $production->phone2 !!}</a>
                             </div>
                         </div>
                         <div class="col-12 pt-3">
