@@ -5,7 +5,7 @@
         <div class="row">
             @foreach($productions as $production)
                 <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
-                    @include('productions.single')
+                    @include('productions.single', ['profile' => true])
                 </div>
             @endforeach
         </div>

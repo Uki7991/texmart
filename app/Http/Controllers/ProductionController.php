@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Http\Requests\ProductionStoreRequest;
 use App\Production;
+use App\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -91,7 +92,19 @@ class ProductionController extends Controller
      */
     public function edit(Production $production)
     {
-        //
+        $types = Type::all();
+        $productionCats = collect();
+
+        foreach ($types as $type) {
+            if ($type->title == 'Производство') {
+                $productionCats = $productionCats->merge($type->categories);
+            }
+        }
+
+        return view('user-production.form-tabs.production-edit', [
+            'production' => $production,
+            'productionCats' => $productionCats,
+        ]);
     }
 
     /**

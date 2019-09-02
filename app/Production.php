@@ -27,6 +27,11 @@ class Production extends Model
         return $this->belongsToMany(Category::class);
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     /**
      * Return the sluggable configuration array for this model.
      *
