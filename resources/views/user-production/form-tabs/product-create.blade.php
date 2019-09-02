@@ -23,7 +23,18 @@
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" class="form-control" required>
+                        <input type="file" name="logo" id="image-input2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <img id="image2" class="w-100 img-preview" src="">
+                            <a id="rotate-left2" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
+                            <a id="rotate-right2" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
+                            <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
+
+                            <input type="text" name="rotate" id="dataImage2">
+                            <div id="cropped2" class="position-relative"></div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="categories-product">Категории</label>

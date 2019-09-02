@@ -5,6 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <input type="file" name="image" id="image-input">
                 <div>
                     <img id="image" class="w-100" src="{{ asset('img/898714.jpg') }}">
                     <a id="rotate" class="btn btn-success"><i class="fa fa-redo-alt"></i></a>
@@ -60,29 +61,4 @@
 
 @push('scripts')
     <script src="{{ asset('js/cropper.min.js') }}"></script>
-{{--    <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
-    <script>
-        var image = $('#image');
-
-        image.cropper({
-            aspectRatio: NaN,
-            crop: function(event) {
-            }
-        });
-        // Get the Cropper.js instance after initialized
-        var cropper = image.data('cropper');
-
-        $('#crop').click(e => {
-            let image = $(cropper.getCroppedCanvas()).addClass('img-fluid');
-            $('#cropped').html(image);
-        });
-        $('#rotate').click(e => {
-            let btn = $(e.currentTarget);
-
-            cropper.rotate(90);
-            console.log(cropper.getImageData(), cropper.getCroppedCanvas());
-            $('#dataImage').val(cropper.getImageData().toString());
-        });
-
-    </script>
 @endpush

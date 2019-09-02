@@ -23,15 +23,16 @@
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" id="logo_announce" class="form-control" required>
+                        <input type="file" name="logo" id="image-input" class="form-control">
                     </div>
                     <div class="form-group">
                         <div>
-                            <img id="image" class="w-100 img-preview" src="{{ asset('img/2 lg.jpg') }}">
-                            <a id="rotate" class="btn btn-success"><i class="fa fa-redo-alt"></i></a>
+                            <img id="image" class="w-100 img-preview" src="">
+                            <a id="rotate-left" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
+                            <a id="rotate-right" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
                             <a id="crop" class="btn btn-success"><i class="fas fa-crop"></i></a>
 
-                            <input type="text" id="dataImage">
+                            <input type="text" name="rotate" id="dataImage">
                             <div id="cropped" class="position-relative"></div>
                         </div>
                     </div>
@@ -213,55 +214,156 @@
     <script src="{{ asset('js/cropper.min.js') }}"></script>
     {{--    <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
     <script>
-        let image = $('#image');
-        image.cropper({
-            aspectRatio: NaN,
-            crop: function(event) {
-            }
+        let input = $('#image-input');
+        let container = $('#image');
+
+        container.cropper({
+            aspectRatio: 1,
+            viewMode: 1
         });
-        // Get the Cropper.js instance after initialized
-        var cropper = image.data('cropper');
-        $('#logo_announce').change(e => {
-            previewFile();
-            image = $('#image');
-            image.cropper({
-                aspectRatio: NaN,
-                crop: function(event) {
-                }
-            });
-            // Get the Cropper.js instance after initialized
-            cropper = image.data('cropper');
-            console.log(cropper.getImageData());
+
+        let cropper = container.data('cropper');
+        input.change(e => {
+            let oFReader = new FileReader();
+
+            oFReader.readAsDataURL(input[0].files[0]);
+
+            oFReader.onload = function (oFREvent) {
+
+                // Destroy the old cropper instance
+                container.cropper('destroy');
+
+                // Replace url
+                container.attr('src', this.result);
+
+                // Start cropper
+                container.cropper({
+                    aspectRatio: 1,
+                    viewMode: 1
+                });
+                cropper = container.data('cropper');
+            };
         });
 
         $('#crop').click(e => {
-            let imageCropped = $(cropper.getCroppedCanvas()).addClass('img-fluid');
-            $('#cropped').html(imageCropped);
+            let image = $(cropper.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped').html(image);
         });
-        $('#rotate').click(e => {
+        $('#rotate-right').click(e => {
             let btn = $(e.currentTarget);
 
             cropper.rotate(90);
+            console.log(cropper.getCropBoxData());
             $('#dataImage').val(cropper.getImageData().rotate);
         });
+        $('#rotate-left').click(e => {
+            let btn = $(e.currentTarget);
 
+            cropper.rotate(-90);
+            console.log(cropper.getImageData());
+            $('#dataImage').val(cropper.getImageData().rotate);
+        });
+    </script>
+    <script>
+        let input2 = $('#image-input2');
+        let container2 = $('#image2');
 
-        function previewFile() {
-            var preview = $('#image');
-            var file    = $('#logo_announce')[0].files[0];
-            var reader  = new FileReader();
+        container2.cropper({
+            aspectRatio: 1,
+            viewMode: 1
+        });
 
-            reader.onloadend = function () {
-                preview.attr('src', reader.result);
+        let cropper2 = container.data('cropper');
+        input2.change(e => {
+            let oFReader = new FileReader();
+
+            oFReader.readAsDataURL(input2[0].files[0]);
+
+            oFReader.onload = function (oFREvent) {
+
+                // Destroy the old cropper instance
+                container2.cropper('destroy');
+
+                // Replace url
+                container2.attr('src', this.result);
+
+                // Start cropper
+                container2.cropper({
+                    aspectRatio: 1,
+                    viewMode: 1
+                });
+                cropper2 = container2.data('cropper');
             };
+        });
 
-            if (file) {
-                reader.readAsDataURL(file);
-            } else {
-                preview.attr('src', '');
-            }
+        $('#crop2').click(e => {
+            let image2 = $(cropper2.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped2').html(image2);
+        });
+        $('#rotate-right2').click(e => {
+            let btn2 = $(e.currentTarget);
 
-        }
+            cropper2.rotate(90);
+            console.log(cropper2.getImageData());
+            $('#dataImage2').val(cropper2.getImageData().rotate);
+        });
+        $('#rotate-left2').click(e => {
+            let btn2 = $(e.currentTarget);
 
+            cropper2.rotate(-90);
+            console.log(cropper2.getImageData());
+            $('#dataImage2').val(cropper2.getImageData().rotate);
+        });
+    </script>
+    <script>
+        let input3 = $('#image-input3');
+        let container3 = $('#image3');
+
+        container3.cropper({
+            aspectRatio: 1,
+            viewMode: 1
+        });
+
+        let cropper3 = container.data('cropper');
+        input3.change(e => {
+            let oFReader = new FileReader();
+
+            oFReader.readAsDataURL(input3[0].files[0]);
+
+            oFReader.onload = function (oFREvent) {
+
+                // Destroy the old cropper instance
+                container3.cropper('destroy');
+
+                // Replace url
+                container3.attr('src', this.result);
+
+                // Start cropper
+                container3.cropper({
+                    aspectRatio: 1,
+                    viewMode: 1
+                });
+                cropper3 = container3.data('cropper');
+            };
+        });
+
+        $('#crop3').click(e => {
+            let image3 = $(cropper3.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped3').html(image3);
+        });
+        $('#rotate-right3').click(e => {
+            let btn3 = $(e.currentTarget);
+
+            cropper3.rotate(90);
+            console.log(cropper3.getImageData());
+            $('#dataImage3').val(cropper3.getImageData().rotate);
+        });
+        $('#rotate-left3').click(e => {
+            let btn3 = $(e.currentTarget);
+
+            cropper3.rotate(-90);
+            console.log(cropper3.getImageData());
+            $('#dataImage3').val(cropper3.getImageData().rotate);
+        });
     </script>
 @endpush

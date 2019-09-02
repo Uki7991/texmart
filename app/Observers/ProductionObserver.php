@@ -51,11 +51,15 @@ class ProductionObserver
 
         if ($logo = request('logo')) {
             $fileName = 'productions/'.uniqid('production_logo_').'.jpg';
-            $image = ImageManagerStatic::make($logo)
-                ->resize(600, null, function ($constraint) {
-                    return $constraint->aspectRatio();
-                })
-                ->stream('jpg', 40);
+            $image = ImageManagerStatic::make($logo);
+
+            if (request('rotate')) {
+                $image = $image->rotate(-(request('rotate')));
+            }
+            $image = $image->resize(500, null, function ($constraint) {
+                return $constraint->aspectRatio();
+            })
+            ->stream('jpg', 40);
 
             Storage::disk('local')->put('public/'.$fileName, $image);
             $production->logo = $fileName;
