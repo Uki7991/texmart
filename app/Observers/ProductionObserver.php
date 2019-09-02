@@ -79,7 +79,7 @@ class ProductionObserver
         }
     }
 
-    public function saving(Production $production)
+    public function saved(Production $production)
     {
         $production->user_id = auth()->user()->id;
 
