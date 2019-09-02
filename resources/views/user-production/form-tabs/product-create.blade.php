@@ -2,8 +2,8 @@
     <h1>Товары</h1>
 
     <div class="container">
-        <div class="row">
-            <div class="col-10">
+        <div class="row justify-content-center justify-content-lg-start">
+            <div class="col-12 col-sm-10 col-lg-10 col-md-10">
                 <form action="{{ route('productions.store') }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     <input type="hidden" name="type" value="product">
@@ -23,7 +23,18 @@
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" class="form-control" required>
+                        <input type="file" name="logo" id="image-input2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <img id="image2" class="w-100 img-preview" src="">
+                            <a id="rotate-left2" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
+                            <a id="rotate-right2" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
+                            <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
+
+                            <input type="text" name="rotate" id="dataImage2">
+                            <div id="cropped2" class="position-relative"></div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="categories-product">Категории</label>
@@ -42,13 +53,13 @@
                         </ul>
                     </div>
                     <div class="form-row">
-                        <div class="col-6">
+                        <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-froup">
                                 <label for="site">Личный сайт</label>
                                 <input type="text" class="form-control" name="site" id="site">
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-froup">
                                 <label for="address">Адрес</label>
                                 <input type="text" class="form-control" name="address" id="address">

@@ -70,70 +70,70 @@
                         </div>
                         @endif
 
-                        <div class="col-12 pt-5">
-                            <h5>Бренд:</h5> 
-                            <div class="brand" style="font-weight: bold">
-                                {!! $production->brand !!}
+                        <div class="row col-lg-4 col-xl-4">
+                            <div class="col-12 pt-5">
+                                <h5>Бренд:</h5>
+                                <div class="brand" style="font-weight: bold">
+                                    {!! $production->brand !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3">
-                            <h5>Адрес:</h5>
-                            <div class="address">
-                                {!! $production->address !!}
+                            <div class="col-12 pt-3">
+                                <h5>Адрес:</h5>
+                                <div class="address">
+                                    {!! $production->address !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3">
-                            <h5>Количество сотрудников:</h5>
-                            <div class="amount_production">
-                                {!! $production->amount_production !!}
+                            <div class="col-12 pt-3">
+                                <h5>Количество сотрудников:</h5>
+                                <div class="amount_production">
+                                    {!! $production->amount_production !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3">
-                            <h5 class="font-weight-light">Оборудование:</h5>
-                            <div class="tools">
-                                {!! $production->tools !!}
+                            <div class="col-12 pt-3">
+                                <h5 class="font-weight-light">Оборудование:</h5>
+                                <div class="tools">
+                                    {!! $production->tools !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3">
-                            <h5>Мини описание:</h5>
-                            <div class="excerpt">
-                                {!! $production->excerpt !!}
+                            <div class="col-12 pt-3">
+                                <h5>Мини описание:</h5>
+                                <div class="excerpt">
+                                    {!! $production->excerpt !!}
+                                </div>
                             </div>
+
                         </div>
-                        <div class="col-12 pt-3">
-                            <h5>Описание:</h5>
-                            <div class="description">
-                                {!! $production->description !!}
+
+                        <div class="row col-lg-4 col-xl-4">
+                            <div class="col-12 pt-5">
+                                <h5>Описание:</h5>
+                                <div class="description">
+                                    {!! $production->description !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3">
-                            <h5>E-mail:</h5>
-                            <div class="email">
-                                {!! $production->email !!}
+                            <div class="col-12 pt-3">
+                                <h5>E-mail:</h5>
+                                <div class="email">
+                                    {!! $production->email !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3 d-flex">
-                            <h5>Телефон №1:</h5>
-                            <div class="phone1">
-                               <a href="tel:" class="text-dark">{!! $production->phone1 !!}</a>
+                            <div class="col-12 pt-3">
+                                <h5>Телефон №1:</h5>
+                                <div class="phone1">
+                                    {!! $production->phone1 !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3 d-flex">
-                            <h5>Телефон №2:</h5>
-                            <div class="phone2">
-                                <a href="tel:" class="text-dark">{!! $production->phone2 !!}</a>
+                            <div class="col-12 pt-3">
+                                <h5>Телефон №2:</h5>
+                                <div class="phone2">
+                                    {!! $production->phone2 !!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 pt-3">
-                            <h5>Личный сайт:</h5>
-                            <div class="url">
-                                {!! $production->url !!}
-                            </div>
-                        </div>
-                        <div class="col-12 pt-3">
-                            <h5>Дата создания:</h5>
-                            <div>
-                                {{ \Illuminate\Support\Carbon::make($production->created_at)->locale('ru')->format('d.m.Y H:i') }}
+                            <div class="col-12 pt-3">
+                                <h5>Личный сайт:</h5>
+                                <div class="url">
+                                    {!! $production->url !!}
+                                </div>
                             </div>
                         </div>
                         @if(count($production->getCoordinates()))

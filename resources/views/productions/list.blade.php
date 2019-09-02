@@ -1,7 +1,7 @@
 <div class="row">
     @foreach($productions as $production)
 
-        <div class="col-12 col-sm-4 col-md-3 col-lg-3 mb-3">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mb-3 pt-1">
             @include('productions.single', ['bootstrap3' => isset($bootstrap3) ? true : false])
         </div>
 

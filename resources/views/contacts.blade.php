@@ -4,6 +4,19 @@
     @include('partials.header', ['shadow' => 'shadow'])
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <input type="file" name="image" id="image-input">
+                <div>
+                    <img id="image" class="w-100" src="{{ asset('img/898714.jpg') }}">
+                    <a id="rotate" class="btn btn-success"><i class="fa fa-redo-alt"></i></a>
+                    <a id="crop" class="btn btn-success"><i class="fas fa-crop"></i></a>
+
+                    <input type="text" id="dataImage">
+                    <div id="cropped" class="position-relative"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col">
                 <h1>Контакты</h1>
                 <iframe
@@ -42,6 +55,10 @@
     </div>
 @endsection
 
-@push('scripts')
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/cropper.min.css') }}">
+@endpush
 
+@push('scripts')
+    <script src="{{ asset('js/cropper.min.js') }}"></script>
 @endpush
