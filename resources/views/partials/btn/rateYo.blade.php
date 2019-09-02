@@ -1,1 +1,1 @@
-<div id="rateYo"></div>
+<div id="{{ $id ?? 'rateYo' }}"></div>

@@ -43,7 +43,8 @@
                     </div>
                     <div class="form-group">
                         <label for="employee">Количество сотрудников</label>
-                        <input type="number" min="1" max="1000" class="form-control" name="amount_production" id="employee">
+                        <input type="number" min="1" max="1000" class="form-control" name="amount_production"
+                               id="employee">
                     </div>
                     <div class="form-group">
                         <label for="equipment">Оборудование</label>
@@ -73,8 +74,27 @@
                         </textarea>
                     </div>
                     <div class="form-group">
-                        <label for="employee">Объем производства</label>
-                        <input type="number" min="1" max="1000" class="form-control" name="amount_production" id="employee">
+
+                        <label for="employee">Минимальный заказ</label>
+                        <input type="number" min="1" max="1000" class="form-control" name="amount_production"
+                               id="employee">
+                    </div>
+                    <h3>Объем прозводства в месяц</h3>
+                    <div class="form-row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="from">От</label>
+                                <input type="number" min="1" class="form-control" name="amount_production"
+                                       id="from">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="before">До</label>
+                                <input type="number" max="10000000" class="form-control" name="amount_prod"
+                                       id="before">
+                            </div>
+                        </div>
                     </div>
                     <h3>Контакты</h3>
                     <div class="form-row">
@@ -114,7 +134,7 @@
 </div>
 
 @push('styles')
-    <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
+    <link rel="stylesheet" href="{{asset("css/intlTelInput.min.css")}}">
 @endpush
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
@@ -136,7 +156,7 @@
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
         });
-        $('.phone1').on('focus', function(e){
+        $('.phone1').on('focus', function (e) {
             let input = $(e.currentTarget);
             let code = input.siblings('.iti__flag-container').find('.iti__selected-dial-code').html();
             input.parent().siblings('input[name="code"]').val(code);
@@ -173,7 +193,7 @@
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
         });
-        $('.phone2').on('focus', function(e){
+        $('.phone2').on('focus', function (e) {
             let input = $(e.currentTarget);
             let code = input.siblings('.iti__flag-container').find('.iti__selected-dial-code').html();
             input.parent().siblings('input[name="code2"]').val(code);

@@ -15,14 +15,19 @@
                             <div class="row h-100">
                                 <div class="col-12 d-flex h-25 align-items-center">
                                     <h1 class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</h1>
-                                    @include('partials.btn.rateYo')
+                                    @include('partials.btn.rateYo', ['id' => 'rateYo'])
                                 </div>
                                 <div class="col-12 ">
                                     <div class="phone1 d-flex">
-                                        <p>Телефон №1:</p><a href="tel:" class="text-dark" >{!! $production->phone1 !!}</a>
+                                        <i class="fas fa-phone-alt p-1 d-md-block">&nbsp</i><a href="tel:" class="text-dark" >{!! $production->phone1 !!}</a>
                                     </div>
                                     <div class="phone2 d-flex">
-                                        <p>Телефон №2:</p><a href="tel:" class="text-dark" >{!! $production->phone2 !!}</a>
+                                        <i class="fas fa-phone-alt p-1 d-md-block">&nbsp</i><a href="tel:" class="text-dark" >{!! $production->phone2 !!}</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 align-self-end">
+                                    <div>
+                                        @include('partials.modals.comment')
                                     </div>
                                 </div>
                                 <div class="col-12 my-4 my-lg-0">
@@ -185,6 +190,11 @@
         $(function () {
 
             $("#rateYo").rateYo({
+                rating: '3',
+                halfStar: true,
+                starWidth: "20px"
+            })
+            $("#rateYo1").rateYo({
                 rating: '{{ $production->rating }}',
                 halfStar: true,
                 starWidth: "20px"
