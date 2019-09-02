@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Observers\ProductionObserver;
 use ChristianKuri\LaravelFavorite\Traits\Favoriteable;
 use Dorvidas\Ratings\Models\RateableTrait;
 use Illuminate\Database\Eloquent\Model;
@@ -25,6 +26,11 @@ class Production extends Model
     public function categories()
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     /**

@@ -1,10 +1,10 @@
 <div class="form-row">
     <div class="">
         <div class="form-group">
-            <input type="hidden" id="latitude{{ $idMap ?? 'map' }}" name="latitude" class="form-control">
+            <input type="hidden" id="latitude{{ $idMap ?? 'map' }}" value="{{ isset($production) && count($production->getCoordinates()) ? $production->getCoordinates()[0]['lng'] : '' }}" name="latitude" class="form-control">
         </div>
         <div class="form-group">
-            <input type="hidden" id="longtitude{{ $idMap ?? 'map' }}" name="longtitude" class="form-control">
+            <input type="hidden" id="longtitude{{ $idMap ?? 'map' }}" value="{{ isset($production) && count($production->getCoordinates()) ? $production->getCoordinates()[0]['lat'] : '' }}" name="longtitude" class="form-control">
         </div>
     </div>
     <div class="col-12 pt-3">
@@ -28,6 +28,7 @@
             // Слушаем клик на карте.
             myMap.events.add('click', function (e) {
                 var coords = e.get('coords');
+                console.log(coords);
                 $('#latitude{{ $idMap ?? 'map' }}').val(coords[0]);
                 $('#longtitude{{ $idMap ?? 'map' }}').val(coords[1]);
                 // Если метка уже создана – просто передвигаем ее.
