@@ -202,21 +202,7 @@
 
                 let rating = data.rating;
                 console.log(rating);
-                $.ajax({
-                    url: '{{ route('productions.rate') }}',
-                    method: 'get',
-                    data: {
-                        id: '{{ $production->id }}',
-                        rating: rating,
-                        _csrf: '{{ csrf_token() }}'
-                    },
-                    success: data => {
-                        console.log(data);
-                    },
-                    error: () => {
-                        console.log('error');
-                    }
-                })
+                $('#input_rating').val(rating);
             });
         });
     </script>
