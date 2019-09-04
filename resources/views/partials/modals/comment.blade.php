@@ -21,6 +21,7 @@
                             <h1 class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</h1>
                             @include('partials.btn.rateYo', ['id' => 'rateYo1'])
                         </div>
+                            <input type="hidden" class="" id="input_rating">
                         <div class="col-12 order-1">
                             <p id=""></p>
                             @auth
