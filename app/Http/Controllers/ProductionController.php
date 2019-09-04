@@ -61,6 +61,7 @@ class ProductionController extends Controller
     {
         $validated = $request->validated();
 
+        $validated['user_id'] = \auth()->id();
         $production = Production::create($validated);
 
         return redirect()->back();
