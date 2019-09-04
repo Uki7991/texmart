@@ -105,20 +105,33 @@
                                     {!! $production->excerpt !!}
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div class="row col-lg-6 col-xl-6">
-                            <div class="col-12 pt-5">
+                            <div class="col-12 pt-3">
                                 <h5>Описание:</h5>
                                 <div class="description">
                                     {!! $production->description !!}
                                 </div>
                             </div>
-                            <div class="col-12 pt-3">
+                        </div>
+                        <div class="row col-lg-6 col-xl-6">
+                            <div class="col-12 pt-5">
                                 <h5>E-mail:</h5>
                                 <div class="email">
                                     {!! $production->email !!}
+                                </div>
+                            </div>
+                            <div class="col-12 pt-3">
+                                <h5>Минимальный заказ:</h5>
+                                <div class="minimum_order">
+                                    {!! $production->minimum_order !!}
+                                </div>
+                            </div>
+                            <div class="col-12 pt-3">
+                                <h5>Объем прозводства в месяц:</h5>
+                                <div class="from_amount_production">
+                                    <p>От</p>{!! $production->from_amount_production !!}
+                                </div>
+                                <div class="before_amount_prod">
+                                    <p>До</p>{!! $production->before_amount_prod !!}
                                 </div>
                             </div>
                             <div class="col-12 pt-3">
