@@ -13,7 +13,11 @@
 {{--            <div class="mr-auto">--}}
 {{--                <p class="m-0 p-0 small text-muted font-italic font-weight-bold">+996 700 700 700</p>--}}
 {{--            </div>--}}
-            <div class="ml-auto">
+            <p class="m-0 small">
+                <i class="fas fa-eye fa-sm"></i>&nbsp;<span class="">{{ $production->views }}</span>
+            </p>
+
+            <div class="ml-auto d-flex align-items-center">
                 @includeWhen(isset($profile) && auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('productions.edit', $production)])
                 @include('partials.btn.call', ['class' => 'btn-sm'])
                 @include('partials.btn.favorite', ['class' => 'btn-sm', 'data' => 'data-id='.$production->id.'', 'route' => \Illuminate\Support\Facades\Auth::user() ? '#' : route('login')])

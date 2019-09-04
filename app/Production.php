@@ -7,6 +7,8 @@ use ChristianKuri\LaravelFavorite\Traits\Favoriteable;
 use Dorvidas\Ratings\Models\RateableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Session;
 use TCG\Voyager\Traits\Spatial;
 
 
@@ -45,5 +47,21 @@ class Production extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public static function getProductionViews($id)
+    {
+        if (Session::has('productionsViewed')) {
+            if (in_array($id, Session::get('productionsViewed'))) {
+                return true;
+            } else {
+                $productions = Arr::prepend(Session::get('productionsViewed'), $id);
+                Session::put('productionsViewed', $productions);
+                return false;
+            }
+        }
+        Session::put('productionsViewed', [$id]);
+
+        return false;
     }
 }

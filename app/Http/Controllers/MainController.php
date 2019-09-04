@@ -15,9 +15,9 @@ class MainController extends Controller
 {
     public function index()
     {
-        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo']);
-        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo']);
-        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo']);
+        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo', 'views']);
+        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo', 'views']);
+        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);
 
         return view('welcome', [
             'productions' => $productions,
@@ -29,9 +29,9 @@ class MainController extends Controller
     public function search(Request $request)
     {
         $search = $request->search;
-        $result = collect(['Производственные фабрики  и цеха' => Production::where('title', 'like', "%$search%")->where('type', 'productions')->get(['id', 'title', 'slug', 'logo'])]);
-        $result = $result->merge(collect(['Товары' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'product')->get(['id', 'title', 'slug', 'logo'])]));
-        $result = $result->merge(collect(['Услуги' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'service')->get(['id', 'title', 'slug', 'logo'])]));
+        $result = collect(['Производственные фабрики  и цеха' => Production::where('title', 'like', "%$search%")->where('type', 'productions')->get(['id', 'title', 'slug', 'logo', 'views'])]);
+        $result = $result->merge(collect(['Товары' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views'])]));
+        $result = $result->merge(collect(['Услуги' => Production::where('title', 'like', '%' . $search. '%')->where('type', 'service')->get(['id', 'title', 'slug', 'logo', 'views'])]));
         $categories = Category::where('title', 'like', '%'.$search.'%')->get();
         foreach ($categories as $category) {
             $result = $result->merge(collect([$category->title => $category->productions]));

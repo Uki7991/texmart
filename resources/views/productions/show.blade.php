@@ -18,12 +18,16 @@
                                     @include('partials.btn.rateYo', ['id' => 'rateYo'])
                                 </div>
                                 <div class="col-12 ">
-                                    <div class="phone1 d-flex">
-                                        <i class="fas fa-phone-alt p-1 d-md-block">&nbsp</i><a href="tel:" class="text-dark" >{!! $production->phone1 !!}</a>
-                                    </div>
-                                    <div class="phone2 d-flex">
-                                        <i class="fas fa-phone-alt p-1 d-md-block">&nbsp</i><a href="tel:" class="text-dark" >{!! $production->phone2 !!}</a>
-                                    </div>
+                                    @if($production->phone1)
+                                        <div class="phone1 d-flex">
+                                            <i class="fas fa-phone-alt p-1 d-md-block">&nbsp;</i><a href="tel:" class="text-dark" >{!! $production->phone1 !!}</a>
+                                        </div>
+                                    @endif
+                                    @if($production->phone2)
+                                        <div class="phone2 d-flex">
+                                            <i class="fas fa-phone-alt p-1 d-md-block">&nbsp;</i><a href="tel:" class="text-dark" >{!! $production->phone2 !!}</a>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-12 align-self-end">
                                     <div>
@@ -70,7 +74,7 @@
                         </div>
                         @endif
 
-                        <div class="row col-lg-4 col-xl-4">
+                        <div class="row col-lg-6 col-xl-6">
                             <div class="col-12 pt-5">
                                 <h5>Бренд:</h5>
                                 <div class="brand" style="font-weight: bold">
@@ -104,7 +108,7 @@
 
                         </div>
 
-                        <div class="row col-lg-4 col-xl-4">
+                        <div class="row col-lg-6 col-xl-6">
                             <div class="col-12 pt-5">
                                 <h5>Описание:</h5>
                                 <div class="description">
@@ -176,11 +180,10 @@
                         color: '#0095b6'
                     });
                 var myMap = new ymaps.Map("map", {
-                    center: [42.865388923088396, 74.60104350048829],
+                    center: ['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
                     zoom: 13
                 });
                 myMap.geoObjects.add(production);
-                myMap.setBounds(myMap.geoObjects().getBounds());
             }
         </script>
     @endif
@@ -190,12 +193,13 @@
         $(function () {
 
             $("#rateYo").rateYo({
-                rating: '3',
+                rating: '{{ $rating ? $rating : '4' }}',
                 halfStar: true,
+                readOnly: true,
                 starWidth: "20px"
-            })
+            });
             $("#rateYo1").rateYo({
-                rating: '{{ $production->rating }}',
+                rating: '0',
                 halfStar: true,
                 starWidth: "20px"
             }).on("rateyo.set", function (e, data) {
