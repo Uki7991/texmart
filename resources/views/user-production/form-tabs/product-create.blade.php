@@ -56,7 +56,7 @@
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-froup">
                                 <label for="site">Личный сайт</label>
-                                <input type="text" class="form-control" name="site" id="site">
+                                <input type="url" class="form-control" name="site" id="site" placeholder="Сайт">
                             </div>
                         </div>
                         <div class="col-12 col-sm-10 col-md-4">
@@ -94,7 +94,7 @@
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="email">E-mail</label>
-                                <input type="text" name="email" class="form-control" id="email">
+                                <input type="email" name="email" class="form-control" id="email">
                             </div>
                         </div>
                     </div>

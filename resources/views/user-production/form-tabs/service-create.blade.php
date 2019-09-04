@@ -48,8 +48,8 @@
                     <div class="form-row">
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-froup">
-                                <label for="site">Сайт</label>
-                                <input type="text" class="form-control" name="site" id="site">
+                                <label for="site">Личный cайт</label>
+                                <input type="url" class="form-control" name="site" id="site" placeholder="Сайт">
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-4">
@@ -68,7 +68,7 @@
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>
                     </div>
-                    <h3>Contacts</h3>
+                    <h3>Контакты</h3>
                     <div class="form-row">
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
@@ -87,7 +87,7 @@
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="email">E-mail</label>
-                                <input type="text" name="email" class="form-control" id="email">
+                                <input type="email" name="email" class="form-control" id="email">
                             </div>
                         </div>
                     </div>
