@@ -46,7 +46,7 @@
                                     @endif
                                     <a href="#" class="text-dark">{{ $category->title }}</a>
                                     @if(count($category->childs))
-                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])
                                     @endif
                                 </li>
                             @endforeach
@@ -75,7 +75,7 @@
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>
                     </div>
-                    <h3>Contacts</h3>
+                    <h3>Контакты</h3>
                     <div class="form-row">
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Map</h3>
+                    <h3>Местонахождение на карте</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map3'])
 
 

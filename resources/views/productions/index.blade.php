@@ -6,7 +6,7 @@
 
     <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-">
+            <div class="col-lg-3">
                 @include('partials.left_sidebar', ['toggle' => true])
             </div>
             <div class="col" id="productions-list">

@@ -39,7 +39,7 @@
                                     @endif
                                     <a href="#" class="text-dark">{{ $category->title }}</a>
                                     @if(count($category->childs))
-                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
+                                        @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'checkbox']])
                                     @endif
                                 </li>
                             @endforeach
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Map</h3>
+                    <h3>Местонахождение на карте</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map2'])
 
                     <div class="form-group">
