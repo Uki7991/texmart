@@ -81,7 +81,7 @@ class ProductionObserver
 
     public function saved(Production $production)
     {
-        $production->user_id = auth()->user()->id;
+//        $production->user_id = auth()->user()->id;
 
         $production->coordinates = null;
         if (($longtitude = request('latitude')) && ($latitude = request('longtitude'))) {

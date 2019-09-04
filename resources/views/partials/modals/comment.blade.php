@@ -8,8 +8,7 @@
             <div class="position-relative">
                 <div class="modal-header border-0">
                     <div class="col-12">
-                        <h3 class="modal-title text-center" id="">Поставьте оценку <span
-                                id="title_production_modal"></span></h3>
+                        <h3 class="modal-title text-center" id="">Поставьте оценку</h3>
                     </div>
                     <button type="button" class="close position-absolute" style="right:10px;top: 10px;"
                             data-dismiss="modal" aria-label="Close">
@@ -24,7 +23,7 @@
                         </div>
                             <input type="hidden" class="" id="input_rating">
                         <div class="col-12 order-1">
-                            <p id="mobile_phone_modal"></p>
+                            <p id=""></p>
                             @auth
                                 <form action="" class="">
                                     <input type="hidden">

@@ -7,10 +7,13 @@ use App\Http\Requests\ProductionStoreRequest;
 use App\Http\Requests\ProductionUpdateRequest;
 use App\Production;
 use App\Type;
+use Dorvidas\Ratings\Models\Rating;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Session;
 
 class ProductionController extends Controller
 {
@@ -69,7 +72,7 @@ class ProductionController extends Controller
      * @param  \App\Production  $production
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show(Request $request, $slug)
     {
         $production = Production::whereSlug($slug)->firstOrFail();
         $categories = $production->categories->where('parent_id', 'is', null);
@@ -79,9 +82,20 @@ class ProductionController extends Controller
 //            $item->childs = $item->childs->has('productions');
 //        });
 
+        $viewed = Production::getProductionViews($production->id);
+
+        if (!$viewed) {
+            $production->views = $production->views + 1;
+            $production->save();
+        }
+
+        $ratings = Rating::of($production)->get();
+        $rating = count($ratings) ? $ratings->avg('rating') : 0;
+
         return view('productions.show', [
             'production' => $production,
             'categories' => $categories,
+            'rating' => $rating,
         ]);
     }
 
@@ -143,7 +157,12 @@ class ProductionController extends Controller
         $production->rate()->give($rating)->by(Auth::user());
         $production->save();
 
-        return response()->json(['production' => $production->only(['id', 'title', 'rating'])]);
+        $ratings = Rating::of($production)->get();
+
+        return response()->json([
+            'production' => $production->only(['id', 'title', 'rating']),
+            'rating' => $ratings->avg('rating'),
+        ]);
     }
 
     public function filter(Request $request)
