@@ -35,7 +35,7 @@ class ProductionStoreRequest extends FormRequest
             'longtitude' => '',
             'images' => '',
             'type' => 'required',
-            'logo' => '',
+            'logo' => 'required',
             'tools' => '',
             'amount_production' => '',
             'brand' => '',

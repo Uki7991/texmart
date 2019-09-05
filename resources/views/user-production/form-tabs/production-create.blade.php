@@ -12,18 +12,33 @@
                             Название объявления
                         </label>
                         <input type="text" name="title" class="form-control" required>
+                        @error('title')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>
                             Бренд/Наименование предприятия
                         </label>
                         <input type="text" name="brand" class="form-control">
+                        @error('brand')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" id="image-input" class="form-control">
+                        <input type="file" name="logo" id="image-input" class="form-control" required>
+                        @error('logo')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <div>
@@ -56,38 +71,73 @@
                         <label for="employee">Количество сотрудников</label>
                         <input type="number" min="1" max="1000" class="form-control" name="amount_production"
                                id="employee">
+                        @error('amount_production')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="equipment">Оборудование</label>
                         <input type="text" class="form-control" name="tools" id="equipment">
+                        @error('tools')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-row">
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-group">
                                 <label for="site">Личный сайт</label>
-                                <input type="url" class="form-control" name="url" id="url" placeholder="Сайт">
+                                <input type="url" class="form-control" name="site" id="url" placeholder="Сайт">
+                                @error('site')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-group">
                                 <label for="address">Адрес</label>
-                                <input type="text" class="form-control" name="address" id="address">
+                                <input type="text" class="form-control" name="address" id="address" required>
+                                @error('address')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="richtextExcerpt">Мини описание</label>
-                        <textarea class="form-control" name="excerpt" id="richtextExcerpt"></textarea>
+                        <textarea class="form-control" name="excerpt" id="richtextExcerpt" required></textarea>
+                        @error('excerpt')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="richtextDescription">Описание</label>
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>
+                        @error('description')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="minimum_order">Минимальный заказ</label>
                         <input type="number" min="1" max="1000" class="form-control" name="minimum_order"
                                id="minimum">
+                        @error('minimum_order')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <h3>Объем прозводства в месяц</h3>
                     <div class="form-row">
@@ -96,6 +146,11 @@
                                 <label for="from">От</label>
                                 <input type="number" min="1" class="form-control" name="from_amount_production"
                                        id="from">
+                                @error('from_amount_production')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-6">
@@ -103,6 +158,11 @@
                                 <label for="before">До</label>
                                 <input type="number" max="10000000" class="form-control" name="before_amount_prod"
                                        id="before">
+                                @error('before_amount_prod')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -112,7 +172,12 @@
                             <div class="form-group">
                                 <label for="phone1">Телефон #1</label>
                                 <input type="hidden" name="code">
-                                <input type="tel" name="phone1" class="form-control phone1">
+                                <input type="tel" name="phone1" class="form-control phone1" required>
+                                @error('phone1')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-4">
@@ -120,12 +185,22 @@
                                 <label for="phone2">Телефон #2</label>
                                 <input type="hidden" name="code2">
                                 <input type="tel" name="phone2" class="form-control phone2">
+                                @error('phone2')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="email">E-mail</label>
                                 <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -134,6 +209,11 @@
                     <div class="form-group">
                         <label for="images">Картинки</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
+                        @error('images')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-texmart-green text-white">Подать</button>
                     <a href="{{ route('profile') }}" class="btn">Назад</a>

@@ -23,7 +23,7 @@
                         <label>
                             Картинка для объявления
                         </label>
-                        <input type="file" name="logo" id="image-input2" class="form-control">
+                        <input type="file" name="logo" id="image-input2" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <div>
@@ -62,13 +62,13 @@
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-froup">
                                 <label for="address">Адрес</label>
-                                <input type="text" class="form-control" name="address" id="address">
+                                <input type="text" class="form-control" name="address" id="address" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="richtextExcerpt">Мини описание</label>
-                        <textarea class="form-control" name="excerpt" id="richtextExcerpt"></textarea>
+                        <textarea class="form-control" name="excerpt" id="richtextExcerpt" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="richtextDescription">Описание</label>
@@ -81,7 +81,7 @@
                             <div class="form-group">
                                 <label for="phone1">Телефон #1</label>
                                 <input type="hidden" name="code">
-                                <input type="text" name="phone1" class="form-control phone1">
+                                <input type="text" name="phone1" class="form-control phone1" required>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-4">
