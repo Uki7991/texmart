@@ -85,24 +85,23 @@
                         </textarea>
                     </div>
                     <div class="form-group">
-
-                        <label for="employee">Минимальный заказ</label>
-                        <input type="number" min="1" max="1000" class="form-control" name="amount_production"
-                               id="employee">
+                        <label for="minimum_order">Минимальный заказ</label>
+                        <input type="number" min="1" max="1000" class="form-control" name="minimum_order"
+                               id="minimum">
                     </div>
                     <h3>Объем прозводства в месяц</h3>
                     <div class="form-row">
                         <div class="col-6">
                             <div class="form-group">
                                 <label for="from">От</label>
-                                <input type="number" min="1" class="form-control" name="amount_production"
+                                <input type="number" min="1" class="form-control" name="from_amount_production"
                                        id="from">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
                                 <label for="before">До</label>
-                                <input type="number" max="10000000" class="form-control" name="amount_prod"
+                                <input type="number" max="10000000" class="form-control" name="before_amount_prod"
                                        id="before">
                             </div>
                         </div>
