@@ -34,7 +34,7 @@ class ProductionController extends Controller
         } else {
             $productions = Production::all();
         }
-        $categories = Category::all()->where('parent_id', 'is', null);
+        $categories = Category::all()->where('parent_id', 'is', null)->sortBy('order');
 
         return view('productions.index', [
             'productions' => $productions,
