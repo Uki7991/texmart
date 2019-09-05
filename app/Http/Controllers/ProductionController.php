@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Feedback;
 use App\Http\Requests\ProductionStoreRequest;
 use App\Http\Requests\ProductionUpdateRequest;
 use App\Production;
@@ -164,6 +165,29 @@ class ProductionController extends Controller
             'production' => $production->only(['id', 'title', 'rating']),
             'rating' => $ratings->avg('rating'),
         ]);
+    }
+
+    public function feedback(Request $request, Production $production)
+    {
+        $rating = \auth()->user()->ratings()->on($production)->first();
+
+        if ($request->rating) {
+            if ($rating) {
+                $production->rate()->give($request->rating)->by(\auth()->user());
+            }
+        }
+        if ($request->message) {
+            if ($request->user_id) {
+                $feedback = new Feedback([
+                    'feedback' => $request->message,
+                    'user_id' => $request->user_id,
+                    'rating' => $rating ? null : $request->rating ? $request->rating : null,
+                ]);
+                $production->feedbacks()->save($feedback);
+            }
+        }
+
+        return redirect()->back();
     }
 
     public function filter(Request $request)

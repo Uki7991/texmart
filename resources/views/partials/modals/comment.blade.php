@@ -1,4 +1,4 @@
-<a href=""  class="text-dark" data-toggle="modal" data-target="#exampleModalCenter">
+<a href="{{ auth()->check() ? '' : '/login' }}"  class="text-dark" {{ auth()->check() ? 'data-toggle=modal data-target=#exampleModalCenter' : '' }}>
     Оставте отзыв
 </a>
 
@@ -18,25 +18,30 @@
                 <div class="modal-body">
                     <div class="row align-items-center">
                         <div class="col-12 d-flex h-25 align-items-center">
-                            <h1 class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</h1>
+                            <p class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</p>
                             @include('partials.btn.rateYo', ['id' => 'rateYo1'])
                         </div>
-                            <input type="hidden" class="" id="input_rating">
                         <div class="col-12 order-1">
                             <p id=""></p>
-                            @auth
-                                <form action="" class="">
-                                    <input type="hidden">
+                                <form action="{{ route('productions.feedback', $production) }}" method="POST" class="">
+                                    @csrf
+                                    <input type="hidden" name="rating" class="" id="input_rating">
+
+                                @auth
+                                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                                     <div class="form-group">
                                         <label for="message">Оставте отзыв</label>
                                         <textarea class="form-control" name="message" id="message" cols="30"
                                                   rows="5"></textarea>
                                     </div>
-                                    <button type="button" class="btn btn-sm text-muted" data-dismiss="modal">Отмена
-                                    </button>
-                                    <button type="submit" class="btn btn-sm btn-primary rounded-0">Отправить</button>
+                                    @endauth
+
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-sm text-muted" data-dismiss="modal">Отмена
+                                        </button>
+                                        <button type="submit" class="btn btn-sm btn-primary rounded-0">Отправить</button>
+                                    </div>
                                 </form>
-                            @endauth
                         </div>
                     </div>
                 </div>

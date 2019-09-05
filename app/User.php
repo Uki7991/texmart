@@ -3,6 +3,7 @@
 namespace App;
 
 use ChristianKuri\LaravelFavorite\Traits\Favoriteability;
+use Dorvidas\Ratings\Models\RateableTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -11,6 +12,7 @@ class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
     use Favoriteability;
+    use RateableTrait;
 
     /**
      * The attributes that are mass assignable.

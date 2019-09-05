@@ -35,6 +35,11 @@ class Production extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function feedbacks()
+    {
+        return $this->hasMany(Feedback::class);
+    }
+
     /**
      * Return the sluggable configuration array for this model.
      *
