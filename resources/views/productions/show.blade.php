@@ -211,7 +211,7 @@
         $(function () {
 
             $("#rateYo").rateYo({
-                rating: '{{ $rating ? $rating : '4' }}',
+                rating: '{{ $rating ? $rating : '0' }}',
                 halfStar: true,
                 readOnly: true,
                 starWidth: "20px"
