@@ -152,9 +152,17 @@
                 <div class="row">
                     <div class="col-10 my-3">
                         <div class="card shadow-sm">
-                            <div class="card-body d-flex">
-                                <p class="m-0">{{ $feedback->feedback }}</p>
-                                <div class="ml-auto" id="rateYo-{{ $feedback->id }}"></div>
+                            <div class="card-body">
+                                @if($feedback->user->role->name == 'admin')
+                                    <p class="small text-muted">
+                                        <i class="fas fa-star text-warning"></i>
+                                        &nbsp;Проверено администрацией Texmart.kg
+                                    </p>
+                                @endif
+                                <div class="d-flex align-items-center">
+                                    <p class="m-0">{{ $feedback->feedback }}</p>
+                                    <div class="ml-auto" id="rateYo-{{ $feedback->id }}"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
