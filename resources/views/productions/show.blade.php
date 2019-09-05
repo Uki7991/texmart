@@ -9,8 +9,8 @@
                      alt="">
             </div>
             <div class="col">
-                <div class="row h-100">
-                    <div class="col-12 d-flex h-25 align-items-center">
+                <div class="row">
+                    <div class="col-12 d-flex h-25 align-items-center mb-4">
                         <h1 class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</h1>
                         @include('partials.btn.rateYo', ['id' => 'rateYo'])
                     </div>
@@ -26,28 +26,28 @@
                             </div>
                         @endif
                     </div>
-                    <div class="col-12 align-self-end">
-                        <div>
-                            @include('partials.modals.comment')
-                        </div>
+                    <div class="col-12 align-self-end my-5">
+                        @include('partials.modals.comment')
                     </div>
                     <div class="col-12 my-4 my-lg-0">
-                        <ul id="tree1">
-                            @foreach($categories as $category)
-                                <li>
-                                    @if(count($category->childs))
-                                        <i class="fas fa-plus"></i>
-                                    @endif
-                                    <a href="#" class="text-dark">{{ $category->title }}</a>
-                                    @if(count($category->childs))
-                                        @include('partials.manage_childs',['childs' => $category->childs])
-                                    @endif
-                                </li>
-                            @endforeach
-                        </ul>
+{{--                        <ul id="tree1">--}}
+{{--                            @foreach($categories as $category)--}}
+{{--                                <li>--}}
+{{--                                    @if(count($category->childs))--}}
+{{--                                        <i class="fas fa-plus"></i>--}}
+{{--                                    @endif--}}
+{{--                                    <a href="#" class="text-dark">{{ $category->title }}</a>--}}
+{{--                                    @if(count($category->childs))--}}
+{{--                                        @include('partials.manage_childs',['childs' => $category->childs])--}}
+{{--                                    @endif--}}
+{{--                                </li>--}}
+{{--                            @endforeach--}}
+{{--                        </ul>--}}
+
+                        <span class="font-weight-bold">Категории:</span> {{ $categories->implode('title', ', ') }}
                     </div>
 
-                    <div class="col-12 align-self-end">
+                    <div class="col-12 mt-5">
                         <div class="d-flex">
                             @include('partials.btn.call', ['id' => $production->id])
                             @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])

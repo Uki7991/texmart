@@ -77,10 +77,10 @@ class ProductionController extends Controller
     public function show(Request $request, $slug)
     {
         $production = Production::whereSlug($slug)->firstOrFail();
-        $categories = $production->categories->where('parent_id', 'is', null);
+        $categories = $production->categories;
 //        $categories2 = $production->categories->has('productions');
-
-//        $categories->map(function ($item, $index) {
+//
+//        $categories = $categories->map(function ($item, $index) {
 //            $item->childs = $item->childs->has('productions');
 //        });
 

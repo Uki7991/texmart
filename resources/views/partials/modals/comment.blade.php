@@ -1,4 +1,4 @@
-<a href="{{ auth()->check() ? '' : '/login' }}"  class="text-dark" {{ auth()->check() ? 'data-toggle=modal data-target=#exampleModalCenter' : '' }}>
+<a href="{{ auth()->check() ? '' : '/login' }}"  class="btn btn-danger font-weight-bold" {{ auth()->check() ? 'data-toggle=modal data-target=#exampleModalCenter' : '' }}>
     Оставте отзыв
 </a>
 
