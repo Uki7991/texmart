@@ -23,7 +23,7 @@
                         <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="text-dark">Производственные цеха и фабрики</a>
                     </p>
                 </div>
-                <div class="col-12 mt-3 {{ count($productions) <= 5 ? 'row' : '' }}">
+                <div class="col-12 mb-5 mt-2 {{ count($productions) <= 5 ? 'row' : '' }}">
                     @include('productions.carousel', ['productions' => $productions])
                 </div>
             @endif
@@ -33,7 +33,7 @@
                         <a href="{{ route('productions.index', ['type' => 'product']) }}" class="text-dark">Товары</a>
                     </p>
                 </div>
-                <div class="col-12 mt-3 {{ count($products) <= 5 ? 'row' : '' }}">
+                <div class="col-12 mb-5 mt-2 {{ count($products) <= 5 ? 'row' : '' }}">
                     @include('productions.carousel', ['productions' => $products])
                 </div>
             @endif
@@ -43,7 +43,7 @@
                         <a href="{{ route('productions.index', ['type' => 'service']) }}" class="text-dark">Услуги</a>
                     </p>
                 </div>
-                <div class="col-12 mt-3 {{ count($services) <= 5 ? 'row' : '' }}">
+                <div class="col-12 mb-5 mt-2 {{ count($services) <= 5 ? 'row' : '' }}">
                     @include('productions.carousel', ['productions' => $services])
                 </div>
             @endif
