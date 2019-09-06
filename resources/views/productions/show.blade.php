@@ -98,22 +98,16 @@
                     </div>
                 </div>
                 <div class="col-12 pt-3">
-                    <h5>Мини описание:</h5>
-                    <div class="excerpt">
-                        {!! $production->excerpt !!}
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row col-lg-6 col-xl-6">
-                <div class="col-12 pt-5">
                     <h5>Описание:</h5>
                     <div class="description">
                         {!! $production->description !!}
                     </div>
                 </div>
-                <div class="col-12 pt-3">
+            </div>
+
+            <div class="row col-lg-6 col-xl-6">
+
+                <div class="col-12 pt-5">
                     <h5>E-mail:</h5>
                     <div class="email">
                         {!! $production->email !!}

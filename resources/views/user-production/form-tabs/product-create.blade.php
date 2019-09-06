@@ -67,10 +67,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="richtextExcerpt">Мини описание</label>
-                        <textarea class="form-control" name="excerpt" id="richtextExcerpt" required></textarea>
-                    </div>
-                    <div class="form-group">
                         <label for="richtextDescription">Описание</label>
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>

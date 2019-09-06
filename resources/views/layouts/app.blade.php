@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Texmart.kg это первая интернет платформа производителей текстильной и швейной продукции Кыргызской Республики. Ведение бизнеса в формате В2В.">
+    <meta name="description" content="Texmart.kg это первая интернет платформа производителей текстильной и швейной продукции Кыргызской Республики. Ведение бизнеса в формате В2В.Услуга логистики и доставки.Оформление документов экспортно ипортных документов.">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="{{ asset('img/favi.png') }}" />
     <link rel="apple-touch-icon" href="{{ asset('img/favi.png') }}"/>
-    <title>Texmart.kg - онлайн платформа производителей цехов и текстилей в Кыргызстане</title>
+    <title>Texmart.kg - онлайн платформа производства одежды в Киргизии.</title>
     <meta name="keywords" content="texmart.kg, texmart, тексмарт, текстиль, ткани, производство в Кыргызстане, Бишкек, Кыргызстан, цеха, футболки, брюки, блузки, текстильное производство">
     <meta name="description" content="Texmart.kg это первая интернет платформа производителей текстильной и швейной продукции Кыргызской Республики. Ведение бизнеса в формате В2В.">
     <!-- Fonts -->

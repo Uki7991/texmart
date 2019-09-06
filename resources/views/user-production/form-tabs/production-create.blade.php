@@ -111,15 +111,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="richtextExcerpt">Мини описание</label>
-                        <textarea class="form-control" name="excerpt" id="richtextExcerpt" required></textarea>
-                        @error('excerpt')
-                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
                         <label for="richtextDescription">Описание</label>
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>
