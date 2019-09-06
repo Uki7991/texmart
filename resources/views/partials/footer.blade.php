@@ -18,7 +18,7 @@
         <h5>Объявления</h5>
         <nav class="nav flex-column">
             <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['type' => 'productions']) }}"><i class="fa fa-angle-double-right"></i> Цеха</a>
-            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['type' => 'product']) }}"><i class="fa fa-angle-double-right"></i> Продукции</a>
+            <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['type' => 'product']) }}"><i class="fa fa-angle-double-right"></i> Товары</a>
             <a class="nav-link text-dark small nav-scale" href="{{ route('productions.index', ['type' => 'service']) }}"><i class="fa fa-angle-double-right"></i> Услуги</a>
         </nav>
     </div>
