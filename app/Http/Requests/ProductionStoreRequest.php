@@ -39,6 +39,11 @@ class ProductionStoreRequest extends FormRequest
             'tools' => '',
             'amount_production' => '',
             'brand' => '',
+            'expert' => '',
+            'minimum_order' => '',
+            'from_amount_production' => '',
+            'before_amount_prod' => '',
+            'categories' => 'required',
         ];
     }
 }

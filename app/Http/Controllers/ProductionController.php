@@ -8,6 +8,7 @@ use App\Http\Requests\ProductionStoreRequest;
 use App\Http\Requests\ProductionUpdateRequest;
 use App\Production;
 use App\Type;
+use App\User;
 use Dorvidas\Ratings\Models\Rating;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -169,10 +170,10 @@ class ProductionController extends Controller
 
     public function feedback(Request $request, Production $production)
     {
-        $rating = \auth()->user()->ratings()->on($production)->first();
+        $rating = Rating::where('model', Production::class)->where('model_id', $production->id)->where('rated_by', \auth()->user()->id)->first();
 
         if ($request->rating) {
-            if ($rating) {
+            if (!$rating) {
                 $production->rate()->give($request->rating)->by(\auth()->user());
             }
         }
@@ -181,7 +182,7 @@ class ProductionController extends Controller
                 $feedback = new Feedback([
                     'feedback' => $request->message,
                     'user_id' => $request->user_id,
-                    'rating' => $rating ? null : $request->rating ? $request->rating : null,
+                    'rating' => $request->rating ? $request->rating : null,
                 ]);
                 $production->feedbacks()->save($feedback);
             }

@@ -16,9 +16,9 @@
 
                 if (data.status === 'success') {
                     if (data.isFavorited) {
-                        btn.find('.fa-star').removeClass('far').addClass('fas');
+                        btn.find('.fa-heart').removeClass('far').addClass('fas');
                     } else {
-                        btn.find('.fa-star').removeClass('fas').addClass('far');
+                        btn.find('.fa-heart').removeClass('fas').addClass('far');
                     }
                 }
             },

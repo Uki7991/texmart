@@ -39,6 +39,7 @@ class ProductionUpdateRequest extends FormRequest
             'tools' => '',
             'amount_production' => '',
             'brand' => '',
+            'categories' => 'required',
         ];
     }
 }

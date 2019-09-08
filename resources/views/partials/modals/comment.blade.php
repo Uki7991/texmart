@@ -1,5 +1,5 @@
 <a href="{{ auth()->check() ? '' : '/login' }}"  class="btn btn-primary font-weight-bold" {{ auth()->check() ? 'data-toggle=modal data-target=#exampleModalCenter' : '' }}>
-    Оставте отзыв
+    Оставьте отзыв
 </a>
 
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">

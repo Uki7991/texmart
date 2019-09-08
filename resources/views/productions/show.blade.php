@@ -10,9 +10,20 @@
             </div>
             <div class="col">
                 <div class="row">
-                    <div class="col-12 d-flex h-25 align-items-center mb-4">
+                    <div class="col-12 d-flex align-items-center mb-2">
                         <h1 class="font-weight-bold m-0 mr-3 h2">{{ $production->title }}</h1>
-                        @include('partials.btn.rateYo', ['id' => 'rateYo'])
+                    </div>
+                    <div class="col-12 my-3">
+                        <div class="d-flex align-items-center">
+                            @include('partials.btn.rateYo', ['id' => 'rateYo'])&nbsp;<span class="h4 m-0 p-0">{{ $rating }} / 5</span>&nbsp;
+                        </div>
+                        <div class="d-flex align-items-center mt-2">
+                            @include('partials.btn.rateYo', ['id' => 'rateYoExpert'])&nbsp;<span class="h4 m-0 p-0">{{ $rating }} / 5</span>&nbsp;
+                            <p class="small m-0 text-muted">
+                                <i class="fas fa-star text-warning"></i>
+                                &nbsp;Проверено администрацией Texmart.kg
+                            </p>
+                        </div>
                     </div>
                     <div class="col-12 ">
                         @if($production->phone1)
@@ -26,9 +37,11 @@
                             </div>
                         @endif
                     </div>
-                    <div class="col-12 align-self-end my-5">
-                        @include('partials.modals.comment')
-                    </div>
+                    @if(auth()->check() && auth()->user()->role->name != 'admin')
+                        <div class="col-12 align-self-end my-5">
+                            @include('partials.modals.comment')
+                        </div>
+                    @endif
                     <div class="col-12 my-4 my-lg-0">
 {{--                        <ul id="tree1">--}}
 {{--                            @foreach($categories as $category)--}}
@@ -206,6 +219,12 @@
         $(function () {
 
             $("#rateYo").rateYo({
+                rating: '{{ $rating ? $rating : '0' }}',
+                halfStar: true,
+                readOnly: true,
+                starWidth: "20px"
+            });
+            $("#rateYoExpert").rateYo({
                 rating: '{{ $rating ? $rating : '0' }}',
                 halfStar: true,
                 readOnly: true,
