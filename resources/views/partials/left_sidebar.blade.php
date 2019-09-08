@@ -11,7 +11,7 @@
             </div>
 
             @if(count($category->childs))
-                <div id="collapse{{ $category->id }}" class="collapse show">
+                <div id="collapse{{ $category->id }}" class="collapse">
                     <div class="card-body">
                         @if(count($category->childs))
                             @include('partials.manage_childs', ['childs' => $category->childs, 'input' => [true,'checkbox']])

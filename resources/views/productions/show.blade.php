@@ -85,6 +85,7 @@
                         {!! $production->address !!}
                     </div>
                 </div>
+                @if($production->type == 'productions')
                 <div class="col-12 pt-3">
                     <h5>Количество сотрудников:</h5>
                     <div class="amount_production">
@@ -97,6 +98,7 @@
                         {!! $production->tools !!}
                     </div>
                 </div>
+                @endif
                 <div class="col-12 pt-3">
                     <h5>Описание:</h5>
                     <div class="description">
