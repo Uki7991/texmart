@@ -12,7 +12,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
-                        <div class="col-6 order-1">
+                        <div class="col-12 col-lg-6 col-md-6 order-1">
                             <p id="mobile_phone_modal"></p>
                             @auth
                                 <form action="" class="">
@@ -26,7 +26,7 @@
                                 </form>
                             @endauth
                         </div>
-                        <div class="col-6 bg-warning py-5">
+                        <div class="col-12 col-lg-6 col-md-6 bg-warning py-5">
                             <div class="modal-phone">
                                 <p class="text-center">По юридическим вопросам звоните на телефон:</p>
                                 <a href="tel:+996700700700" class="nav-link text-dark h5 font-weight-bold text-center">+996 (700) 700-700</a>

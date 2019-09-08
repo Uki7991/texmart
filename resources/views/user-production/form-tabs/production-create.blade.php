@@ -41,11 +41,10 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <div>
+                        <div class="">
                             <img id="image" class="w-100 img-preview" src="">
                             <a id="rotate-left" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
                             <a id="rotate-right" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
-                            <a id="crop" class="btn btn-success"><i class="fas fa-crop"></i></a>
 
                             <input type="text" name="rotate" id="dataImage">
                             <div id="cropped" class="position-relative"></div>
@@ -66,6 +65,11 @@
                                 </li>
                             @endforeach
                         </ul>
+                        @error('categories')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="employee">Количество сотрудников</label>
@@ -329,6 +333,8 @@
                 // Start cropper
                 container.cropper({
                     aspectRatio: 1,
+                    autoCrop: false,
+                    dragCrop: false,
                     viewMode: 1
                 });
                 cropper = container.data('cropper');

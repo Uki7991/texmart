@@ -114,3 +114,8 @@ Route::get('/conditions',function(){
 Route::get('/offer',function(){
     return view('offer');
 })->name('offer');
+
+Route::get('/delivery',function(){
+    return view('delivery');
+})->name('delivery');
+

@@ -16,6 +16,7 @@
             </ul>
 
             <ul class="navbar-nav mx-auto text-center">
+
                 <li class="nav-scale">
                     <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="nav-link text-white text-capitalize">Цеха</a>
                 </li>
@@ -28,6 +29,9 @@
                 <li class="nav-scale">
                     <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
                 </li>
+                <li class="nav-scale">
+                    <a href="/delivery" class="nav-link text-white text-capitalize">Доставка</a>
+                </li>
                 @guest
                 <li class="nav-scale">
                     <a href="{{ route('login') }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
@@ -37,6 +41,7 @@
                     <a href="{{ route('profile', ['sharp' => true]) }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
                 </li>
                 @endguest
+
 
 
 {{--                <li class="nav-scale" >--}}
