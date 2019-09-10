@@ -29,7 +29,7 @@
                         <div class="col-12 col-lg-6 col-md-6 bg-warning py-5">
                             <div class="modal-phone">
                                 <p class="text-center">По юридическим вопросам звоните на телефон:</p>
-                                <a href="tel:+996700700700" class="nav-link text-dark h5 font-weight-bold text-center">+996 (700) 700-700</a>
+                                <a href="tel:+996700700700" class="nav-link text-dark h5 font-weight-bold text-center">+996 (508) 900-500</a>
                             </div>
                         </div>
                     </div>
