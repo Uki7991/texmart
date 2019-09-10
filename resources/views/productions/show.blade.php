@@ -62,7 +62,6 @@
 
                     <div class="col-12 mt-5">
                         <div class="d-flex">
-                            @include('partials.btn.share')
                             @include('partials.btn.call', ['id' => $production->id])
                             @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])
                         </div>
