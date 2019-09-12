@@ -276,7 +276,7 @@
                     </div>
                     <div class="form-group">
                         <label>
-                            Картинка для объявления
+                            Выберите главную картинку для объявления
                         </label>
                         <input type="file" name="logo" id="image-input" class="form-control">
                         @error('logo')

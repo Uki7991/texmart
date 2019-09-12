@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group">
                         <label>
-                            Картинка для объявления
+                            Выберите главную картинку для объявления
                         </label>
                         <input type="file" name="logo" id="image-input" class="form-control" required>
                         @error('logo')
@@ -202,7 +202,7 @@
                     <h3>Укажите свое местонахождение на карте</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
                     <div class="form-group">
-                        <label for="images">Картинки</label>
+                        <label for="images">Выберите картинки объявления</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
                         @error('images')
                         <span class="invalid-feedback" role="alert">

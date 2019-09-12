@@ -8,7 +8,7 @@
                     <input type="hidden" name="type" value="service">
                     <div class="form-group">
                         <label>
-                            Название обьявления
+                            Название услуги
                         </label>
                         <input type="text" name="title" class="form-control" required>
                         @error('title')
@@ -19,7 +19,7 @@
                     </div>
                     <div class="form-group">
                         <label>
-                            Картинка для объявления
+                            Выберите главную картинку для объявления
                         </label>
                         <input type="file" name="logo" id="image-input3" class="form-control">
                         @error('logo')
