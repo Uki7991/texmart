@@ -177,6 +177,15 @@ p, h1, h2, h3, h4, h5, h6{
     -moz-box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.21) !important;
     box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.21) !important;
 }
+/*.ty-compact-list {*/
+/*    padding: 5px 5px 5px 0px;*/
+/*    float: left;*/
+/*    width: 100%;*/
+/*}*/
+/*.show-more {*/
+/*    display: none;*/
+/*    cursor: pointer;*/
+/*}*/
 
 .fa-odnoklassniki-square:hover {
     color: #ee8208 !important;

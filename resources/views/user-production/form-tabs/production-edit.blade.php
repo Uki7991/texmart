@@ -339,12 +339,12 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <label for="site">Личный сайт</label>
-                                <input type="url" class="form-control" name="url" id="url" value="{{ $production->site }}" placeholder="Сайт">
-                                @error('url')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
+                                <input type="text" class="form-control" name="url" id="url" value="{{ $production->site }}" placeholder="Сайт">
+{{--                                @error('url')--}}
+{{--                                <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                        </span>--}}
+{{--                                @enderror--}}
                             </div>
                         </div>
                         <div class="col-6">

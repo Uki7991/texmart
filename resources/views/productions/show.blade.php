@@ -158,7 +158,7 @@
                 <h2>Отзывы</h2>
             </div>
             @foreach($production->feedbacks as $feedback)
-                <div class="row">
+                <div class="row ty-compact-list">
                     <div class="col-10 my-3">
                         <div class="card shadow-sm">
                             <div class="card-body">
@@ -177,7 +177,11 @@
                     </div>
                 </div>
             @endforeach
+{{--            <div id="show-more" style="">--}}
+{{--                <a href="#">show-more</a>--}}
+{{--            </div>--}}
         @endif
+
     </div>
 
     @include('partials.modals.message_modal')
@@ -194,7 +198,20 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5f9a88a6c2d02d"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+{{--    <script>--}}
+{{--        if ($('.ty-compact-list').length > 3) {--}}
+{{--            $('.ty-compact-list:gt(2)').hide();--}}
+{{--            $('.show-more').show();--}}
+{{--        }--}}
 
+{{--        $('.show-more').on('click', function() {--}}
+{{--            //toggle elements with class .ty-compact-list that their index is bigger than 2--}}
+{{--            $('.ty-compact-list:gt(2)').toggle();--}}
+{{--            //change text of show more element just for demonstration purposes to this demo--}}
+{{--            $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');--}}
+{{--        });--}}
+{{--    </script>--}}
     <script src="{{ asset('js/lightbox.min.js') }}"></script>
     @if(count($production->getCoordinates()))
         <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU" type="text/javascript"></script>

@@ -94,12 +94,12 @@
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-group">
                                 <label for="site">Личный сайт</label>
-                                <input type="url" class="form-control" name="site" id="url" placeholder="Сайт">
-                                @error('site')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
+                                <input type="text" class="form-control" name="site" id="url" placeholder="Сайт">
+{{--                                @error('site')--}}
+{{--                                <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                        </span>--}}
+{{--                                @enderror--}}
                             </div>
                         </div>
                         <div class="col-12 col-sm-10 col-md-4">
