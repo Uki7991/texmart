@@ -3,7 +3,7 @@
 
     <ul class="nav">
         <li class="nav-item">
-            <a href="#production-create" id="production-create-tab" data-toggle="tab" role="tab" aria-controls="production-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3">Произведственный цех</a>
+            <a href="#production-create" id="production-create-tab" data-toggle="tab" role="tab" aria-controls="production-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3">Производственная фабрика или цех</a>
         </li>
         <li class="nav-item">
             <a href="#service-create" id="service-create-tab" data-toggle="tab" role="tab" aria-controls="service-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3">Услуги</a>

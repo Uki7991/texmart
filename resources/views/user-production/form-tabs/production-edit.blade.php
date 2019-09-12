@@ -413,7 +413,7 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Карта</h3>
+                    <h3>Укажите свое местонахождение на карте</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
                     <div class="form-group">
                         <label for="images">Картинки</label>
