@@ -26,7 +26,7 @@ class ProductionStoreRequest extends FormRequest
         return [
             'title' => 'string|required',
             'address' => 'string|required',
-            'excerpt' => 'string|required',
+            'excerpt' => '',
             'description' => 'string|required',
             'phone1' => 'required',
             'phone2' => '',
