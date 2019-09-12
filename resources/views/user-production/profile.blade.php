@@ -114,10 +114,10 @@
 {{--                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Чат</a>--}}
 {{--                        </li>--}}
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="#announce" class="nav-link text-light" id="announce-tab" data-toggle="tab" role="tab" aria-controls="announce" aria-selected="false">Мои обьявления</a>
+                            <a href="#announce" class="nav-link text-light" id="announce-tab" data-toggle="tab" role="tab" aria-controls="announce" aria-selected="false">Мои объявления</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="#announce-create" class="nav-link text-light" id="announce-create-tab" data-toggle="tab" role="tab" aria-controls="announce-create" aria-selected="false">Подать обьявление</a>
+                            <a href="#announce-create" class="nav-link text-light" id="announce-create-tab" data-toggle="tab" role="tab" aria-controls="announce-create" aria-selected="false">Подать объявление</a>
                         </li>
                     </ul>
                 </div>

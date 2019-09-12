@@ -18,7 +18,7 @@
             <ul class="navbar-nav mx-auto text-center">
 
                 <li class="nav-scale">
-                    <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="nav-link text-white text-capitalize">Цеха</a>
+                    <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="nav-link text-white text-capitalize">Производство</a>
                 </li>
                 <li class="nav-scale">
                     <a href="{{ route('productions.index', ['type' => 'product']) }}" class="nav-link text-white text-capitalize">Товары</a>
