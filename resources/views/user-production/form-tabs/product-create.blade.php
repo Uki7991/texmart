@@ -66,11 +66,11 @@
                                 </li>
                             @endforeach
                         </ul>
-                        @error('categories')
-                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                        @enderror
+{{--                        @error('categories')--}}
+{{--                        <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                        </span>--}}
+{{--                        @enderror--}}
                     </div>
                     <div class="form-row">
                         <div class="col-12 col-sm-10 col-md-4">
