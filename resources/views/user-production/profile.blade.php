@@ -102,8 +102,8 @@
 
         <div class="container py-5">
             <div class="row">
-                <div class="col-12 col-lg-auto">
-                    <ul class="nav flex-column">
+                <div class="col-12 col-lg-auto box">
+                    <ul class="nav flex-column ">
                         <li class="nav-item bg-texmart-blue border">
                             <a href="#settings" class="nav-link text-light" id="settings-tab" data-toggle="tab" role="tab" aria-controls="settings" aria-selected="false">Настройки</a>
                         </li>
