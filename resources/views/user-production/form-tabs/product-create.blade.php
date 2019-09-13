@@ -9,7 +9,7 @@
                     <input type="hidden" name="type" value="product">
                     <div class="form-group">
                         <label>
-                            Название товара
+                            Название товара:
                         </label>
                         <input type="text" name="title" class="form-control" required>
                         @error('title')
@@ -20,7 +20,7 @@
                     </div>
                     <div class="form-group">
                         <label>
-                            Бренд/Наименование предприятия
+                            Бренд:
                         </label>
                         <input type="text" name="brand" class="form-control">
                         @error('brand')
@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group">
                         <label>
-                            Выберите главную картинку для объявления
+                            Выберите главную картинку для объявления:
                         </label>
                         <input type="file" name="logo" id="image-input2" class="form-control" required>
                         @error('logo')
@@ -52,7 +52,16 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="categories-product">Категории</label>
+                        <label for="images">Выберите картинки для объявления:</label>
+                        <input type="file" name="images[]" class="form-control" id="images" multiple>
+                        @error('images')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="categories-product">Выберите категории:</label>
                         <ul id="tree2">
                             @foreach($productCats as $category)
                                 <li>
@@ -75,7 +84,7 @@
                     <div class="form-row">
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-froup">
-                                <label for="site">Личный сайт</label>
+                                <label for="site">Укажите ваш личный сайт(если он есть):</label>
                                 <input type="text" class="form-control" name="site" id="site" placeholder="Сайт">
 {{--                                @error('site')--}}
 {{--                                <span class="invalid-feedback" role="alert">--}}
@@ -86,7 +95,7 @@
                         </div>
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-froup">
-                                <label for="address">Адрес</label>
+                                <label for="address">Укажите адрес:</label>
                                 <input type="text" class="form-control" name="address" id="address" required>
                                 @error('address')
                                 <span class="invalid-feedback" role="alert">
@@ -97,7 +106,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="richtextDescription">Описание</label>
+                        <label for="richtextDescription">Опишите свой товар(ы):</label>
                         <textarea class="form-control richTextBox" name="description" id="richtextDescription">
                         </textarea>
                         @error('description')
@@ -106,11 +115,11 @@
                                         </span>
                         @enderror
                     </div>
-                    <h3>Контакты</h3>
+                    <h3>Укажите ваши контактные данные:</h3>
                     <div class="form-row">
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
-                                <label for="phone1">Телефон #1</label>
+                                <label for="phone1">Телефон #1:</label>
                                 <input type="hidden" name="code">
                                 <input type="text" name="phone1" class="form-control phone1" required>
                                 @error('phone1')
@@ -122,7 +131,7 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
-                                <label for="phone2">Телефон #2</label>
+                                <label for="phone2">Телефон #2:</label>
                                 <input type="hidden" name="code2">
                                 <input type="text" name="phone2" class="form-control phone2">
                                 @error('phone2')
@@ -134,7 +143,7 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="form-group">
-                                <label for="email">E-mail</label>
+                                <label for="email">E-mail:</label>
                                 <input type="email" name="email" class="form-control" id="email">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -144,18 +153,9 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Укажите свое местонахождение на карте</h3>
+                    <h3>Укажите свое местонахождение на карте:</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map3'])
 
-                    <div class="form-group">
-                        <label for="images">Выберите картинки для объявления</label>
-                        <input type="file" name="images[]" class="form-control" id="images" multiple>
-                        @error('images')
-                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                        @enderror
-                    </div>
                     <button type="submit" class="btn btn-texmart-green text-white">Подать</button>
                     <a href="{{ route('profile') }}" class="btn">Назад</a>
                 </form>

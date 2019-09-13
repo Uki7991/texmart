@@ -1,5 +1,5 @@
 <div class="tab-pane {{ request('sharp') ? 'active' : '' }}" id="announce-create" role="tabpanel" aria-labelledby="announce-create-tab">
-    <h1>Подача обьявления</h1>
+    <h1>Подача объявления</h1>
 
     <ul class="nav">
         <li class="nav-item">
