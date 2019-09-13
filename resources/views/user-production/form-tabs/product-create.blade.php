@@ -148,7 +148,7 @@
                     @include('user-production.formFields.coordinates', ['idMap' => 'map3'])
 
                     <div class="form-group">
-                        <label for="images">Картинки</label>
+                        <label for="images">Выберите картинки для объявления</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
                         @error('images')
                         <span class="invalid-feedback" role="alert">

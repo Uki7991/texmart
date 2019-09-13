@@ -116,7 +116,7 @@
                     </div>
                     <div class="form-group">
                         <label for="richtextDescription">Описание</label>
-                        <textarea class="form-control richTextBox" name="description" id="richtextDescription">
+                        <textarea class="form-control richTextBox" name="description" id="editorContent">
                         </textarea>
                         @error('description')
                         <span class="invalid-feedback" role="alert">
@@ -202,7 +202,7 @@
                     <h3>Укажите свое местонахождение на карте</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
                     <div class="form-group">
-                        <label for="images">Выберите картинки объявления</label>
+                        <label for="images">Выберите картинки для объявления</label>
                         <input type="file" name="images[]" class="form-control" id="images" multiple>
                         @error('images')
                         <span class="invalid-feedback" role="alert">
@@ -224,6 +224,75 @@
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
     <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
+    <script>
+        var editorContent = tinyMCE.get('tinyeditor').getContent();
+        if (editorContent == '')
+        {
+            // Editor empty
+
+        }
+        else
+        {
+            // Editor contains a value
+        }
+    </script>
+{{--    <script>--}}
+{{--        tinyMCE.init({--}}
+{{--            setup: function (editor) {--}}
+{{--                editor.on('init change', function () {--}}
+{{--                    editor.save();--}}
+{{--                });--}}
+{{--            }--}}
+{{--        });--}}
+{{--        $('#myform').validate({--}}
+{{--            ignore: ':hidden:not(textarea)'--}}
+{{--        });--}}
+{{--    </script>--}}
+{{--    <script src="tiny_mce.js">--}}
+{{--        // $('.richtextDescription').click(function() {--}}
+{{--        //     tinymce.triggerSave();--}}
+{{--        // });--}}
+{{--        tinyMCE.init({--}}
+{{--            mode: "textareas",--}}
+{{--            theme: "simple",--}}
+{{--            onchange_callback: function(editor){--}}
+{{--                tinyMCE.triggerSave();--}}
+{{--                $("#" + editor.id).valid();--}}
+{{--            }--}}
+{{--        });--}}
+{{--        $(function () {--}}
+{{--            var validator = $("myform").submit(function () {--}}
+{{--                tinyMCE.triggerSave();--}}
+{{--            }).validate({--}}
+{{--                ignore:"",--}}
+{{--                rules:{--}}
+{{--                    title: "required",--}}
+{{--                    content: "required"--}}
+{{--                },--}}
+{{--                errorPlacement:function (label, element) {--}}
+{{--                    if (element.is(textarea)){--}}
+{{--                        label.insertAfter(element.next());--}}
+{{--                    } else {--}}
+{{--                        label.insertAfter(element)--}}
+{{--                    }--}}
+{{--                }--}}
+{{--            });--}}
+{{--            validator.focusInvalid = function () {--}}
+{{--                if (this.settings.focusInvalid){--}}
+{{--                    try {--}}
+{{--                        var toFocus = $(this.findLastActive() || this.errorList.length && this.errorList[0].element || []);--}}
+{{--                        if (toFocus.is("textarea")){--}}
+{{--                            tinyMCE.get(toFocus.attr("id")).focus();--}}
+{{--                        } else {--}}
+{{--                            toFocus.filter(":visible").focus();--}}
+{{--                        }--}}
+{{--                    } catch (e) {--}}
+
+{{--                    }--}}
+{{--                }--}}
+{{--            }--}}
+{{--        })--}}
+{{--    </script>--}}
     <script>
         /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
 
