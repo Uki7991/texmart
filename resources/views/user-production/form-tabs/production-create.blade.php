@@ -102,7 +102,7 @@
                     <div class="form-row">
                         <div class="col-12 col-sm-10 col-md-4">
                             <div class="form-group">
-                                <label for="site">укажите ваш личный сайт(если он есть):</label>
+                                <label for="site">Укажите ваш личный сайт(если он есть):</label>
                                 <input type="text" class="form-control" name="site" id="url" placeholder="Сайт">
 {{--                                @error('site')--}}
 {{--                                <span class="invalid-feedback" role="alert">--}}

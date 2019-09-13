@@ -415,7 +415,7 @@
                     </div>
                     <h3>Укажите свое местонахождение на карте</h3>
                     @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
-                    
+
                     <button type="submit" class="btn btn-texmart-green text-white">Подать</button>
                     <a href="{{ route('profile') }}" class="btn">Назад</a>
                 </form>

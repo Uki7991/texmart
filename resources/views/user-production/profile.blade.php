@@ -110,9 +110,9 @@
                         <li class="nav-item bg-texmart-blue border">
                             <a href="#favorite" class="nav-link text-light" id="favorite-tab" data-toggle="tab" role="tab" aria-controls="favorite" aria-selected="false">Избранные</a>
                         </li>
-{{--                        <li class="nav-item bg-texmart-blue border">--}}
-{{--                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Чат</a>--}}
-{{--                        </li>--}}
+                        <li class="nav-item bg-texmart-blue border">
+                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Чат</a>
+                        </li>
                         <li class="nav-item bg-texmart-blue border">
                             <a href="#announce" class="nav-link text-light" id="announce-tab" data-toggle="tab" role="tab" aria-controls="announce" aria-selected="false">Мои объявления</a>
                         </li>
