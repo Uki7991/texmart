@@ -8,6 +8,11 @@
             <div class="row justify-content-center justify-content-lg-start">
                 <div class="col-12 col-sm-10 col-lg-10 col-md-10">
                     <form action="{{ route('productions.store') }}" enctype="multipart/form-data" method="POST">
+                        @if($errors->any())
+                            <span class="invalid-feedback d-block">
+                                <strong>У вас есть ошибки при заполнении</strong>
+                            </span>
+                        @endif
                         @csrf
                         <input type="hidden" name="type" value="productions">
                         <div class="form-group">
