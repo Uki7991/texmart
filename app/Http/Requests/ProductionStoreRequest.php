@@ -27,7 +27,7 @@ class ProductionStoreRequest extends FormRequest
             'title' => 'string|required',
             'address' => 'string|required',
             'excerpt' => '',
-            'description' => 'string|required',
+            'description' => 'required',
             'phone1' => 'required',
             'phone2' => '',
             'email' => '',
@@ -44,6 +44,17 @@ class ProductionStoreRequest extends FormRequest
             'from_amount_production' => '',
             'before_amount_prod' => '',
             'categories' => 'required',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'title' => 'название объявления',
+            'address' => 'адрес',
+            'description' => 'описание',
+            'phone1' => 'номер телефона',
+            'categories' => 'категории'
         ];
     }
 }

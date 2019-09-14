@@ -18,10 +18,18 @@
             </p>
 
             <div class="ml-auto d-flex align-items-center">
-                @includeWhen(isset($profile) && auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('productions.edit', $production)])
                 @include('partials.btn.call', ['class' => 'btn-sm'])
                 @include('partials.btn.favorite', ['class' => 'btn-sm', 'data' => 'data-id='.$production->id.'', 'route' => \Illuminate\Support\Facades\Auth::user() ? '#' : route('login')])
             </div>
         </div>
     </a>
+    @if(isset($profile) && auth()->check())
+        <div class="card-footer">
+            <div class="d-flex">
+                @includeWhen(isset($profile) && auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('productions.edit', $production)])
+                @includeWhen(isset($profile) && auth()->check() && auth()->id() == $production->user->id, 'partials.btn.delete', ['route' => route('productions.destroy', $production)])
+            </div>
+        </div>
+    @endif
+
 </div>

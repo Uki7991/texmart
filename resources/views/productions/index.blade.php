@@ -42,20 +42,56 @@
                 success: data => {
                     console.log(data);
                     let result = $('#productions-list').hide().html(data).fadeIn('fast');
-                    result.find('.favorite').each((e, i) => {
-                        registerFavoriteButton(i);
-                    });
+                    @if(auth()->check())
+                        result.find('.favorite').each((e, i) => {
+                            registerFavoriteButton($(i));
+                        });
+                    @endif
                     result.find('.call-btn').each((e, i) => {
-                        registerCallButton(i);
-                    });
-                    result.find('.favorite').each((e, i) => {
-                        registerFavoriteButton(i);
+                        registerCallButton($(i));
                     });
                 },
                 error: () => {
                     console.log('error');
                 }
             })
+        }
+        
+        @if(auth()->check())
+            function registerFavoriteButton(item) {
+                item.click((e) => {
+                    e.preventDefault();
+                    let btn = $(e.currentTarget);
+                    let id = btn.data('id');
+                    console.log(id);
+                    $.ajax({
+                        method: "POST",
+                        url: '{{ route('production.favorite') }}',
+                        data: {
+                            'id': id,
+                            'user_id': '{{ \Illuminate\Support\Facades\Auth::user()->id }}'
+                        },
+                        success: data => {
+                            console.log(data);
+
+                            if (data.status === 'success') {
+                                if (data.isFavorited) {
+                                    btn.find('.fa-heart').removeClass('far').addClass('fas');
+                                } else {
+                                    btn.find('.fa-heart').removeClass('fas').addClass('far');
+                                }
+                            }
+                        },
+                        error: () => {
+                            console.log('error');
+                        }
+                    })
+                });
+            }
+        @endif
+
+        function registerCallButton(item) {
+
         }
 
         fetchProductions(params);

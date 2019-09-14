@@ -14,7 +14,7 @@
     </div>
 </div>
 
-@push('scripts')
+@push('scripts_profile')
     <script>
         ymaps.ready(init);
         function init() {

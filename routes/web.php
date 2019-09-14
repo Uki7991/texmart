@@ -19,6 +19,12 @@ Route::post('/image/resize', 'MainController@imageResize')->name('image.resize')
 
 Route::get('/profile', 'UserController@index')->name('profile');
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
+Route::get('/user/settings', 'UserController@settings')->name('user.settings');
+Route::get('/user/favorites', 'UserController@favorites')->name('user.favorites');
+Route::get('/user/announce', 'UserController@productions')->name('user.announce');
+Route::get('/user/production/create', 'UserController@productionCreate')->name('user.production.create');
+Route::get('/user/service/create', 'UserController@serviceCreate')->name('user.service.create');
+Route::get('/user/product/create', 'UserController@productCreate')->name('user.product.create');
 Route::put('/user/password/edit/{user}', 'UserController@editPassword')->name('user.password.edit');
 Route::get('/get-categories', 'UserController@getCategories')->name('get.categories');
 

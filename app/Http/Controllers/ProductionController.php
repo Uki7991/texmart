@@ -148,7 +148,13 @@ class ProductionController extends Controller
      */
     public function destroy(Production $production)
     {
-        //
+        $production->ratings()->delete();
+        $production->favorites()->delete();
+        $production->categories()->detach();
+        $production->feedbacks()->delete();
+        $production->delete();
+
+        return redirect()->back();
     }
 
     public function rate(Request $request) {

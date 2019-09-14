@@ -1,5 +1,61 @@
 @extends('layouts.app')
 
+@section('content')
+    @include('partials.header')
+    <div class="py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <img src="{{ asset('storage/'.$user->avatar) }}" class="img-fluid" alt="">
+                </div>
+                <div class="col">
+                    <h1 class="text-capitalize">{{ $user->name }}</h1>
+                    <p>{{ $user->email }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-lg-auto">
+                    <ul class="nav flex-column">
+                        <li class="nav-item bg-texmart-blue border">
+                            <a href="{{ route('user.settings') }}" class="nav-link text-light">Настройки</a>
+                        </li>
+                        <li class="nav-item bg-texmart-blue border">
+                            <a href="{{ route('user.favorites') }}" class="nav-link text-light">Избранные</a>
+                        </li>
+{{--                        <li class="nav-item bg-texmart-blue border">--}}
+{{--                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Чат</a>--}}
+{{--                        </li>--}}
+                        <li class="nav-item bg-texmart-blue border">
+                            <a href="{{ route('user.announce') }}" class="nav-link text-light">Мои объявления</a>
+                        </li>
+                        <li class="nav-item bg-texmart-blue border">
+                            <a href="{{ route('user.production.create') }}" class="nav-link text-light">Подать производство</a>
+                        </li>
+                        <li class="nav-item bg-texmart-blue border">
+                            <a href="{{ route('user.service.create') }}" class="nav-link text-light">Подать услугу</a>
+                        </li>
+                        <li class="nav-item bg-texmart-blue border">
+                            <a href="{{ route('user.product.create') }}" class="nav-link text-light">Подать товар</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    @yield('office')
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @include('partials.modals.message_modal')
+
+@endsection
+
+@push('styles')
+
+@endpush
 
 @push('scripts')
     <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU" type="text/javascript"></script>
@@ -82,62 +138,5 @@
     @include('partials.scripts.favorite_click')
     @include('partials.scripts.favorite_btn')
     @include('partials.scripts.call_btn')
-@endpush
-
-
-@section('content')
-    @include('partials.header')
-    <div class="py-5 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-2">
-                    <img src="{{ asset('storage/'.$user->avatar) }}" class="img-fluid" alt="">
-                </div>
-                <div class="col">
-                    <h1 class="text-capitalize">{{ $user->name }}</h1>
-                    <p>{{ $user->email }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 col-lg-auto">
-                    <ul class="nav flex-column">
-                        <li class="nav-item bg-texmart-blue border">
-                            <a href="#settings" class="nav-link text-light" id="settings-tab" data-toggle="tab" role="tab" aria-controls="settings" aria-selected="false">Настройки</a>
-                        </li>
-                        <li class="nav-item bg-texmart-blue border">
-                            <a href="#favorite" class="nav-link text-light" id="favorite-tab" data-toggle="tab" role="tab" aria-controls="favorite" aria-selected="false">Избранные</a>
-                        </li>
-{{--                        <li class="nav-item bg-texmart-blue border">--}}
-{{--                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Чат</a>--}}
-{{--                        </li>--}}
-                        <li class="nav-item bg-texmart-blue border">
-                            <a href="#announce" class="nav-link text-light" id="announce-tab" data-toggle="tab" role="tab" aria-controls="announce" aria-selected="false">Мои объявления</a>
-                        </li>
-                        <li class="nav-item bg-texmart-blue border">
-                            <a href="#announce-create" class="nav-link text-light" id="announce-create-tab" data-toggle="tab" role="tab" aria-controls="announce-create" aria-selected="false">Подать объявление</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <div class="tab-content">
-                        @include('user-production.profile-tabs.settings')
-                        @include('user-production.profile-tabs.messages')
-                        @include('user-production.profile-tabs.favorite')
-                        @include('user-production.profile-tabs.announce')
-                        @include('user-production.profile-tabs.announce_create')
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    @include('partials.modals.message_modal')
-
-@endsection
-
-@push('styles')
-
+    @stack('scripts_profile')
 @endpush

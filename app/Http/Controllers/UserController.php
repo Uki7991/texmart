@@ -104,6 +104,76 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    public function settings(Request $request)
+    {
+        return view('user-production.profile-tabs.settings', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function favorites(Request $request)
+    {
+        return view('user-production.profile-tabs.favorite', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function productions(Request $request)
+    {
+        return view('user-production.profile-tabs.announce', [
+            'user' => $request->user(),
+            'productions' => $request->user()->productions,
+        ]);
+    }
+
+    public function productionCreate(Request $request)
+    {
+        $types = Type::all();
+        $productionCats = collect();
+        foreach ($types as $type) {
+            if ($type->title == 'Производство') {
+                $productionCats = $productionCats->merge($type->categories);
+            }
+        }
+
+        return view('user-production.form-tabs.production-create', [
+            'productionCats' => $productionCats,
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function productCreate(Request $request)
+    {
+        $types = Type::all();
+        $productCats = collect();
+        foreach ($types as $type) {
+            if ($type->title == 'Товары') {
+                $productCats = $productCats->merge($type->categories);
+            }
+        }
+
+        return view('user-production.form-tabs.product-create', [
+            'productCats' => $productCats,
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function serviceCreate(Request $request)
+    {
+        $types = Type::all();
+        $serviceCats = collect();
+        foreach ($types as $type) {
+            if ($type->title == 'Услуги') {
+                $serviceCats = $serviceCats->merge($type->categories);
+            }
+        }
+
+        return view('user-production.form-tabs.service-create', [
+            'serviceCats' => $serviceCats,
+            'user' => $request->user(),
+        ]);
+    }
+
     public function editPassword(UpdateUserPassword $request, User $user)
     {
         $validated = $request->validated();
