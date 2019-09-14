@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        setlocale(LC_TIME, 'ru_RU.UTF-8');
         Schema::defaultStringLength(191);
         Production::observe(ProductionObserver::class);
 

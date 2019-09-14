@@ -117,6 +117,12 @@
                         {!! $production->description !!}
                     </div>
                 </div>
+                <div class="col-12 pt-3">
+                    <h5>Дата создания объявления:</h5>
+                    <div class="description">
+                        {{ \Carbon\Carbon::make($production->created_at)->formatLocalized('%d %B %Y') }}
+                    </div>
+                </div>
             </div>
 
             <div class="row col-lg-6 col-xl-6">
