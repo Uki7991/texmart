@@ -222,9 +222,7 @@
             </div>
         </div>
     </div>
-
 @endsection
-
 @push('styles')
     <link rel="stylesheet" href="{{asset("css/intlTelInput.min.css")}}">
 @endpush

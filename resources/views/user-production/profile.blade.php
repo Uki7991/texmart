@@ -18,7 +18,7 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-12 col-lg-auto">
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column box">
                         <li class="nav-item bg-texmart-blue border">
                             <a href="{{ route('user.settings') }}" class="nav-link text-light">Настройки</a>
                         </li>

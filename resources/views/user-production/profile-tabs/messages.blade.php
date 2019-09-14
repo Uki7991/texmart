@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-12 d-flex">
                 @include('partials.chat')
+
             </div>
         </div>
     </div>
