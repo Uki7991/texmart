@@ -566,11 +566,11 @@ p, h1, h2, h3, h4, h5, h6{
 }
 .box ul:hover li
 {
-    opacity: 0.2;
+    opacity: 0.3;
 }
 .box ul li:hover
 {
-    transform:scale(1.1);
+    transform:scale(1.0);
     z-index: 100;
     background: #25bcff;
     box-shadow: 0 5px 25px rgba(0,0,0,.2);
