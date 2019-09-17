@@ -5,8 +5,10 @@
     <div class="container py-5">
         <div class="row bg-white p-md-3">
             <div class="col-12 col-md-5 mb-4 mb-lg-0">
-                <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" class="img-fluid shadow-sm"
-                     alt="">
+                <img
+                    src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}"
+                    class="img-fluid shadow-sm"
+                    alt="">
             </div>
             <div class="col">
                 <div class="row">
@@ -28,12 +30,14 @@
                     <div class="col-12 ">
                         @if($production->phone1)
                             <div class="phone1 d-flex">
-                                <i class="fas fa-phone-alt p-1 d-md-block">&nbsp;</i><a href="tel:" class="text-dark" >{!! $production->phone1 !!}</a>
+                                <i class="fas fa-phone-alt p-1 d-md-block">&nbsp;</i><a href="tel:"
+                                                                                        class="text-dark">{!! $production->phone1 !!}</a>
                             </div>
                         @endif
                         @if($production->phone2)
                             <div class="phone2 d-flex">
-                                <i class="fas fa-phone-alt p-1 d-md-block">&nbsp;</i><a href="tel:" class="text-dark" >{!! $production->phone2 !!}</a>
+                                <i class="fas fa-phone-alt p-1 d-md-block">&nbsp;</i><a href="tel:"
+                                                                                        class="text-dark">{!! $production->phone2 !!}</a>
                             </div>
                         @endif
                     </div>
@@ -43,19 +47,19 @@
                         </div>
                     @endif
                     <div class="col-12 my-4 my-lg-0">
-{{--                        <ul id="tree1">--}}
-{{--                            @foreach($categories as $category)--}}
-{{--                                <li>--}}
-{{--                                    @if(count($category->childs))--}}
-{{--                                        <i class="fas fa-plus"></i>--}}
-{{--                                    @endif--}}
-{{--                                    <a href="#" class="text-dark">{{ $category->title }}</a>--}}
-{{--                                    @if(count($category->childs))--}}
-{{--                                        @include('partials.manage_childs',['childs' => $category->childs])--}}
-{{--                                    @endif--}}
-{{--                                </li>--}}
-{{--                            @endforeach--}}
-{{--                        </ul>--}}
+                        {{--                        <ul id="tree1">--}}
+                        {{--                            @foreach($categories as $category)--}}
+                        {{--                                <li>--}}
+                        {{--                                    @if(count($category->childs))--}}
+                        {{--                                        <i class="fas fa-plus"></i>--}}
+                        {{--                                    @endif--}}
+                        {{--                                    <a href="#" class="text-dark">{{ $category->title }}</a>--}}
+                        {{--                                    @if(count($category->childs))--}}
+                        {{--                                        @include('partials.manage_childs',['childs' => $category->childs])--}}
+                        {{--                                    @endif--}}
+                        {{--                                </li>--}}
+                        {{--                            @endforeach--}}
+                        {{--                        </ul>--}}
 
                         <span class="font-weight-bold">Категории:</span> {{ $categories->implode('title', ', ') }}
                     </div>
@@ -98,18 +102,18 @@
                     </div>
                 </div>
                 @if($production->type == 'productions')
-                <div class="col-12 pt-3">
-                    <h5>Количество сотрудников:</h5>
-                    <div class="amount_production">
-                        {!! $production->amount_production !!}
+                    <div class="col-12 pt-3">
+                        <h5>Количество сотрудников:</h5>
+                        <div class="amount_production">
+                            {!! $production->amount_production !!}
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 pt-3">
-                    <h5 class="font-weight-light">Оборудование:</h5>
-                    <div class="tools">
-                        {!! $production->tools !!}
+                    <div class="col-12 pt-3">
+                        <h5 class="font-weight-light">Оборудование:</h5>
+                        <div class="tools">
+                            {!! $production->tools !!}
+                        </div>
                     </div>
-                </div>
                 @endif
                 <div class="col-12 pt-3">
                     <h5>Описание:</h5>
@@ -133,6 +137,28 @@
                         {!! $production->email !!}
                     </div>
                 </div>
+                @if($production->type == 'productions')
+                <div class="col-12 pt-3">
+                    <h5 class="font-weight-light">Минимальный заказ:</h5>
+                    <div class="minimum_order">
+                        {!! $production->minimum_order !!}
+                    </div>
+                </div>
+
+                <div class="col-12 pt-3">
+                    <h5>Объем прозводства в месяц:</h5>
+                    <h6 class="font-weight-light">От:</h6>
+                    <div class="from_amount_production">
+                        {!! $production->from_amount_production !!}
+                    </div>
+                </div>
+                <div class="col-12 pt-3">
+                    <h6 class="font-weight-light">До:</h6>
+                    <div class="before_amount_prod">
+                        {!! $production->before_amount_prod !!}
+                    </div>
+                </div>
+                @endif
                 <div class="col-12 pt-3">
                     <h5>Телефон №1:</h5>
                     <div class="phone1">
@@ -202,7 +228,8 @@
 
 @push('scripts')
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU"
+            type="text/javascript"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5f9a88a6c2d02d"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
@@ -211,7 +238,7 @@
             $('.show-more').show();
         }
 
-        $('.show-more').on('click', function(e) {
+        $('.show-more').on('click', function (e) {
             e.preventDefault();
             //toggle elements with class .ty-compact-list that their index is bigger than 2
             $('.ty-compact-list:gt(2)').toggle();
@@ -221,11 +248,13 @@
     </script>
     <script src="{{ asset('js/lightbox.min.js') }}"></script>
     @if(count($production->getCoordinates()))
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU" type="text/javascript"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU"
+                type="text/javascript"></script>
         <script type="text/javascript">
             ymaps.ready(init);
-            function init(){
-                let production= new ymaps.Placemark(['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
+
+            function init() {
+                let production = new ymaps.Placemark(['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
                     {}, {
                         preset: 'islands#icon',
                         color: '#0095b6'
@@ -287,11 +316,11 @@
                 var openedClass = 'fa-plus';
                 var closedClass = 'fa-minus';
 
-                if (typeof o != 'undefined'){
-                    if (typeof o.openedClass != 'undefined'){
+                if (typeof o != 'undefined') {
+                    if (typeof o.openedClass != 'undefined') {
                         openedClass = o.openedClass;
                     }
-                    if (typeof o.closedClass != 'undefined'){
+                    if (typeof o.closedClass != 'undefined') {
                         closedClass = o.closedClass;
                     }
                 }
@@ -313,7 +342,7 @@
                     branch.children().children().toggle();
                 });
                 /* fire event from the dynamically added icon */
-                tree.find('.branch .indicator').each(function(){
+                tree.find('.branch .indicator').each(function () {
                     $(this).on('click', function () {
                         $(this).closest('li').click();
                     });
