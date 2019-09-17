@@ -4,6 +4,7 @@
         <nav class="nav flex-column">
             <a class="nav-link text-dark small nav-scale" href="/about"><i class="fa fa-angle-double-right"></i> О нас</a>
             <a class="nav-link text-dark small nav-scale" href="#"><i class="fa fa-angle-double-right"></i> Форум</a>
+            <a class="nav-link text-dark small nav-scale" href="/blog"><i class="fa fa-angle-double-right"></i> Блог</a>
             <a class="nav-link text-dark small nav-scale" href="/contacts"><i class="fa fa-angle-double-right"></i> Контакты</a>
         </nav>
     </div>
@@ -12,6 +13,7 @@
         <nav class="nav flex-column">
             <a class="nav-link text-dark small nav-scale" href="/privacy"><i class="fa fa-angle-double-right"></i> Политика Конфидециальности</a>
             <a class="nav-link text-dark small nav-scale" href="/conditions"><i class="fa fa-angle-double-right"></i> Условия использования сайта</a>
+            <a class="nav-link text-dark small nav-scale" href="#"><i class="fa fa-angle-double-right"></i> Доставка</a>
         </nav>
     </div>
     <div class="col-12 col-sm-4 col-md-3 mb-4 mb-md-0">

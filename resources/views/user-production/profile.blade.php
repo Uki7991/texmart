@@ -32,6 +32,9 @@
                             <a href="{{ route('user.announce') }}" class="nav-link text-light">Мои объявления</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
+                            <a href="{{ route('blog.create') }}" class="nav-link text-light">Добавить статью</a>
+                        </li>
+                        <li class="nav-item bg-texmart-blue border">
                             <a href="{{ route('user.production.create') }}" class="nav-link text-light">Подать производство</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">

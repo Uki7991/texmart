@@ -3,7 +3,6 @@
 @section('office')
     <div class="tab-pane" id="product-create" role="tabpanel" aria-labelledby="product-create-tab">
         <h1>Товары</h1>
-
         <div class="container">
             <div class="row justify-content-center justify-content-lg-start">
                 <div class="col-12 col-sm-10 col-lg-10 col-md-10">
@@ -115,8 +114,8 @@
                         </div>
                         <div class="form-group">
                             <label for="richtextDescription">Опишите свой товар <span class="text-danger">*</span></label>
-                            <textarea class="form-control richTextBox @error('address') 'is-invalid' @enderror" name="description" id="richtextDescription">
-                                {{ old('address') }}
+                            <textarea class="form-control richTextBox @error('description') 'is-invalid' @enderror" name="description" id="richtextDescription">
+                                {{ old('description') }}
                         </textarea>
                             @error('description')
                             <span class="invalid-feedback" role="alert">
