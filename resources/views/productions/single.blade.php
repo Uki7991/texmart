@@ -30,6 +30,17 @@
                 @includeWhen(isset($profile) && auth()->check() && auth()->id() == $production->user->id, 'partials.btn.delete', ['route' => route('productions.destroy', $production)])
             </div>
         </div>
+        <div class="card-footer">
+            @if($production->type == 'productions')
+                <p class="m-0">Производство</p>
+            @endif
+            @if($production->type == 'service')
+                <p class="m-0">Услуга</p>
+            @endif
+            @if($production->type == 'product')
+                <p class="m-0">Товар</p>
+            @endif
+        </div>
     @endif
 
 </div>

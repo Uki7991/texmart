@@ -18,7 +18,7 @@
                             <label>
                                 Название услуги <span class="text-danger">*</span>
                             </label>
-                            <input type="text" name="title" class="form-control @error('title') 'is-invalid' @enderror" value="{{ old('title') }}" required>
+                            <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" required>
                             @error('title')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -29,7 +29,7 @@
                             <label>
                                 Выберите главную картинку для объявления <span class="text-danger">*</span>
                             </label>
-                            <input type="file" name="logo" id="image-input3" class="form-control @error('logo') 'is-invalid' @enderror">
+                            <input type="file" name="logo" id="image-input3" class="form-control @error('logo') is-invalid @enderror">
                             @error('logo')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="form-group">
                             <label for="images">Выберите картинки для объявления</label>
-                            <input type="file" name="images[]" class="form-control @error('images') 'is-invalid' @enderror" id="images" multiple>
+                            <input type="file" name="images[]" class="form-control @error('images') is-invalid @enderror" id="images" multiple>
                             @error('images')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -81,7 +81,7 @@
                             <div class="col-12 col-sm-12 col-md-6">
                                 <div class="form-froup">
                                     <label for="site">Личный cайт</label>
-                                    <input type="text" class="form-control @error('site') 'is-invalid' @enderror" value="{{ old('site') }}" name="site" id="site" placeholder="Сайт">
+                                    <input type="text" class="form-control @error('site') is-invalid @enderror" value="{{ old('site') }}" name="site" id="site" placeholder="Сайт">
                                     {{--                                @error('site')--}}
                                     {{--                                <span class="invalid-feedback" role="alert">--}}
                                     {{--                                        <strong>{{ $message }}</strong>--}}
@@ -92,7 +92,7 @@
                             <div class="col-12 col-sm-12 col-md-6">
                                 <div class="form-froup">
                                     <label for="address">Укажите адрес <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control @error('address') 'is-invalid' @enderror" value="{{ old('address') }}" name="address" id="address">
+                                    <input type="text" class="form-control @error('address') is-invalid @enderror" value="{{ old('address') }}" name="address" id="address">
                                     @error('address')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -103,7 +103,7 @@
                         </div>
                         <div class="form-group my-4">
                             <label for="richtextDescription">Опишите услугу <span class="text-danger">*</span></label>
-                            <textarea class="form-control richTextBox @error('description') 'is-invalid' @enderror" name="description" id="richtextDescription">
+                            <textarea class="form-control richTextBox @error('description') is-invalid @enderror" name="description" id="richtextDescription">
                                 {{ old('description') }}
                         </textarea>
                             @error('description')
@@ -118,7 +118,7 @@
                                 <div class="form-group">
                                     <label for="phone1">Телефон #1 <span class="text-danger">*</span></label>
                                     <input type="hidden" name="code">
-                                    <input type="text" name="phone1" class="form-control phone1 @error('phone1') 'is-invalid' @enderror">
+                                    <input type="text" name="phone1" class="form-control phone1 @error('phone1') is-invalid @enderror">
                                     @error('phone1')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -130,7 +130,7 @@
                                 <div class="form-group">
                                     <label for="phone2">Телефон #2</label>
                                     <input type="hidden" name="code2">
-                                    <input type="text" name="phone2" class="form-control phone2 @error('phone2') 'is-invalid' @enderror">
+                                    <input type="text" name="phone2" class="form-control phone2 @error('phone2') is-invalid @enderror">
                                     @error('phone2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -141,7 +141,7 @@
                             <div class="col-12 col-sm-12 col-md-4">
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
-                                    <input type="email" name="email" class="form-control @error('email') 'is-invalid' @enderror" value="{{ old('email') }}" id="email">
+                                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" id="email">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

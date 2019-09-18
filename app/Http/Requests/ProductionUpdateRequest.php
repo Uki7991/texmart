@@ -26,7 +26,6 @@ class ProductionUpdateRequest extends FormRequest
         return [
             'title' => 'string|required',
             'address' => 'string|required',
-            'excerpt' => 'string|required',
             'description' => 'string|required',
             'phone1' => '',
             'phone2' => '',

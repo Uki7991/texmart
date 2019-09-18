@@ -1,8 +1,9 @@
 @extends('user-production.profile')
 
 @section('office')
-    <div class="tab-pane" id="production-create" role="tabpanel" aria-labelledby="production-create-tab">
-        <h1>Производственный цех</h1>
+    <div class="tab-pane" id="product-create" role="tabpanel" aria-labelledby="product-create-tab">
+        <h1>Товары</h1>
+
         <div class="container">
             <div class="row justify-content-center justify-content-lg-start">
                 <div class="col-12 col-sm-10 col-lg-10 col-md-10">
@@ -13,13 +14,13 @@
                             </span>
                         @endif
                         @csrf
-                        @method("PUT")
-                        <input type="hidden" name="type" value="productions">
+                        @method('PUT')
+                        <input type="hidden" name="type" value="product">
                         <div class="form-group">
                             <label>
-                                Название предприятия <span class="text-danger">*</span>
+                                Название товара <span class="text-danger">*</span>
                             </label>
-                            <input type="text" value="{{ $production->title }}" name="title" class="form-control @error('title') is-invalid @enderror" required>
+                            <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $production->title }}" required>
                             @error('title')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -28,9 +29,9 @@
                         </div>
                         <div class="form-group">
                             <label>
-                                Бренд
+                                Бренд <span class="text-danger">*</span>
                             </label>
-                            <input type="text" name="brand" value="{{ $production->brand }}" class="form-control @error('brand') is-invalid @enderror">
+                            <input type="text" name="brand" class="form-control @error('brand') is-invalid @enderror" value="{{ $production->brand }}">
                             @error('brand')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -41,7 +42,7 @@
                             <label>
                                 Выберите главную картинку для объявления <span class="text-danger">*</span>
                             </label>
-                            <input type="file" name="logo" id="image-input" class="form-control @error('logo') is-invalid @enderror" required>
+                            <input type="file" name="logo" id="image-input2" class="form-control @error('logo') is-invalid @enderror" required>
                             @error('logo')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -49,18 +50,19 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <div class="">
-                                <img id="image" class="w-100 img-preview" src="">
-                                <a id="rotate-left" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
-                                <a id="rotate-right" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
+                            <div>
+                                <img id="image2" class="w-100 img-preview" src="">
+                                <a id="rotate-left2" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
+                                <a id="rotate-right2" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
+                                <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
 
-                                <input type="text" name="rotate" id="dataImage">
-                                <div id="cropped" class="position-relative"></div>
+                                <input type="text" name="rotate" id="dataImage2">
+                                <div id="cropped2" class="position-relative"></div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="images">Выберите картинки для объявления</label>
-                            <input type="file" name="images[]" class="form-control @error('images') is-invalid @enderror" id="images" multiple>
+                            <label for="images">Выберите картинки для объявления:</label>
+                            <input type="file" name="images[]" class="form-control" id="images" multiple>
                             @error('images')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -68,50 +70,31 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="categories-multi">Выберите категории <span class="text-danger">*</span></label>
-                            <ul id="tree1">
-                                @foreach($productionCats as $category)
+                            <label for="categories-product">Выберите категорию товара <span class="text-danger">*</span></label>
+                            <ul id="tree2">
+                                @foreach($productCats as $category)
                                     <li>
                                         @if(count($category->childs))
                                             <i class="fas fa-plus"></i>
                                         @endif
                                         <a href="#" class="text-dark">{{ $category->title }}</a>
                                         @if(count($category->childs))
-                                            @include('partials.manage_childs',['childs' => $category->childs->sortBy('order'), 'input' => [true, 'checkbox']])
+                                            @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
                                         @endif
                                     </li>
                                 @endforeach
                             </ul>
                             @error('categories')
-                            <span class="invalid-feedback" @error('categories') style="display:block;" @enderror role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="employee">Количество сотрудников</label>
-                            <input type="number" value="{{ $production->amount_production }}" min="1" max="1000" class="form-control @error('amount_production') is-invalid @enderror" name="amount_production"
-                                   id="employee">
-                            @error('amount_production')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="equipment">Оборудование (количество машинок и т.д.)</label>
-                            <input type="text" value="{{ $production->tools }}" class="form-control @error('tools') is-invalid @enderror" name="tools" id="equipment">
-                            @error('tools')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="invalid-feedback" @error('categories') style="display: block;" @enderror role="alert">
                                         <strong>{{ $message }}</strong>
                                         </span>
                             @enderror
                         </div>
                         <div class="form-row">
                             <div class="col-12 col-sm-10 col-md-6">
-                                <div class="form-group">
-                                    <label for="site">Личный сайт(если он есть)</label>
-                                    <input type="text" value="{{ $production->site }}" class="form-control" name="site" id="url" placeholder="Сайт">
+                                <div class="form-froup">
+                                    <label for="site">Личный сайт (если он есть)</label>
+                                    <input type="text" class="form-control @error('site') is-invalid @enderror" value="{{ $production->site }}" name="site" id="site" placeholder="Сайт">
                                     {{--                                @error('site')--}}
                                     {{--                                <span class="invalid-feedback" role="alert">--}}
                                     {{--                                        <strong>{{ $message }}</strong>--}}
@@ -120,9 +103,9 @@
                                 </div>
                             </div>
                             <div class="col-12 col-sm-10 col-md-6">
-                                <div class="form-group">
+                                <div class="form-froup">
                                     <label for="address">Укажите адрес <span class="text-danger">*</span></label>
-                                    <input type="text" value="{{ $production->address }}" class="form-control @error('address') is-invalid @enderror" name="address" id="address" required>
+                                    <input type="text" class="form-control @error('address') is-invalid @enderror" value="{{ $production->address }}" name="address" id="address" required>
                                     @error('address')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -132,9 +115,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="richtextDescription">Опишите свое производство</label>
-                            <textarea class="form-control richTextBox @error('description') is-invalid @enderror" name="description" id="editorContent">
-                                {!! $production->description !!}
+                            <label for="richtextDescription">Опишите свой товар <span class="text-danger">*</span></label>
+                            <textarea class="form-control richTextBox @error('address') is-invalid @enderror" name="description" id="richtextDescription">
+                                {{ $production->address }}
                         </textarea>
                             @error('description')
                             <span class="invalid-feedback" role="alert">
@@ -142,50 +125,13 @@
                                         </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="minimum_order">Минимальный заказ</label>
-                            <input type="number" min="1" {!! $production->minimum_order !!} max="1000" class="form-control @error('minimum_order') is-invalid @enderror" name="minimum_order"
-                                   id="minimum">
-                            @error('minimum_order')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                        <h3>Объем прозводства в месяц</h3>
-                        <div class="form-row">
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="from">От</label>
-                                    <input type="number" {!! $production->from_amount_production !!} min="1" class="form-control @error('from_amount_production') is-invalid @enderror" name="from_amount_production"
-                                           id="from">
-                                    @error('from_amount_production')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="before">До</label>
-                                    <input type="number" {!! $production->before_amount_prod !!} max="10000000" class="form-control @error('before_amount_prod') is-invalid @enderror" name="before_amount_prod"
-                                           id="before">
-                                    @error('before_amount_prod')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
-                        <h3>Укажите ваши контактные данные</h3>
+                        <h3>Укажите ваши контактные данные:</h3>
                         <div class="form-row">
                             <div class="col-12 col-sm-12 col-md-4">
                                 <div class="form-group">
                                     <label for="phone1">Телефон #1 <span class="text-danger">*</span></label>
                                     <input type="hidden" name="code">
-                                    <input type="tel" name="phone1" class="form-control phone1 @error('phone1') is-invalid @enderror" required>
+                                    <input type="text" name="phone1" class="form-control phone1 @error('phone1') ' is-invalid ' @enderror" required>
                                     @error('phone1')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -197,7 +143,7 @@
                                 <div class="form-group">
                                     <label for="phone2">Телефон #2</label>
                                     <input type="hidden" name="code2">
-                                    <input type="tel" name="phone2" class="form-control phone2 @error('phone2') is-invalid @enderror">
+                                    <input type="text" name="phone2" class="form-control phone2 @error('phone2') is-invalid @enderror">
                                     @error('phone2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -208,7 +154,7 @@
                             <div class="col-12 col-sm-12 col-md-4">
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
-                                    <input type="email" {!! $production->email !!} name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Email">
+                                    <input type="email" name="email" value="{{ $production->email }}" class="form-control @error('email') is-invalid @enderror" id="email">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -218,7 +164,7 @@
                             </div>
                         </div>
                         <h3>Укажите свое местонахождение на карте</h3>
-                        @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
+                        @include('user-production.formFields.coordinates', ['idMap' => 'map3'])
 
                         <button type="submit" class="btn btn-texmart-green text-white">Подать</button>
                         <a href="{{ route('profile') }}" class="btn">Назад</a>
@@ -227,7 +173,9 @@
             </div>
         </div>
     </div>
+
 @endsection
+
 @push('styles')
     <link rel="stylesheet" href="{{asset("css/intlTelInput.min.css")}}">
 @endpush
@@ -318,65 +266,61 @@
 @push('scripts')
     <script src="{{ asset('js/cropper.min.js') }}"></script>
     {{--    <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
-    <script>
-        let input = $('#image-input');
-        let container = $('#image');
 
-        container.cropper({
+    <script>
+        let input2 = $('#image-input2');
+        let container2 = $('#image2');
+
+        container2.cropper({
             aspectRatio: 1,
             viewMode: 1
         });
 
-        let cropper = container.data('cropper');
-        input.change(e => {
+        let cropper2 = container2.data('cropper');
+        input2.change(e => {
             let oFReader = new FileReader();
 
-            oFReader.readAsDataURL(input[0].files[0]);
+            oFReader.readAsDataURL(input2[0].files[0]);
 
             oFReader.onload = function (oFREvent) {
 
                 // Destroy the old cropper instance
-                container.cropper('destroy');
+                container2.cropper('destroy');
 
                 // Replace url
-                container.attr('src', this.result);
+                container2.attr('src', this.result);
 
                 // Start cropper
-                container.cropper({
+                container2.cropper({
                     aspectRatio: 1,
-                    autoCrop: false,
-                    dragCrop: false,
                     viewMode: 1
                 });
-                cropper = container.data('cropper');
-                setTimeout(rotateImage, 1000);
-
+                cropper2 = container2.data('cropper');
+                setTimeout(rotateImage2, 1000);
             };
-
         });
-
-        function rotateImage() {
-            cropper.rotate(0);
-            $('#dataImage').val(cropper.getImageData().rotate);
+        function rotateImage2() {
+            cropper2.rotate(0);
+            $('#dataImage2').val(cropper2.getImageData().rotate);
         }
 
-        $('#crop').click(e => {
-            let image = $(cropper.getCroppedCanvas()).addClass('img-fluid');
-            $('#cropped').html(image);
+        $('#crop2').click(e => {
+            let image2 = $(cropper2.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped2').html(image2);
         });
-        $('#rotate-right').click(e => {
-            let btn = $(e.currentTarget);
+        $('#rotate-right2').click(e => {
+            let btn2 = $(e.currentTarget);
 
-            cropper.rotate(90);
-            console.log(cropper.getCropBoxData());
-            $('#dataImage').val(cropper.getImageData().rotate);
+            cropper2.rotate(90);
+            console.log(cropper2.getImageData());
+            $('#dataImage2').val(cropper2.getImageData().rotate);
         });
-        $('#rotate-left').click(e => {
-            let btn = $(e.currentTarget);
+        $('#rotate-left2').click(e => {
+            let btn2 = $(e.currentTarget);
 
-            cropper.rotate(-90);
-            console.log(cropper.getImageData());
-            $('#dataImage').val(cropper.getImageData().rotate);
+            cropper2.rotate(-90);
+            console.log(cropper2.getImageData());
+            $('#dataImage2').val(cropper2.getImageData().rotate);
         });
     </script>
 @endpush

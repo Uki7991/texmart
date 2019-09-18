@@ -1,8 +1,8 @@
 @extends('user-production.profile')
 
 @section('office')
-    <div class="tab-pane" id="production-create" role="tabpanel" aria-labelledby="production-create-tab">
-        <h1>Производственный цех</h1>
+    <div class="tab-pane" id="service-create" role="tabpanel" aria-labelledby="service-create-tab">
+        <h1>Услуги</h1>
         <div class="container">
             <div class="row justify-content-center justify-content-lg-start">
                 <div class="col-12 col-sm-10 col-lg-10 col-md-10">
@@ -14,24 +14,13 @@
                         @endif
                         @csrf
                         @method("PUT")
-                        <input type="hidden" name="type" value="productions">
+                        <input type="hidden" name="type" value="service">
                         <div class="form-group">
                             <label>
-                                Название предприятия <span class="text-danger">*</span>
+                                Название услуги <span class="text-danger">*</span>
                             </label>
-                            <input type="text" value="{{ $production->title }}" name="title" class="form-control @error('title') is-invalid @enderror" required>
+                            <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $production->title }}" required>
                             @error('title')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                Бренд
-                            </label>
-                            <input type="text" name="brand" value="{{ $production->brand }}" class="form-control @error('brand') is-invalid @enderror">
-                            @error('brand')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                         </span>
@@ -41,7 +30,7 @@
                             <label>
                                 Выберите главную картинку для объявления <span class="text-danger">*</span>
                             </label>
-                            <input type="file" name="logo" id="image-input" class="form-control @error('logo') is-invalid @enderror" required>
+                            <input type="file" name="logo" id="image-input3" class="form-control @error('logo') is-invalid @enderror">
                             @error('logo')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -49,13 +38,14 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <div class="">
-                                <img id="image" class="w-100 img-preview" src="">
-                                <a id="rotate-left" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
-                                <a id="rotate-right" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
+                            <div>
+                                <img id="image3" class="w-100 img-preview" src="">
+                                <a id="rotate-left3" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
+                                <a id="rotate-right3" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
+                                <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
 
-                                <input type="text" name="rotate" id="dataImage">
-                                <div id="cropped" class="position-relative"></div>
+                                <input type="text" name="rotate" id="dataImage3">
+                                <div id="cropped3" class="position-relative"></div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -68,16 +58,16 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="categories-multi">Выберите категории <span class="text-danger">*</span></label>
-                            <ul id="tree1">
-                                @foreach($productionCats as $category)
+                            <label for="categories-service">Выберите категории <span class="text-danger">*</span></label>
+                            <ul id="tree3">
+                                @foreach($serviceCats as $category)
                                     <li>
                                         @if(count($category->childs))
                                             <i class="fas fa-plus"></i>
                                         @endif
                                         <a href="#" class="text-dark">{{ $category->title }}</a>
                                         @if(count($category->childs))
-                                            @include('partials.manage_childs',['childs' => $category->childs->sortBy('order'), 'input' => [true, 'checkbox']])
+                                            @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
                                         @endif
                                     </li>
                                 @endforeach
@@ -88,30 +78,11 @@
                                         </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="employee">Количество сотрудников</label>
-                            <input type="number" value="{{ $production->amount_production }}" min="1" max="1000" class="form-control @error('amount_production') is-invalid @enderror" name="amount_production"
-                                   id="employee">
-                            @error('amount_production')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="equipment">Оборудование (количество машинок и т.д.)</label>
-                            <input type="text" value="{{ $production->tools }}" class="form-control @error('tools') is-invalid @enderror" name="tools" id="equipment">
-                            @error('tools')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
                         <div class="form-row">
-                            <div class="col-12 col-sm-10 col-md-6">
-                                <div class="form-group">
-                                    <label for="site">Личный сайт(если он есть)</label>
-                                    <input type="text" value="{{ $production->site }}" class="form-control" name="site" id="url" placeholder="Сайт">
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="form-froup">
+                                    <label for="site">Личный cайт</label>
+                                    <input type="text" class="form-control @error('site') is-invalid @enderror" value="{{ $production->site }}" name="site" id="site" placeholder="Сайт">
                                     {{--                                @error('site')--}}
                                     {{--                                <span class="invalid-feedback" role="alert">--}}
                                     {{--                                        <strong>{{ $message }}</strong>--}}
@@ -119,10 +90,10 @@
                                     {{--                                @enderror--}}
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-10 col-md-6">
-                                <div class="form-group">
+                            <div class="col-12 col-sm-12 col-md-6">
+                                <div class="form-froup">
                                     <label for="address">Укажите адрес <span class="text-danger">*</span></label>
-                                    <input type="text" value="{{ $production->address }}" class="form-control @error('address') is-invalid @enderror" name="address" id="address" required>
+                                    <input type="text" class="form-control @error('address') is-invalid @enderror" value="{{ $production->address }}" name="address" id="address">
                                     @error('address')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -131,53 +102,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="richtextDescription">Опишите свое производство</label>
-                            <textarea class="form-control richTextBox @error('description') is-invalid @enderror" name="description" id="editorContent">
-                                {!! $production->description !!}
+                        <div class="form-group my-4">
+                            <label for="richtextDescription">Опишите услугу <span class="text-danger">*</span></label>
+                            <textarea class="form-control richTextBox @error('description') is-invalid @enderror" name="description" id="richtextDescription">
+                                {{ $production->description }}
                         </textarea>
                             @error('description')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="invalid-feedback @error('description') d-block @enderror" role="alert">
                                         <strong>{{ $message }}</strong>
                                         </span>
                             @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="minimum_order">Минимальный заказ</label>
-                            <input type="number" min="1" {!! $production->minimum_order !!} max="1000" class="form-control @error('minimum_order') is-invalid @enderror" name="minimum_order"
-                                   id="minimum">
-                            @error('minimum_order')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                        <h3>Объем прозводства в месяц</h3>
-                        <div class="form-row">
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="from">От</label>
-                                    <input type="number" {!! $production->from_amount_production !!} min="1" class="form-control @error('from_amount_production') is-invalid @enderror" name="from_amount_production"
-                                           id="from">
-                                    @error('from_amount_production')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="before">До</label>
-                                    <input type="number" {!! $production->before_amount_prod !!} max="10000000" class="form-control @error('before_amount_prod') is-invalid @enderror" name="before_amount_prod"
-                                           id="before">
-                                    @error('before_amount_prod')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
                         </div>
                         <h3>Укажите ваши контактные данные</h3>
                         <div class="form-row">
@@ -185,7 +119,7 @@
                                 <div class="form-group">
                                     <label for="phone1">Телефон #1 <span class="text-danger">*</span></label>
                                     <input type="hidden" name="code">
-                                    <input type="tel" name="phone1" class="form-control phone1 @error('phone1') is-invalid @enderror" required>
+                                    <input type="text" name="phone1" class="form-control phone1 @error('phone1') is-invalid @enderror">
                                     @error('phone1')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -197,7 +131,7 @@
                                 <div class="form-group">
                                     <label for="phone2">Телефон #2</label>
                                     <input type="hidden" name="code2">
-                                    <input type="tel" name="phone2" class="form-control phone2 @error('phone2') is-invalid @enderror">
+                                    <input type="text" name="phone2" class="form-control phone2 @error('phone2') is-invalid @enderror">
                                     @error('phone2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -208,7 +142,7 @@
                             <div class="col-12 col-sm-12 col-md-4">
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
-                                    <input type="email" {!! $production->email !!} name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Email">
+                                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ $production->email }}" id="email">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -218,7 +152,8 @@
                             </div>
                         </div>
                         <h3>Укажите свое местонахождение на карте</h3>
-                        @include('user-production.formFields.coordinates', ['idMap' => 'map1'])
+                        @include('user-production.formFields.coordinates', ['idMap' => 'map2'])
+
 
                         <button type="submit" class="btn btn-texmart-green text-white">Подать</button>
                         <a href="{{ route('profile') }}" class="btn">Назад</a>
@@ -227,14 +162,84 @@
             </div>
         </div>
     </div>
+
 @endsection
+
 @push('styles')
     <link rel="stylesheet" href="{{asset("css/intlTelInput.min.css")}}">
 @endpush
 @push('scripts_profile')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
     <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
+    <script>
+        var editorContent = tinyMCE.get('tinyeditor').getContent();
+        if (editorContent == '')
+        {
+            // Editor empty
 
+        }
+        else
+        {
+            // Editor contains a value
+        }
+    </script>
+    {{--    <script>--}}
+    {{--        tinyMCE.init({--}}
+    {{--            setup: function (editor) {--}}
+    {{--                editor.on('init change', function () {--}}
+    {{--                    editor.save();--}}
+    {{--                });--}}
+    {{--            }--}}
+    {{--        });--}}
+    {{--        $('#myform').validate({--}}
+    {{--            ignore: ':hidden:not(textarea)'--}}
+    {{--        });--}}
+    {{--    </script>--}}
+    {{--    <script src="tiny_mce.js">--}}
+    {{--        // $('.richtextDescription').click(function() {--}}
+    {{--        //     tinymce.triggerSave();--}}
+    {{--        // });--}}
+    {{--        tinyMCE.init({--}}
+    {{--            mode: "textareas",--}}
+    {{--            theme: "simple",--}}
+    {{--            onchange_callback: function(editor){--}}
+    {{--                tinyMCE.triggerSave();--}}
+    {{--                $("#" + editor.id).valid();--}}
+    {{--            }--}}
+    {{--        });--}}
+    {{--        $(function () {--}}
+    {{--            var validator = $("myform").submit(function () {--}}
+    {{--                tinyMCE.triggerSave();--}}
+    {{--            }).validate({--}}
+    {{--                ignore:"",--}}
+    {{--                rules:{--}}
+    {{--                    title: "required",--}}
+    {{--                    content: "required"--}}
+    {{--                },--}}
+    {{--                errorPlacement:function (label, element) {--}}
+    {{--                    if (element.is(textarea)){--}}
+    {{--                        label.insertAfter(element.next());--}}
+    {{--                    } else {--}}
+    {{--                        label.insertAfter(element)--}}
+    {{--                    }--}}
+    {{--                }--}}
+    {{--            });--}}
+    {{--            validator.focusInvalid = function () {--}}
+    {{--                if (this.settings.focusInvalid){--}}
+    {{--                    try {--}}
+    {{--                        var toFocus = $(this.findLastActive() || this.errorList.length && this.errorList[0].element || []);--}}
+    {{--                        if (toFocus.is("textarea")){--}}
+    {{--                            tinyMCE.get(toFocus.attr("id")).focus();--}}
+    {{--                        } else {--}}
+    {{--                            toFocus.filter(":visible").focus();--}}
+    {{--                        }--}}
+    {{--                    } catch (e) {--}}
+
+    {{--                    }--}}
+    {{--                }--}}
+    {{--            }--}}
+    {{--        })--}}
+    {{--    </script>--}}
     <script>
         /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
 
@@ -377,6 +382,118 @@
             cropper.rotate(-90);
             console.log(cropper.getImageData());
             $('#dataImage').val(cropper.getImageData().rotate);
+        });
+    </script>
+    <script>
+        let input2 = $('#image-input2');
+        let container2 = $('#image2');
+
+        container2.cropper({
+            aspectRatio: 1,
+            viewMode: 1
+        });
+
+        let cropper2 = container.data('cropper');
+        input2.change(e => {
+            let oFReader = new FileReader();
+
+            oFReader.readAsDataURL(input2[0].files[0]);
+
+            oFReader.onload = function (oFREvent) {
+
+                // Destroy the old cropper instance
+                container2.cropper('destroy');
+
+                // Replace url
+                container2.attr('src', this.result);
+
+                // Start cropper
+                container2.cropper({
+                    aspectRatio: 1,
+                    viewMode: 1
+                });
+                cropper2 = container2.data('cropper');
+                setTimeout(rotateImage2, 1000);
+            };
+        });
+        function rotateImage2() {
+            cropper2.rotate(0);
+            $('#dataImage2').val(cropper2.getImageData().rotate);
+        }
+
+        $('#crop2').click(e => {
+            let image2 = $(cropper2.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped2').html(image2);
+        });
+        $('#rotate-right2').click(e => {
+            let btn2 = $(e.currentTarget);
+
+            cropper2.rotate(90);
+            console.log(cropper2.getImageData());
+            $('#dataImage2').val(cropper2.getImageData().rotate);
+        });
+        $('#rotate-left2').click(e => {
+            let btn2 = $(e.currentTarget);
+
+            cropper2.rotate(-90);
+            console.log(cropper2.getImageData());
+            $('#dataImage2').val(cropper2.getImageData().rotate);
+        });
+    </script>
+    <script>
+        let input3 = $('#image-input3');
+        let container3 = $('#image3');
+
+        container3.cropper({
+            aspectRatio: 1,
+            viewMode: 1
+        });
+
+        let cropper3 = container.data('cropper');
+        input3.change(e => {
+            let oFReader = new FileReader();
+
+            oFReader.readAsDataURL(input3[0].files[0]);
+
+            oFReader.onload = function (oFREvent) {
+
+                // Destroy the old cropper instance
+                container3.cropper('destroy');
+
+                // Replace url
+                container3.attr('src', this.result);
+
+                // Start cropper
+                container3.cropper({
+                    aspectRatio: 1,
+                    viewMode: 1
+                });
+                cropper3 = container3.data('cropper');
+                setTimeout(rotateImage3, 1000);
+            };
+        });
+        function rotateImage3() {
+            cropper3.rotate(0);
+            $('#dataImage3').val(cropper3.getImageData().rotate);
+        }
+
+        $('#crop3').click(e => {
+            let image3 = $(cropper3.getCroppedCanvas()).addClass('img-fluid');
+            $('#cropped3').html(image3);
+        });
+        $('#rotate-right3').click(e => {
+            let btn3 = $(e.currentTarget);
+
+            cropper3.rotate(90);
+            console.log(cropper3.getImageData());
+            $('#dataImage3').val(cropper3.getImageData().rotate);
+        });
+        $('#rotate-left3').click(e => {
+            let btn3 = $(e.currentTarget);
+
+            cropper3.rotate(-90);
+            console.log(cropper3.getImageData());
+            $('#dataImage3').val(cropper3.getImageData().rotate);
         });
     </script>
 @endpush

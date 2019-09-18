@@ -112,14 +112,41 @@ class ProductionController extends Controller
     {
         $types = Type::all();
         $productionCats = collect();
-
+        $productCats = collect();
+        $serviceCats = collect();
         foreach ($types as $type) {
             if ($type->title == 'Производство') {
                 $productionCats = $productionCats->merge($type->categories);
             }
+            if ($type->title == 'Услуги') {
+                $serviceCats = $serviceCats->merge($type->categories);
+            }
+            if ($type->title == 'Товары') {
+                $productCats = $productCats->merge($type->categories);
+            }
         }
 
+        if ($production->type == 'productions') {
+            return view('user-production.form-tabs.production-edit', [
+                'user' => \auth()->user(),
+                'production' => $production,
+                'productionCats' => $productionCats,
+            ]);
+        } elseif ($production->type == 'service') {
+            return view('user-production.form-tabs.service-edit', [
+                'user' => \auth()->user(),
+                'production' => $production,
+                'serviceCats' => $serviceCats,
+            ]);
+        } elseif ($production->type == 'product') {
+            return view('user-production.form-tabs.product-edit', [
+                'user' => \auth()->user(),
+                'production' => $production,
+                'productCats' => $productCats,
+            ]);
+        }
         return view('user-production.form-tabs.production-edit', [
+            'user' => \auth()->user(),
             'production' => $production,
             'productionCats' => $productionCats,
         ]);
