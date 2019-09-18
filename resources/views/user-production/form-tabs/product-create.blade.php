@@ -115,8 +115,8 @@
                         </div>
                         <div class="form-group">
                             <label for="richtextDescription">Опишите свой товар <span class="text-danger">*</span></label>
-                            <textarea class="form-control richTextBox @error('address') is-invalid @enderror" name="description" id="richtextDescription">
-                                {{ old('address') }}
+                            <textarea class="form-control richTextBox @error('description') is-invalid @enderror" name="description" id="richtextDescription">
+                                {{ old('description') }}
                         </textarea>
                             @error('description')
                             <span class="invalid-feedback" role="alert">
