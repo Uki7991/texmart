@@ -111,7 +111,7 @@
                             <div class="col-12 col-sm-10 col-md-6">
                                 <div class="form-group">
                                     <label for="site">Личный сайт(если он есть)</label>
-                                    <input type="text" value="{{ old('site') }}" class="form-control" name="site" id="url" placeholder="Сайт">
+                                    <input type="text" value="{{ old('site') }}" class="form-control" name="site" id="site" placeholder="Сайт">
                                     {{--                                @error('site')--}}
                                     {{--                                <span class="invalid-feedback" role="alert">--}}
                                     {{--                                        <strong>{{ $message }}</strong>--}}
@@ -144,7 +144,7 @@
                         </div>
                         <div class="form-group">
                             <label for="minimum_order">Минимальный заказ</label>
-                            <input type="number" min="1" {!! old('minimum_order') !!} max="1000" class="form-control @error('minimum_order') is-invalid @enderror" name="minimum_order"
+                            <input type="number" min="1" {!! old('minimum_order') !!} max="10000" class="form-control @error('minimum_order') is-invalid @enderror" name="minimum_order"
                                    id="minimum">
                             @error('minimum_order')
                             <span class="invalid-feedback" role="alert">
