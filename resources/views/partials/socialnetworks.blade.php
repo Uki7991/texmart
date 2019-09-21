@@ -2,10 +2,10 @@
     <a href="#" class="text-muted">
         <i class="fab fa-facebook mr-3 fa-lg nav-scale"></i>
     </a>
-    <a href="#" class="text-muted">
+    <a href="https://www.youtube.com/channel/UCKTgbechwSBXrz8az2_HEsQ" class="text-muted">
         <i class="fab fa-youtube mr-3 fa-lg nav-scale"></i>
     </a>
-    <a href="#" class="text-muted">
+    <a href="https://www.instagram.com/texmart.kg/" class="text-muted">
         <i class="fab fa-instagram mr-3 fa-lg nav-scale"></i>
     </a>
     <a href="#" class="text-muted">
