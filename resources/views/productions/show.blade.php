@@ -20,7 +20,7 @@
                             @include('partials.btn.rateYo', ['id' => 'rateYo'])&nbsp;<span class="h4 m-0 p-0">{{ $rating }} / 5</span>&nbsp;
                         </div>
                         <div class="d-flex align-items-center mt-2">
-                            @include('partials.btn.rateYo', ['id' => 'rateYoExpert'])&nbsp;<span class="h4 m-0 p-0">{{ $production->expert }} / 5</span>&nbsp;
+                            @include('partials.btn.rateYo', ['id' => 'rateYoExpert'])&nbsp;<span class="h4 m-0 p-0">{{ $production->expert ?? 0 }} / 5</span>&nbsp;
                             <p class="small m-0 text-muted">
                                 <i class="fas fa-star text-warning"></i>
                                 &nbsp;Проверено администрацией Texmart.kg
