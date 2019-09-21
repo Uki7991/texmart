@@ -20,7 +20,7 @@
                             @include('partials.btn.rateYo', ['id' => 'rateYo'])&nbsp;<span class="h4 m-0 p-0">{{ $rating }} / 5</span>&nbsp;
                         </div>
                         <div class="d-flex align-items-center mt-2">
-                            @include('partials.btn.rateYo', ['id' => 'rateYoExpert'])&nbsp;<span class="h4 m-0 p-0">{{ $rating }} / 5</span>&nbsp;
+                            @include('partials.btn.rateYo', ['id' => 'rateYoExpert'])&nbsp;<span class="h4 m-0 p-0">{{ $production->expert }} / 5</span>&nbsp;
                             <p class="small m-0 text-muted">
                                 <i class="fas fa-star text-warning"></i>
                                 &nbsp;Проверено администрацией Texmart.kg
@@ -41,7 +41,7 @@
                             </div>
                         @endif
                     </div>
-                    @if(auth()->check() && auth()->user()->role->name != 'admin')
+                    @if(true)
                         <div class="col-12 align-self-end my-5">
                             @include('partials.modals.comment')
                         </div>
@@ -79,7 +79,7 @@
                     <h2 class="font-weight-light h4">Галерея</h2>
                     <div class="gallery">
                         @foreach(json_decode($production->images) as $image)
-                            <a href="{{ asset('storage/'.$image) }}" data-lightbox="gallery">
+                            <a href="{{ asset('storage/'.$image) }}" data-fancybox="gallery">
                                 <img src="{{ asset('storage/'.$image) }}" height="80" width="auto"
                                      alt="">
                             </a>
@@ -189,7 +189,14 @@
             <div class="row">
                 <h2>Отзывы</h2>
             </div>
+        @php($less = false)
             @foreach($production->feedbacks as $feedback)
+                @if($loop->index > 2 && $less == false)
+                    <div id="show-more" style="">
+                        <a href="#" class="show-more">Показать больше</a>
+                    </div>
+                    @php($less = true)
+                @endif
                 <div class="row ty-compact-list">
                     <div class="col-10 my-3">
                         <div class="card shadow-sm">
@@ -209,9 +216,7 @@
                     </div>
                 </div>
             @endforeach
-            <div id="show-more" style="">
-                <a href="#" class="show-more">Show more</a>
-            </div>
+
         @endif
 
     </div>
@@ -221,13 +226,14 @@
 @endsection
 
 @push('styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-    <link rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}">
 @endpush
 
 @push('scripts')
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU"
             type="text/javascript"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5f9a88a6c2d02d"></script>
@@ -241,14 +247,14 @@
         $('.show-more').on('click', function (e) {
             e.preventDefault();
             //toggle elements with class .ty-compact-list that their index is bigger than 2
-            $('.ty-compact-list:gt(2)').toggle();
+            $('.ty-compact-list:gt(2)').toggle(300);
             //change text of show more element just for demonstration purposes to this demo
-            $(this).text() === 'Show more' ? $(this).text('Show less') : $(this).text('Show more');
+            $(this).text() === 'Показать больше' ? $(this).text('Показать меньше') : $(this).text('Показать больше');
         });
     </script>
     <script src="{{ asset('js/lightbox.min.js') }}"></script>
     @if(count($production->getCoordinates()))
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=313eee03-ed05-406c-b163-190f6e578f48&lang=ru_RU"
+        <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU"
                 type="text/javascript"></script>
         <script type="text/javascript">
             ymaps.ready(init);
@@ -279,7 +285,7 @@
                 starWidth: "20px"
             });
             $("#rateYoExpert").rateYo({
-                rating: '{{ $rating ? $rating : '0' }}',
+                rating: '{{ $production->expert ? $production->expert : '0' }}',
                 halfStar: true,
                 readOnly: true,
                 starWidth: "20px"

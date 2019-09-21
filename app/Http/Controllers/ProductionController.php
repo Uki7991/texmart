@@ -208,7 +208,14 @@ class ProductionController extends Controller
 
         if ($request->rating) {
             if (!$rating) {
-                $production->rate()->give($request->rating)->by(\auth()->user());
+                if (\auth()->user()->role->name == 'admin') {
+                    if (!$production->expert) {
+                        $production->expert = $request->rating;
+                        $production->save();
+                    }
+                } else {
+                    $production->rate()->give($request->rating)->by(\auth()->user());
+                }
             }
         }
         if ($request->message) {
