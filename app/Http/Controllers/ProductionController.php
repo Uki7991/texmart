@@ -163,6 +163,7 @@ class ProductionController extends Controller
     {
         $validated = $request->validated();
         $production->update($validated);
+        $production->updateColumns();
 
         return redirect()->route('profile');
     }

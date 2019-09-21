@@ -8,7 +8,10 @@ use Dorvidas\Ratings\Models\RateableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic;
 use TCG\Voyager\Traits\Spatial;
 
 
@@ -55,6 +58,55 @@ class Production extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public function updateColumns()
+    {
+        $this->coordinates = null;
+        if (($longtitude = request('latitude')) && ($latitude = request('longtitude'))) {
+            $lat = (float) $latitude;
+            $lng = (float) $longtitude;
+            $this->coordinates = DB::raw("ST_GeomFromText('POINT({$lng} {$lat})')");
+        }
+
+        if (request('phone1') && request('code')) {
+            $this->phone1 = request('code'). ' ' . request('phone1');
+        }
+        if (request('phone2') && request('code2')) {
+            $this->phone2 = request('code2'). ' ' . request('phone2');
+        }
+
+        $imagesArray = [];
+        if ($images = request('images')) {
+            foreach ($images as $image) {
+                $fileName = 'productions/'.uniqid('production_').'.jpg';
+                $image = ImageManagerStatic::make($image)
+                    ->resize(1000, null, function ($constraint) {
+                        return $constraint->aspectRatio();
+                    })
+                    ->stream('jpg', 40);
+
+                Storage::disk('local')->put('public/'.$fileName, $image);
+                $imagesArray[] = $fileName;
+            }
+        }
+        $this->images = json_encode($imagesArray, true);
+
+        if ($logo = request('logo')) {
+            $fileName = 'productions/'.uniqid('production_logo_').'.jpg';
+            $image = ImageManagerStatic::make($logo)
+                ->resize(600, null, function ($constraint) {
+                    return $constraint->aspectRatio();
+                })
+                ->stream('jpg', 40);
+
+            Storage::disk('local')->put('public/'.$fileName, $image);
+            $this->logo = $fileName;
+        }
+        if ($categories = request('categories')) {
+            $this->categories()->sync($categories);
+        }
+        $this->save();
     }
 
     public static function getProductionViews($id)
