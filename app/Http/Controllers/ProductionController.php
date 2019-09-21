@@ -82,7 +82,6 @@ class ProductionController extends Controller
 
         foreach ($categories as $index => $category) {
             $category->parent = $category->hasParent();
-            dd($category);
         }
 //        $categories2 = $production->categories->has('productions');
 //
