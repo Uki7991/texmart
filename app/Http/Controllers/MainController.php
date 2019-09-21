@@ -20,9 +20,9 @@ class MainController extends Controller
         $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);
 
         return view('welcome', [
-            'productions' => $productions,
-            'services' => $services,
-            'products' => $products,
+            'productions' => $productions->sortByDesc('id'),
+            'services' => $services->sortByDesc('id'),
+            'products' => $products->sortByDesc('id'),
         ]);
     }
 
