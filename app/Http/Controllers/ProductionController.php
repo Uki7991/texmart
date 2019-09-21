@@ -79,6 +79,11 @@ class ProductionController extends Controller
     {
         $production = Production::whereSlug($slug)->firstOrFail();
         $categories = $production->categories;
+
+        foreach ($categories as $index => $category) {
+            $category->parent = $category->hasParent();
+        }
+        dd($categories);
 //        $categories2 = $production->categories->has('productions');
 //
 //        $categories = $categories->map(function ($item, $index) {
