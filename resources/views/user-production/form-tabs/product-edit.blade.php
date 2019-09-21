@@ -42,7 +42,7 @@
                             <label>
                                 Выберите главную картинку для объявления <span class="text-danger">*</span>
                             </label>
-                            <input type="file" name="logo" id="image-input2" class="form-control @error('logo') is-invalid @enderror" required>
+                            <input type="file" name="logo" id="image-input2" class="form-control @error('logo') is-invalid @enderror">
                             @error('logo')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
