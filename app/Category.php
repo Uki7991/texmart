@@ -28,4 +28,18 @@ class Category extends Model
         }
         return $this->parent;
     }
+
+    public function checkChildren($cat, $category)
+    {
+        if (count($cat->childs)) {
+            foreach ($cat->childs as $child) {
+                if ($child->id == $category->id) {
+                    return $category->title;
+                } else {
+                    $child->checkChildren($child, $category);
+                    return $category->title;
+                }
+            }
+        }
+    }
 }
