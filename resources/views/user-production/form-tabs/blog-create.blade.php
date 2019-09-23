@@ -26,7 +26,10 @@
                                         </span>
                             @enderror
                         </div>
-                        <div class="input-group">
+                        <div class="input-group mb-3">
+                            <label>
+                                Лицевая картинка <span class="text-danger">*</span>
+                            </label>
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                             </div>
@@ -59,7 +62,6 @@
                                 ...
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label for="richtextDescription">Опиcание<span
                                     class="text-danger">*</span></label>
