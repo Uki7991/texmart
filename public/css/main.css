@@ -611,6 +611,8 @@ body.bg-white {
   width: 100%;
 }
 
+
+
 .promo-container {
   height: 100%;
 }
@@ -809,6 +811,16 @@ body.bg-white {
 }
 .nav-scale:hover{
     transform: scale(1.1);
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.grayscale:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 
 .slider-text {

@@ -102,18 +102,18 @@
     </div>
 
     <div class="container py-5">
-        <h2 class="text-center h1 mb-5">
+        <h2 class="text-center h1 mb-5 font-weight-bold">
             Наши партнеры
         </h2>
         <div class="row align-items-center justify-content-between">
-            <div class="col-4 col-md-3 col-xl-2">
-                <a target="_blank" href="https://akilbirs.kg/"><img class="img-fluid" src="{{ asset("img/ak-ilbirs.png") }}"  alt="Компания Ак-Илбирс"></a>
+            <div class="col-4 col-md-3">
+                <a target="_blank" href="https://akilbirs.kg/"><img class="img-fluid grayscale" src="{{ asset("img/ak-ilbirs.png") }}"  alt="Компания Ак-Илбирс"></a>
             </div>
-            <div class="col-4 col-md-3 col-xl-2">
-                <a target="_blank"  href="https://www.bgi.kg/"><img class="img-fluid" src="{{ asset("img/bgi.png") }}"  alt=""></a>
+            <div class="col-4 col-md-3">
+                <a target="_blank"  href="https://www.bgi.kg/"><img class="img-fluid grayscale" src="{{ asset("img/bgi.png") }}"  alt=""></a>
             </div>
-            <div class="col-4 col-md-3 col-xl-2">
-                <a target="_blank"  href="https://textile.kg/"><img class="img-fluid" src="{{ asset("img/silk_way.png") }}"  alt=""></a>
+            <div class="col-4 col-md-3">
+                <a target="_blank"  href="https://textile.kg/"><img class="img-fluid grayscale" src="{{ asset("img/silk_way.png") }}"  alt=""></a>
             </div>
         </div>
     </div>
