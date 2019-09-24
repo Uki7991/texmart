@@ -101,6 +101,23 @@
         @endif
     </div>
 
+    <div class="container">
+        <h2 class="text-center h1">
+            Наши партнеры
+        </h2>
+        <div class="row align-items-center">
+            <div class="col-4 ">
+                <a target="_blank" href="https://akilbirs.kg/"><img class="img-fluid" src="{{ asset("img/ak-ilbirs.png") }}"  alt="Компания Ак-Илбирс"></a>
+            </div>
+            <div class="col-4">
+                <a target="_blank"  href="https://www.bgi.kg/"><img class="img-fluid" src="{{ asset("img/bgi.png") }}"  alt=""></a>
+            </div>
+            <div class="col-4">
+                <a target="_blank"  href="https://textile.kg/"><img class="img-fluid" src="{{ asset("img/silk_way.png") }}"  alt=""></a>
+            </div>
+        </div>
+    </div>
+
     <div class="pt-5">
         <div class="card-group">
             <div class="card border-0 rounded-0">
