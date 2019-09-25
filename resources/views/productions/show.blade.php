@@ -147,13 +147,13 @@
 
                 <div class="col-12 pt-3">
                     <p class="h5">Объем прозводства в месяц:</p>
-                    <h6 class="font-weight-light">От:</h6>
+                    <p class="font-weight-light h6">От:</p>
                     <div class="from_amount_production">
                         {!! $production->from_amount_production !!}
                     </div>
                 </div>
                 <div class="col-12 pt-3">
-                    <h6 class="font-weight-light">До:</h6>
+                    <p class="font-weight-light h6">До:</p>
                     <div class="before_amount_prod">
                         {!! $production->before_amount_prod !!}
                     </div>
