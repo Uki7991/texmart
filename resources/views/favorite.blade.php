@@ -13,7 +13,7 @@
                     @include('productions.list', ['bootstrap3' => true])
                 @else
                     <div class="text-center py-5">
-                        <h5>Избранных производителей нет</h5>
+                        <p class="h5">Избранных производителей нет</p>
                         <p class="small">Добавьте в избранное</p>
                     </div>
                 @endif

@@ -6,7 +6,7 @@
         <div class="row py-4">
             <div class="col">
                 <div class="container">
-                    <h3>Контроль качества</h3>
+                    <p class="h1">Контроль качества</p>
                     <div class="about-us--block">
                         <div class="about-us--block--image-container">
                             <img class="about-us--image"

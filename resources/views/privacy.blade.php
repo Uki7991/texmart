@@ -4,7 +4,7 @@
     @include('partials.header', ['shadow' => 'shadow'])
     <div class="container">
         <div class="row py-4">
-            <h2>Политика в области обработки и безопасности данных пользователей «Texmart»</h2>
+            <p class="h1">Политика в области обработки и безопасности данных пользователей «Texmart»</p>
         </div>
         <ol>
             <li>

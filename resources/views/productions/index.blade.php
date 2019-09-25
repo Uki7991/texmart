@@ -4,6 +4,7 @@
 
     @include('partials.header', ['shadow' => 'shadow'])
 
+    <h1 class="" style="display: none">Production</h1>
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-lg-3">

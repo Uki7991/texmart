@@ -8,7 +8,7 @@
                 <div class="container">
                     <div class="row bg-white p-3">
                         <div class="col">
-                            <h2>Консультация</h2>
+                            <p class="h1">Консультация</p>
                             <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at
                                 cum cupiditate earum eius esse eveniet facere fugiat harum illum laborum, libero
                                 molestias mollitia pariatur quisquam, repudiandae sapiente vitae voluptates.</p>

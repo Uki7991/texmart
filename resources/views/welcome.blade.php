@@ -5,6 +5,7 @@
     @include('partials.promo')
 
 
+    <h1 class="" style="display: none">Welcome</h1>
 
     <div class="container-fluid my-5">
         <div class="row">
@@ -69,7 +70,7 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-12 col-sm-8 col-lg-7">
-                <iframe class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/xTYkmWnwLvg" frameborder="0"
+                <iframe title="Видео про Texmart" class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/xTYkmWnwLvg" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
             </div>
@@ -107,13 +108,13 @@
         </h2>
         <div class="row align-items-center justify-content-between">
             <div class="col-4 col-md-3">
-                <a target="_blank" href="https://akilbirs.kg/"><img class="img-fluid grayscale" src="{{ asset("img/ak-ilbirs.png") }}"  alt="Компания Ак-Илбирс"></a>
+                <a target="_blank" href="https://akilbirs.kg/" rel="noopener"><img class="img-fluid grayscale" src="{{ asset("img/ak-ilbirs.png") }}"  alt="Компания Ак-Илбирс"></a>
             </div>
             <div class="col-4 col-md-3">
-                <a target="_blank"  href="https://www.bgi.kg/"><img class="img-fluid grayscale" src="{{ asset("img/bgi.png") }}"  alt=""></a>
+                <a target="_blank"  href="https://www.bgi.kg/" rel="noopener"><img class="img-fluid grayscale" src="{{ asset("img/bgi.png") }}"  alt="Компания BGI Center"></a>
             </div>
             <div class="col-4 col-md-3">
-                <a target="_blank"  href="https://textile.kg/"><img class="img-fluid grayscale" src="{{ asset("img/silk_way.png") }}"  alt=""></a>
+                <a target="_blank"  href="https://textile.kg/" rel="noopener"><img class="img-fluid grayscale" src="{{ asset("img/silk_way.png") }}"  alt="Компания Silk Way"></a>
             </div>
         </div>
     </div>
@@ -122,7 +123,7 @@
         <div class="card-group">
             <div class="card border-0 rounded-0">
                 <img src="{{ asset('img/cons.jpg') }}"
-                     class="card-img rounded-0" alt="...">
+                     class="card-img rounded-0" alt="Консалтинг">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -132,7 +133,7 @@
                 </div>
             </div>
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/contr.jpg') }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset('img/contr.jpg') }}" class="card-img rounded-0" alt="Логистика">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -142,7 +143,7 @@
                 </div>
             </div>
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/logi.jpg') }}" class="card-img rounded-0" alt="...">
+                <img src="{{ asset('img/logi.jpg') }}" class="card-img rounded-0" alt="Контроль Качества">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
