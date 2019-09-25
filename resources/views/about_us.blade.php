@@ -6,7 +6,7 @@
         <div class="row py-4">
             <div class="col">
                 <div class="container">
-                    <h3>Что такое Texmart.kg?</h3>
+                    <h1>Что такое Texmart.kg?</h1>
                     <p>Тексмарт.кг это первая интернет платформа производителей текстильной и швейной продукции
                         Кыргызской Республики.
                         Ведение бизнеса в формате В2В.</p>
@@ -51,7 +51,7 @@
                         отзывы об их деятельности и об их возможностях. Вы будете иметь полное представление что из себя
                         представляет тот или
                         иной производитель. Вам будет доступны отзывы и оценки заказчиков. </p>
-                    <h4>Что вы получите пользуясь Texmart.kg?</h4>
+                    <p class="h4">Что вы получите пользуясь Texmart.kg?</p>
                     <div class="about-us--block-right">
                         <div class="about-us--block--image-container-right">
                             <img class="about-us--image" src="{{ asset('img/volha-flaxeco-omgRZCmTvUM-unsplash.jpg') }}"
@@ -77,7 +77,7 @@
                             <li>бесплатная онлайн консультация.</li>
                         </ul>
                     </div>
-                    <h4>Мы можем сделать за вас:</h4>
+                    <p class="h4">Мы можем сделать за вас:</p>
                     <div class="about-us--block">
                         <div class="about-us--block--image-container">
                             <img class="about-us--image" src="{{ asset('img/ashim-d-silva-ZmgJiztRHXE-unsplash.jpg') }}"
@@ -97,7 +97,7 @@
                             <li>сертификация продукции и многое другое.</li>
                         </ul>
                     </div>
-                    <h4>Также у нас:</h4>
+                    <p class="h4">Также у нас:</p>
                     <div class="about-us--block-right">
                         <div class="about-us--block--image-container-right">
                             <img class="about-us--image" src="{{ asset('img/kenny-luo-xyC3Bx8FXnI-unsplash.jpg') }}"

@@ -24,6 +24,15 @@
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-WN292N4');</script>
     <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148741731-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148741731-1');
+    </script>
     <meta name="google-site-verification" content="gQhpGRoPuGE72Ov_f3SoLPgO5gYjVJPAb6JvcvpJJh8" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

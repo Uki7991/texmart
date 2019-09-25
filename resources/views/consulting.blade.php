@@ -6,7 +6,7 @@
         <div class="row py-4">
             <div class="col">
                 <div class="container">
-                    <h3>Консалтинг</h3>
+                    <p class="h1">Консалтинг</p>
                     <div class="about-us--block">
                         <div class="about-us--block--image-container">
                             <img class="about-us--image"
@@ -24,7 +24,7 @@
                             платформы правильно выстроить бизнес процессы.
                         </p>
                     </div>
-                    <h5>Приоритетом консалтинга является:</h5>
+                    <p class="h5">Приоритетом консалтинга является:</p>
                     <ul>
                         <li>поиск проблем компаний ведущих деятельность в купле продаже одежды и текстильных
                             продукций.
