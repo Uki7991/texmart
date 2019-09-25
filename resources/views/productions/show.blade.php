@@ -90,39 +90,39 @@
 
             <div class="row col-lg-6 col-xl-6">
                 <div class="col-12 pt-5">
-                    <h5>Бренд:</h5>
+                    <p class="h5">Бренд:</p>
                     <div class="brand" style="font-weight: bold">
                         {!! $production->brand !!}
                     </div>
                 </div>
                 <div class="col-12 pt-3">
-                    <h5>Адрес:</h5>
+                    <p class="h5">Адрес:</p>
                     <div class="address">
                         {!! $production->address !!}
                     </div>
                 </div>
                 @if($production->type == 'productions')
                     <div class="col-12 pt-3">
-                        <h5>Количество сотрудников:</h5>
+                        <p class="h5">Количество сотрудников:</p>
                         <div class="amount_production">
                             {!! $production->amount_production !!}
                         </div>
                     </div>
                     <div class="col-12 pt-3">
-                        <h5 class="font-weight-light">Оборудование:</h5>
+                        <p class="font-weight-light h5">Оборудование:</p>
                         <div class="tools">
                             {!! $production->tools !!}
                         </div>
                     </div>
                 @endif
                 <div class="col-12 pt-3">
-                    <h5>Описание:</h5>
+                    <p class="h5">Описание:</p>
                     <div class="description">
                         {!! $production->description !!}
                     </div>
                 </div>
                 <div class="col-12 pt-3">
-                    <h5>Дата создания объявления:</h5>
+                    <p class="h5">Дата создания объявления:</p>
                     <div class="description">
                         {{ \Carbon\Carbon::make($production->created_at)->formatLocalized('%d %B %Y') }}
                     </div>
@@ -132,21 +132,21 @@
             <div class="row col-lg-6 col-xl-6">
 
                 <div class="col-12 pt-5">
-                    <h5>E-mail:</h5>
+                    <p class="h5">E-mail:</p>
                     <div class="email">
                         {!! $production->email !!}
                     </div>
                 </div>
                 @if($production->type == 'productions')
                 <div class="col-12 pt-3">
-                    <h5 class="font-weight-light">Минимальный заказ:</h5>
+                    <p class="font-weight-light h5">Минимальный заказ:</p>
                     <div class="minimum_order">
                         {!! $production->minimum_order !!}
                     </div>
                 </div>
 
                 <div class="col-12 pt-3">
-                    <h5>Объем прозводства в месяц:</h5>
+                    <p class="h5">Объем прозводства в месяц:</p>
                     <h6 class="font-weight-light">От:</h6>
                     <div class="from_amount_production">
                         {!! $production->from_amount_production !!}
@@ -160,19 +160,19 @@
                 </div>
                 @endif
                 <div class="col-12 pt-3">
-                    <h5>Телефон №1:</h5>
+                    <p class="h5">Телефон №1:</p>
                     <div class="phone1">
                         {!! $production->phone1 !!}
                     </div>
                 </div>
                 <div class="col-12 pt-3">
-                    <h5>Телефон №2:</h5>
+                    <p class="h5">Телефон №2:</p>
                     <div class="phone2">
                         {!! $production->phone2 !!}
                     </div>
                 </div>
                 <div class="col-12 pt-3">
-                    <h5>Личный сайт:</h5>
+                    <p class="h5">Личный сайт:</p>
                     <div class="site">
                         {!! $production->site !!}
                     </div>

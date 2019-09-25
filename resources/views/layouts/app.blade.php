@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(55482520, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            trackHash:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/55482520" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <meta name="google-site-verification" content="gQhpGRoPuGE72Ov_f3SoLPgO5gYjVJPAb6JvcvpJJh8" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Texmart.kg это первая интернет платформа производителей текстильной и швейной продукции Кыргызской Республики. Ведение бизнеса в формате В2В.Услуга логистики и доставки.Оформление документов экспортно ипортных документов.">
@@ -31,12 +48,6 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
                     @include('partials.socialnetworks')
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                    <a href="https://mount.kg" target="_blank" class="text-muted small">Made with <span
-                            class="text-danger">&hearts;</span> by Mount</a>
                 </div>
             </div>
         </div>
