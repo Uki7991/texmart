@@ -6,11 +6,11 @@
         <div class="col-12 col-lg-6">
             <div class="card border-0">
                 <img src="{{ asset("img/sharon-mccutcheon-tn57JI3CewI-unsplash.jpg") }}" class="card-img rounded-0"
-                     alt="...">
+                     alt="Задайте вопрос">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay text-white text-center center-content">
                     <div>
-                        <h5 class="card-title">Заполните форму.</h5>
+                        <p class="card-title h5">Заполните форму.</p>
                         <p class="card-text">Менеджеры компании с радостью ответят на ваши вопросы.</p>
                     </div>
                 </div>

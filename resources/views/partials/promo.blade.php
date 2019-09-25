@@ -14,21 +14,21 @@
 
     <div class="promo-carousel owl-carousel owl-theme">
         <div class="item">
-            <img src="img/slide1.jpg" class="img-fluid" alt="...">
+            <img src="img/slide1.jpg" class="img-fluid" alt="Первая интернет платформа  швейной и текстильной  промышленности Кыргызстана">
             <div class="position-absolute slider-text-position">
-                <h2 class="text-uppercase text-white slider-text">Первая интернет платформа <br> швейной и текстильной <br> промышленности Кыргызстана</h2>
+                <p class="text-uppercase text-white slider-text h2">Первая интернет платформа <br> швейной и текстильной <br> промышленности Кыргызстана</p>
             </div>
         </div>
         <div class="item">
-            <img src="img/slide2.jpg" class="img-fluid" alt="...">
+            <img src="img/slide2.jpg" class="img-fluid" alt="Консалтинг,  оформление всех бухгалтерских  и юридических документов">
             <div class="position-absolute slider-text-position">
-                <h2 class="text-uppercase text-white slider-text">Консалтинг, <br> оформление всех бухгалтерских <br> и юридических документов</h2>
+                <p class="text-uppercase text-white slider-text h2">Консалтинг, <br> оформление всех бухгалтерских <br> и юридических документов</p>
             </div>
         </div>
         <div class="item">
-            <img src="img/slide3.jpg" class="img-fluid" alt="...">
+            <img src="img/slide3.jpg" class="img-fluid" alt="Оценка качества пошива одежды  и производства от Texmart.kg  для уверенности на расстоянии">
             <div class="position-absolute slider-text-position">
-                <h2 class="text-uppercase text-white slider-text">Оценка качества пошива одежды <br> и производства от Texmart.kg <br> для уверенности на расстоянии</h2>
+                <p class="text-uppercase text-white slider-text h2">Оценка качества пошива одежды <br> и производства от Texmart.kg <br> для уверенности на расстоянии</p>
             </div>
         </div>
     </div>
