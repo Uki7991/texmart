@@ -3,13 +3,13 @@
 
     <ul class="nav">
         <li class="nav-item">
-            <a href="#production-create" id="production-create-tab" data-toggle="tab" role="tab" aria-controls="production-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3">Швейное производство</a>
+            <a href="#production-create" id="production-create-tab" data-toggle="tab" role="tab" aria-controls="production-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3" title="Швейное производство">Швейное производство</a>
         </li>
         <li class="nav-item">
-            <a href="#service-create" id="service-create-tab" data-toggle="tab" role="tab" aria-controls="service-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3">Услуги</a>
+            <a href="#service-create" id="service-create-tab" data-toggle="tab" role="tab" aria-controls="service-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3" title="Услуги">Услуги</a>
         </li>
         <li class="nav-item">
-            <a href="#product-create" id="product-create-tab" data-toggle="tab" role="tab" aria-controls="product-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3">Товары</a>
+            <a href="#product-create" id="product-create-tab" data-toggle="tab" role="tab" aria-controls="product-create" aria-selected="false" class="nav-link btn btn-texmart-orange rounded-0 mr-3" title="Товары">Товары</a>
         </li>
     </ul>
 

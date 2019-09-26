@@ -1,10 +1,10 @@
 <div class="card border shadow-sm production-card transition-500">
     <a href="{{ route('productions.show', $production->slug) }}" class="text-dark text-decoration-none">
         <div class="card-img-top position-relative text-center">
-            <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" class="img-fluid img-responsive height-carusel" alt="">
+            <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" class="img-fluid img-responsive height-carusel" alt="Storage">
         </div>
         <div class="card-body pb-0">
-            <h6 class="font-weight-bold card-title">{{ Str::limit($production->title ?? 'ОсОО "Швея на час"', 18) }}</h6>
+            <p class="font-weight-bold card-title h6">{{ Str::limit($production->title ?? 'ОсОО "Швея на час"', 18) }}</p>
 {{--            <p class="card-text">--}}
 {{--                {{ Str::limit($production->excerpt ?? 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cum cumque dignissimos eligendi, est hic impedit iure laboriosam laudantium molestiae, molestias nulla odit quae quaerat quibusdam recusandae repellendus tempora voluptatem.', 80, '...') }}--}}
 {{--            </p>--}}

@@ -2,7 +2,7 @@
 
 @section('office')
     <div class="tab-pane" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
-        <h1>Избранные</h1>
+        <p class="h1">Избранные</p>
         @if(count(auth()->user()->favorites))
             <div class="container">
                 <div class="row">

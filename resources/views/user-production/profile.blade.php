@@ -6,10 +6,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-2">
-                    <img src="{{ asset('storage/'.$user->avatar) }}" class="img-fluid" alt="">
+                    <img src="{{ asset('storage/'.$user->avatar) }}" class="img-fluid" alt="Аватарка">
                 </div>
                 <div class="col">
-                    <h1 class="text-capitalize">{{ $user->name }}</h1>
+                    <p class="text-capitalize h1">{{ $user->name }}</p>
                     <p>{{ $user->email }}</p>
                 </div>
             </div>
@@ -20,30 +20,30 @@
                 <div class="col-12 col-lg-auto box">
                     <ul class="nav flex-column ">
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="{{ route('user.settings') }}" class="nav-link text-light">Настройки</a>
+                            <a href="{{ route('user.settings') }}" class="nav-link text-light" title="Настройки">Настройки</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="{{ route('user.favorites') }}" class="nav-link text-light">Избранные</a>
+                            <a href="{{ route('user.favorites') }}" class="nav-link text-light" title="Избранные">Избранные</a>
                         </li>
 {{--                        <li class="nav-item bg-texmart-blue border">--}}
 {{--                            <a href="#messages" class="nav-link text-light" id="messages-tab" data-toggle="tab" role="tab" aria-controls="messages" aria-selected="false">Чат</a>--}}
 {{--                        </li>--}}
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="{{ route('user.announce') }}" class="nav-link text-light">Мои объявления</a>
+                            <a href="{{ route('user.announce') }}" class="nav-link text-light" title="Мои объявления">Мои объявления</a>
                         </li>
                         @if(auth()->check() && auth()->user()->role->name == 'admin')
                             <li class="nav-item bg-texmart-blue border">
-                                <a href="{{ route('blog.create') }}" class="nav-link text-light">Добавить статью</a>
+                                <a href="{{ route('blog.create') }}" class="nav-link text-light" title="Добавить статью">Добавить статью</a>
                             </li>
                         @endif
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="{{ route('user.production.create') }}" class="nav-link text-light">Подать производство</a>
+                            <a href="{{ route('user.production.create') }}" class="nav-link text-light" title="Подать производство">Подать производство</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="{{ route('user.service.create') }}" class="nav-link text-light">Подать услугу</a>
+                            <a href="{{ route('user.service.create') }}" class="nav-link text-light" title="Подать услугу">Подать услугу</a>
                         </li>
                         <li class="nav-item bg-texmart-blue border">
-                            <a href="{{ route('user.product.create') }}" class="nav-link text-light">Подать товар</a>
+                            <a href="{{ route('user.product.create') }}" class="nav-link text-light" title="Подать товар">Подать товар</a>
                         </li>
                     </ul>
                 </div>
