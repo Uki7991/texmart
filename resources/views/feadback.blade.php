@@ -14,7 +14,7 @@
                                 molestias mollitia pariatur quisquam, repudiandae sapiente vitae voluptates.</p>
                         </div>
                         <div class="col-5 border border-dark pb-2">
-                            <h1>Обратная связь</h1>
+                            <p class="h1">Обратная связь</p>
                             <hr >
                             <form>
                                 <div class="form-row">

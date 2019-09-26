@@ -4,7 +4,7 @@
     @include('partials.header', ['shadow' => 'shadow'])
     <div class="container py-5">
         <div class="row pt-5">
-            <h2>Результаты поиска</h2>
+            <p class="h2">Результаты поиска</p>
         </div>
         <div class="row">
             @foreach($result as $key => $items)

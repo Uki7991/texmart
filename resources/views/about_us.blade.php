@@ -22,7 +22,7 @@
                     </p>
                     <div class="about-us--block">
                         <div class="about-us--block--image-container">
-                            <img class="about-us--image" src="{{ asset('img/kolsunting.jpg') }}" alt="">
+                            <img class="about-us--image" src="{{ asset('img/kolsunting.jpg') }}" alt="Консалтинг">
                         </div>
                         <p>
                             Не всегда поиски на разных сайтах, форумах дают положительный результат, зачастую это
@@ -55,7 +55,7 @@
                     <div class="about-us--block-right">
                         <div class="about-us--block--image-container-right">
                             <img class="about-us--image" src="{{ asset('img/volha-flaxeco-omgRZCmTvUM-unsplash.jpg') }}"
-                                 alt="">
+                                 alt="Швея за машинкой">
                         </div>
                         <ul>
                             <li>самое выгодное предложение для вашего бизнеса;</li>
@@ -81,7 +81,7 @@
                     <div class="about-us--block">
                         <div class="about-us--block--image-container">
                             <img class="about-us--image" src="{{ asset('img/ashim-d-silva-ZmgJiztRHXE-unsplash.jpg') }}"
-                                 alt="">
+                                 alt="Работы дизайнеров, вид сверху">
                         </div>
                         <ul>
                             <li>разместить заказы и запустить в производство;</li>
@@ -101,7 +101,7 @@
                     <div class="about-us--block-right">
                         <div class="about-us--block--image-container-right">
                             <img class="about-us--image" src="{{ asset('img/kenny-luo-xyC3Bx8FXnI-unsplash.jpg') }}"
-                                 alt="">
+                                 alt="Дизайнер одежды за работой">
                         </div>
                         <ul>
                             <li>поиск, подбор, заключение контракта, выкуп и прямые поставки тканей, фурнитуры и
@@ -112,14 +112,13 @@
                             <li>упаковка и отправка швейной продукции, а также многое другое.</li>
                         </ul>
                     </div>
-
                     <p>Texmart.kg каждый день развивается и дополняются возможности для облегчения и ведения вашего
                         бизнеса.
                         Открываются новые уровни для стабильного роста и приумножения капитала каждого предпринимателя
                         пользующегося
                         платформой. Учитывая Ваши интересы и потребности наш коллектив готов решать стандартные и
                         нестандартные задачи.</p>
-                    <h5 class="text-lg-center"><strong>Откройте новые возможности с Texmart.kg</strong></h5>
+                    <p class="text-lg-center h5"><strong>Откройте новые возможности с Texmart.kg</strong></p>
                 </div>
             </div>
         </div>

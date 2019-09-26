@@ -6,11 +6,11 @@
         <div class="row py-4">
             <div class="col">
                 <div class="container">
-                    <h3>Логистика </h3>
+                    <p class="h1">Логистика </p>
                     <div class="about-us--block">
                         <div class="about-us--block--image-container">
                             <img class="about-us--image"
-                                 src="{{ asset('img/traffic.jpg') }}" alt="">
+                                 src="{{ asset('img/traffic.jpg') }}" alt="Фура">
                         </div>
                     <p>Суть логистики заключается в поиске путей рационального продвижения продукта по цепочке: от
                         производителя до конечного получателя. Этот процесс достаточно трудоемок и предусматривает

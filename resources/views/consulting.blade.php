@@ -10,7 +10,7 @@
                     <div class="about-us--block">
                         <div class="about-us--block--image-container">
                             <img class="about-us--image"
-                                 src="{{ asset('img/nik-macmillan-YXemfQiPR_E-unsplash (1).jpg') }}" alt="">
+                                 src="{{ asset('img/nik-macmillan-YXemfQiPR_E-unsplash (1).jpg') }}" alt="Консалтинг,двое мужчин обсуждают">
                         </div>
                         <p>Ключевая задача и одновременно цель консалтинга - усовершенствование менеджмента, улучшить
                             функционирование бизнеса и найти

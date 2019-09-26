@@ -14,7 +14,7 @@
 
     </div>
     <div>
-        <img src="{{ asset('img/ornamentos2.png') }}"  style="width: 100%;" alt="">
+        <img src="{{ asset('img/ornamentos2.png') }}"  style="width: 100%;" alt="Орнамент">
     </div>
     <div class="container">
         <div class="row justify-content-center py-4">
