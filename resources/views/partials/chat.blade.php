@@ -3,7 +3,7 @@
         <div class="inbox_people">
             <div class="headind_srch">
                 <div class="recent_heading">
-                    <h4>Recent</h4>
+                    <p class="h4">Recent</p>
                 </div>
                 <div class="srch_bar">
                     <div class="stylish-input-group">
@@ -48,7 +48,7 @@
                     <div class="chat_people">
                         <div class="chat_img"> <img class="img-fluid" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                         <div class="chat_ib">
-                            <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                            <p class="h5">Sunil Rajput <span class="chat_date">Dec 25</span></p>
                             <p>Test, which is a new approach to have all solutions
                                 astrology under one roof.</p>
                         </div>
@@ -68,7 +68,7 @@
                     <div class="chat_people">
                         <div class="chat_img"> <img class="img-fluid" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                         <div class="chat_ib">
-                            <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                            <p class="h5">Sunil Rajput <span class="chat_date">Dec 25</span></p>
                             <p>Test, which is a new approach to have all solutions
                                 astrology under one roof.</p>
                         </div>
@@ -78,7 +78,7 @@
                     <div class="chat_people">
                         <div class="chat_img"> <img class="img-fluid" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                         <div class="chat_ib">
-                            <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                            <p class="h5">Sunil Rajput <span class="chat_date">Dec 25</span></p>
                             <p>Test, which is a new approach to have all solutions
                                 astrology under one roof.</p>
                         </div>
