@@ -4,7 +4,7 @@
             <div class="position-relative">
                 <div class="modal-header border-0">
                     <div class="col-12">
-                        <h3 class="modal-title text-center" id="callToProductionTitle">Связаться с производителем <span id="title_production_modal"></span></h3>
+                        <p class="modal-title text-center h3" id="callToProductionTitle">Связаться с производителем <span id="title_production_modal"></span></p>
                     </div>
                     <button type="button" class="close position-absolute" style="right:10px;top: 10px;" data-dismiss="modal" aria-label="Close">
                         <i class="fas fa-times text-dark" aria-hidden="true"></i>
