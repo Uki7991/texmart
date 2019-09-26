@@ -105,13 +105,14 @@
         </h2>
         <div class="row align-items-center justify-content-between">
             <div class="col-4 col-md-3">
-                <a target="_blank" href="https://akilbirs.kg/" rel="noopener"><img class="img-fluid grayscale" src="{{ asset("img/ak-ilbirs.png") }}"  alt="Компания Ак-Илбирс"></a>
+                <a target="_blank" href="https://akilbirs.kg/" rel="noopener"><img data-src="{{ asset("img/ak-ilbirs.png") }}"
+                        class="img-fluid lazy grayscale" src=""  alt="Компания Ак-Илбирс"></a>
             </div>
             <div class="col-4 col-md-3">
-                <a target="_blank"  href="https://www.bgi.kg/" rel="noopener"><img class="img-fluid grayscale" src="{{ asset("img/bgi.png") }}"  alt="Компания BGI Center"></a>
+                <a target="_blank"  href="https://www.bgi.kg/" rel="noopener"><img data-src="{{ asset("img/bgi.png") }}" class="img-fluid lazy grayscale" src=""  alt="Компания BGI Center"></a>
             </div>
             <div class="col-4 col-md-3">
-                <a target="_blank"  href="https://textile.kg/" rel="noopener"><img class="img-fluid grayscale" src="{{ asset("img/silk_way.png") }}"  alt="Компания Silk Way"></a>
+                <a target="_blank"  href="https://textile.kg/" rel="noopener"><img class="img-fluid lazy grayscale" data-src="{{ asset("img/silk_way.png") }}" src=""  alt="Компания Silk Way"></a>
             </div>
         </div>
     </div>
@@ -119,8 +120,8 @@
     <div class="pt-5">
         <div class="card-group">
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/cons.jpg') }}"
-                     class="card-img rounded-0" alt="Консалтинг">
+                <img data-src="{{ asset('img/cons.jpg') }}" src=""
+                     class="card-img lazy rounded-0" alt="Консалтинг">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -130,7 +131,7 @@
                 </div>
             </div>
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/contr.jpg') }}" class="card-img rounded-0" alt="Логистика">
+                <img data-src="{{ asset('img/contr.jpg') }}" src="" class="card-img lazy rounded-0" alt="Логистика">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -140,7 +141,7 @@
                 </div>
             </div>
             <div class="card border-0 rounded-0">
-                <img src="{{ asset('img/logi.jpg') }}" class="card-img rounded-0" alt="Контроль Качества">
+                <img data-src="{{ asset('img/logi.jpg') }}" src="" class="card-img lazy rounded-0" alt="Контроль Качества">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -183,6 +184,7 @@
             autoplayTimeout: 7000,
             autoplayHoverPause: true,
             nav: true,
+            lazyLoad:true,
             responsive: {
                 0: {
                     items: 1
@@ -205,6 +207,7 @@
             margin: 10,
             nav: true,
             dots: false,
+            lazyLoad:true,
             responsive: {
                 0: {
                     items: 1
