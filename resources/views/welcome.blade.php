@@ -5,7 +5,7 @@
     @include('partials.promo')
 
 
-    <h1 class="" style="display: none">Welcome</h1>
+    <h1 class="" style="display: none">Texmart.kg</h1>
 
     <div class="container-fluid my-5">
         <div class="row">
