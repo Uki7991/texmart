@@ -7,7 +7,7 @@
             <div class="col-12 col-md-5 mb-4 mb-lg-0">
                 <img
                     src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}"
-                    class="img-fluid shadow-sm"
+                    class="img-fluid  shadow-sm"
                     alt="">
             </div>
             <div class="col">
@@ -80,7 +80,8 @@
                     <div class="gallery">
                         @foreach(json_decode($production->images) as $image)
                             <a href="{{ asset('storage/'.$image) }}" data-fancybox="gallery">
-                                <img src="{{ asset('storage/'.$image) }}" height="80" width="auto"
+                                <img
+                                    src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" height="80" width="auto" class=""
                                      alt="">
                             </a>
                         @endforeach
