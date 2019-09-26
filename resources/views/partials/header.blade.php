@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-xl fixed-top navbar-{{ $theme ?? 'light' }} bg-texmart-orange shadow-sm " id="header">
     <div class="container-fluid">
         <a class="navbar-brand position-relative" href="{{ url('/') }}">
-            <img src="{{ asset('img/logo.png') }}" class="img-fluid" width="200" height="auto" alt="">
+            <img src="{{ asset('img/logo.png') }}" class="img-fluid" width="200" height="auto" alt="Лого">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="" style="color:white">Меню</span>
@@ -18,27 +18,27 @@
             <ul class="navbar-nav mx-auto text-center">
 
                 <li class="nav-scale">
-                    <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="nav-link text-white text-capitalize">Производство</a>
+                    <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="nav-link text-white text-capitalize" title="Производство">Производство</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="{{ route('productions.index', ['type' => 'product']) }}" class="nav-link text-white text-capitalize">Товары</a>
+                    <a href="{{ route('productions.index', ['type' => 'product']) }}" class="nav-link text-white text-capitalize" title="Товары">Товары</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="{{ route('productions.index', ['type' => 'service']) }}" class="nav-link text-white text-capitalize">Услуги</a>
+                    <a href="{{ route('productions.index', ['type' => 'service']) }}" class="nav-link text-white text-capitalize" title="Услуги">Услуги</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="/about" class="nav-link text-white text-capitalize">О нас</a>
+                    <a href="/about" class="nav-link text-white text-capitalize" title="О нас">О нас</a>
                 </li>
                 <li class="nav-scale">
-                    <a href="/delivery" class="nav-link text-white text-capitalize">Доставка</a>
+                    <a href="/delivery" class="nav-link text-white text-capitalize" title="Доставка">Доставка</a>
                 </li>
                 @guest
                 <li class="nav-scale">
-                    <a href="{{ route('login') }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
+                    <a href="{{ route('login') }}" class="nav-link text-white btn btn-danger text-capitalize" title="Добавить объявление">{{ __('Добавить объявление') }}</a>
                 </li>
                 @else
                 <li class="nav-scale">
-                    <a href="{{ route('profile', ['sharp' => true]) }}" class="nav-link text-white btn btn-danger text-capitalize">{{ __('Добавить объявление') }}</a>
+                    <a href="{{ route('profile', ['sharp' => true]) }}" class="nav-link text-white btn btn-danger text-capitalize" title="Add announcement">{{ __('Добавить объявление') }}</a>
                 </li>
                 @endguest
 

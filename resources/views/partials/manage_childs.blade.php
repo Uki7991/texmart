@@ -4,7 +4,7 @@
             <li>
                 @if(count($child->childs))
                     <i class="fas fa-plus"></i>
-                    <a href="#{{ $child->title }}" class="text-dark">{{ $child->title }}</a>
+                    <a href="#{{ $child->title }}" class="text-dark" title="Категории">{{ $child->title }}</a>
                 @else
                     @if(isset($production))
                         @php($found = false)
@@ -37,7 +37,7 @@
                 @if(count($child->childs))
                     <i class="fas fa-plus"></i>
                 @endif
-                <a href="#{{ $child->title }}" class="text-dark">{{ $child->title }}</a>
+                <a href="#{{ $child->title }}" class="text-dark" title="категории">{{ $child->title }}</a>
                 @if(count($child->childs))
                     @include('partials.manage_childs',['childs' => $child->childs->sortBy('order')])
                 @endif
