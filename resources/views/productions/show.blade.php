@@ -8,7 +8,7 @@
                 <img
                     data-src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}"
                     src=""
-                    class="img-fluid lazy shadow-sm"
+                    class="img-fluid  shadow-sm"
                     alt="">
             </div>
             <div class="col">
@@ -83,7 +83,7 @@
                             <a href="{{ asset('storage/'.$image) }}" data-fancybox="gallery">
                                 <img
                                     data-src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}"
-                                    src="" height="80" width="auto" class="lazy"
+                                    src="" height="80" width="auto" class=""
                                      alt="">
                             </a>
                         @endforeach
