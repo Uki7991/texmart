@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="Ваш телефонный номер" class="d-block"><i
+                    <label for="phone-number" class="d-block"><i
                             class="fas fa-phone-alt text-primary pt-3"></i> {{ __('Ваш телефонный номер:') }}
                     </label>
                     <input type="hidden" name="code">
