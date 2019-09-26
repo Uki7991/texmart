@@ -20,13 +20,13 @@
             </div>
         </div>
         <div class="item">
-            <img src="img/slide2.jpg" class="img-fluid" alt="Консалтинг,  оформление всех бухгалтерских  и юридических документов">
+            <img data-src="img/slide2.jpg" src="" class="img-fluid lazy" alt="Консалтинг,  оформление всех бухгалтерских  и юридических документов">
             <div class="position-absolute slider-text-position">
                 <p class="text-uppercase text-white slider-text h2">Консалтинг, <br> оформление всех бухгалтерских <br> и юридических документов</p>
             </div>
         </div>
         <div class="item">
-            <img src="img/slide3.jpg" class="img-fluid" alt="Оценка качества пошива одежды  и производства от Texmart.kg  для уверенности на расстоянии">
+            <img data-src="img/slide3.jpg" src="" class="img-fluid lazy" alt="Оценка качества пошива одежды  и производства от Texmart.kg  для уверенности на расстоянии">
             <div class="position-absolute slider-text-position">
                 <p class="text-uppercase text-white slider-text h2">Оценка качества пошива одежды <br> и производства от Texmart.kg <br> для уверенности на расстоянии</p>
             </div>

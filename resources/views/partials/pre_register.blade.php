@@ -5,7 +5,7 @@
     <div class="row justify-content-center align-items-center py-2">
         <div class="col-12 col-lg-6">
             <div class="card border-0">
-                <img src="{{ asset("img/sharon-mccutcheon-tn57JI3CewI-unsplash.jpg") }}" class="card-img rounded-0"
+                <img data-src="{{ asset("img/sharon-mccutcheon-tn57JI3CewI-unsplash.jpg") }}" src="" class="card-img lazy rounded-0"
                      alt="Задайте вопрос">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay text-white text-center center-content">
