@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-auto col-2 bg-light rounded-left py-3 text-secondary">
                             <ul class="nav flex-column">
-                                <li class="nav-item d-none my-2">
+                                <li class="nav-item my-2">
                                     <a href="{{ route('google.redirect', 'facebook') }}" class="text-secondary">
                                         <i class="fab fa-facebook fa-lg"></i>
                                     </a>
