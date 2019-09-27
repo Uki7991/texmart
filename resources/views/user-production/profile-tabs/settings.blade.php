@@ -5,7 +5,7 @@
         <p class="h1">Настройки профиля</p>
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 image-preview-col">
                     <form action="{{ route('user.edit', auth()->user()->id) }}" method="POST" id="editProfile" enctype="multipart/form-data">
                         @csrf
                         @method("PUT")
@@ -28,7 +28,7 @@
                         </div>
                         <div class="form-group">
                             <div>
-                                <img src="" id="image-preview" alt="">
+                                <img src="" id="image-preview" style="max-width: 100%;" alt="">
                             </div>
                             <input type="hidden" name="naturalWidth">
                             <input type="hidden" name="naturalHeight">
@@ -116,10 +116,16 @@
                 // Replace url
                 containerAvatar.attr('src', this.result);
 
+                let imageCol = $('.image-preview-col');
+                let imageColWidth = imageCol.width();
+                let $ratio = 0;
+                setTimeout(function () {
+                    $ratio = containerAvatar[0].width / imageColWidth;
+                }, 200);
                 // Start cropper
                 containerAvatar.cropper({
                     aspectRatio: 1,
-                    autoCrop: false,
+                    autoCrop: true,
                     dragCrop: false,
                     viewMode: 2,
                     zoomable: false,
@@ -127,7 +133,8 @@
                     zoomOnTouch: false,
                     toggleDragModeOnDblclick: false,
                     scalable: false,
-                    highlight: false
+                    highlight: false,
+                    autoCropArea: 1
                 });
                 cropperAvatar = containerAvatar.data('cropper');
                 setTimeout(rotateImage, 1000);
