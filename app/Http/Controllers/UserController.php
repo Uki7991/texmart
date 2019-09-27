@@ -82,16 +82,14 @@ class UserController extends Controller
             $fileName = 'users/'.uniqid('user_').'.jpg';
 
             $file = ImageManagerStatic::make($request->avatar);
+            if ($request->width && $request->height) {
 
-            if ($request->naturalWidth && $request->naturalHeight && $request->width && $request->height) {
-                $ratio = $request->naturalWidth / $request->noneNaturalWidth;
+                $top = $request->top;
+                $left = $request->left;
+                $width = $request->width;
+                $height = $request->height;
 
-                $top = ($request->top - $request->naturalTop) * $ratio;
-                $left = ($request->left - $request->naturalLeft) * $ratio;
-                $width = $request->width * $ratio;
-                $height = $request->height * $ratio;
-
-                $file = $file->crop((int)$width, (int)$height, (int)$top, (int)$left);
+                $file = $file->crop((int)$width, (int)$height, (int)$left, (int)$top);
             }
 
             $file = $file->stream('jpg', 40);

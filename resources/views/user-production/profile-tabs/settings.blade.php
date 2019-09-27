@@ -119,7 +119,15 @@
                 // Start cropper
                 containerAvatar.cropper({
                     aspectRatio: 1,
-                    viewMode: 2
+                    autoCrop: false,
+                    dragCrop: false,
+                    viewMode: 2,
+                    zoomable: false,
+                    zoomOnWheel: false,
+                    zoomOnTouch: false,
+                    toggleDragModeOnDblclick: false,
+                    scalable: false,
+                    highlight: false
                 });
                 cropperAvatar = containerAvatar.data('cropper');
                 setTimeout(rotateImage, 1000);
@@ -162,10 +170,10 @@
             $('input[name="noneNaturalHeight"]').val(cropperAvatar.getImageData().height);
             $('input[name="naturalTop"]').val(cropperAvatar.getCanvasData().top);
             $('input[name="naturalLeft"]').val(cropperAvatar.getCanvasData().left);
-            $('input[name="width"]').val(cropperAvatar.getCropBoxData().width);
-            $('input[name="height"]').val(cropperAvatar.getCropBoxData().height);
-            $('input[name="top"]').val(cropperAvatar.getCropBoxData().top);
-            $('input[name="left"]').val(cropperAvatar.getCropBoxData().left);
+            $('input[name="width"]').val(cropperAvatar.getData().width);
+            $('input[name="height"]').val(cropperAvatar.getData().height);
+            $('input[name="top"]').val(cropperAvatar.getData().y);
+            $('input[name="left"]').val(cropperAvatar.getData().x);
 
             $('#editProfile').submit();
         })
