@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <div class="">
-                                <img id="image" class="w-100 img-preview" src="">
+                                <img id="image" style="max-width: 100%;" class="img-preview" src="">
                                 <a id="rotate-left" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
                                 <a id="rotate-right" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
 
@@ -344,8 +344,12 @@
                 // Start cropper
                 container.cropper({
                     aspectRatio: 1,
-                    autoCrop: false,
-                    dragCrop: false,
+                    zoomable: false,
+                    scalable: false,
+                    movable: false,
+                    zoomOnWheel: false,
+                    dragMode: 'none',
+                    wheelZoomRatio: 0,
                     viewMode: 1
                 });
                 cropper = container.data('cropper');
