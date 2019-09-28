@@ -81,7 +81,7 @@
                         @foreach(json_decode($production->images) as $image)
                             <a href="{{ asset('storage/'.$image) }}" data-fancybox="gallery">
                                 <img
-                                    src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" height="80" width="auto" class=""
+                                    src="{{ $production->logo && file_exists('storage/'.$image) ? asset('storage/'.$image) : asset('img/2 lg.jpg') }}" height="80" width="auto" class=""
                                      alt="">
                             </a>
                         @endforeach
