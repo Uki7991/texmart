@@ -18,7 +18,8 @@
             @if(count($productions))
                 <div class="col-12">
                     <p class="font-weight-bold text-uppercase m-0 pl-4 ">
-                        <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="text-dark">Производственные цеха и фабрики</a>
+                        <a href="{{ route('productions.index', ['type' => 'productions']) }}" class="text-dark">Производственные
+                            цеха и фабрики</a>
                     </p>
                 </div>
                 <div class="col-12 mb-5 mt-2 {{ count($productions) <= 5 ? 'row' : '' }}">
@@ -58,7 +59,8 @@
                 <div class="col-auto">
                     <a href="{{ route('register') }}"
                        class="btn btn-danger text-white rounded-0 btn-lg px-5 py-3 shadow-lg scale-on-hover">Зарегистрируйтесь</a>
-                    <p class="small mt-2 text-center font-italic text-muted">Для подробной информации свяжитесь с нами</p>
+                    <p class="small mt-2 text-center font-italic text-muted">Для подробной информации свяжитесь с
+                        нами</p>
                 </div>
             </div>
         </div>
@@ -66,10 +68,11 @@
 
     <div class="container py-5">
         <div class="row align-items-center">
-            <div class="col-12 col-sm-8 col-lg-7">
-                <iframe title="Видео про Texmart" class="w-100 youtube-player" height="200" src="https://www.youtube.com/embed/xTYkmWnwLvg" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <div class="col-12 col-sm-8 col-lg-7 wrap">
+                <a class="fancybox-media" href="https://www.youtube.com/watch?time_continue=3&v=xTYkmWnwLvg">
+                    <img src="{{ asset('img/print_you.png') }}" class="img-fluid h-75 position-relative" alt="">
+                    <img src="{{asset('img/youtube (2).png')}}" class="w-50 youtube position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
+                </a>
             </div>
             <div class="col">
                 <h3 class="text-texmart-orange font-weight-bold">Преимущества работы с нами</h3>
@@ -90,7 +93,8 @@
     <div>
         @include('partials.pre_register')
         @if(\Illuminate\Support\Facades\Session::has('bid_success'))
-            <div class="alert alert-danger alert-dismissible w-25 fixed-bottom fade show" style="left: unset;" role="alert">
+            <div class="alert alert-danger alert-dismissible w-25 fixed-bottom fade show" style="left: unset;"
+                 role="alert">
                 <strong>Ваша заявка была отправлена!</strong> Ожидайте ответа или звонка
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -105,14 +109,19 @@
         </h2>
         <div class="row align-items-center justify-content-between">
             <div class="col-4 col-md-3">
-                <a target="_blank" href="https://akilbirs.kg/" rel="noopener"><img data-src="{{ asset("img/ak-ilbirs.png") }}"
-                        class="img-fluid lazy grayscale" src=""  alt="Компания Ак-Илбирс"></a>
+                <a target="_blank" href="https://akilbirs.kg/" rel="noopener"><img
+                        data-src="{{ asset("img/ak-ilbirs.png") }}"
+                        class="img-fluid lazy grayscale" src="" alt="Компания Ак-Илбирс"></a>
             </div>
             <div class="col-4 col-md-3">
-                <a target="_blank"  href="https://www.bgi.kg/" rel="noopener"><img data-src="{{ asset("img/bgi.png") }}" class="img-fluid lazy grayscale" src=""  alt="Компания BGI Center"></a>
+                <a target="_blank" href="https://www.bgi.kg/" rel="noopener"><img data-src="{{ asset("img/bgi.png") }}"
+                                                                                  class="img-fluid lazy grayscale"
+                                                                                  src="" alt="Компания BGI Center"></a>
             </div>
             <div class="col-4 col-md-3">
-                <a target="_blank"  href="https://textile.kg/" rel="noopener"><img class="img-fluid lazy grayscale" data-src="{{ asset("img/silk_way.png") }}" src=""  alt="Компания Silk Way"></a>
+                <a target="_blank" href="https://textile.kg/" rel="noopener"><img class="img-fluid lazy grayscale"
+                                                                                  data-src="{{ asset("img/silk_way.png") }}"
+                                                                                  src="" alt="Компания Silk Way"></a>
             </div>
         </div>
     </div>
@@ -141,7 +150,8 @@
                 </div>
             </div>
             <div class="card border-0 rounded-0">
-                <img data-src="{{ asset('img/logi.jpg') }}" src="" class="card-img lazy rounded-0" alt="Контроль Качества">
+                <img data-src="{{ asset('img/logi.jpg') }}" src="" class="card-img lazy rounded-0"
+                     alt="Контроль Качества">
                 <div class="backdrop"></div>
                 <div class="card-img-overlay p-0">
                     <div class="">
@@ -172,11 +182,16 @@
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5f9a88a6c2d02d"></script>
 
 @endpush
+@push('styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <!-- Latest compiled and minified CSS -->
+@endpush
 @push("scripts")
     @includeWhen(auth()->check(), 'partials.scripts.favorite_click')
     @include('partials.scripts.favorite_btn')
     @include('partials.scripts.call_btn')
     <script src="{{ asset("js/owl.carousel.min.js") }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
         $('.promo-carousel').owlCarousel({
             loop: true,
@@ -184,7 +199,7 @@
             autoplayTimeout: 7000,
             autoplayHoverPause: true,
             nav: true,
-            lazyLoad:true,
+            lazyLoad: true,
             responsive: {
                 0: {
                     items: 1
@@ -207,7 +222,7 @@
             margin: 10,
             nav: true,
             dots: false,
-            lazyLoad:true,
+            lazyLoad: true,
             responsive: {
                 0: {
                     items: 1
@@ -223,6 +238,17 @@
         });
     </script>
 
+    <script>
+        $(document).ready(function () {
+            $('.fancybox-media').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+                helpers: {
+                    media: {}
+                }
+            });
+        });
+    </script>
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
