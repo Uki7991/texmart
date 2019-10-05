@@ -3,15 +3,11 @@
 @section('content')
 
     @include('partials.promo')
-
-
     <h1 class="" style="display: none">Texmart.kg</h1>
-
     <div class="container-fluid my-5">
         <div class="row">
             @include('partials.feature')
         </div>
-
     </div>
     <div class="container">
         <div class="row justify-content-center py-4">
@@ -52,7 +48,6 @@
             {{--</div>--}}
         </div>
     </div>
-
     @guest
         <div class="container my-5">
             <div class="row justify-content-center">
@@ -65,13 +60,12 @@
             </div>
         </div>
     @endguest
-
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-12 col-sm-8 col-lg-7 wrap">
                 <a class="fancybox-media" href="https://www.youtube.com/watch?time_continue=3&v=xTYkmWnwLvg">
-                    <img src="{{ asset('img/print_you.png') }}" class="img-fluid h-75 position-relative" alt="">
-                    <img src="{{asset('img/youtube (2).png')}}" class="w-50 youtube position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
+                    <img data-src="{{ asset('img/print_you.png') }}" class="img-fluid h-75 position-relative" alt="">
+                    <img data-src="{{asset('img/youtube (2).png')}}" class="w-50 youtube position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
                 </a>
             </div>
             <div class="col">
@@ -89,7 +83,6 @@
             </div>
         </div>
     </div>
-
     <div>
         @include('partials.pre_register')
         @if(\Illuminate\Support\Facades\Session::has('bid_success'))
@@ -102,7 +95,6 @@
             </div>
         @endif
     </div>
-
     <div class="container py-5">
         <h2 class="text-center h1 mb-5 font-weight-bold">
             Наши партнеры
@@ -125,7 +117,6 @@
             </div>
         </div>
     </div>
-
     <div class="pt-5">
         <div class="card-group">
             <div class="card border-0 rounded-0">
@@ -162,18 +153,14 @@
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="row">
 
         </div>
     </div>
-
     <button class="col-12 btn btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
         <i class="fa fa-chevron-up text-center"></i>
     </button>
-
-
     @include('partials.modals.message_modal')
 
 @endsection
