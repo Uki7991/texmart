@@ -11,13 +11,7 @@
     <a href="https://vk.com/public186831202" class="text-muted" title="Ссылка на vk">
         <i class="fab fa-vk mr-3 fa-lg nav-scale"></i>
     </a>
-{{--    <a href="#" class="text-muted">--}}
-{{--        <i class="fab fa-twitter mr-3 fa-lg nav-scale"></i>--}}
-{{--    </a>--}}
     <a href="#" class="text-muted">
         <i class="fab fa-weixin mr-3 fa-lg nav-scale" title="Ссылка на Wechat"></i>
     </a>
-{{--    <a href="#" class="text-muted">--}}
-{{--        <i class="fab fa-google mr-3 fa-lg nav-scale"></i>--}}
-{{--    </a>--}}
 </div>

@@ -64,8 +64,8 @@
         <div class="row align-items-center">
             <div class="col-12 col-sm-8 col-lg-7 wrap">
                 <a class="fancybox-media" href="https://www.youtube.com/watch?time_continue=3&v=xTYkmWnwLvg">
-                    <img data-src="{{ asset('img/print_you.png') }}" class="img-fluid h-75 position-relative" alt="">
-                    <img data-src="{{asset('img/youtube (2).png')}}" class="w-50 youtube position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
+                    <img data-src="{{ asset('img/print_you.png') }}" class="img-fluid lazy h-75 position-relative" alt="">
+                    <img data-src="{{asset('img/youtube(2).png')}}" class="w-50 youtube lazy position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
                 </a>
             </div>
             <div class="col">
@@ -165,8 +165,8 @@
 
 @endsection
 @push('scripts')
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5f9a88a6c2d02d"></script>
+
+
 
 @endpush
 @push('styles')
