@@ -36,6 +36,7 @@ class ProductionController extends Controller
             $productions = Production::all();
         }
         $categories = Category::all()->where('parent_id', 'is', null)->sortBy('order');
+        $productions = $productions->shuffle();
 
         return view('productions.index', [
             'productions' => $productions,
@@ -262,7 +263,7 @@ class ProductionController extends Controller
 
 
         return response()->json(view('productions.list', [
-            'productions' => $productions,
+            'productions' => $productions->shuffle(),
         ])->render());
     }
 }
