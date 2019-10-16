@@ -51,13 +51,20 @@
                     result.find('.call-btn').each((e, i) => {
                         registerCallButton($(i));
                     });
+                    result.find('.div-lazy').each((e, i) => {
+                        registerLazyLoad($(i));
+                    })
                 },
                 error: () => {
                     console.log('error');
                 }
             })
         }
-        
+
+        function registerLazyLoad(item) {
+            item.lazy();
+        }
+
         @if(auth()->check())
             function registerFavoriteButton(item) {
                 item.click((e) => {
