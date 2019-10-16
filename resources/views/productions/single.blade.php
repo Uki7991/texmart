@@ -1,6 +1,6 @@
 <div class="card border shadow-sm production-card transition-500">
     <a href="{{ route('productions.show', $production->slug) }}" class="text-dark text-decoration-none">
-        <div class="card-img-top position-relative text-center" style="height: 150px; background-image: url({{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
+        <div class="card-img-top position-relative text-center div-lazy" data-src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" style="height: 150px; background-position: center; background-size: cover; background-repeat: no-repeat;">
         </div>
         <div class="card-body pb-0">
             <p class="font-weight-bold card-title h6">{{ Str::limit($production->title ?? 'ОсОО "Швея на час"', 18) }}</p>
