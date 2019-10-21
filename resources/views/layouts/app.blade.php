@@ -52,6 +52,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mmenu.css') }}">
     @stack('styles')
 </head>
 <body class="bg-white">
@@ -83,8 +84,10 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
-
+<script src="{{ asset('js/mdb.min.js') }}"></script>
+<script src="{{ asset('js/mmenu.js') }}"></script>
 @stack('scripts')
+
 <script>
     $('#callToProduction').on('show.bs.modal', e => {
         let btn = $(e.relatedTarget);

@@ -84,11 +84,76 @@
                     </li>
                 @endguest
             </ul>
+            <ul class="navbar-nav ml-5 mt-2 mt-lg-0">
+                <li class="nav-item mr-4">
+                    <a href="#"
+                       class="border-bottom-0 border-top-0 border-right-0 border-left-0 rounded-0 border-dark my-2 my-sm-0"><img
+                            src="img/basket.svg" class="img-fluid" alt=""></a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a href="#menu" class="border-bottom-0 border-top-0 border-right-0 border-left-0 rounded-0 border-dark my-2 my-sm-0">
+                        <img src="img/hamburber.svg" alt="" class="img-fluid"></a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a href="{{ auth()->check() ? route('profile') : route('login') }}"
+                       class="border-bottom-0 border-top-0 border-right-0 border-left-0 rounded-0 border-dark my-2 my-sm-0"><img
+                            src="img/user_avatar.svg" class="img-fluid" alt=""></a>
+                </li>
+            </ul>
         </div>
     </div>
+
 </nav>
 
+<nav id="menu">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/work">Our work</a></li>
+        <li><span>About us</span>
+            <ul>
+                <li><a href="/about/history">History</a></li>
+                <li><span>The team</span>
+                    <ul>
+                        <li><a href="/about/team/management">Management</a></li>
+                        <li><a href="/about/team/sales">Sales</a></li>
+                        <li><a href="/about/team/development">Development</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span>Services</span>
+            <ul>
+                <li><a href="/services/design">Design</a></li>
+                <li><a href="/services/development">Development</a></li>
+                <li><a href="/services/marketing">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
 
+@push('styles')
+
+@endpush
+@push("scripts")
+<script>
+            new Mmenu( "#menu", {
+                "extensions": [
+                    "pagedim-black"
+                ],
+                "iconPanels": true,
+                "navbars": [
+                    {
+                        "position": "top",
+                        "content": [
+                            "searchfield"
+                        ]
+                    }
+                ]
+            });
+
+</script>
+@endpush
 
 {{--@push('scripts')--}}
     {{--<script type="text/javascript">--}}
