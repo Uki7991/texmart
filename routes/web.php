@@ -33,7 +33,6 @@ Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
 
     Route::get('/message', 'HomeController@message')->name('message');
 
@@ -129,3 +128,7 @@ Route::get('/delivery',function(){
 Route::get('/blog',function(){
     return view('blog');
 })->name('blog');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
