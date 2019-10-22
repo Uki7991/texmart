@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/mmenu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     @stack('styles')
+    @laravelPWA
 </head>
 <body>
     <div id="app">
