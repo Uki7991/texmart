@@ -1,8 +1,13 @@
-var staticCacheName = "pwa-v" + new Date().getTime();
-var filesToCache = [
+let staticCacheName = "pwa-v-texmart" + new Date().getTime();
+let filesToCache = [
+    '/',
     '/offline',
     '/css/app.css',
     '/js/app.js',
+    '/js/mmenu.js',
+    '/js/owl.carousel.min.js',
+    '/css/main.css',
+    '/css/owl.carousel.min.css',
     '/images/icons/icon-72x72.png',
     '/images/icons/icon-96x96.png',
     '/images/icons/icon-128x128.png',
