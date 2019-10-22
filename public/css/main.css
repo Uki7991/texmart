@@ -1,3 +1,6 @@
 .maxw-content {
     max-width: min-content!important;
 }
+.bg-texmart-sidebar {
+    background-color: #e99b33 !important;
+}

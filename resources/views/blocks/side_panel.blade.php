@@ -1,4 +1,4 @@
-<div class="amber darken-4 m-0 fixed-top maxw-content row min-vh-100">
+<div class="bg-texmart-sidebar m-0 fixed-top maxw-content row min-vh-100">
     <div class="col-12">
         <ul class="navbar-nav ml-3 mt-2 mt-lg-0">
             <li class="nav-item ">
@@ -7,7 +7,7 @@
             </li>
             <li class="nav-item ">
                 <a href="{{ auth()->check() ? route('profile') : route('login') }}"
-                   class="my-3" ><img src="icons/avatar.png" class="img-fluid" alt=""></a>
+                   class="my-3"><img src="icons/avatar.png" class="img-fluid" alt=""></a>
             </li>
             <li class="nav-item ">
                 <a href="#" class=""><img src="icons/search.png" alt="" class="img-fluid"></a>
@@ -19,7 +19,7 @@
         <ul class="nav flex-column ml-3 mt-2 mt-lg-0">
             <li class="nav-item ">
                 <a href="" class="text-muted" title="Ссылка на страницу в Facebook">
-                    <img src="icons/whatsapp.png"  alt="ссылка на whatsapp">
+                    <img src="icons/whatsapp.png" alt="ссылка на whatsapp">
                 </a>
             </li>
             <li class="nav-item">
@@ -29,7 +29,7 @@
             </li>
             <li class="nav-item">
                 <a href="" class="text-muted" title="Ссылка на facebook">
-                    <img src="icons/facebook.png"  alt="Ссылка на facebook">
+                    <img src="icons/facebook.png" alt="Ссылка на facebook">
                 </a>
             </li>
             <li class="nav-item ">
@@ -45,3 +45,54 @@
         </ul>
     </div>
 </div>
+<nav id="menu">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/work">Our work</a></li>
+        <li><span>About us</span>
+            <ul>
+                <li><a href="/about/history">History</a></li>
+                <li><span>The team</span>
+                    <ul>
+                        <li><a href="/about/team/management">Management</a></li>
+                        <li><a href="/about/team/sales">Sales</a></li>
+                        <li><a href="/about/team/development">Development</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span>Services</span>
+            <ul>
+                <li><a href="/services/design">Design</a></li>
+                <li><a href="/services/development">Development</a></li>
+                <li><a href="/services/marketing">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+
+@push("scripts")
+    <script>
+        new Mmenu("#menu", {
+            "extensions": [
+                "pagedim-black"
+            ],
+            "navbars": [
+                {
+                    "position": "top",
+                    "content": [
+                        "searchfield"
+                    ]
+                },
+                {
+                    "position": "top",
+                    "content": [
+                        "prev",
+                        "title"
+                    ]
+                }
+            ]
+        });
+    </script>
+@endpush
