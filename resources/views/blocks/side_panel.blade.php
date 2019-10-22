@@ -3,11 +3,11 @@
         <ul class="navbar-nav ml-3 mt-2 mt-lg-0">
             <li class="nav-item ">
                 <a href="#menu"
-                   class=""><img src="icons/hamburger.svg" class="img-fluid" alt=""></a>
+                   class="" style="padding-top: 25px"><img src="icons/hamburger.svg" class="img-fluid" alt=""></a>
             </li>
             <li class="nav-item ">
                 <a href="{{ auth()->check() ? route('profile') : route('login') }}"
-                   class=""><img src="icons/avatar.png" class="img-fluid" alt=""></a>
+                   class="my-3" ><img src="icons/avatar.png" class="img-fluid" alt=""></a>
             </li>
             <li class="nav-item ">
                 <a href="#" class=""><img src="icons/search.png" alt="" class="img-fluid"></a>
@@ -15,7 +15,7 @@
 
         </ul>
     </div>
-    <div class="align-self-end col-12">
+    <div class="align-self-end col-12" style="padding-bottom: 20px;">
         <ul class="nav flex-column ml-3 mt-2 mt-lg-0">
             <li class="nav-item ">
                 <a href="" class="text-muted" title="Ссылка на страницу в Facebook">
@@ -24,7 +24,7 @@
             </li>
             <li class="nav-item">
                 <a href="" class="text-muted">
-                    <img src="icons/insta.png" class="my-2" alt="Ссылка на instagram">
+                    <img src="icons/insta.png" class="my-3" alt="Ссылка на instagram">
                 </a>
             </li>
             <li class="nav-item">
@@ -34,7 +34,7 @@
             </li>
             <li class="nav-item ">
                 <a href="" class="text-muted" title="Ссылка на telegram">
-                    <img src="icons/telegram.png" class="my-2" alt="ссылка на telegram">
+                    <img src="icons/telegram.png" class="my-3" alt="ссылка на telegram">
                 </a>
             </li>
             <li class="nav-item ">
