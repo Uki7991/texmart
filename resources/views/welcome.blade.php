@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('blocks.category')
+    <div class="container">
+        @include('blocks.side_panel')
+    </div>
 @endsection

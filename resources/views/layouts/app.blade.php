@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mmenu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     @stack('styles')
@@ -26,7 +27,7 @@
     <div id="app">
 
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>
