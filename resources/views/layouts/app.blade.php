@@ -9,8 +9,6 @@
 
     <title>Texmart</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,7 +18,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mmenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     @stack('styles')
     @laravelPWA
 </head>
@@ -32,9 +30,11 @@
             @yield('content')
         </main>
     </div>
-    <script src="{{ asset('js/mdb.min.js') }}"></script>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/mmenu.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     @stack('scripts')
 </body>
 </html>
