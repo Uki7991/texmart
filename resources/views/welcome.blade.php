@@ -3,7 +3,9 @@
 @section('content')
     <div class="container">
         @include('blocks.side_panel')
-    </div>
 
+    </div>
     @include('partials.modals.10_seconds')
+
+
 @endsection

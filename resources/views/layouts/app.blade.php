@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     @stack('styles')
 
-    @laravelPWA
 </head>
 <body>
     <div id="app">
