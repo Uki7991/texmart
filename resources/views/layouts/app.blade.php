@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html prefix="og: //ogp.me/ns#" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="The Rock" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="//www.imdb.com/title/tt0117500/" />
+    <meta property="og:image" content="//ia.media-imdb.com/images/rock.jpg" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Texmart</title>
-
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,11 +27,24 @@
 </head>
 <body>
     <div id="app">
-
-
-        <main class="">
             @yield('content')
-        </main>
+
+        <footer class="footer border-top border-danger bg-white">
+            <div class="container pt-5 pb-2">
+                @include('blocks.footer')
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                        @include('partials.socialnetworks')
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                        <a rel="noopener" href="https://mount.kg" target="_blank" class="text-muted small">Made with <span
+                                class="text-danger">&hearts;</span> by Mount</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <!-- Scripts -->
