@@ -34,6 +34,9 @@
     <script>
         setTimeout(function () {
             $('#tenSecondsModal').modal('show');
-        }, 1000)
+        }, 1000);
+        setTimeout(function() {
+            $('#tenSecondsModal').modal('show');
+        },60*1000);
     </script>
 @endpush
