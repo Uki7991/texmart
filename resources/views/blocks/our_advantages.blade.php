@@ -51,8 +51,31 @@
 
             {{--<iframe  frameborder="0" allow="></iframe>--}}
 
-            <iframe width="90%" height="100%" src="https://www.youtube.com/embed/xTYkmWnwLvg?rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a class="fancybox-media" href="https://www.youtube.com/watch?time_continue=3&v=xTYkmWnwLvg">
+                <img data-src="{{ asset('img/video.png') }}" class="img-fluid lazy h-75 position-relative" alt="">
+                <img data-src="{{asset('img/youtube(2).png')}}" class="w-50 youtube lazy position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
+            </a>
 
         </div>
     </div>
 </div>
+@push('styles')
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+@endpush
+@push('scripts')
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.fancybox-media').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+                helpers: {
+                    media: {}
+                }
+            });
+        });
+    </script>
+@endpush
