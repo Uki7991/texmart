@@ -13,4 +13,31 @@
     background-size: 100%; /* Современные браузеры */
     height: 700px;
 }
-/*Нурс рак*/
+/.text-bold{
+     font-weight: bold!important;
+ }
+.text-texmart{
+    color: #f8fafc!important;
+}
+.bg-img {
+    background: url("../newImages/texmart-box.png") no-repeat top right;
+}
+body{
+    font-size: 0.5rem!important;
+}
+@media(min-width: 576px){
+    body{
+        font-size: 0.6rem!important;
+    }
+}
+@media(min-width: 768px){
+    body{
+        font-size: 0.7rem!important;
+    }
+}
+@media(min-width: 1200px){
+    body{
+        font-size: 0.9rem!important;
+    }
+}
+
