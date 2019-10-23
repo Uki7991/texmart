@@ -42,8 +42,8 @@ body{
 }
 
 .scroll-top {
-    width: 45px;
-    height: 45px;
+    width: 76px;
+    height: 71px;
     position: fixed;
     bottom: 25px;
     right: 20px;
@@ -60,4 +60,24 @@ body{
 
 .scale-on-hover:hover {
     transform: scale(1.04);
+}
+
+.fa-odnoklassniki-square:hover {
+    color: #ee8208 !important;
+}
+
+.fa-vk:hover {
+    color: #4a76a8 !important;
+}
+
+.fa-facebook:hover {
+    color: #4267b2 !important;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2 !important;
+}
+
+.fa-google:hover {
+    color: #ea4335 !important;
 }
