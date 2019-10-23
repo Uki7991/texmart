@@ -18,17 +18,17 @@
     <div class="align-self-end col-12" style="padding-bottom: 20px;">
         <ul class="nav flex-column ml-3 mt-2 mt-lg-0">
             <li class="nav-item ">
-                <a href="" class="text-muted" title="Ссылка на страницу в Facebook">
+                <a href="https://api.whatsapp.com/send?phone=996502900500" class="text-muted" title="Ссылка на страницу в Facebook">
                     <img src="icons/whatsapp.png" alt="ссылка на whatsapp">
                 </a>
             </li>
             <li class="nav-item">
-                <a href="" class="text-muted">
+                <a href="https://www.instagram.com/texmart.kg/" class="text-muted">
                     <img src="icons/insta.png" class="my-3" alt="Ссылка на instagram">
                 </a>
             </li>
             <li class="nav-item">
-                <a href="" class="text-muted" title="Ссылка на facebook">
+                <a href="https://www.facebook.com/texmart.kg" class="text-muted" title="Ссылка на facebook">
                     <img src="icons/facebook.png" alt="Ссылка на facebook">
                 </a>
             </li>
@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a href="" class="text-muted" title="Ссылка на vk">
+                <a href="https://vk.com/texmartkg" class="text-muted" title="Ссылка на vk">
                     <img src="icons/vk.png" class="" alt="ссылка на vk">
                 </a>
             </li>
