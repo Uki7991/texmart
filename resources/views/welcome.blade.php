@@ -3,12 +3,6 @@
 @section('title')
     Texmart - онлайн платформа
 @endsection
-@push('opengraph')
-    <meta property="og:title" content="Texmart - онлайн платформа">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ asset('img/1_AjogZeCnStQ8zJXAZPw4Pw.jpeg') }}">
-    <meta property="og:url" content="{{ url() }}">
-@endpush
 
 @section('content')
     <div class="container">
