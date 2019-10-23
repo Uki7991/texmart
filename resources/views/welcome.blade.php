@@ -9,9 +9,8 @@
     {{--@include('partials.modals.10_seconds')--}}
 
 
-    <div class="container-fluid">
-        @include('blocks.middle_panel')
-    </div>
+
+    @include('blocks.middle_panel')
     @include('blocks.partners')
     @include('blocks.footer')
 {{--    @include('partials.modals.10_seconds')--}}
