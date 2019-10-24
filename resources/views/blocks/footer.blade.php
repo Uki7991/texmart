@@ -1,5 +1,5 @@
 <div class="row text-center text-xs-center text-sm-left text-md-left">
-    <div class="col-12 col-sm-4 col-md-3 col-lg-2 col-xl-2 mb-4 mb-md-0">
+    <div class="col-12 col-sm-3 col-md-3 col-lg-2 col-xl-2 mb-4 mb-md-0">
         <h5>О компании</h5>
         <nav class="nav flex-column">
             <a class="nav-link text-dark small nav-scale" href="" title="О нас"><i class="fa fa-angle-double-right"></i> О нас</a>
@@ -8,7 +8,7 @@
             <a class="nav-link text-dark small nav-scale" href="" title="контакты"><i class="fa fa-angle-double-right"></i> Контакты</a>
         </nav>
     </div>
-    <div class="col-12 col-sm-4 col-md-3 mb-4 mb-md-0">
+    <div class="col-12 col-sm-3 col-md-3 mb-4 mb-md-0">
         <h5>Сервис и поддержка</h5>
         <nav class="nav flex-column">
             <a class="nav-link text-dark small nav-scale" href="" title="Политика Конфидециальности"><i class="fa fa-angle-double-right"></i> Политика Конфидециальности</a>
@@ -16,7 +16,7 @@
             <a class="nav-link text-dark small nav-scale" href="#" title="Доставка"><i class="fa fa-angle-double-right"></i> Доставка</a>
         </nav>
     </div>
-    <div class="col-12 col-sm-4 col-md-3 mb-4 mb-md-0">
+    <div class="col-12 col-sm-3 col-md-3 mb-4 mb-md-0">
         <h5>Объявления</h5>
         <nav class="nav flex-column">
             <a class="nav-link text-dark small nav-scale" href="" title="Производство"><i class="fa fa-angle-double-right"></i> Производство</a>
@@ -24,7 +24,7 @@
             <a class="nav-link text-dark small nav-scale" href="" title="Услуги"><i class="fa fa-angle-double-right"></i> Услуги</a>
         </nav>
     </div>
-    <div class="col-12 col-sm-4 ml-auto col-md-3 mb-4 mb-md-0">
+    <div class="col-12 col-sm-3 ml-auto col-md-3 mb-4 mb-md-0">
         <h5>Наши Контакты</h5>
         <ul class="nav flex-column">
             <li class="nav-item ">
