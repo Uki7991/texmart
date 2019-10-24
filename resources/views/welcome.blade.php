@@ -7,7 +7,7 @@
 @section('content')
     <div class="contaner-fluid">
         <div class="row">
-            <div cl]ass="col-1 px-0 bg-texmart-sidebar">
+            <div class="col-1 px-0 bg-texmart-sidebar">
                 @include('blocks.side_panel')
             </div>
 
@@ -15,15 +15,10 @@
                 @include('blocks.middle_panel')
                 @include('blocks.our_advantages')
                 @include('blocks.partners')
-                @include('blocks.footer')
             </div>
         </div>
     </div>
     {{--@include('partials.modals.10_seconds')--}}
-
-
-
-
 
     <button class="col-12 btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
         <i class="fa fa-chevron-up text-center"></i>
