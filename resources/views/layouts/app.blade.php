@@ -32,6 +32,8 @@
         <main class="">
             @yield('content')
         </main>
+
+
     </div>
 
     <!-- Scripts -->
