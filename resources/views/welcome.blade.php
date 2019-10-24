@@ -5,19 +5,26 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        @include('blocks.side_panel')
+    <div class="contaner-fluid">
+        <div class="row">
+            <div class="col-1 px-0 bg-texmart-sidebar">
+                @include('blocks.side_panel')
+            </div>
 
-
+            <div class="col-11 px-0">
+                @include('blocks.middle_panel')
+                @include('blocks.our_advantages')
+                @include('blocks.partners')
+                @include('blocks.footer')
+            </div>
+        </div>
     </div>
     {{--@include('partials.modals.10_seconds')--}}
 
 
 
-    @include('blocks.middle_panel')
-    @include('blocks.our_advantages')
-    @include('blocks.partners')
-    @include('blocks.footer')
+
+
     <button class="col-12 btn btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
         <i class="fa fa-chevron-up text-center"></i>
     </button>
