@@ -5,20 +5,7 @@
 @endsection
 
 @section('content')
-    {{--<div class="contaner-fluid">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col px-0 bg-texmart-sidebar">--}}
-                {{----}}
-            {{--</div>--}}
 
-            {{--<div class="col-11 px-0">--}}
-                {{--@include('blocks.middle_panel')--}}
-                {{--@include('blocks.our_advantages')--}}
-                {{--@include('blocks.partners')--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    {{--@include('partials.modals.10_seconds')--}}
     <div class="container">
         @include('blocks.side_panel')
     </div>
