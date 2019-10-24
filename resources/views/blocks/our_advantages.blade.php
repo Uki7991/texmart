@@ -52,8 +52,8 @@
             {{--<iframe  frameborder="0" allow="></iframe>--}}
 
             <a class="fancybox-media" href="https://www.youtube.com/watch?time_continue=3&v=xTYkmWnwLvg">
-                <img data-src="{{ asset('img/video.png') }}" class="img-fluid lazy h-75 position-relative" alt="">
-                <img data-src="{{asset('img/youtube(2).png')}}" class="w-50 youtube lazy position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
+                <img src="{{ asset('img/video.png') }}" class="img-fluid  h-75 position-relative" alt="">
+                <img src="{{asset('img/youtube(2).png')}}" class="w-50 youtube  position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%) " alt="">
             </a>
 
         </div>
@@ -63,9 +63,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 @endpush
 @push('scripts')
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
     <script>
             $('.fancybox-media').fancybox({
                 openEffect: 'none',
