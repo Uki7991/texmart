@@ -1,5 +1,5 @@
 <div class="container py-5">
-    <h2 class="text-center h1 mb-5 font-weight-bold">
+    <h2 class="text-center" style="color: #e99b33 !important;">
         Наши партнеры
     </h2>
     <div class="row align-items-center justify-content-between">

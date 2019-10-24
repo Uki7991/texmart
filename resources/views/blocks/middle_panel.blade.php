@@ -1,6 +1,5 @@
 <div class="container-fluid bg-img-header">
     <div class="row">
-        <div class="col-12">
             <div class="col-6">
                 <div class="pt-4 mb-5">
                     <img src="{{asset('img/logo 3.png')}}" class="img-fluid" alt="logo">
@@ -25,7 +24,6 @@
                     <img src="{{asset('icons/icons_3.png')}}" class="mx-3" alt="advantages">
                 </div>
             </div>
-        </div>
     </div>
 </div>
 

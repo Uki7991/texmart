@@ -14,7 +14,9 @@
             <div class="col-11 px-0">
                 @include('blocks.middle_panel')
                 @include('blocks.our_advantages')
+                @include('blocks.applications')
                 @include('blocks.partners')
+
             </div>
         </div>
     </div>
