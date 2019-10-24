@@ -19,9 +19,37 @@
             </div>
 
             <div class="text-center mt-5">
-                <img src="{{asset('icons/icons_1.png')}}" class="mx-3" alt="advantages">
-                <img src="{{asset('icons/icons_2.png')}}" class="mx-3" alt="advantages">
-                <img src="{{asset('icons/icons_3.png')}}" class="mx-3" alt="advantages">
+                <ul class="list-inline text-light">
+                    <li class="list-inline-item">
+                        <h4 class="mx-5 folder-sprite waves-effect waves-light "></h4>
+                        Единая база <br> производителей
+                    </li>
+                    <li class="list-inline-item">
+                        <h4 class="mx-5 mb-4 medal-sprite waves-effect waves-light"></h4>
+                        <span class="pb-3">Оценка качества</span>
+                    </li>
+                    <li class="list-inline-item">
+                        <h4 class="mx-5 cloth-sprite waves-effect waves-light"></h4>
+                        Поставка тканей <br>
+                        и фурнитуры
+                    </li>
+                </ul>
+                <ul class="list-inline text-light">
+                    <li class="list-inline-item">
+                        <h4 class="mx-5 production-sprite waves-effect waves-light"></h4>
+                        Производство <br> одежды  в КР
+                    </li>
+                    <li class="list-inline-item">
+                        <h4 class="mxmx-5 -3 box-sprite waves-effect waves-light"></h4>
+                        Доставка
+                    </li>
+                    <li class="list-inline-item">
+                        <h4 class="mx-5 document-sprite waves-effect waves-light"></h4>
+                        Оформление <br>
+                        документов
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
