@@ -1,45 +1,44 @@
 <div class="bg-texmart-sidebar m-0 fixed-top maxw-content row min-vh-100">
-    <div class="col-12">
+    <div class="col-12 px-0">
         <ul class="navbar-nav ml-3 mt-2 mt-lg-0">
             <li class="nav-item ">
                 <a href="#menu"
-                   class="" style="padding-top: 25px"><img src="icons/hamburger.svg" class="img-fluid" alt=""></a>
+                   class="hamburger-sprite mt-3" style="padding-top: 25px"></a>
             </li>
             <li class="nav-item ">
                 <a href="{{ auth()->check() ? route('profile') : route('login') }}"
-                   class="my-3"><img src="icons/avatar.png" class="img-fluid" alt=""></a>
+                   class="user-sprite my-3"></a>
             </li>
             <li class="nav-item ">
-                <a href="#" class=""><img src="icons/search.png" alt="" class="img-fluid"></a>
+                <a href="#" class="search-sprite"></a>
             </li>
 
         </ul>
     </div>
-    <div class="align-self-end col-12" style="padding-bottom: 20px;">
+    <div class="align-self-end col-12 px-0 px-sm-0 p-lg-1" style="padding-bottom: 20px;">
         <ul class="nav flex-column ml-3 mt-2 mt-lg-0">
-            <li class="nav-item ">
-                <a href="https://api.whatsapp.com/send?phone=996502900500" class="text-muted" title="Ссылка на страницу в Facebook">
-                    <img src="icons/whatsapp.png" alt="ссылка на whatsapp">
+            <li class="nav-item mr-3 ">
+                <a href="https://api.whatsapp.com/send?phone=996502900500" class="whatsapp-sprite waves-effect waves-light text-muted" title="Ссылка на страницу в Facebook">
+
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="https://www.instagram.com/texmart.kg/" class="text-muted">
-                    <img src="icons/insta.png" class="my-3" alt="Ссылка на instagram">
+            <li class="nav-item mr-3">
+                <a href="https://www.instagram.com/texmart.kg/" class="instagram-sprite waves-effect waves-light text-muted">
+
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="https://www.facebook.com/texmart.kg" class="text-muted" title="Ссылка на facebook">
-                    <img src="icons/facebook.png" alt="Ссылка на facebook">
+            <li class="nav-item mr-3">
+                <a href="https://www.facebook.com/texmart.kg" class="fb-sprite waves-effect waves-light text-muted" title="Ссылка на facebook">
+
                 </a>
             </li>
-            <li class="nav-item ">
-                <a href="" class="text-muted" title="Ссылка на telegram">
-                    <img src="icons/telegram.png" class="my-3" alt="ссылка на telegram">
+            <li class="nav-item mr-3 ">
+                <a href="" class="telegram-sprite waves-effect waves-light text-muted" title="Ссылка на telegram">
                 </a>
             </li>
-            <li class="nav-item ">
-                <a href="https://vk.com/texmartkg" class="text-muted" title="Ссылка на vk">
-                    <img src="icons/vk.png" class="" alt="ссылка на vk">
+            <li class="nav-item mr-3 ">
+                <a href="https://vk.com/texmartkg" class="vk-sprite waves-effect waves-light text-muted" title="Ссылка на vk">
+
                 </a>
             </li>
         </ul>
