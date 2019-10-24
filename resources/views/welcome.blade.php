@@ -34,11 +34,9 @@
 {{--    @include('partials.modals.10_seconds')--}}
 @endsection
 @push('styles')
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
 @endpush
 @push('scripts')
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
@@ -56,17 +54,6 @@
                 return false;
             });
 
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('.fancybox-media').fancybox({
-                openEffect: 'none',
-                closeEffect: 'none',
-                helpers: {
-                    media: {}
-                }
-            });
         });
     </script>
 @endpush
