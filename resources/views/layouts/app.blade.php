@@ -27,11 +27,23 @@
 </head>
 <body>
     <div id="app">
-
-
-        <main class="">
             @yield('content')
-        </main>
+        <footer class="footer border-top border-danger bg-white">
+            <div class="container pt-5 pb-2">
+                @include('blocks.footer')
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                        @include('partials.socialnetworks')
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                        <a rel="noopener" href="https://mount.kg" target="_blank" class="text-muted small">Made with <span
+                                class="text-danger">&hearts;</span> by Mount</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <!-- Scripts -->
