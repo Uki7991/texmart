@@ -17,7 +17,9 @@
                     </div>
                 </div>
             </div>
-
+            <div class="add_announcement">
+                <a href="">Добавить объявление</a>
+            </div>
             <div class="text-center mt-5">
                 <ul class="list-inline text-light">
                     <li class="list-inline-item">

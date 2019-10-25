@@ -130,7 +130,24 @@
                 </div>
             </div>
         <div class="col-8">
+            <div class="card-deck">
+                <div class="card mb-4" style="margin-right: 0;">
+                    <div class="view overlay">
+                        <img class="card-img-top" src="{{asset('img/consulting_texmart.png')}}" alt="Card image cap">
+                    </div>
+                </div>
+                <div class="card mb-4" style="margin-right: 0;">
+                    <div class="view overlay">
+                        <img class="card-img-top" src="{{asset('img/logistik_texmart.png')}}" alt="Card image cap">
+                    </div>
+                </div>
+                <div class="card mb-4" style="margin-right: 0;">
+                    <div class="view overlay">
+                        <img class="card-img-top" src="{{asset('img/quality_texmart.png')}}" alt="Card image cap">
 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
