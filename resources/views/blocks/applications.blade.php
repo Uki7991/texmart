@@ -1,4 +1,4 @@
-<div class="container" style="max-width: 1300px;">
+<div class="container" >
     <h2 class="mb-5" style="color:#CD882D ">Заявки от заказчиков </h2>
     <div class="row col-12">
             <div class="col-3 slider">
