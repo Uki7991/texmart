@@ -15,6 +15,8 @@ Route::get('/', 'MainController@index')->name('homepage');
 Route::get('/image', function () {
     return view('image-resizer');
 });
+Route::post('/user/register/phone', 'UserController@registerPhone')->name('register.phone');
+Route::post('/user/register/phonecode', 'UserController@codeVerification')->name('register.code');
 Route::post('/image/resize', 'MainController@imageResize')->name('image.resize');
 
 Route::get('/profile', 'UserController@index')->name('profile');
@@ -33,7 +35,6 @@ Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
 
     Route::get('/message', 'HomeController@message')->name('message');
 

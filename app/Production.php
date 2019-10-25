@@ -20,7 +20,6 @@ class Production extends Model
     use Sluggable;
     use Favoriteable;
     use RateableTrait;
-    use Spatial;
 
     protected $fillable = [
         'title', 'address', 'excerpt', 'description', 'phone1',

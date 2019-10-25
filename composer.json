@@ -9,8 +9,10 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "aloha/twilio": "^4.0",
         "christiankuri/laravel-favorite": "^1.3",
         "cviebrock/eloquent-sluggable": "^4.3",
+        "doctrine/dbal": "^2.9",
         "dorvidas/laravel-ratings": "^1.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",

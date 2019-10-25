@@ -7,8 +7,9 @@ use Dorvidas\Ratings\Models\RateableTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use TCG\Voyager\Models\Role;
 
-class User extends \TCG\Voyager\Models\User
+class User extends Authenticatable
 {
     use Notifiable;
     use Favoriteability;
@@ -20,7 +21,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role_id',
+        'name', 'email', 'password', 'role_id', 'phone',
     ];
 
     /**
@@ -44,5 +45,10 @@ class User extends \TCG\Voyager\Models\User
     public function productions()
     {
         return $this->hasMany(Production::class);
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
     }
 }
