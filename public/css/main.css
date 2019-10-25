@@ -168,6 +168,7 @@ body{
     box-shadow:0 1px 6px 0 #d6e0e7;
 }
 .item_slider{
+    width: 0;
     margin-bottom:15px;
     padding:0;
 }
@@ -198,4 +199,7 @@ body{
     letter-spacing:1px;
     font:10px RalewayExtraBold,sans-serif;
     display: block;
+}
+.bg-texmart-service{
+    background-color: rgba(205, 136, 45, 0.82);
 }

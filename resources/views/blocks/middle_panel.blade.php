@@ -67,7 +67,6 @@
             touchDrag: true,
             autoplay: true,
             autoplayTimeout: 3000,
-
         })
     </script>
 @endpush
