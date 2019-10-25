@@ -12,6 +12,7 @@
     @include('blocks.middle_panel')
     @include('blocks.our_advantages')
     @include('blocks.applications')
+    @include('blocks.blog')
     @include('blocks.partners')
 
     <button class="col-12 btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
