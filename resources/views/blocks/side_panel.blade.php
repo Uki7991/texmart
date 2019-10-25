@@ -19,11 +19,10 @@
         <ul class="nav flex-column ml-3 mt-2 mt-lg-0">
             <li class="nav-item mr-3 ">
                 <a href="https://api.whatsapp.com/send?phone=996502900500" class="whatsapp-sprite waves-effect waves-light text-muted" title="Ссылка на страницу в Facebook">
-
                 </a>
             </li>
             <li class="nav-item mr-3">
-                <a href="https://www.instagram.com/texmart.kg/" class="instagram-sprite waves-effect waves-light text-muted">
+                <a href="https://www.instagram.com/texmart.kg/" class="instagram-sprite waves-effect waves-light text-muted my-3">
 
                 </a>
             </li>
@@ -33,11 +32,11 @@
                 </a>
             </li>
             <li class="nav-item mr-3 ">
-                <a href="" class="telegram-sprite waves-effect waves-light text-muted" title="Ссылка на telegram">
+                <a href="" class="telegram-sprite waves-effect waves-light text-muted my-3" title="Ссылка на telegram">
                 </a>
             </li>
             <li class="nav-item mr-3 ">
-                <a href="https://vk.com/texmartkg" class="vk-sprite waves-effect waves-light text-muted" title="Ссылка на vk">
+                <a href="https://vk.com/texmartkg" class="vk-sprite waves-effect waves-light text-muted pb-4" title="Ссылка на vk">
 
                 </a>
             </li>
