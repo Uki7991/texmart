@@ -7,13 +7,13 @@
             <div class="text-center">
                 <div class="owl-carousel owl-theme">
                     <div class="item text-white">
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <p>Первая интернерт платформа швейной и текстильной промышленности Кыргызстана</p>
                     </div>
                     <div class="item text-white">
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <p>Консалтинг,оформление всех бухлагтерских и юридических документов</p>
                     </div>
                     <div class="item text-white">
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <p>Оценка качества пошива одежды и производтсва от Texmart.kg для уверенности на растоянии </p>
                     </div>
                 </div>
             </div>
