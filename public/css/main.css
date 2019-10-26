@@ -162,7 +162,21 @@ body{
 .slider{
     padding: 0;
 }
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
+.slick-prev.slick-arrow {
+    top: -30px;
+    left: 50%;
+    transform: rotate(90deg) translateY(50%);
+}
 
+.slick-next.slick-arrow {
+    bottom: -30px;
+    top: unset;
+    right: 50%;
+    transform: rotate(90deg) translateY(-50%);
+}
 
 .application_for {
     border-left:10px solid #e58a7a;
