@@ -5,7 +5,7 @@
                 <img src="{{asset('img/logo 3.png')}}" class="img-fluid" alt="logo">
             </div>
             <div class="text-center">
-                <div class="owl-carousel owl-theme">
+                <div id="owl-text" class="owl-carousel owl-theme">
                     <div class="item text-white">
                         <p>Первая интернерт платформа швейной и <br>текстильной промышленности Кыргызстана</p>
                     </div>
@@ -59,7 +59,7 @@
 
 @push('scripts')
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('#owl-text').owlCarousel({
             items: 1,
             loop: true,
             margin: 10,
