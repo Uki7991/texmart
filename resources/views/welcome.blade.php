@@ -12,6 +12,7 @@
     @include('blocks.middle_panel')
     @include('blocks.our_advantages')
     @include('blocks.applications')
+    @include('blocks.sliders')
     @include('blocks.blog')
     @include('blocks.partners')
 
