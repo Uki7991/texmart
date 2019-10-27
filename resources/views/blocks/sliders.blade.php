@@ -183,6 +183,15 @@
 
 
                 <p>
+                    <h6 class="sprite-email waves-effect waves-light"></h6>
+                    <h6 class="sprite-email waves-effect waves-light mr-5"></h6>
+                    <span class="ml-5">Lorem ipsum dolor.</span>
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+                <p>
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                     Lorem ipsum dolor.
@@ -191,67 +200,45 @@
             <div class="item">
                 <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
 
-                <div class="mr-5 ">
+                <p>
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
-                </div>
-                <p class="ml-5">
                     Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
                 <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
 
-                <div class="mr-5">
-
+                <p>
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
-                </div>
-                <p class="ml-5">
                     Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
                 <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
 
-                <div class="mr-5">
+                <p>
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
-                </div>
-                <p class="ml-5">
                     Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
                 <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
 
-                <div class="mr-5">
+                <p>
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
-                </div>
-                <p class="ml-5">
                     Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
                 <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
 
-                <div class="mr-5">
+                <p>
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
-                </div>
-                <p class="ml-5">
-                    Lorem ipsum dolor.
-                </p>
-            </div>
-            <div class="item">
-                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
-
-                <div class="mr-5">
-                    <span class="sprite-email waves-effect waves-light"></span>
-                    <span class="sprite-email waves-effect waves-light"></span>
-                </div>
-                <p class="ml-5">
                     Lorem ipsum dolor.
                 </p>
             </div>
@@ -317,7 +304,7 @@
                 }
             },
             autoplay: true,
-            autoplayTimeout: 3000,
+            autoplayTimeout: 300000,
         })
 
     </script>

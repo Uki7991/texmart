@@ -14,6 +14,7 @@
     @include('blocks.applications')
     @include('blocks.sliders')
     @include('blocks.blog')
+    @include('blocks.form')
     @include('blocks.partners')
 
     <button class="col-12 btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
