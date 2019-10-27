@@ -22,19 +22,19 @@
                     <div class="text-center">
                         <div id="owl-text" class="owl-carousel owl-theme">
                             <div class="item text-white">
-                                <p>Первая интернерт платформа швейной и <br>текстильной промышленности Кыргызстана</p>
+                                <p class="h3">Первая интернерт платформа швейной и <br>текстильной промышленности Кыргызстана</p>
                             </div>
                             <div class="item text-white">
-                                <p>Консалтинг,оформление всех<br> бухлагтерских и юридических документов</p>
+                                <p class="h3">Консалтинг,оформление всех<br> бухлагтерских и юридических документов</p>
                             </div>
                             <div class="item text-white">
-                                <p>Оценка качества пошива одежды и<br> производтсва от Texmart.kg для<br> уверенности на растоянии </p>
+                                <p class="h3">Оценка качества пошива одежды и<br> производтсва от Texmart.kg для<br> уверенности на растоянии </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="add_announcement col-12 position-relative text-center">
-                    <a href="">Добавить объявление</a>
+                    <a href="" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
                 <div class="text-center col-12 position-relative mt-5">
                     <ul class="list-inline text-light">
