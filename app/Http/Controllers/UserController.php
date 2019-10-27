@@ -210,6 +210,35 @@ class UserController extends Controller
         return redirect()->route('homepage');
     }
 
+    public function reRegisterPhone(Request $request)
+    {
+        $user = auth()->user();
+
+        $user->phone = '';
+        $user->save();
+
+        $data = $request->toArray();
+        $data['phone'] = str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']);
+        $validator = Validator::make($data, [
+            'code' => 'required|string',
+            'phone' => 'required|string|unique:users',
+        ]);
+        if ($validator->fails()) {
+            return redirect('/')
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            $user->phone_verification = rand(111111, 999999);
+            $user->phone = $data['phone'];
+            $user->save();
+            Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+//            auth()->user()->phone = $data['phone'];
+//            auth()->user()->save();
+        }
+
+        return redirect()->route('homepage');
+    }
+
     public function codeVerification(Request $request)
     {
         $data = $request->toArray();

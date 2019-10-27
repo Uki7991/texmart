@@ -49,8 +49,36 @@
                                 @enderror
                             </div>
                         </div>
+
+
                         <div class="form-group mb-0 mx-auto text-center">
-                            @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Сохранить'])
+                            @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Активировать'])
+                        </div>
+                    </form>
+
+                    <form action="{{ route('reregister.phone') }}" method="post">
+                        @csrf
+                        <div class="row justify-content-center">
+                            <div class="form-group mb-0">
+                                <label for="phone-number" class="d-block"><i
+                                        class="fas fa-phone-alt text-primary pt-3"></i> {{ __('Ваш телефонный номер: ' . auth()->user()->phone.'.') }}
+                                </label>
+                                <input type="hidden" name="code">
+                                <input type="text"
+                                       class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
+                                       name="phone" required autocomplete="phone"
+                                       id="phone-number-register">
+                                @error('phone')
+                                <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <small class="col-12 text-muted text-center">Если это не ваш номер, введите снова</small>
+
+                        </div>
+                        <div class="form-group mb-0 mt-3 mx-auto text-center">
+                            @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Изменить'])
                         </div>
                     </form>
                 @endif
