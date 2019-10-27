@@ -74,7 +74,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <small class="col-12 text-muted text-center">Если это не ваш номер, введите снова</small>
+                            <small class="col-12 text-muted text-center">Если это не ваш номер или код не пришел вам, то введите снова</small>
 
                         </div>
                         <div class="form-group mb-0 mt-3 mx-auto text-center">
