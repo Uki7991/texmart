@@ -24,6 +24,9 @@
 .text-texmart{
     color: #f8fafc!important;
 }
+.text-orange{
+    color: #e99b33 !important;
+}
 .bg-img {
     background: url("../newImages/texmart-box.png") no-repeat top right;
 }
@@ -158,6 +161,17 @@ body{
     width: 30px;
     height: 30px;
 }
+.sprite-email{
+    background: url('../images/sprite.png') no-repeat -144px -41px;
+    width: 12px;
+    height: 12px;
+}
+.sprite-likeIcon{
+    background: url('../images/sprite.png') no-repeat -158px -41px;
+    width: 12px;
+    height: 11px;
+}
+
 
 .slider{
     padding: 0;

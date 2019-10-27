@@ -170,8 +170,9 @@
         $(document).ready(function () {
             // slick carousel
             $('.slider').slick({
-                dots: true,
                 vertical: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 verticalSwiping: true,
