@@ -27,6 +27,14 @@
 .text-orange{
     color: #e99b33 !important;
 }
+.backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+}
 .bg-img {
     background: url("../newImages/texmart-box.png") no-repeat top right;
 }
