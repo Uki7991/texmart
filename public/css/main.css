@@ -282,3 +282,15 @@ body{
     padding:8px 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
+/*background for form.blade.php*/
+
+.bg-form-images{
+    background: url('../images/dogovor.png')no-repeat  center left;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+.text-orange{
+    color: ;
+}
