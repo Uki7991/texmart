@@ -33,6 +33,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="add_announcement col-12 position-relative text-center">
                     <a href="" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
@@ -74,16 +75,22 @@
     </div>
 </div>
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('https://raw.githubusercontent.com/daneden/animate.css/master/animate.css') }}">
+@endpush
 @push('scripts')
     <script>
         $('#owl-text').owlCarousel({
             items: 1,
-            loop: true,
+            loop: false,
             margin: 10,
             mouseDrag: false,
             touchDrag: true,
             autoplay: true,
             autoplayTimeout: 3000,
+            dots:true,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut'
         });
         $('#background-carousel').slick({
             dots: true,
