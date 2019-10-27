@@ -1,9 +1,61 @@
 <section>
-    <div class="container">
-        <div class="row">
-            
+    <div class="container py-5">
+        <div class="row justify-content-center align-items-center py-2">
+            <div class="col-12 col-lg-5">
+                <h2 class="text-orange">
+
+                </h2>
+            </div>
+            <div class="col-12 col-lg-5 py-5 border shadow-sm col-sm-12">
+                <form action="{{ route('bid.store') }}" method="POST">
+                    @csrf
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="firstName"><i class="fas fa-user text-primary"></i> {{ __('Имя') }}
+                            </label>
+                            <input type="text"
+                                   class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror"
+                                   name="name" required autocomplete="name"
+                                   id="firstName" placeholder="Иван">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-number" class="d-block"><i
+                                class="fas fa-phone-alt text-primary pt-3"></i> {{ __('Ваш телефонный номер:') }}
+                        </label>
+                        <input type="hidden" name="code">
+                        <input type="text"
+                               class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
+                               name="phone" required autocomplete="phone"
+                               id="phone-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1"><i
+                                class="fas fa-envelope text-primary"></i> {{ __('E-Mail') }}</label>
+                        <input type="email"
+                               class="form-control rounded-pill shadow-sm @error('email') is-invalid @enderror"
+                               name="email" required autocomplete="email"
+                               id="exampleFormControlInput1"
+                               placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1"><i
+                                class="fas fa-pencil-alt text-primary"></i> {{ __('Описание') }}</label>
+                        <textarea class="form-control" name="bid" id="exampleFormControlTextarea1" rows="3"
+                                  placeholder="Соcтавьте подробное описание"></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit"
+                                class="btn btn-danger text-white rounded-pill btn-lg px-5 py-2 shadow-lg scale-on-hover"> {{ __('Отправить') }}</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
+    @push('styles')
+        <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
+    @endpush
 </section>
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
