@@ -5,24 +5,20 @@
 .bg-texmart-sidebar {
     background-color: #e99b33 !important;
 }
-.bg-img-header {
-    background: url("../img/main.png") no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
-    height: 600px;
-}
-.bg-text-header{
-    height: 600px;
-    background: #000;
-    opacity: 0.5;
-}
+
 .text-bold{
      font-weight: bold!important;
  }
 .text-texmart{
     color: #f8fafc!important;
+}
+.backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
 }
 .bg-img {
     background: url("../newImages/texmart-box.png") no-repeat top right;
