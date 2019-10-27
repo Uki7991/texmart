@@ -5,7 +5,19 @@
 .bg-texmart-sidebar {
     background-color: #e99b33 !important;
 }
-
+.bg-img-header {
+    background: url("../img/main.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    height: 600px;
+}
+.bg-text-header{
+    height: 600px;
+    background: #000;
+    opacity: 0.5;
+}
 .text-bold{
      font-weight: bold!important;
  }
@@ -154,6 +166,17 @@ body{
     width: 30px;
     height: 30px;
 }
+.sprite-email{
+    background: url('../images/sprite.png') no-repeat -144px -41px;
+    width: 12px;
+    height: 12px;
+}
+.sprite-likeIcon{
+    background: url('../images/sprite.png') no-repeat -158px -41px;
+    width: 12px;
+    height: 11px;
+}
+
 
 .slider{
     padding: 0;
@@ -212,8 +235,14 @@ body{
     font:10px RalewayExtraBold,sans-serif;
     display: block;
 }
+/*background for side panel*/
 .bg-texmart-service{
     background-color: rgba(205, 136, 45, 0.82);
+}
+/* Images sliders size */
+.img-slider-size{
+    width: 220px!important;
+    height: 220px;
 }
 .owl-theme .owl-dot span {
     background: none repeat scroll 0 0 rgba(186, 205, 199, 0);
