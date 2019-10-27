@@ -238,6 +238,12 @@ body{
     font:10px RalewayExtraBold,sans-serif;
     display: block;
 }
+/*background for side panel*/
 .bg-texmart-service{
     background-color: rgba(205, 136, 45, 0.82);
+}
+/* Images sliders size */
+.img-slider-size{
+    width: 220px!important;
+    height: 220px;
 }

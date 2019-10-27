@@ -6,29 +6,29 @@
 
         <div id="owl-one" class="owl-carousel owl-theme col-12">
             <div class="item">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
 
                 <div class="mr-5">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>
                 <p class="ml-5">
-
+                    Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
 
                 <div class="mr-5 ">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>
                 <p class="ml-5">
-
+                    Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
 
                 <div class="mr-5">
 
@@ -36,79 +36,226 @@
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>
                 <p class="ml-5">
-
+                    Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
 
                 <div class="mr-5">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>
                 <p class="ml-5">
-
+                    Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
 
                 <div class="mr-5">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>
                 <p class="ml-5">
-
+                    Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
 
                 <div class="mr-5">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>
                 <p class="ml-5">
-
+                    Lorem ipsum dolor.
                 </p>
             </div>
             <div class="item">
-                <img src="{{ asset('images/slider1.png') }}" alt="">
+                <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
 
                 <div class="mr-5">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>
                 <p class="ml-5">
-
+                    Lorem ipsum dolor.
                 </p>
             </div>
 
         </div>
     </div>
     <div class="row">
-
 
 
         <div id="owl-two" class="owl-carousel owl-theme col-12">
-            <div class="item"><h4>1</h4></div>
-            <div class="item"><h4>2</h4></div>
-            <div class="item"><h4>3</h4></div>
-            <div class="item"><h4>4</h4></div>
-            <div class="item"><h4>5</h4></div>
-            <div class="item"><h4>6</h4></div>
-            <div class="item"><h4>7</h4></div>
+            <div class="item">
+                <img src="{{ asset('images/slider2.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider2.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5 ">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider2.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider2.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider2.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider2.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider2.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+
         </div>
     </div>
+
+    {{--this block for third slide--}}
+    <h4 class="text-orange">
+        Услуги
+    </h4>
     <div class="row">
         <div id="owl-three" class="owl-carousel owl-theme col-12">
-            <div class="item"><h4>1</h4></div>
-            <div class="item"><h4>2</h4></div>
-            <div class="item"><h4>3</h4></div>
-            <div class="item"><h4>4</h4></div>
-            <div class="item"><h4>5</h4></div>
-            <div class="item"><h4>6</h4></div>
-            <div class="item"><h4>7</h4></div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+
+                <p>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5 ">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+            <div class="item">
+                <img src="{{ asset('images/slider3.png') }}" class="img-slider-size" alt="">
+
+                <div class="mr-5">
+                    <span class="sprite-email waves-effect waves-light"></span>
+                    <span class="sprite-email waves-effect waves-light"></span>
+                </div>
+                <p class="ml-5">
+                    Lorem ipsum dolor.
+                </p>
+            </div>
+
         </div>
     </div>
 </div>
@@ -116,57 +263,57 @@
 @push('scripts')
     <script>
         $('#owl-one').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:false,
+            loop: true,
+            margin: 10,
+            nav: false,
             touchDrag: true,
-            responsive:{
-                0:{
-                    items:1
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600 :{
-                    items:3
+                600: {
+                    items: 3
                 },
-                1000:{
-                    items:4
+                1000: {
+                    items: 4
                 }
             },
             autoplay: true,
             autoplayTimeout: 3000,
         })
         $('#owl-two').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:false,
+            loop: true,
+            margin: 10,
+            nav: false,
             touchDrag: true,
-            responsive:{
-                0:{
-                    items:1
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:3
+                600: {
+                    items: 3
                 },
-                1000:{
-                    items:4
+                1000: {
+                    items: 4
                 }
             },
             autoplay: true,
             autoplayTimeout: 3000,
         })
         $('#owl-three').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:false,
+            loop: true,
+            margin: 10,
+            nav: false,
             touchDrag: true,
-            responsive:{
-                0:{
-                    items:1
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:3
+                600: {
+                    items: 3
                 },
-                1000:{
-                    items:4
+                1000: {
+                    items: 4
                 }
             },
             autoplay: true,
