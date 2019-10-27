@@ -24,9 +24,6 @@
 .text-texmart{
     color: #f8fafc!important;
 }
-.text-orange{
-    color: #e99b33 !important;
-}
 .backdrop {
     position: absolute;
     width: 100%;
@@ -246,4 +243,39 @@ body{
 .img-slider-size{
     width: 220px!important;
     height: 220px;
+}
+.owl-theme .owl-dot span {
+    background: none repeat scroll 0 0 rgba(186, 205, 199, 0);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 1;
+    width: 12px;
+}
+.owl-theme .owl-dot.active span {
+    background: none repeat scroll 0 0 #ffffff;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 1;
+    width: 12px;
+}
+.owl-dot:focus {
+    outline: 0!important;
+}
+.btn-texmart{
+    border-radius: 14px;
+    border:1px solid #d0d7dd;
+    padding:8px 30px;
+    background:#CD882D;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+.btn-texmart-info {
+    border-radius: 14px;
+    border:1px solid #ffffff;
+    padding:8px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }

@@ -1,4 +1,4 @@
-<div class="container" >
+<div class="container py-5">
     <h2 class="mb-5" style="color:#CD882D ">Заявки от заказчиков </h2>
     <div class="row">
             <div class="col-4 slider">
