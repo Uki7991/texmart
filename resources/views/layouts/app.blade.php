@@ -30,7 +30,7 @@
 <body>
     <div id="app">
             @yield('content')
-        <footer class="footer border-top border-danger bg-white">
+        <footer class="footer border-danger">
             <div class="container pt-5 pb-2">
                 @include('blocks.footer')
                 <div class="row">
