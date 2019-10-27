@@ -37,7 +37,7 @@
     <div>
         <div class="card-deck">
             <div class="card card-image"
-                 style="background-image: url({{asset('img/blog_3.png')}});">
+                 style="background-image: url({{asset('img/blog_3.png')}});background-repeat: no-repeat;background-size: cover">
                 <div class="text-white text-center d-flex align-items-center  py-5 px-4">
                     <div>
                         <h5 class="white-text">28.09.19</h5>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="card card-image"
-                 style="background-image: url({{asset('img/blog_5.png')}});">
+                 style="background-image: url({{asset('img/blog_5.png')}});background-repeat: no-repeat;background-size: cover">
                 <div class="text-white text-center d-flex align-items-center  py-5 px-4">
                     <div>
                         <h5 class="white-text">28.09.19</h5>
