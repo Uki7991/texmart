@@ -71,6 +71,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'phone' => str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']),
             'password' => Hash::make($data['password']),
+            'phone_verification' => rand(111111, 999999),
         ]);
     }
 }
