@@ -385,32 +385,28 @@ body{
     height: 350px;
 }
 
+@media (min-width: 768px) {
+    .about-us-block {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+    }
 
+    .about-us--block-image-container {
+        flex: 1;
+        margin-right: 10px;
+    }
 
-.about-us-block {
-    display: flex;
-    flex-direction: row;
-    margin: 10px 0;
+    .about-us-block-right{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 10px 0;
+    }
+
+    .about-us-block-image-container-right{
+        flex: 1;
+        margin-left: 10px;
+    }
 }
 
-.about-us--block-image-container {
-    flex: 1;
-    margin-right: 10px;
-}
 
-.about-us-block-right{
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 10px 0;
-}
-
-.about-us-block-image-container-right{
-    flex: 1;
-    margin-left: 10px;
-}
-
-.about-us-image {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
