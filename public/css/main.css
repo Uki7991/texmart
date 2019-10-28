@@ -362,3 +362,8 @@ body{
 /*li .father:hover .btn-submit-your-application-child {*/
 /*    display: block;*/
 /*}*/
+
+
+.text-dark label {
+    color: white!important;
+}
