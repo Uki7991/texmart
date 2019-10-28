@@ -5,7 +5,7 @@
         </a>
         <ul class="btn-submit-your-application-child">
             <li>
-                <a href="">отсавить заявку</a>
+                <a href="">оставить заявку</a>
             </li>
         </ul>
     </li>
