@@ -9,12 +9,12 @@
                     Если вы ищете производителя и хотите разместить заказ
                 </p>
             </div>
-            <div class="col-12 col-lg-5 py-5 border shadow-sm col-sm-12 bg-white">
+            <div class="col-12 col-lg-5 py-5 border-0 shadow-0 col-sm-12 bg-white-50 rounded text-light">
                 <form action="{{ route('bid.store') }}" method="POST">
                     @csrf
                     <div class="form-row">
                         <div class="col">
-                            <label for="firstName"><i class="fas fa-user text-primary"></i> {{ __('Имя') }}
+                            <label for="firstName"><i class="fas fa-user text-primary text-orange"></i> {{ __('Имя') }}
                             </label>
                             <input type="text"
                                    class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror"
@@ -22,9 +22,9 @@
                                    id="firstName" placeholder="Иван">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone-number" class="d-block"><i
-                                class="fas fa-phone-alt text-primary pt-3"></i> {{ __('Ваш телефонный номер:') }}
+                    <div class="form-group text-dark">
+                        <label for="phone-number " class="d-block"><i
+                                class="fas fa-phone-alt text-primary pt-3 text-orange"></i> {{ __('Ваш телефонный номер:') }}
                         </label>
                         <input type="hidden" name="code">
                         <input type="text"
@@ -34,7 +34,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1"><i
-                                class="fas fa-envelope text-primary"></i> {{ __('E-Mail') }}</label>
+                                class="fas fa-envelope text-primary text-orange"></i> {{ __('E-Mail') }}</label>
                         <input type="email"
                                class="form-control rounded-pill shadow-sm @error('email') is-invalid @enderror"
                                name="email" required autocomplete="email"
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1"><i
-                                class="fas fa-pencil-alt text-primary"></i> {{ __('Описание') }}</label>
+                                class="fas fa-pencil-alt text-primary text-orange"></i> {{ __('Описание') }}</label>
                         <textarea class="form-control" name="bid" id="exampleFormControlTextarea1" rows="3"
                                   placeholder="Соcтавьте подробное описание"></textarea>
                     </div>
