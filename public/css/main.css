@@ -353,6 +353,12 @@ body{
     bottom: 90px;
     list-style-type: none;
     z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+}
+.btn-submit-your-application-child.active {
+    opacity: 1!important;
+    visibility: visible!important;
 }
 .w3-animate-opacity {
     animation: opac 0.8s;
