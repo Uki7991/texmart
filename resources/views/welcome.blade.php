@@ -22,8 +22,6 @@
     @include('blocks.buttons.scroll-top')
 
 
-
-
 {{--    @include('partials.modals.10_seconds')--}}
 @endsection
 @push('styles')

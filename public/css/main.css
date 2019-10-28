@@ -57,8 +57,8 @@ body{
 
 .scroll-top {
     border: 0;
-    width: 61px;
-    height: 61px;
+    width: 46px;
+    height: 44px;
     position: fixed;
     bottom: 25px;
     right: 20px;
@@ -299,12 +299,12 @@ body{
     background: #CD882D;
     border: 2px solid #CD882D;
     border-radius: 70px!important;
-    height: 63px;
+    height: 60px;
     text-align: center;
-    width: 63px;
+    width: 60px;
     position: fixed;
-    right: 6%;
-    bottom: 25px;
+    right: 1%;
+    bottom: 83px;
     padding: 1%;
     transition: .3s;
     -webkit-animation: hoverWave linear 1s infinite;
@@ -346,10 +346,10 @@ body{
     padding:8px 30px;
     background:#CD882D;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    width: 180px;
+    width: 172px;
     position: fixed;
-    right: 9%;
-    bottom: 33px;
+    right: 3%;
+    bottom: 90px;
     list-style-type: none;
     z-index: 5000;
 }

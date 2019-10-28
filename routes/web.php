@@ -93,9 +93,6 @@ Route::get('/consulting',function(){
     return view('consulting');
 })->name('consulting');
 
-Route::get('/consulting',function(){
-    return view('consulting');
-})->name('consulting');
 
 Route::get('/logistic',function(){
     return view('logistic');
