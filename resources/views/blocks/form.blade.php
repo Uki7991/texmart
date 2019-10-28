@@ -1,6 +1,6 @@
 <section class="bg-form-images">
     <div class="container py-5">
-        <div class="row justify-content-center align-items-start py-2">
+        <div class="row justify-content-center align-items-center  py-2">
             <div class="col-12 col-lg-5">
                 <h2 class="text-orange">
                     Заполните форму
