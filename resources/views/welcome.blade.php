@@ -18,6 +18,9 @@
     @include('blocks.form')
     @include('blocks.partners')
 
+    <a href="" class="form-call d-md-block d-none">
+        <img src="{{asset('icons/submit_your_application.png')}}" class="icon_form" alt="оставить заявку">
+    </a>
     <button class="col-12 btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
         <i class="fa fa-chevron-up text-center"></i>
     </button>

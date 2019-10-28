@@ -292,5 +292,49 @@ body{
     -moz-background-size: cover;
 }
 .text-orange{
-    color: ;
+    /*color: ;*/
 }
+
+.form-call{
+    background: #CD882D;
+    border: 2px solid #CD882D;
+    border-radius: 70px!important;
+    height: 63px;
+    text-align: center;
+    width: 63px;
+    position: fixed;
+    right: 6%;
+    bottom: 25px;
+    padding: 1%;
+    transition: .3s;
+    -webkit-animation: hoverWave linear 1s infinite;
+    animation: hoverWave linear 1s infinite;
+    z-index: 10000;
+}
+@-webkit-keyframes hoverWave {
+    0% {
+        box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 0 rgba(205, 136, 45, 0.52),0 0 0 0 rgba(205, 136, 45, 0.52)
+    }
+    40% {
+        box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 0 rgba(205, 136, 45, 0.52),0 0 0 0 rgba(205, 136, 45, 0.52)
+    }
+    80% {
+        box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 0 rgba(205, 136, 45, 0.52),0 0 0 0 rgba(205, 136, 45, 0.52)
+    }
+    100% {
+        box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 30px rgba(0, 217, 192, 0),0 0 0 40px rgba(0, 217, 192, 0)
+    }
+}@keyframes hoverWave {
+     0% {
+         box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 0 rgba(205, 136, 45, 0.52),0 0 0 0 rgba(205, 136, 45, 0.52)
+     }
+     40% {
+         box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 0 rgba(205, 136, 45, 0.52),0 0 0 0 rgba(205, 136, 45, 0.52)
+     }
+     80% {
+         box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 30px rgba(56,163,253,0),0 0 0 26.7px rgba(0, 217, 192, 0.07)
+     }
+     100% {
+         box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 30px rgba(56,163,253,0),0 0 0 40px rgba(56,163,253,0.0)
+     }
+ }

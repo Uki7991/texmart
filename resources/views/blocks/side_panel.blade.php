@@ -45,9 +45,9 @@
 </div>
 <nav id="menu">
     <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="/">Главная</a></li>
         <li><a href="/work">Our work</a></li>
-        <li><span>About us</span>
+        <li><span>О нас</span>
             <ul>
                 <li><a href="/about/history">History</a></li>
                 <li><span>The team</span>
@@ -59,14 +59,14 @@
                 </li>
             </ul>
         </li>
-        <li><span>Services</span>
+        <li><span>Наши услуги</span>
             <ul>
                 <li><a href="/services/design">Design</a></li>
                 <li><a href="/services/development">Development</a></li>
                 <li><a href="/services/marketing">Marketing</a></li>
             </ul>
         </li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/contact">Контакты</a></li>
     </ul>
 </nav>
 
