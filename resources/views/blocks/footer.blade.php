@@ -2,7 +2,7 @@
     <div class="col-12 col-sm-3 col-md-3 col-lg-2 col-xl-2 mb-4 mb-md-0">
         <h5>О компании</h5>
         <nav class="nav flex-column">
-            <a class="nav-link text-dark small nav-scale" href="" title="О нас"><i class="fa fa-angle-double-right"></i> О нас</a>
+            <a class="nav-link text-dark small nav-scale" href="/about" title="О нас"><i class="fa fa-angle-double-right"></i> О нас</a>
             <a class="nav-link text-dark small nav-scale" href="#" title="Форум"><i class="fa fa-angle-double-right"></i> Форум</a>
             <a class="nav-link text-dark small nav-scale" href="" title="Блог"><i class="fa fa-angle-double-right"></i> Блог</a>
             <a class="nav-link text-dark small nav-scale" href="" title="контакты"><i class="fa fa-angle-double-right"></i> Контакты</a>

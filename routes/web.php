@@ -74,8 +74,8 @@ Route::get('announcement',function(){
 })->name('announcement');
 
 Route::get('/about',function(){
-    return view('about_us');
-})->name('about_us');
+    return view('about');
+})->name('about');
 
 Route::get('/product',function(){
     return view('products');
