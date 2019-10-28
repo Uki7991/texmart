@@ -294,7 +294,7 @@ body{
 .text-orange{
     /*color: ;*/
 }
-
+/* аннимация кнопки (оставить отзыв)*/
 .form-call{
     background: #CD882D;
     border: 2px solid #CD882D;
@@ -338,3 +338,27 @@ body{
          box-shadow:0 8px 10px rgba(205, 136, 45, 0.3),0 0 0 30px rgba(56,163,253,0),0 0 0 40px rgba(56,163,253,0.0)
      }
  }
+/*end*/
+/*hover animation in submit your appllication*/
+.btn-submit-your-application-child{
+    border-radius: 14px;
+    border:1px solid #CD882D;
+    padding:8px 30px;
+    background:#CD882D;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    position: fixed;
+    right: 9%;
+    bottom: 33px;
+    list-style-type: none;
+    z-index: 5000;
+}
+.w3-animate-opacity {
+    animation: opac 0.8s;
+}
+.btn-submit-your-application-child li a{
+    color:white!important;
+}
+/*li .father:hover .btn-submit-your-application-child {*/
+/*    display: block;*/
+/*}*/
