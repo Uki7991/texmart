@@ -18,22 +18,11 @@
     @include('blocks.form')
     @include('blocks.partners')
 
-    <ul class="btn-submit-your-application father">
-        <li>
-            <a href="" class="form-call d-md-block d-none">
-                <img src="{{asset('icons/submit_your_application.png')}}" class="icon_form" alt="оставить заявку">
-            </a>
-            <ul class="btn-submit-your-application-child">
-                <li>
-                    <a href="">отсавить заявку</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    @include('blocks.buttons.submit_your_application')
+    @include('blocks.buttons.scroll-top')
 
-    <button class="col-12 btn-danger rounded-pill scroll-top scale-on-hover" data-scroll="up" type="button">
-        <i class="fa fa-chevron-up text-center"></i>
-    </button>
+
+
 
 {{--    @include('partials.modals.10_seconds')--}}
 @endsection
