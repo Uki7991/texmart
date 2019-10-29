@@ -5,8 +5,12 @@
 @endsection
 
 @section('content')
-
-    <div class="container">
+    <section class="bg-texmart-sidebar fixed-top">
+        <div class="container d-xl-none">
+            @include('blocks.header')
+        </div>
+    </section>
+    <div class="container d-none d-xl-block">
         @include('blocks.side_panel')
     </div>
     @include('blocks.middle_panel')

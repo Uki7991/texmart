@@ -89,6 +89,14 @@
                         "prev",
                         "title"
                     ]
+                },
+                {
+                    "position": "bottom",
+                    "content": [
+                        "<a class='fa fa-envelope' href='#/'></a>",
+                        "<a class='fab fa-twitter' href='#/'></a>",
+                        "<a class='fab fa-facebook' href='#/'></a>"
+                    ]
                 }
             ]
         });
