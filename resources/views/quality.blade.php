@@ -65,7 +65,6 @@
                         соответствие цветов, швы, фурнитура, упаковка, маркировка и тд.</p>
                 </div>
             </div>
-
             <div class="row justify-content-center align-items-center font-weight-bold">
                 <div class="col-12  py-4">
                     <p>Благодаря подобным инспекциям наши клиенты получают объективную картину происходящего:
@@ -74,10 +73,9 @@
                         основании которых клиент может принять решение о том, нужно ли отгружать товар или нет.</p>
                 </div>
             </div>
-
             <div class="row justify-content-center align-items-center">
-                <div class="col-6">
-                    <img src="{{asset('img/quality_1.png')}}" class="img-fluid" alt="">
+                <div class="col-6 text-center">
+                    <img src="{{asset('img/quality_1.png')}}" class="img-fluid text-center" alt="">
                 </div>
                 <div class="col-6">
                     <p>
