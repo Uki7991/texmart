@@ -38,20 +38,24 @@
 /*font size for all fonts*/
 body{
     font-size: 0.5rem!important;
+    margin-top: 3.4rem;
 }
 @media(min-width: 576px){
     body{
         font-size: 0.6rem!important;
+        margin-top: 3.7;
     }
 }
 @media(min-width: 768px){
     body{
         font-size: 0.7rem!important;
+        margin-top: 3.7rem;
     }
 }
 @media(min-width: 1200px){
     body{
         font-size: 0.9rem!important;
+        margin-top: 0;
     }
 }
 
@@ -390,6 +394,7 @@ body{
     width: 140px!important;
     height: auto!important;
 }
+
 /*media end*/
 .bg-consulting {
     background: url('../img/bg_for_consulting.png') no-repeat center left;
