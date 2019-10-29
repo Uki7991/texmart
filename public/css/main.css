@@ -384,6 +384,30 @@ body{
     -webkit-background-size: cover;
     height: 350px;
 }
+.bg-consulting {
+    background: url('../img/bg_for_consulting.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
+.bg-logistics {
+    background: url('../img/bg_for_logistik.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
+.bg-quality-control {
+    background: url('../img/bg_quality_control.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
 
 @media (min-width: 768px) {
     .about-us-block {
