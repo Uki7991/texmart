@@ -14,7 +14,7 @@
             </li>
             <li class="nav-item">
                 <a href="{{ auth()->check() ? route('profile') : route('login') }}"
-                   class="user-sprite my-3 waves-effect waves-light mx-5"></a>
+                   class="user-sprite my-3 waves-effect waves-light mx-3 mx-md-5"></a>
             </li>
             <li class="nav-item">
                 <a href="#menu"
