@@ -126,6 +126,10 @@ Route::get('/blog',function(){
     return view('blog');
 })->name('blog');
 
+Route::get('/logistics',function(){
+    return view('logistics');
+})->name('logistics');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
