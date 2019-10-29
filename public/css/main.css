@@ -38,24 +38,20 @@
 /*font size for all fonts*/
 body{
     font-size: 0.5rem!important;
-    margin-top: 3.4rem;
 }
 @media(min-width: 576px){
     body{
         font-size: 0.6rem!important;
-        margin-top: 2.1rem;
     }
 }
 @media(min-width: 768px){
     body{
         font-size: 0.7rem!important;
-        margin-top: 3.7rem;
     }
 }
 @media(min-width: 1200px){
     body{
         font-size: 0.9rem!important;
-        margin-top: 0;
     }
 }
 
@@ -357,6 +353,12 @@ body{
     bottom: 90px;
     list-style-type: none;
     z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+}
+.btn-submit-your-application-child.active {
+    opacity: 1!important;
+    visibility: visible!important;
 }
 .w3-animate-opacity {
     animation: opac 0.8s;
@@ -388,3 +390,64 @@ body{
     width: 140px!important;
     height: auto!important;
 }
+/*media end*/
+.bg-consulting {
+    background: url('../img/bg_for_consulting.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
+.bg-logistics {
+    background: url('../img/bg_for_logistik.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
+.bg-quality-control {
+    background: url('../img/bg_quality_control.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
+.bg-contacts {
+    background: url('../img/contact-us-2993000_1920 1.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
+.info-contacts {
+    float: right;
+}
+@media (min-width: 768px) {
+    .about-us-block {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+    }
+
+    .about-us--block-image-container {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .about-us-block-right{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 10px 0;
+    }
+
+    .about-us-block-image-container-right{
+        flex: 1;
+        margin-left: 10px;
+    }
+}
+
+
