@@ -1,9 +1,17 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
+    <section class="bg-contacts">
+        <div class="container h-100">
+            <div class="row align-items-end h-100">
+                <div class="h1 text-white">
+                    Контакты
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container py-5">
         <div class="row">
             <div class="col">
-                <h1>Контакты</h1>
                 <iframe title="Офис Texmart.kg"
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A95d8395382f6f742cb4d5dca4a8aa599cc96f478858d19aa2106e15d67bd6cd0&amp;source=constructor"
                         width="700" height="400" frameborder="0">

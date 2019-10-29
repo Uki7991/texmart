@@ -408,7 +408,17 @@ body{
     -webkit-background-size: cover;
     height: 350px;
 }
-
+.bg-contacts {
+    background: url('../img/contact-us-2993000_1920 1.png') no-repeat center left;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 350px;
+}
+.info-contacts {
+    float: right;
+}
 @media (min-width: 768px) {
     .about-us-block {
         display: flex;
