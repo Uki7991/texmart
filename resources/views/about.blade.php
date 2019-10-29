@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section class="bg-texmart-sidebar fixed-top">
-        <div class="container d-xl-none">
+        <div class="container">
             @include('blocks.header')
         </div>
     </section>
