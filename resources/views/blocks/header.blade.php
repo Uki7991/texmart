@@ -2,7 +2,7 @@
 <div class="row justify-content-between ">
     <div class="col-2 m-0">
         <a href="\" >
-            <img src="{{asset('img/logo3.png')}}" class="img-header pt-3 pt-md-1" alt="logo">
+            <img src="{{asset('img/logo3.png')}}" class="img-header pt-3 pt-md-2" alt="logo">
         </a>
     </div>
 
