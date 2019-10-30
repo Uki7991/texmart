@@ -1,4 +1,4 @@
-<div class="container pb-5">
+<div class="container mt-5 pb-5">
     <h2 class="text-center" style="color: #e99b33 !important;padding-bottom: 25px">
         Наш Блог
     </h2>

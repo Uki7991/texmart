@@ -7,7 +7,6 @@
         <div id="owl-one" class="owl-carousel owl-theme col-12">
             <div class="item">
                 <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
-
                 <div class="mr-5">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
@@ -18,7 +17,6 @@
             </div>
             <div class="item">
                 <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
-
                 <div class="mr-5 ">
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
@@ -29,9 +27,7 @@
             </div>
             <div class="item">
                 <img src="{{ asset('images/slider1.png') }}" class="img-slider-size" alt="">
-
                 <div class="mr-5">
-
                     <span class="sprite-email waves-effect waves-light"></span>
                     <span class="sprite-email waves-effect waves-light"></span>
                 </div>

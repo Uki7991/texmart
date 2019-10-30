@@ -431,6 +431,9 @@ body{
 .info-contacts {
     float: right;
 }
+.owl-nav {
+nav-left: true;
+}
 @media (min-width: 768px) {
     .about-us-block {
         display: flex;
