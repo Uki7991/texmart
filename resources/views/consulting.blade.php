@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('content')
+    <section class="bg-texmart-sidebar fixed-top">
+        <div class="container">
+            @include('blocks.header')
+        </div>
+    </section>
     <section class="bg-consulting">
         <div class="container h-100">
             <div class="row align-items-end h-100">
