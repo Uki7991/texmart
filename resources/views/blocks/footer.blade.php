@@ -5,7 +5,7 @@
             <a class="nav-link text-dark small nav-scale" href="/about" title="О нас"><i class="fa fa-angle-double-right"></i> О нас</a>
             <a class="nav-link text-dark small nav-scale" href="#" title="Форум"><i class="fa fa-angle-double-right"></i> Форум</a>
             <a class="nav-link text-dark small nav-scale" href="" title="Блог"><i class="fa fa-angle-double-right"></i> Блог</a>
-            <a class="nav-link text-dark small nav-scale" href="" title="контакты"><i class="fa fa-angle-double-right"></i> Контакты</a>
+            <a class="nav-link text-dark small nav-scale" href="/contacts" title="контакты"><i class="fa fa-angle-double-right"></i> Контакты</a>
         </nav>
     </div>
     <div class="col-12 col-sm-3 col-md-3 mb-4 mb-md-0">

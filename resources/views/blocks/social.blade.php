@@ -1,5 +1,5 @@
 <div class="">
-    <a href="https://api.whatsapp.com/send?phone=996502900500" class="text-muted" title="Ссылка на страницу в Facebook">
+    <a href="https://api.whatsapp.com/send?phone=996502900500" class="text-muted" title="Ссылка на страницу в whatsapp">
         <img src="icons/whatsapp.png"  alt="ссылка на whatsapp">
     </a>
     <a href="https://vk.com/texmartkg" class="text-muted" title="Ссылка на vk">

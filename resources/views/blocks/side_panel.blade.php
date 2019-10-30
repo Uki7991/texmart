@@ -18,7 +18,7 @@
     <div class="align-self-end col-12 px-0 px-sm-0 p-lg-1" style="padding-bottom: 20px;">
         <ul class="nav flex-column ml-3 mt-2 mt-lg-0">
             <li class="nav-item mr-3 ">
-                <a href="https://api.whatsapp.com/send?phone=996502900500" class="whatsapp-sprite waves-effect waves-light text-muted" title="Ссылка на страницу в Facebook">
+                <a href="https://api.whatsapp.com/send?phone=996502900500" class="whatsapp-sprite waves-effect waves-light text-muted" title="Ссылка на страницу в whatsapp">
                 </a>
             </li>
             <li class="nav-item mr-3">
