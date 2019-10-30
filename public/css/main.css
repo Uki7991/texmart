@@ -516,5 +516,43 @@ body{
         height: 56px;
     }
 }
+/*end style for category.blade.php*/
+
+/*style for our_adcantages.blade.php*/
+
+@media all and (min-width: 0px) and (max-width: 570px){
+    #preim {
+        width: 37px!important;
+        height: auto!important;
+    }
+    .pad-micro-mob{
+        padding-top: 0.7rem!important;
+    }
+    .mar-micro-mob{
+        margin-bottom: 0!important;
+    }
+}
 
 
+@media all and (min-width: 576px){
+    #preim {
+        width: 43px!important;
+        height: auto!important;
+    }
+    /*.mar-medium-tablet{*/
+        /*margin-bottom: ;*/
+    /*}*/
+}
+@media all and (min-width: 999px){
+    #preim {
+        width: 47px!important;
+        height: auto!important;
+    }
+
+}
+@media all and (min-width: 1200px){
+    #preim {
+        width: 57px!important;
+        height: auto!important;
+    }
+}
