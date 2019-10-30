@@ -17,7 +17,8 @@
     @include('blocks.category')
     @include('blocks.our_advantages')
     @include('blocks.applications')
-    @include('blocks.sliders')
+{{--    @include('blocks.sliders')--}}
+    @include('blocks.announcement')
     @include('blocks.reviews')
     @include('blocks.blog')
     @include('blocks.form')
