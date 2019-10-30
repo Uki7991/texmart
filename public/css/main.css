@@ -456,7 +456,65 @@ body{
 }
 
 /*style for button in category.blade.php*/
-.card-btn{
-    width: 200px!important;
-    height: 200px!important;
+
+
+@media all and (min-width: 0px) {
+    .card-btn{
+        width: 90px!important;
+        height: 90px!important;
+        background: #e6e6e6!important;
+    }
+    .text-btn{
+        font-size: 8px!important;
+    }
+    .card-btn .img-fluid{
+        width: 36px;
+        height: 36px;
+    }
 }
+
+@media all and (min-width: 576px){
+    .card-btn{
+        width: 100px!important;
+        height: 100px!important;
+        background: #e6e6e6!important;
+    }
+    .text-btn{
+        font-size: 12px!important;
+    }
+    .card-btn .img-fluid{
+        width: 40px;
+        height: 40px;
+    }
+
+}
+@media all and (min-width: 999px){
+    .card-btn{
+        width: 150px!important;
+        height: 150px!important;
+        background: #e6e6e6!important;
+    }
+    .text-btn{
+        font-size: 14px;
+    }
+    .card-btn .img-fluid{
+        width: 46px;
+        height: 46px;
+    }
+}
+@media all and (min-width: 1200px){
+    .card-btn{
+        width: 200px!important;
+        height: 200px!important;
+        background: #e6e6e6!important;
+    }
+    .text-btn{
+        font-size: 16px;
+    }
+    .card-btn .img-fluid{
+        width: 56px;
+        height: 56px;
+    }
+}
+
+
