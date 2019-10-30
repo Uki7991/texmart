@@ -455,4 +455,8 @@ body{
     }
 }
 
-
+/*style for button in category.blade.php*/
+.card-btn{
+    width: 200px!important;
+    height: 200px!important;
+}

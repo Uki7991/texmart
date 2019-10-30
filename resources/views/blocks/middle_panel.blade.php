@@ -38,7 +38,7 @@
                 <div class="add_announcement col-12 position-relative text-center">
                     <a href="" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
-                
+
                 <div class="text-center col-12 position-relative mt-5">
                     <ul class="list-inline text-light">
                         <li class="list-inline-item">
