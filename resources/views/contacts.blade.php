@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('content')
+    <section class="bg-texmart-sidebar fixed-top">
+        <div class="container">
+            @include('blocks.header')
+        </div>
+    </section>
     <section class="bg-contacts">
         <div class="container h-100">
             <div class="row align-items-end h-100">
@@ -22,14 +27,13 @@
                         На этом портале Вы найдете долгосрочного партнера в швейно-текстильной сфере!
                         <br>
                     </p>
-
                     <div class="col-12 d-flex mb-3">
                         <i class="fas fa-phone p-1"></i>
                         <p class="m-0 p-0 ml-2">+996 508 900 500</p>
                     </div>
                     <div class="col-12 d-flex mb-3">
                         <i class="fas fa-map-marker-alt p-1"></i>
-                        <p class="m-0 p-0 ml-2">Кыргызстан, г. Бишкек, ул. Тоголока Молдо 104</p>
+                        <p class="m-0 p-0 ml-2">Кыргызстан, г. Бишкек, ул. Шопокова 121/1</p>
                     </div>
                     <div class="col-12 d-flex mb-3">
                         <i class="fas fa-envelope p-1"></i>
