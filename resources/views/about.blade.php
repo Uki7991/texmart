@@ -5,7 +5,7 @@
             @include('blocks.header')
         </div>
     </section>
-    <section class="bg-about">
+    <section class="bg-about mt-xl-5">
         <div class="container h-100">
             <div class="row align-items-end h-100">
                 <div class="h1 text-white">
