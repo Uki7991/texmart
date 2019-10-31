@@ -435,16 +435,28 @@ body{
 #owl-otzivi .owl-nav {
     display: block !important;
 }
-#owl-otzivi .owl-nav .owl-prev.disabled,
-#owl-otzivi .owl-nav .owl-next.disabled{
-    pointer-events: none;
-    opacity: 0.2;
+/*#owl-otzivi .owl-nav .owl-prev.disabled,*/
+/*#owl-otzivi .owl-nav .owl-next.disabled{*/
+/*    pointer-events: none;*/
+/*    opacity: 0.2;*/
+/*}*/
+/*#owl-otzivi .owl-nav .prev-slide:hover{*/
+/*    background-position: 0px -53px;*/
+/*}*/
+/*#owl-otzivi .next-slide:hover{*/
+/*    background-position: -24px -53px;*/
+/*}*/
+#owl-otzivi .owl-nav .owl-prev,
+#owl-otzivi .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
 }
-#owl-otzivi .owl-nav .prev-slide:hover{
-    background-position: 0px -53px;
-}
-#owl-otzivi .next-slide:hover{
-    background-position: -24px -53px;
+
+#owl-otzivi .owl-nav .owl-next {
+    left: auto;
+    right: 0;
 }
 @media (min-width: 768px) {
     .about-us-block {
