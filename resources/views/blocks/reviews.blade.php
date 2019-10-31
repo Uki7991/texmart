@@ -2,7 +2,7 @@
     <h2 class="text-center" style="color: #e99b33 !important;">
         Отзывы
     </h2>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center bg-grey-blog">
         <div id="owl-otzivi" class="owl-carousel owl-theme col-8">
             <div class="item">
                 <div class="card justify-content-center">
