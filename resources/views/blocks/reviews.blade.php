@@ -169,7 +169,6 @@
             loop: true,
             margin: 10,
             nav: true,
-            navigation: true,
             touchDrag: true,
             responsive: {
                 0: {
