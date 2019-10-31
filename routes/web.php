@@ -114,10 +114,6 @@ Route::get('/conditions',function(){
     return view('conditions');
 })->name('conditions');
 
-Route::get('/offer',function(){
-    return view('offer');
-})->name('offer');
-
 Route::get('/delivery',function(){
     return view('delivery');
 })->name('delivery');
@@ -129,6 +125,18 @@ Route::get('/blog',function(){
 Route::get('/logistics',function(){
     return view('logistics');
 })->name('logistics');
+
+Route::get('/production',function(){
+    return view('production');
+})->name('production');
+
+Route::get('/gds',function(){
+    return view('gds');
+})->name('gds');
+
+Route::get('/service',function(){
+    return view('service');
+})->name('service');
 
 Auth::routes();
 
