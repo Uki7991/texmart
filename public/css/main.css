@@ -449,14 +449,16 @@ body{
 #owl-otzivi .owl-nav .owl-prev,
 #owl-otzivi .owl-nav .owl-next {
     position: absolute;
+    color:white;
     top: 50%;
-    left: 0;
+    font-size: 58px;
+    left: -3%;
     transform: translate(0,-50%);
 }
 
 #owl-otzivi .owl-nav .owl-next {
     left: auto;
-    right: 0;
+    right: -3%;
 }
 @media (min-width: 768px) {
     .about-us-block {
