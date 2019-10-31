@@ -1,7 +1,7 @@
 <div class="container py-5">
     <h2 class="mb-5" style="color:#CD882D ">Заявки от заказчиков </h2>
     <div class="row">
-            <div class="col-4 slider">
+            <div class="col-12 col-md-4 slider">
                 <div class="item_slider">
                     <div class="application_for">
                         <div class="app_content">
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-        <div class="col-8">
+        <div class="col-12 col-md-8">
             <div class="card-deck">
                 <div class="card mb-4" style="margin-right: 0;">
                     <div class="view overlay">

@@ -453,7 +453,13 @@ body{
     left: 0;
     transform: translate(0,-50%);
 }
-
+.bg-grey-blog{
+    background: url('../images/grey-block.png') no-repeat right bottom;
+    background-size: 350px 290px;
+    -moz-background-size: 350px 290px;
+    -o-background-size: 350px 290px;
+    -webkit-background-size: 350px 290px;
+}
 #owl-otzivi .owl-nav .owl-next {
     left: auto;
     right: 0;
