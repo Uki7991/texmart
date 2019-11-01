@@ -31,7 +31,8 @@
                                 <div class="ml-auto d-flex align-items-center"><a
                                         href=""
                                         class="text-dark text-decoration-none">
-                                    </a><a href="#" data-id=""
+                                    </a>
+                                    <a href="#" data-id=""
                                            class="btn  shadow-sm rounded-pill mx-1 call-btn transition-100 btn-sm"
                                            data-toggle="modal" data-target="#callToProduction">
                                         <i class="fas fa-envelope text-success"></i>
@@ -154,10 +155,32 @@
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-around align-items-center">
+                    <p class="">Показано: 1-20 of 31 результат(ов)</p>
+                    <nav>
+                        <ul class="pagination pg-amber">
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link">1</a></li>
+                            <li class="page-item"><a class="page-link">2</a></li>
+                            <li class="page-item"><a class="page-link">3</a></li>
+                            <li class="page-item"><a class="page-link">4</a></li>
+                            <li class="page-item"><a class="page-link">5</a></li>
+                            <li class="page-item">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-        <div>
-            <p></p>
-        </div>
+
     </div>
 @endsection
