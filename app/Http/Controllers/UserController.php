@@ -188,7 +188,7 @@ class UserController extends Controller
     public function registerPhone(Request $request)
     {
         $data = $request->toArray();
-        $data['phone'] = str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']);
+        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[ -]/', '', $data['phone']);
         $validator = Validator::make($data, [
             'code' => 'required|string',
             'phone' => 'required|string|unique:users',
@@ -216,9 +216,8 @@ class UserController extends Controller
 
         $user->phone = '';
         $user->save();
-
         $data = $request->toArray();
-        $data['phone'] = str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']);
+        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[ -]/', '', $data['phone']);
         $validator = Validator::make($data, [
             'code' => 'required|string',
             'phone' => 'required|string|unique:users',
