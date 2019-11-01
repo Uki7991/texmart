@@ -8,11 +8,19 @@
     </section>
 
     <section class=" mt-5 pt-5">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
 
                 <div class="col-3">
-
+                    <nav class="nav flex-column bg-texmart-sidebar lighten-5 py-4">
+                        <a class="nav-link text-center" href="/">
+                            <img src="{{asset('img/logo3.png')}}" alt="">
+                        </a>
+                        <a class="nav-link text-dark text-center" href="#">Active</a>
+                        <a class="nav-link text-dark text-center" href="#">Link</a>
+                        <a class="nav-link text-dark text-center" href="#">Link</a>
+                        <a class="nav-link text-dark text-center" href="#">Disabled</a>
+                    </nav>
                 </div>
 
                 <div class="col-6">
