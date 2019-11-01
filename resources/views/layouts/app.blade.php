@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{ asset('css/mmenu.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.rateyo.css') }}">
     @stack('styles')
 </head>
 <body>
@@ -53,6 +54,7 @@
     <script src="{{ asset('js/mmenu.js') }}"></script>
     <script src="{{asset('js/slick.min.js')}}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.rateyo.js') }}"></script>
     @stack('scripts')
 </body>
 </html>
