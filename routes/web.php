@@ -66,8 +66,8 @@ Route::get('/traffic',function (){
 })->name('traffic');
 
 Route::get('/news',function (){
-   return view('news');
-})->name('news');
+   return view('user_page');
+})->name('user_page');
 
 Route::get('announcement',function(){
     return view('announcement.announcement');
@@ -92,6 +92,15 @@ Route::get('/about_us',function(){
 Route::get('/consulting',function(){
     return view('consulting');
 })->name('consulting');
+
+Route::get('/product',function(){
+    return view('product_description');
+})->name('product_description');
+
+Route::get('/user',function (){
+    return view('user-login');
+})->name('user-login');
+
 
 
 Route::get('/logistic',function(){
