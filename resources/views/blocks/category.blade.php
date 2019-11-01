@@ -1,56 +1,60 @@
-<div class="container mt-5">
+<div class="container py-5">
     <h2 class="text-center" style="color: #e99b33 !important;padding-bottom: 25px">
         Категории
     </h2>
-    <a ></a>
-    <div class="col-12 row justify-content-center">
-        <a href="#" class="btn p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-0 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/women_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">Женская одежда</p>
-        </a>
-        <a href="" class="btn p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-0 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/polo_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">
-                Мужская
-                одежда
-            </p>
-        </a>
-        <a href="" class="btn p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-5 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/baby_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">
-                Детская одежда
-            </p>
-        </a>
-        <a href="" class="btn  p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-5 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/specialist_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">
-                Спец одежда
-            </p>
-        </a>
+    <div class="row justify-content-center">
+        <div class="row col-10">
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+                    <img class="w-25 mx-auto" src="{{ asset('icons/women_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Женская одежда</p>
+                </a>
+            </div>
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+                    <img class="w-25 mx-auto" src="{{ asset('icons/polo_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Мужская одежда</p>
+                </a>
+            </div>
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+                    <img class="w-25 mx-auto" src="{{ asset('icons/baby_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Детская одежда</p>
+                </a>
+            </div>
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+                    <img class="w-25 mx-auto" src="{{ asset('icons/specialist_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Спец одежда</p>
+                </a>
+            </div>
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+                    <img class="w-25 mx-auto" src="{{ asset('icons/big_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Батальные размеры</p>
+                </a>
+            </div>
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+                    <img class="w-25 mx-auto" src="{{ asset('icons/other_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Прочее</p>
+                </a>
+            </div>
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+
+                    <img class="w-25 mx-auto" src="{{ asset('icons/cloth_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Ткань, фурнитура</p>
+                </a>
+            </div>
+            <div class="col-3 mb-5">
+                <a href="#" class="card py-5" style="border-radius: 10px;">
+
+                    <img class="w-25 mx-auto" src="{{ asset('icons/service_dress_category.png') }}" alt="Card image cap">
+                    <p class="card-title mt-4 text-dark text-center">Услуги</p>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="col-12 row justify-content-center mt-5">
-        <a href="" class="btn  p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-0 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/big_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">Женская одежда</p>
-        </a>
-        <a href="" class="btn p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-0 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/other_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">
-                Мужская
-                одежда
-            </p>
-        </a>
-        <a href="" class="btn  p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-5 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/cloth_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">
-                Детская одежда
-            </p>
-        </a>
-        <a href="" class="btn  p-1 py-lg-2 px-lg-2 py-xl-4 px-xl-5 card-btn mx-4 mt-5 mt-md-2" style="border-radius: 10px">
-            <img class="img-fluid" src="{{asset('icons/service_dress_category.png')}}" alt="Card image cap">
-            <p class="card-text pt-3 text-btn text-dark">
-                Спец одежда
-            </p>
-        </a>
-    </div>
+
 </div>

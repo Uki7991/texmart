@@ -440,9 +440,11 @@ body{
     position: absolute;
     color:white;
     top: 50%;
-    font-size: 58px;
+    font-size: 46px;
     left: -3%;
     transform: translate(0,-50%);
+    background: radial-gradient(51.95% 243.1% at 87.23% 110.69%, rgba(205, 136, 45, 0.99) 0%, rgba(171, 111, 31, 0.99) 100%);
+    width: 39px;
 }
 .bg-grey-blog{
     background: url('../images/grey-block.png') no-repeat right bottom;
