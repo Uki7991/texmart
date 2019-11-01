@@ -92,6 +92,10 @@ Route::get('/about_us',function(){
 Route::get('/consulting',function(){
     return view('consulting');
 })->name('consulting');
+Route::get('/product',function(){
+    return view('product_description');
+})->name('product_description');
+
 
 
 Route::get('/logistic',function(){
