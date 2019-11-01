@@ -53,8 +53,12 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/mmenu.js') }}"></script>
     <script src="{{asset('js/slick.min.js')}}"></script>
+
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    {{--connect rateyo.js--}}
     <script src="{{ asset('js/jquery.rateyo.js') }}"></script>
+    {{--connect chart.js with CDN--}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     @stack('scripts')
 </body>
 </html>

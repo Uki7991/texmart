@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    {{--<section class="bg-texmart-sidebar fixed-top">
+    <section class="bg-texmart-sidebar fixed-top">
         <div class="container">
             @include('blocks.header')
         </div>
@@ -49,61 +49,31 @@
                 </div>
             </div>
         </div>
-    </div>--}}
-    <section class="bg-texmart-sidebar fixed-top">
-        <div class="container">
-            @include('blocks.header')
-        </div>
-    </section>
+    </div>
 
-    <section class=" mt-5 pt-3">
-        <div class="container">
-            <div class="row">
 
-                <div class="col-3">
-
-                </div>
-
-                <div class="col-6">
-                    <section id="blog-components" class="text-center">
-
-                        <!--Section heading-->
-                        <h3 class="section-heading mb-5 h1">Blog components</h3>
-
-                        <h5 class="">Author Box</h5>
-
-                        <!--Section: Author Box-->
-                        <section class="my-5">
-
-                            <!-- Card header -->
-                            <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
-                                <p class="mr-4 mb-0">About the author</p>
-                                <ul class="list-unstyled list-inline mb-0">
-                                    <li class="list-inline-item"><a href="" class="mr-3"><i class="fas fa-envelope mr-1"></i>Send message</a></li>
-                                    <li class="list-inline-item"><a href="" class="mr-3"><i class="fas fa-user mr-1"></i>See profile</a></li>
-                                    <li class="list-inline-item"><a href="" class="mr-3"><i class="fas fa-feed mr-1"></i>Follow</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="media mt-4 px-1 text-md-left">
-                                <img class="card-img-100 d-flex z-depth-1 mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" alt="Generic placeholder image">
-                                <div class="media-body">
-                                    <h5 class="font-weight-bold mt-0">
-                                        <a href="">Danny Newman</a>
-                                    </h5>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consectetur accusamus velit nostrum et magnam.
-                                </div>
-                            </div>
-
-                        </section>
-                        <!--Section: Author Box-->
-
-                    </section>
-                </div>
-                <div class="col-3">
-
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
+
+@push('scripts')
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+@endpush
