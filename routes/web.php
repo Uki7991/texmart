@@ -32,7 +32,10 @@ Route::get('/get-categories', 'UserController@getCategories')->name('get.categor
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('google.redirect');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::get('/admin', 'AdminController@dashboard')->name('admin.dashboard');
+
+Route::group(['prefix' => 'admin', 'name' => 'admin.'], function () {
+    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
 
     Route::get('/message', 'HomeController@message')->name('message');
 

@@ -19,12 +19,17 @@ use Illuminate\Support\Facades\Session;
 
 class ProductionController extends Controller
 {
+    public function index(Request $request)
+    {
+        return view('admin.productions.index');
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index2(Request $request)
     {
         if ($request->type == 'productions') {
             $productions = Production::where('type', 'productions')->get();
