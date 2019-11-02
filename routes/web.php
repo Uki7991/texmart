@@ -127,9 +127,9 @@ Route::get('/delivery',function(){
     return view('delivery');
 })->name('delivery');
 
-Route::get('/blog',function(){
-    return view('blog');
-})->name('blog');
+Route::get('/blog_index',function(){
+    return view('blog.blog_index');
+})->name('blog_index');
 
 Route::get('/logistics',function(){
     return view('logistics');
