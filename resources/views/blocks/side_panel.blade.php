@@ -66,7 +66,7 @@
                 <li><a href="/services/marketing">Marketing</a></li>
             </ul>
         </li>
-        <li><a href="/contact">Контакты</a></li>
+        <li><a href="http://texmart/contacts">Контакты</a></li>
     </ul>
 </nav>
 
