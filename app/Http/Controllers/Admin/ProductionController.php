@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Production;
+use App\Type;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
@@ -14,67 +16,21 @@ class ProductionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function indexProduction(Request $request)
+    public function index(Request $request)
     {
-        return view('admin.productions.index');
+        $type = $request->type;
+
+        return view('admin.productions.index', [
+            'type' => $type,
+        ]);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function indexService(Request $request)
+    public function datatable(Request $request)
     {
-        return view('admin.productions.index');
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function indexProduct(Request $request)
-    {
-        return view('admin.productions.index');
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\Response
-     * @throws \Exception
-     */
-    public function dataTableProduction(Request $request)
-    {
-        $productions = Production::where('type', 'productions')->get();
+        $type = $request->type;
+        $productions = Production::where('type', $type)->get();
 
         return DataTables::of($productions)->make(true);
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function dataTableService(Request $request)
-    {
-        $services = Production::where('type', 'service')->get();
-
-        return DataTables::of($services)->make(true);
-    }
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function dataTableProduct(Request $request)
-    {
-        $products = Production::where('type', 'product')->get();
-
-        return DataTables::of($products)->make(true);
     }
 
     /**
@@ -82,9 +38,29 @@ class ProductionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $requestType = $request->type;
+
+        $types = Type::all();
+        $productCats = collect();
+        foreach ($types as $type) {
+            if ($requestType == 'productions' && $type->title == 'Производство') {
+                $productCats = $productCats->merge($type->categories);
+            }
+            if ($requestType == 'service' && $type->title == 'Услуги') {
+                $productCats = $productCats->merge($type->categories);
+            }
+            if ($requestType == 'product' && $type->title == 'Товары') {
+                $productCats = $productCats->merge($type->categories);
+            }
+        }
+
+        return view('admin.productions.create', [
+            'productCats' => $productCats,
+            'users' => User::whereIn('role_id', [4, 5])->get(),
+            'type' => $requestType,
+        ]);
     }
 
     /**

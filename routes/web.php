@@ -32,9 +32,15 @@ Route::get('/get-categories', 'UserController@getCategories')->name('get.categor
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('google.redirect');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
 
-Route::get('/admin', 'AdminController@dashboard')->name('admin.dashboard');
+Route::get('/admin', 'AdminController@admin')->name('admin.admin');
 
-Route::group(['prefix' => 'admin', 'name' => 'admin.'], function () {
+Route::prefix('admin')->name('admin.')->group(function () {
+    /**
+     * Production routes
+     */
+    Route::get('/production/datatable', 'Admin\ProductionController@datatable')->name('production.datatable');
+    Route::resource('production', 'Admin\ProductionController');
+
     Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
 
     Route::get('/message', 'HomeController@message')->name('message');
