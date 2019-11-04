@@ -19,12 +19,17 @@ use Illuminate\Support\Facades\Session;
 
 class ProductionController extends Controller
 {
+    public function index(Request $request)
+    {
+        return view('admin.productions.index');
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index2(Request $request)
     {
         if ($request->type == 'productions') {
             $productions = Production::where('type', 'productions')->get();
@@ -49,9 +54,28 @@ class ProductionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('productions.create');
+        $requestType = $request->type;
+
+        $types = Type::all();
+        $productCats = collect();
+        foreach ($types as $type) {
+            if ($requestType == 'productions' && $type->title == 'Производство') {
+                $productCats = $productCats->merge($type->categories);
+            }
+            if ($requestType == 'service' && $type->title == 'Услуги') {
+                $productCats = $productCats->merge($type->categories);
+            }
+            if ($requestType == 'product' && $type->title == 'Товары') {
+                $productCats = $productCats->merge($type->categories);
+            }
+        }
+        dd($productCats);
+        return view('productions.create', [
+            'productCats' => $productCats,
+            'users' => User::whereIn('role_id', [4, 5])->get(),
+        ]);
     }
 
     /**

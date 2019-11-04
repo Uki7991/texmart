@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Midnite81\GeoLocation\Services\GeoLocation;
 
 class Controller extends BaseController
@@ -18,7 +19,13 @@ class Controller extends BaseController
     {
         $address = request()->server('REMOTE_ADDR');
 
-        $ipLocation = $geoLocation->getCity($address);
+        $ipLocation = null;
+
+        try {
+            $ipLocation = $geoLocation->getCity($address);
+        } catch (\Exception $exception) {
+            Log::alert($exception->getMessage());
+        }
 
         $addressFinded = DB::table('addresses')->where('address', $address)->get();
 

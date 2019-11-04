@@ -3,10 +3,10 @@
         Наш Блог
     </h2>
     <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-md-4 col-lg-4 col-sm-12 pb-sm-5 mb-4 mb-md-1">
             <div class="card">
                 <img class="card-img-top" src="{{asset('img/blog_1.png')}}" alt="Card image cap">
-                <div class="card-body">
+                <div class="card-body pb-3 pb-md-4">
                     <p>28.09.19</p>
                     <h4 class="card-title"><a>Какая-то тема</a></h4>
                     <p class="card-text">Сайт рыбатекст поможет дизайнеру,
@@ -17,10 +17,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-12 col-md-8 mb-md-4 mb-sm-2">
             <div class="card mb-3">
                 <img src="{{asset('img/blog_2.png')}}" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body mb-3 mb-md-2 pb-md-3 pb-lg-3">
                     <p class="card-text"><small class="text-muted">28.09.19</small></p>
                     <h5 class="card-title text-center">Какая-то тема</h5>
                     <p class="card-text text-center">Сайт рыбатекст поможет дизайнеру, верстальщику,
