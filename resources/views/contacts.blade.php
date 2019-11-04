@@ -7,8 +7,8 @@
     </section>
     <section class="bg-contacts">
         <div class="container h-100">
-            <div class="row align-items-end h-100">
-                <div class="h1 text-white">
+            <div class="row align-items-end justify-content-center justify-content-md-start h-100">
+                <div class="h1 text-white text-center">
                     Контакты
                 </div>
             </div>

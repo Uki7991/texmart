@@ -7,8 +7,8 @@
     </section>
     <section class="bg-consulting">
         <div class="container h-100">
-            <div class="row align-items-end h-100">
-                <div class="h1 text-white pb-5 text_for_info">
+            <div class="row align-items-end justify-content-center justify-content-md-start h-100">
+                <div class="h1 text-white pb-5 text_for_info text-center">
                     Консалтинг
                 </div>
             </div>
@@ -16,7 +16,7 @@
     </section>
     <section>
         <div class="container py-5">
-            <div class="row justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-center text-justify">
                 <div class="col-12 text-for-clq">
                     <p>
                         Ключевая задача и одновременно цель консалтинга - усовершенствование менеджмента, улучшить
@@ -29,17 +29,15 @@
                         процессы.
                     </p>
                 </div>
-
             </div>
-
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="font-weight-bold">Приоритетами консалтинга являются:</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-9 text-for-clq">
-                    <ul class="font-weight-normal" style="line-height: 2.5em">
+                <div class="col-12 text-for-clq">
+                    <ul class="font-weight-normal">
                         <li>поиск проблем компаний ведущих деятельность в купле продаже одежды и текстильных
                             продукций.
                         </li>
@@ -51,7 +49,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="row justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-center text-justify">
                 <div class="col-12  py-4 text-for-clq">
                     <p>
                         И вот тут Тексмарт Вас приятно удивит, долгое время работая в сфере производства, изготовления

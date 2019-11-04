@@ -1,4 +1,4 @@
-p, h1, h2, h3, h4, h5, h6,span{
+*{
     font-family: 'OpenSans', sans-serif;
 }
 .maxw-content {
@@ -448,20 +448,13 @@ p, h1, h2, h3, h4, h5, h6,span{
     width: 42px;
 }
 .text_for_info {
-    font-weight: 600;
-    font-size: 65px;
 }
 .text-for-about{
-    font-size: 18px;
     line-height: 25px;
 }
 .text-for-clq{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 19px;
     line-height: 26px;
 }
-
 
 .bg-grey-blog{
     background: url('../images/grey-block.png') no-repeat right bottom;
