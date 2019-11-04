@@ -36,28 +36,7 @@
     background: url("../newImages/texmart-box.png") no-repeat top right;
 }
 /*font size for all fonts*/
-body{
-    font-size: 0.5rem!important;
-    margin-top: 3.4rem;
-}
-@media(min-width: 576px){
-    body{
-        font-size: 0.6rem!important;
-        margin-top: 3.4rem;
-    }
-}
-@media(min-width: 768px){
-    body{
-        font-size: 0.7rem!important;
-        margin-top: 3.4rem;
-    }
-}
-@media(min-width: 1200px){
-    body{
-        font-size: 0.9rem!important;
-        margin-top: 0;
-    }
-}
+
 
 .scroll-top {
     border: 0;
