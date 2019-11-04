@@ -173,8 +173,8 @@
                 vertical: true,
                 autoplay: true,
                 autoplaySpeed: 3000,
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 3.5,
+                slidesToScroll: 1.5,
                 verticalSwiping: true,
             });
         });

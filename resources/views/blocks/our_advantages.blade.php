@@ -51,9 +51,9 @@
 
             {{--<iframe  frameborder="0" allow="></iframe>--}}
 
-            <a class="fancybox-media" href="https://www.youtube.com/watch?time_continue=3&v=xTYkmWnwLvg">
-                <img src="{{ asset('img/video.png') }}" class="img-fluid  h-75 position-relative" alt="">
-                <img src="{{asset('img/youtube(2).png')}}" class="youtube  position-absolute" style="left: 50%; top: 40%; transform: translate(-99%, -50%); " alt="">
+            <a class="fancybox-media position-relative" href="https://www.youtube.com/watch?time_continue=3&v=xTYkmWnwLvg">
+                <img src="{{ asset('img/video.png') }}" class="img-fluid   position-relative" alt="">
+                <img src="{{asset('img/youtube(2).png')}}" class="youtube  position-absolute" style="left: 50%; top: 50%; transform: translate(-50%, -50%); " alt="">
             </a>
 
         </div>
