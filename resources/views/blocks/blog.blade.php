@@ -77,4 +77,8 @@
             </div>
         </div>
     </div>
+    <div class="pt-3">
+        <a href="{{ route('blog_index') }}"><button type="submit"
+                class="btn btn-texmart-orange text-white btn-lg px-5 py-2 shadow-lg scale-on-hover "> Все новости>></button></a>
+    </div>
 </div>

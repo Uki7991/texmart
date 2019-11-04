@@ -23,6 +23,37 @@
         </ul>
     </div>
 </div>
-
+@push("scripts")
+    <script>
+        new Mmenu("#menu", {
+            "extensions": [
+                "pagedim-black"
+            ],
+            "navbars": [
+                {
+                    "position": "top",
+                    "content": [
+                        "searchfield"
+                    ]
+                },
+                {
+                    "position": "top",
+                    "content": [
+                        "prev",
+                        "title"
+                    ]
+                },
+                {
+                    "position": "bottom",
+                    "content": [
+                        "<a class='fa fa-envelope' href='#/'></a>",
+                        "<a class='fab fa-twitter' href='#/'></a>",
+                        "<a class='fab fa-facebook' href='#/'></a>"
+                    ]
+                }
+            ]
+        });
+    </script>
+@endpush
 
 
