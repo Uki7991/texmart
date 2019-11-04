@@ -16,8 +16,8 @@
                     </p>
                     <p class="mb-1 mb-md-3 mb-xl-3">
                         <img src="{{ asset('newImages/cards-star.png') }}" id="preim" class="my-1 my-md-2" alt="">
-
                     </p>
+                    <div class="sprite-community"></div>
                     <p class="mb-1 mb-md-3">
                         <img src="{{ asset('newImages/like.png') }}" id="preim" class="mt-1 mt-md-0" alt="">
 

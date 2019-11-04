@@ -166,6 +166,11 @@ p, h1, h2, h3, h4, h5, h6,span{
     width: 12px;
     height: 11px;
 }
+.sprite-community {
+    background: url('../images/sprite.png') no-repeat 50% 100%;
+    width: 56px;
+    height: 57px;
+}
 /*end style sprite image*/
 
 .slider{
