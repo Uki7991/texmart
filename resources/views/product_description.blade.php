@@ -5,7 +5,7 @@
             @include('blocks.header')
         </div>
     </section>
-    <section class="mt-xl-5 pt-xl-5">
+    <section class="mt-5 pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-3">
@@ -49,7 +49,7 @@
 
                 </div>
 
-                <div class="col-lg-9">
+                <div class="col-lg-9 pt-2 mt-1">
                     <a class="border border-texmart rounded-pill bg-texmart-sidebar text-white py-2 px-2 ">
                         Ветровки и толстовки
                     </a>
@@ -58,21 +58,96 @@
                             <div class="my-3" id="rateYo"></div>
                         </li>
                         <li class="list-inline-item">
-                            <a href="">
+                            <a href="" class="text-dark">
                                 25 отзывов
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="">
+                            <a href="" class="text-dark">
                                 написать отзыв
                             </a>
                         </li>
                     </ul>
                     <div class="col-12">
+                        <p class="h4">
+                            Мужские толстовки <a href="#" class="btn border-0 shadow-none p-0">
+                                <img src="{{ asset('icons/likeIcon.png') }}" alt="">
+                            </a>
+
+                        </p>
                         <div class="card">
 
+
+                            <div class="card-body">
+                                <div class="row d-none d-md-block">
+                                    <div class="col-6">
+                                        <p>
+                                            Бренд: <br> Какой-то
+                                        </p>
+
+                                    </div>
+                                    <div class="col-6">
+                                        <p>
+                                        <div id="rateYo1"></div>
+                                        Проверено администрацией Texmart.kg
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-block d-md-none">
+                                    <p>
+                                        <div id="rateYo2" class="py-2"></div>
+                                        Проверено администрацией Texmart.kg
+                                    </p>
+                                    <p>
+                                        Бренд: <br> Какой-то
+                                    </p>
+                                </div>
+                                <p>
+                                    Адрес: <br> г.Бишкек рынок Дордой 1 проход, 80/4 контейнер
+                                </p>
+
+                                <p>
+                                    Описание: <br>
+                                    г.Бишкек рынок Дордой 1 проход, 80/4 контейнер
+
+                                </p>
+
+                                <p>
+                                    Дата создания объявления: <br>
+                                    10 Октябрь 2019
+
+                                </p>
+                                <p>
+                                    E-mail: <br>
+                                    gbabatayeva@bk.ru
+
+                                </p>
+                                <p>
+                                    Телефон №1: <br>
+                                    +996 704 142 013
+
+                                </p>
+                                <p>
+                                    Телефон №2: <br>
+
+                                </p>
+                                <p>
+                                    Личный сайт: <br>
+
+                                </p>
+                            </div>
                         </div>
+
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+
                 </div>
             </div>
         </div>
@@ -90,6 +165,7 @@
             border-radius: 3px;
             text-align: center;
         }
+
         #sync2 .item {
             background: red;
             padding: 10px 0px;
@@ -99,21 +175,27 @@
             text-align: center;
             cursor: pointer;
         }
+
         #sync2 .item h1 {
             font-size: 18px;
         }
+
         #sync2 .current .item {
             background: gold;
         }
+
         .owl-theme .owl-nav [class*='owl-'] {
             transition: all 0.3s ease;
         }
+
         .owl-theme .owl-nav [class*='owl-'].disabled:hover {
             background-color: gold;
         }
+
         #sync1.owl-theme {
             position: relative;
         }
+
         #sync1.owl-theme .owl-next,
         #sync1.owl-theme .owl-prev {
             width: 22px;
@@ -122,9 +204,11 @@
             position: absolute;
             top: 50%;
         }
+
         #sync1.owl-theme .owl-prev {
             left: 10px;
         }
+
         #sync1.owl-theme .owl-next {
             right: 10px;
         }
@@ -136,7 +220,7 @@
 
     {{--two owl carousels--}}}
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             var sync1 = $("#sync1");
             var sync2 = $("#sync2");
@@ -144,14 +228,14 @@
             var syncedSecondary = true;
 
             sync1.owlCarousel({
-                items : 1,
-                slideSpeed : 2000,
+                items: 1,
+                slideSpeed: 2000,
                 nav: true,
                 autoplay: true,
                 dots: false,
                 loop: true,
-                responsiveRefreshRate : 200,
-                navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+                responsiveRefreshRate: 200,
+                navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
             }).on('changed.owl.carousel', syncPosition);
 
             sync2
@@ -159,24 +243,24 @@
                     sync2.find(".owl-item").eq(0).addClass("current");
                 })
                 .owlCarousel({
-                    items : slidesPerPage,
+                    items: slidesPerPage,
                     dots: false,
                     nav: false,
                     smartSpeed: 200,
-                    slideSpeed : 500,
+                    slideSpeed: 500,
                     slideBy: slidesPerPage,
-                    responsiveRefreshRate : 100
+                    responsiveRefreshRate: 100
                 }).on('changed.owl.carousel', syncPosition2);
 
             function syncPosition(el) {
 
-                var count = el.item.count-1;
-                var current = Math.round(el.item.index - (el.item.count/2) - .5);
+                var count = el.item.count - 1;
+                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
 
-                if(current < 0) {
+                if (current < 0) {
                     current = count;
                 }
-                if(current > count) {
+                if (current > count) {
                     current = 0;
                 }
 
@@ -200,26 +284,25 @@
             }
 
             function syncPosition2(el) {
-                if(syncedSecondary) {
+                if (syncedSecondary) {
                     var number = el.item.index;
                     sync1.data('owl.carousel').to(number, 100, true);
                 }
             }
 
-            sync2.on("click", ".owl-item", function(e){
+            sync2.on("click", ".owl-item", function (e) {
                 e.preventDefault();
                 var number = $(this).index();
                 sync1.data('owl.carousel').to(number, 300, true);
             });
 
-            $('.owl-next').click(function(){
+            $('.owl-next').click(function () {
 
                 $('.owl-carousel').trigger('stop.owl.autoplay');
 
             });
 
         });
-
 
 
     </script>
@@ -244,5 +327,43 @@
 
         // Setter
         $("#rateYo").rateYo("option", "starWidth", "20px"); //returns a jQuery Element
+    </script>
+    <script>
+        $(function () {
+
+            $("#rateYo1").rateYo({
+                ratedFill: "#E74C3C",
+                starWidth: "20px"
+            });
+
+        });
+        // Getter
+        var ratedFill = $("#rateYo1").rateYo("option", "ratedFill"); //returns "#E74C3C"
+
+        // Setter
+        $("#rateYo1").rateYo("option", "ratedFill", "#E74C3C"); //returns a jQuery Element
+        var starWidth = $("#rateYo1").rateYo("option", "starWidth"); //returns 40px
+
+        // Setter
+        $("#rateYo1").rateYo("option", "starWidth", "20px"); //returns a jQuery Element
+    </script>
+    <script>
+        $(function () {
+
+            $("#rateYo2").rateYo({
+                ratedFill: "#E74C3C",
+                starWidth: "20px"
+            });
+
+        });
+        // Getter
+        var ratedFill = $("#rateYo2").rateYo("option", "ratedFill"); //returns "#E74C3C"
+
+        // Setter
+        $("#rateYo2").rateYo("option", "ratedFill", "#E74C3C"); //returns a jQuery Element
+        var starWidth = $("#rateYo2").rateYo("option", "starWidth"); //returns 40px
+
+        // Setter
+        $("#rateYo2").rateYo("option", "starWidth", "20px"); //returns a jQuery Element
     </script>
 @endpush

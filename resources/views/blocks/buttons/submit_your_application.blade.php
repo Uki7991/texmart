@@ -1,11 +1,13 @@
-<ul class="btn-submit-your-application father">
+@include('blocks.buttons.button_request')
+
+<ul class="list-unstyled  btn-submit-your-application father" data-toggle="modal" data-target="#modalContactForm">
     <li>
         <a href="" class="form-call d-md-block d-none">
             <img src="{{asset('icons/submit_your_application.png')}}" class="icon_form" alt="оставить заявку">
         </a>
-        <ul class=" btn-submit-your-application-child">
+        <ul class="list-unstyled btn-submit-your-application-child">
             <li>
-                <a href="">оставить заявку</a>
+                <a href="btn" data-toggle="modal" data-target="#modalContactForm">оставить заявку</a>
             </li>
         </ul>
     </li>
