@@ -1,5 +1,5 @@
-*{
- font-family: OpenSans;
+p, h1, h2, h3, h4, h5, h6,span{
+    font-family: 'OpenSans', sans-serif;
 }
 .maxw-content {
     max-width: min-content!important;
