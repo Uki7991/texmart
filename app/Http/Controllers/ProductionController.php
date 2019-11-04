@@ -21,7 +21,13 @@ class ProductionController extends Controller
 {
     public function index(Request $request)
     {
-        return view('admin.productions.index');
+        $type = $request->type;
+        $productions = \auth()->user()->productions->where('type', $type);
+
+        return view('profile.productions.index', [
+            'type' => $type,
+            'productions' => $productions,
+        ]);
     }
 
     /**
@@ -71,10 +77,10 @@ class ProductionController extends Controller
                 $productCats = $productCats->merge($type->categories);
             }
         }
-        dd($productCats);
-        return view('productions.create', [
+        return view('profile.productions.create', [
             'productCats' => $productCats,
-            'users' => User::whereIn('role_id', [4, 5])->get(),
+//            'users' => User::whereIn('role_id', [4, 5])->get(),
+            'type' => $requestType,
         ]);
     }
 
