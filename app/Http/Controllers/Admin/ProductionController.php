@@ -7,10 +7,17 @@ use App\Type;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Midnite81\GeoLocation\Services\GeoLocation;
 use Yajra\DataTables\Facades\DataTables;
 
 class ProductionController extends Controller
 {
+    public function __construct(GeoLocation $geoLocation)
+    {
+        $this->middleware('admin');
+        parent::__construct($geoLocation);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -71,7 +78,10 @@ class ProductionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $production = new Production($request->all());
+        $production->save();
+
+        return redirect()->route('admin.production.index', ['type' => 'product']);
     }
 
     /**

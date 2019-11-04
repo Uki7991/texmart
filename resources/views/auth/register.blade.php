@@ -4,7 +4,7 @@
     <div class="promo-register">
         <div class="backdrop"></div>
         <div class="container h-100">
-            <div class="row h-100 justify-content-center align-items-center">
+            <div class="row h-100 min-vh-100 justify-content-center align-items-center">
                 <div class="col-12 col-lg-10 shadow-lg">
                     <div class="row">
                         <div class="col-md-auto col-2 bg-light rounded-left py-3 text-secondary">

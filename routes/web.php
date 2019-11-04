@@ -34,7 +34,7 @@ Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCal
 
 Route::get('/admin', 'AdminController@admin')->name('admin.admin');
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
     /**
      * Production routes
      */
