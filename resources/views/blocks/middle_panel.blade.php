@@ -1,5 +1,5 @@
 <div class="container-fluid position-relative mt-5 mt-xl-0 vh-100" style="overflow:hidden;">
-    <div class="row pl-5" style="left: 0; top: 0;">
+    <div class="row pl-xl-5" style="left: 0; top: 0;">
         <div class="col-12 position-absolute p-0">
             {{--new carousel but this carousel is slick.js carouse--}}
             <div class="" id="background-carousel" style="z-index: 0;">
