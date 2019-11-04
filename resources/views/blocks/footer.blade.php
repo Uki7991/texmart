@@ -3,7 +3,7 @@
         <h5>О компании</h5>
         <nav class="nav flex-column">
             <a class="nav-link text-dark small nav-scale" href="/about" title="О нас"><i class="fa fa-angle-double-right"></i> О нас</a>
-            <a class="nav-link text-dark small nav-scale" href="" title="Блог"><i class="fa fa-angle-double-right"></i> Блог</a>
+            <a class="nav-link text-dark small nav-scale" href="/blog_index" title="Блог"><i class="fa fa-angle-double-right"></i> Блог</a>
             <a class="nav-link text-dark small nav-scale" href="/contacts" title="контакты"><i class="fa fa-angle-double-right"></i> Контакты</a>
         </nav>
     </div>

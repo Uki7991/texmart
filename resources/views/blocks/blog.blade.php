@@ -1,8 +1,8 @@
-<div class="container mt-5 pb-5">
-    <h2 class="text-center" style="color: #e99b33 !important;padding-bottom: 25px">
+<div class="container mt-5 pb-5 text-center">
+    <a href="{{ route('blog_index') }}" class="text-center h2 " style="color: #e99b33 !important;padding-bottom: 25px;text-align: center">
         Наш Блог
-    </h2>
-    <div class="row">
+    </a>
+    <div class="row pt-3">
         <div class="col-12 col-md-4 col-lg-4 col-sm-12 pb-sm-5 mb-4 mb-md-1">
             <div class="card">
                 <img class="card-img-top" src="{{asset('img/blog_1.png')}}" alt="Card image cap">

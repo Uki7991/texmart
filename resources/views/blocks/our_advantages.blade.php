@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row justify-content-center py-5">
+    <div class="row justify-content-center">
         <div class="col-12">
             <h2 class="text-center" style="color: #e99b33 !important;">
                 Наши преимущества
