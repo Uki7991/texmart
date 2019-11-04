@@ -13,6 +13,9 @@
     <div class="container d-none d-xl-block">
         @include('blocks.side_panel')
     </div>
+    <div class="mt-5 d-xl-none">
+        @include('blocks.middle_panel')
+    </div>
     @include('blocks.middle_panel')
     @include('blocks.category')
 {{--    <div class="jumbotron">--}}
