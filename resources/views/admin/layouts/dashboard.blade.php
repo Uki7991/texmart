@@ -15,11 +15,3 @@
         </div>
     </div>
 @endsection
-
-@push('styles')
-    @stack('dashboard.styles')
-@endpush
-
-@push('scripts')
-
-@endpush

@@ -2,41 +2,137 @@
     <div class="row">
 
         <div class="col-12 col-sm-10 col-lg-10 col-md-10">
-            <form action="{{ route('productions.store') }}" enctype="multipart/form-data" method="POST">
+            <form action="{{ route('admin.production.store') }}" enctype="multipart/form-data" method="POST">
                 @if($errors->any())
                     <span class="invalid-feedback d-block">
                                 <strong>У вас есть ошибки при заполнении</strong>
                             </span>
                 @endif
                 @csrf
-                <input type="hidden" name="type" value="product">
+                <input type="hidden" name="type" value="{{ $type }}">
                 <div class="form-group">
-                    <label>
-                        Название товара <span class="text-danger">*</span>
-                    </label>
-                    <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" required>
-                    @error('title')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                    @enderror
+                    <label for="user_id">Выберите поставщика</label>
+                    <select name="user_id" id="user_id" class="form-control">
+                        <option value="{{ null }}">Выберите номер</option>
+                        @foreach($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name .' | '. $user->email . ' | ' . $user->phone }}</option>
+                        @endforeach
+                    </select>
                 </div>
-                <div class="form-group">
-                    <label>
-                        Бренд <span class="text-danger">*</span>
-                    </label>
-                    <input type="text" name="brand" class="form-control @error('brand') is-invalid @enderror" value="{{ old('brand') }}">
-                    @error('brand')
-                    <span class="invalid-feedback" role="alert">
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label>
+                            Название товара <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
+                               value="{{ old('title') }}" required>
+                        @error('title')
+                        <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                         </span>
-                    @enderror
+                        @enderror
+                    </div>
+                    <div class="form-group col-4">
+                        <label>
+                            Бренд <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" name="brand" class="form-control @error('brand') is-invalid @enderror"
+                               value="{{ old('brand') }}">
+                        @error('brand')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
+                    </div>
+                    <div class="form-group col-4">
+                        <label>
+                            Цена <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" name="price" class="form-control @error('price') is-invalid @enderror"
+                               value="{{ old('price') }}">
+                        @error('price')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
+                    </div>
+                </div>
+
+                    <h3>Укажите ваши контактные данные:</h3>
+                    <div class="form-row">
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="phone1">Телефон #1 <span class="text-danger">*</span></label>
+                                <input type="hidden" name="code">
+                                <input type="text" name="phone1"
+                                       class="form-control phone1 @error('phone1') ' is-invalid ' @enderror" required>
+                                @error('phone1')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="phone2">Телефон #2</label>
+                                <input type="hidden" name="code2">
+                                <input type="text" name="phone2"
+                                       class="form-control phone2 @error('phone2') is-invalid @enderror">
+                                @error('phone2')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
+                                       id="email">
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+
+
+                <div class="form-row">
+                    <div class="col-12 col-sm-10 col-md-6">
+                        <div class="form-group">
+                            <label for="site">Личный сайт (если он есть)</label>
+                            <input type="text" class="form-control @error('site') is-invalid @enderror"
+                                   value="{{ old('site') }}" name="site" id="site" placeholder="Сайт">
+                            {{--                                @error('site')--}}
+                            {{--                                <span class="invalid-feedback" role="alert">--}}
+                            {{--                                        <strong>{{ $message }}</strong>--}}
+                            {{--                                        </span>--}}
+                            {{--                                @enderror--}}
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-10 col-md-6">
+                        <div class="form-group">
+                            <label for="address">Укажите адрес <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control @error('address') is-invalid @enderror"
+                                   value="{{ old('address') }}" name="address" id="address" required>
+                            @error('address')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                            @enderror
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>
                         Выберите главную картинку для объявления <span class="text-danger">*</span>
                     </label>
-                    <input type="file" name="logo" id="image-input2" class="form-control @error('logo') is-invalid @enderror" value="{{ old('logo') }}" required>
+                    <input type="file" name="logo" id="image-input2"
+                           class="form-control @error('logo') is-invalid @enderror" value="{{ old('logo') }}" required>
                     @error('logo')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -84,33 +180,11 @@
                                         </span>
                     @enderror
                 </div>
-                <div class="form-row">
-                    <div class="col-12 col-sm-10 col-md-6">
-                        <div class="form-froup">
-                            <label for="site">Личный сайт (если он есть)</label>
-                            <input type="text" class="form-control @error('site') is-invalid @enderror" value="{{ old('site') }}" name="site" id="site" placeholder="Сайт">
-                            {{--                                @error('site')--}}
-                            {{--                                <span class="invalid-feedback" role="alert">--}}
-                            {{--                                        <strong>{{ $message }}</strong>--}}
-                            {{--                                        </span>--}}
-                            {{--                                @enderror--}}
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-10 col-md-6">
-                        <div class="form-froup">
-                            <label for="address">Укажите адрес <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control @error('address') is-invalid @enderror" value="{{ old('address') }}" name="address" id="address" required>
-                            @error('address')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
+
                 <div class="form-group">
                     <label for="richtextDescription">Опишите свой товар <span class="text-danger">*</span></label>
-                    <textarea class="form-control richTextBox @error('description') is-invalid @enderror" name="description" id="richtextDescription">
+                    <textarea class="form-control richTextBox @error('description') is-invalid @enderror"
+                              name="description" id="richtextDescription">
                                 {{ old('description') }}
                         </textarea>
                     @error('description')
@@ -119,49 +193,12 @@
                                         </span>
                     @enderror
                 </div>
-                <h3>Укажите ваши контактные данные:</h3>
-                <div class="form-row">
-                    <div class="col-12 col-sm-12 col-md-4">
-                        <div class="form-group">
-                            <label for="phone1">Телефон #1 <span class="text-danger">*</span></label>
-                            <input type="hidden" name="code">
-                            <input type="text" name="phone1" class="form-control phone1 @error('phone1') ' is-invalid ' @enderror" required>
-                            @error('phone1')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-4">
-                        <div class="form-group">
-                            <label for="phone2">Телефон #2</label>
-                            <input type="hidden" name="code2">
-                            <input type="text" name="phone2" class="form-control phone2 @error('phone2') is-invalid @enderror">
-                            @error('phone2')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-4">
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email">
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                        </span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
+
                 <h3>Укажите свое местонахождение на карте</h3>
                 @include('partials.formFields.coordinates', ['idMap' => 'map3'])
 
-                <button type="submit" class="btn btn-texmart-green text-white">Подать</button>
-                <a href="{{ route('profile') }}" class="btn">Назад</a>
+                <button type="submit" class="btn btn-green text-white">Подать</button>
+                <a href="{{ route('admin.production.index', ['type' => $type]) }}" class="btn">Назад</a>
             </form>
         </div>
     </div>
@@ -170,8 +207,9 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{asset("css/intlTelInput.min.css")}}">
+    <link rel="stylesheet" href="{{ asset('css/main.css')}}">
 @endpush
-@push('scripts_profile')
+@push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
     <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
 
@@ -250,7 +288,6 @@
 @endpush
 
 @push('scripts')
-    <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU" type="text/javascript"></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="{{ asset('js/comboTreePlugin.js') }}"></script>
@@ -260,11 +297,11 @@
             treed: function (o) {
                 var openedClass = 'fa-plus';
                 var closedClass = 'fa-minus';
-                if (typeof o != 'undefined'){
-                    if (typeof o.openedClass != 'undefined'){
+                if (typeof o != 'undefined') {
+                    if (typeof o.openedClass != 'undefined') {
                         openedClass = o.openedClass;
                     }
-                    if (typeof o.closedClass != 'undefined'){
+                    if (typeof o.closedClass != 'undefined') {
                         closedClass = o.closedClass;
                     }
                 }
@@ -285,7 +322,7 @@
                     branch.children().children().toggle();
                 });
                 /* fire event from the dynamically added icon */
-                tree.find('.branch .indicator').each(function(){
+                tree.find('.branch .indicator').each(function () {
                     $(this).on('click', function () {
                         $(this).closest('li').click();
                     });
@@ -310,7 +347,7 @@
         $('#tree1').treed();
         $('#tree2').treed();
         $('#tree3').treed();
-        $("body").on('click', '.select2-results__group', function() {
+        $("body").on('click', '.select2-results__group', function () {
             $(this).siblings().toggle();
         });
     </script>
@@ -351,10 +388,12 @@
                 setTimeout(rotateImage2, 1000);
             };
         });
+
         function rotateImage2() {
             cropper2.rotate(0);
             $('#dataImage2').val(cropper2.getImageData().rotate);
         }
+
         $('#crop2').click(e => {
             let image2 = $(cropper2.getCroppedCanvas()).addClass('img-fluid');
             $('#cropped2').html(image2);
