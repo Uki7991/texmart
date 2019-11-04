@@ -7,15 +7,15 @@
     </section>
     <section class="bg-logistics">
         <div class="container h-100">
-            <div class="row align-items-end h-100">
-                <div class="h1 text-white pb-5 text_for_info">
+            <div class="row align-items-end justify-content-center justify-content-md-start h-100">
+                <div class="h1 text-white pb-5 text_for_info text-center">
                     Логистика
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container py-5 font-weight-bold">
+        <div class="container py-5">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 text-for-clq">
                     <p>
