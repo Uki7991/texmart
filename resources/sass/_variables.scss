@@ -17,3 +17,27 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+    // Extra small screen / phone
+    xs: 0,
+    // Small screen / phone
+    sm: 576px,
+    // Medium screen / tablet
+    md: 768px,
+    // Large screen / desktop
+    lg: 1130px,
+    // Extra large screen / wide desktop
+    xl: 1440px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 1070px,
+    xl: 1340px
+);

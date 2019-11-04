@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="bg-texmart-sidebar fixed-top">
+    <section class="bg-texmart-sidebar fixed-top mb-4">
         <div class="container">
             @include('blocks.header')
         </div>
