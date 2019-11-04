@@ -3,11 +3,89 @@
         Отзывы
     </h2>
     <div class="row justify-content-center bg-grey-blog">
-        <div id="owl-otzivi" class="owl-carousel owl-theme col-8">
+        <div id="owl-otzivi" class="owl-carousel owl-theme col-12 col-md-8">
             <div class="item">
                 <div class="card justify-content-center">
                     <div class="card-body row justify-content-center p-5">
+                        <h4 class="card-title text-center font-weight-bold"><a>Спасибо компании Texmart</a></h4>
+                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
+                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
+                            текст.." Многие программы электронной вёрстки и </p>
+                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card justify-content-center">
+                    <div class="card-body row justify-content-center p-5">
+                        <h4 class="card-title text-center font-weight-bold"><a>Спасибо компании Texmart</a></h4>
+                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
+                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
+                            текст.." Многие программы электронной вёрстки и </p>
+                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card justify-content-center">
+                    <div class="card-body row text-center justify-content-center p-5">
                         <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
+                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
+                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
+                            текст.." Многие программы электронной вёрстки и </p>
+                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card justify-content-center">
+                    <div class="card-body text-center row justify-content-center p-5">
+                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
+                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
+                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
+                            текст.." Многие программы электронной вёрстки и </p>
+                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card justify-content-center">
+                    <div class="card-body text-center row justify-content-center p-5">
+                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
+                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
+                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
+                            текст.." Многие программы электронной вёрстки и </p>
+                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card justify-content-center">
+                    <div class="card-body row justify-content-center p-5">
+                        <h4 class="card-title text-center font-weight-bold"><a>Спасибо компании Texmart</a></h4>
+                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
+                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
+                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
+                            текст.." Многие программы электронной вёрстки и </p>
+                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card justify-content-center">
+                    <div class="card-body row justify-content-center p-5">
+                        <h4 class="card-title text-center font-weight-bold"><a>Спасибо компании Texmart</a></h4>
                         <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
                             сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
                             стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
@@ -33,85 +111,7 @@
             <div class="item">
                 <div class="card justify-content-center">
                     <div class="card-body row justify-content-center p-5">
-                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
-                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
-                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
-                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
-                            текст.." Многие программы электронной вёрстки и </p>
-                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card justify-content-center">
-                    <div class="card-body row justify-content-center p-5">
-                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
-                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
-                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
-                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
-                            текст.." Многие программы электронной вёрстки и </p>
-                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card justify-content-center">
-                    <div class="card-body row justify-content-center p-5">
-                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
-                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
-                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
-                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
-                            текст.." Многие программы электронной вёрстки и </p>
-                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card justify-content-center">
-                    <div class="card-body row justify-content-center p-5">
-                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
-                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
-                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
-                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
-                            текст.." Многие программы электронной вёрстки и </p>
-                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card justify-content-center">
-                    <div class="card-body row justify-content-center p-5">
-                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
-                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
-                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
-                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
-                            текст.." Многие программы электронной вёрстки и </p>
-                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card justify-content-center">
-                    <div class="card-body row justify-content-center p-5">
-                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
-                        <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
-                            сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
-                            стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,
-                            которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш
-                            текст.." Многие программы электронной вёрстки и </p>
-                        <p class="card-title font-weight-bold">Татьяна М.Н.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card justify-content-center">
-                    <div class="card-body row justify-content-center p-5">
-                        <h4 class="card-title font-weight-bold"><a>Спасибо компании Texmart</a></h4>
+                        <h4 class="card-title text-center font-weight-bold"><a>Спасибо компании Texmart</a></h4>
                         <p class="card-text text-center">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
                             сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
                             стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах,

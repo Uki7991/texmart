@@ -8,16 +8,16 @@
     <section class="bg-quality-control">
         <div class="container h-100">
             <div class="row align-items-end h-100">
-                <div class="h1 text-white">
+                <div class="h1 text-white pb-5 text_for_info">
                     Контроль качества
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container py-5 font-weight-bold">
+        <div class="container py-5">
             <div class="row justify-content-center align-items-center">
-                <div class="col-12">
+                <div class="col-12 text-for-clq">
                     <p>
                         Качество швейных изделий меняется в зависимости от потребностей общества, которые постоянно
                         изменяются и растут. Уровень качества швейных товаров оценивается комплексными показателями.
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-6 text-for-clq">
                     <p class="h5 text-orange text-center">“In-line inspection”</p>
                     <p>“In-line inspection” - это контроль качества на этапе производства продукции, чаще всего, мы
                         осуществляем подобные проверки, когда производство только запущено в серию. Первые единицы
@@ -61,7 +61,7 @@
                         зрения
                         заказчика, такая услуга экономически оправдана почти всегда.</p>
                 </div>
-                <div class="col-6">
+                <div class="col-6 text-for-clq">
                     <p class="h5 text-orange text-center">“Pre-shipment inspection”</p>
                     <p>“Pre-shipment inspection” - это контроль качества перед отгрузкой товара. Как правило, мы
                         проводим
@@ -70,8 +70,8 @@
                         соответствие цветов, швы, фурнитура, упаковка, маркировка и тд.</p>
                 </div>
             </div>
-            <div class="row justify-content-center align-items-center font-weight-bold">
-                <div class="col-12  py-4">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12  py-4 text-for-clq">
                     <p>Благодаря подобным инспекциям наши клиенты получают объективную картину происходящего:
                         фактическое
                         состояние товара, процент и степень брака. Кроме того мы составляем отчеты о проверке товара, на
@@ -82,7 +82,7 @@
                 <div class="col-6 text-center">
                     <img src="{{asset('img/quality_1.png')}}" class="img-fluid text-center" alt="">
                 </div>
-                <div class="col-6">
+                <div class="col-6 text-for-clq">
                     <p>
                         Тексмарт предоставляет возможность заказчику предложить свой вариант проведения контроля качества,
                         которую специалисты Тексмарт выполнить в надлежащем порядке.

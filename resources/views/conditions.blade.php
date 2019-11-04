@@ -5,7 +5,7 @@
             @include('blocks.header')
         </div>
     </section>
-    <div class="container">
+    <div class="container pt-5">
         <div class="row py-4">
             <p class="text-center text-dark h1">Условия использования сайтом Texmart</p>
         </div>

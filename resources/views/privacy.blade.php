@@ -5,9 +5,9 @@
             @include('blocks.header')
         </div>
     </section>
-    <div class="container">
+    <div class="container pt-5 ">
         <div class="row py-4">
-            <p class="h1">Политика в области обработки и безопасности данных пользователей «Texmart»</p>
+            <p class="h1 text-center">Политика в области обработки и безопасности данных пользователей «Texmart»</p>
         </div>
         <ol>
             <li>

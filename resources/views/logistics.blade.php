@@ -8,7 +8,7 @@
     <section class="bg-logistics">
         <div class="container h-100">
             <div class="row align-items-end h-100">
-                <div class="h1 text-white">
+                <div class="h1 text-white pb-5 text_for_info">
                     Логистика
                 </div>
             </div>
@@ -17,7 +17,7 @@
     <section>
         <div class="container py-5 font-weight-bold">
             <div class="row justify-content-center align-items-center">
-                <div class="col-12">
+                <div class="col-12 text-for-clq">
                     <p>
                         Суть логистики заключается в поиске путей рационального продвижения продукта по цепочке: от
                         производителя до конечного получателя. Этот процесс достаточно трудоемок и предусматривает
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="row justify-content-center align-items-center">
-                <div class="col-12 py-4">
+                <div class="col-12 py-4 text-for-clq">
                     <p>
                         Бюрократия и разница роста интеграции налогового законодательства наших стран стала камнем
                         преткновения для

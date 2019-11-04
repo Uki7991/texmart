@@ -8,17 +8,17 @@
     <section class="bg-about mt-xl-5">
         <div class="container h-100">
             <div class="row align-items-end h-100">
-                <div class="h1 text-white">
+                <div class="h1 text-white pb-5 text_for_info">
                     ЧТО ТАКОЕ TEXMART.KG?
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container py-5 font-weight-bold text-dark">
+        <div class="container py-5 text-dark">
             <div class="row justify-content-center align-items-center">
                 <div class="col-5">
-                    <p>Мы первая интернет платформа производителей
+                    <p class="text-for-about">Мы первая интернет платформа производителей
                         текстильной<br> и швейной продукции Кыргызской Республики.
                         Ведение бизнеса в формате В2В.</p>
                 </div>
@@ -32,14 +32,14 @@
                     <img src="{{ asset('img/about_2.png') }}" class="img-fluid" alt="">
                 </div>
                 <div class="col-5">
-                    <p>Мы знаем Ваши потребности и можем удовлетворить их, знаем как помочь
+                    <p class="text-for-about">Мы знаем Ваши потребности и можем удовлетворить их, знаем как помочь
                         Вам в решении Ваших каждодневных проблем - поиска производителей
                         и заказчиков швейной и текстильной продукций и изделий.</p>
                 </div>
             </div>
             <div class="row justify-content-center my-5">
                 <div class="col-11 grey lighten-4 rounded p-5">
-                    <p>Не всегда поиски на разных сайтах, форумах дают положительный результат, зачастую это
+                    <p class="text-for-about">Не всегда поиски на разных сайтах, форумах дают положительный результат, зачастую это
                         оборачивается пустой тратой времени и ресурсов как трудовых так и финансовых, которое
                         Вы могли бы использовать для улучшения и развития Вашей компании. Наш коллектив
                         достаточно долгое время проработал в сферах производства, логистики, финансов и
@@ -57,7 +57,7 @@
                 <div class="col-3">
                     <img src="{{ asset('img/about_3.png') }}" class="img-fluid" alt="">
                 </div>
-                <div class="col-7">
+                <div class="col-7 text-for-about">
                     <p>Платформа Texmart.kg предоставит вам возможность узнать подробно о всех производителях швейной и
                         текстильной продукции Кыргызской Республики.</p>
                     <p>Вам будет доступна детальная информация о каждом производителе, которую наши специалисты
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-10 text-for-about">
                     <ul class="font-weight-normal">
                         <li>самое выгодное предложение для вашего бизнеса;</li>
                         <li>единая база предприятий легкой промышленности,
@@ -101,8 +101,8 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10">
-                    <ul class="font-weight-normal">
+                <div class="col-10 text-for-about">
+                    <ul class="font-weight-normal ">
                         <li>разместить заказы и запустить в производство;</li>
                         <li>независимая оценка текстильных и швейных предприятий;</li>
                         <li>оценка и инспекция качества продукции на всех этапах
@@ -122,7 +122,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10">
+                <div class="col-10 text-for-about">
                     <ul class="font-weight-normal">
                         <li>поиск, подбор, заключение контракта, выкуп и прямые поставки тканей, фурнитуры и
                             оборудования из КНР
@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="row justify-content-center my-1">
-                <div class="col-11  p-4">
+                <div class="col-11  p-4 text-for-about">
                     Texmart.kg каждый день развивается и дополняются возможности для облегчения и ведения вашего
                     бизнеса.
                     Открываются новые уровни для стабильного роста и приумножения капитала каждого предпринимателя

@@ -439,9 +439,25 @@ p, h1, h2, h3, h4, h5, h6,span{
     font-size: 46px;
     left: -3%;
     transform: translate(0,-50%);
-    background: radial-gradient(51.95% 243.1% at 87.23% 110.69%, rgba(205, 136, 45, 0.99) 0%, rgba(171, 111, 31, 0.99) 100%);
-    width: 39px;
+    background: rgba(205, 136, 45, 0.99);
+    width: 42px;
 }
+.text_for_info {
+    font-weight: 600;
+    font-size: 65px;
+}
+.text-for-about{
+    font-size: 18px;
+    line-height: 25px;
+}
+.text-for-clq{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+
 .bg-grey-blog{
     background: url('../images/grey-block.png') no-repeat right bottom;
     background-size: 350px 290px;
