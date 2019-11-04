@@ -268,6 +268,11 @@
     background:#CD882D;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
+.btn-texmart-orange{
+    background:#CD882D;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
 /*for button in blog blocks*/
 .btn-texmart-info {
     border-radius: 14px;
