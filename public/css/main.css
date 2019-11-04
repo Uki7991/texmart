@@ -1,4 +1,6 @@
-
+*{
+ font-family: OpenSans;
+}
 .maxw-content {
     max-width: min-content!important;
 }
