@@ -1,7 +1,7 @@
 <div class="bg-texmart-sidebar m-0 fixed-top maxw-content row min-vh-100">
-    <div class="col-12 px-0">
+    <div class="align-self-start col-12 px-0 px-sm-0 p-lg-1">
         <ul class="navbar-nav ml-3 mt-2 mt-lg-0">
-            <li class="nav-item ">
+            <li class="nav-item">
                 <a href="#menu"
                    class="hamburger-sprite mt-3" style="padding-top: 25px"></a>
             </li>
@@ -9,7 +9,7 @@
                 <a href="{{ auth()->check() ? route('profile') : route('login') }}"
                    class="user-sprite my-3"></a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
                 <a href="#" class="search-sprite"></a>
             </li>
 

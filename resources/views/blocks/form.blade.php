@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group text-center">
                         <button type="submit"
-                                class="btn btn-danger text-white rounded-pill btn-lg px-5 py-2 shadow-lg scale-on-hover"> {{ __('Отправить') }}</button>
+                                class="btn btn-texmart-orange text-white rounded-pill btn-lg px-5 py-2 shadow-lg scale-on-hover"> {{ __('Отправить') }}</button>
                     </div>
                 </form>
             </div>
