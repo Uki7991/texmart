@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="bg-texmart-sidebar fixed-top　mb-3">
+    <section class="bg-texmart-sidebar fixed-top">
         <div class="container d-xl-none">
             @include('blocks.header')
         </div>
