@@ -53,7 +53,7 @@
             $('.scroll-top').click(function () {
                 $("html, body").animate({
                     scrollTop: 0
-                }, 100);
+                }, 1000);
                 return false;
             });
 

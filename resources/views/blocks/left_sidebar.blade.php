@@ -1,5 +1,5 @@
 <div class="col-lg-3">
-    <div class="accordion tree" id="tree">
+    <div class="accordion tree" id="tree" data-step="1" data-intro="This is a tooltip!" >
         <div class="card border-bottom border-top-0 border-left-0 border-right-0 bg-white">
             <div class="card-header  border-0 bg-white p-0" id="headingOne">
                 <h2 class="mb-0">

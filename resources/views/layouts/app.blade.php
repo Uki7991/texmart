@@ -31,7 +31,7 @@
 <body>
     <div id="app">
             @yield('content')
-        <footer class="footer border-danger">
+        <footer class="footer border-top border-dark border-danger">
             <div class="container pt-5 pb-2">
                 @include('blocks.footer')
                 <div class="row">
@@ -48,12 +48,10 @@
             </div>
         </footer>
     </div>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/mmenu.js') }}"></script>
     <script src="{{asset('js/slick.min.js')}}"></script>
-
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     {{--connect rateyo.js--}}
     <script src="{{ asset('js/jquery.rateyo.js') }}"></script>
