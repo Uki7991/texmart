@@ -15,6 +15,9 @@ Route::get('/', 'MainController@index')->name('homepage');
 Route::get('/image', function () {
     return view('image-resizer');
 });
+Route::post('/user/register/phone', 'UserController@registerPhone')->name('register.phone');
+Route::post('/user/register/phonecode', 'UserController@codeVerification')->name('register.code');
+Route::post('/user/reregister/phonecode', 'UserController@reRegisterPhone')->name('reregister.phone');
 Route::post('/image/resize', 'MainController@imageResize')->name('image.resize');
 
 Route::get('/profile', 'UserController@index')->name('profile');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Aloha\Twilio\Support\Laravel\Facade;
 use App\Category;
 use App\Http\Requests\UpdateUserPassword;
 use App\Production;
@@ -9,7 +10,9 @@ use App\Type;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 use Intervention\Image\ImageManagerStatic;
 
 class UserController extends Controller
@@ -185,5 +188,85 @@ class UserController extends Controller
         $user->save();
 
         return redirect()->back();
+    }
+
+    public function registerPhone(Request $request)
+    {
+        $data = $request->toArray();
+        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[ -]/', '', $data['phone']);
+        $validator = Validator::make($data, [
+            'code' => 'required|string',
+            'phone' => 'required|string|unique:users',
+        ]);
+        $user = auth()->user();
+        if ($validator->fails()) {
+            return redirect('/')
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            $user->phone_verification = rand(111111, 999999);
+            $user->phone = $data['phone'];
+            $user->save();
+            Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+//            auth()->user()->phone = $data['phone'];
+//            auth()->user()->save();
+        }
+
+        return redirect()->route('homepage');
+    }
+
+    public function reRegisterPhone(Request $request)
+    {
+        $user = auth()->user();
+
+        $user->phone = '';
+        $user->save();
+        $data = $request->toArray();
+        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[ -]/', '', $data['phone']);
+        $validator = Validator::make($data, [
+            'code' => 'required|string',
+            'phone' => 'required|string|unique:users',
+        ]);
+        if ($validator->fails()) {
+            return redirect('/')
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            $user->phone_verification = rand(111111, 999999);
+            $user->phone = $data['phone'];
+            $user->save();
+            Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+//            auth()->user()->phone = $data['phone'];
+//            auth()->user()->save();
+        }
+
+        return redirect()->route('homepage');
+    }
+
+    public function codeVerification(Request $request)
+    {
+        $data = $request->toArray();
+        $validator = Validator::make($data, [
+            'code_verification' => 'required|string',
+        ]);
+
+        $user = auth()->user();
+
+        if ($validator->fails()) {
+            return redirect('/')
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            if ($user->phone_verification == $data['code_verification']) {
+                $user->phone_verification = null;
+                $user->save();
+
+                Session::flash('status', ['status' => 'success', 'message' => 'Ваш аккаунт успешно активирован']);
+            } else {
+                Session::flash('status', ['status' => 'fail', 'message' => 'Ваш аккаунт не активирован']);
+            }
+
+            return redirect()->route('homepage');
+        }
     }
 }

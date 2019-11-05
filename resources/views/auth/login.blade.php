@@ -44,12 +44,13 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="email" class="col-form-label text-md-right"><i
-                                            class="fas fa-envelope text-primary"></i> {{ __('E-Mail') }}</label>
+                                            class="fas fa-user text-primary"></i> {{ __('E-Mail или номер телефона') }}</label>
 
-                                    <input id="email" type="email"
+                                    <input id="email" type="text"
                                            class="form-control shadow-sm rounded-pill @error('email') is-invalid @enderror"
                                            name="email" value="{{ old('email') }}" required autocomplete="email"
                                            autofocus>
+                                    <small id="emailHelp" class="form-text text-muted text-center">Номер телефона обязательно писать с кодом страны</small>
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -60,7 +61,7 @@
 
                                 <div class="form-group">
                                     <label for="password" class="col-form-label text-md-right"><i
-                                            class="fas fa-key text-primary"></i> {{ __('Password') }}</label>
+                                            class="fas fa-key text-primary"></i> {{ __('Пароль') }}</label>
 
                                     <input id="password" type="password"
                                            class="form-control shadow-sm rounded-pill @error('password') is-invalid @enderror"
