@@ -5,16 +5,16 @@
             @include('blocks.header')
         </div>
     </section>
-    <div class="container">
+    <div class="container pt-5 mt-5">
         <div class="row">
-            <div class="col-12">
+            <div class="col-9">
                 <h1>Компания GitLab из-за политики прекращает набор инженеров из России и Китая</h1>
                 <p class="oclock">вчера в 17:34</p>
                 <p class="tegi">Блог компании Флант,
                     Карьера в IT-индустрии,
                     IT-компании</p>
                 <div class="">
-                    <img src="" alt="">
+                    <img src="{{ asset('img/production.png') }}" alt="">
                 </div>
                 <p class="description_blog">Поправка: это всё ещё обсуждение, и конечного подтверждения по принятой
                     политике нет.
@@ -46,8 +46,14 @@
                     инфраструктуре (Infra), а также SecOps и Anti-Abuse в отделе безопасности (Security) — см.
                     соответствующий issue.</p>
             </div>
-            <div class="col-12">
+            <div class="col-3">
+                <div class="default-block">
+                    <div class="default-block__header">
+                        <h2 class="default-block__header-title">Блог в Texmart</h2>
+                    </div>
 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
