@@ -47,6 +47,11 @@ class UserController extends Controller
 
     public function index()
     {
+        return redirect()->route('profile.dashboard');
+    }
+
+    public function dashboard(Request $request)
+    {
         $productions = Production::where('user_id', auth()->user()->id)->get();
         $categories = Category::where('parent_id', null)->get(['id', 'title']);
         $types = Type::all();
@@ -66,7 +71,7 @@ class UserController extends Controller
         }
 
         $user = auth()->user();
-        return view('user-production.profile', [
+        return view('profile.profile', [
             'user' => $user,
             'productions' => $productions,
             'productionCats' => $productionCats->sortBy('order'),

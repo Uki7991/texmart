@@ -7,7 +7,7 @@
     </section>
     <section class="bg-quality-control">
         <div class="container h-100">
-            <div class="row align-items-end h-100">
+            <div class="row align-items-end justify-content-center justify-content-md-start h-100">
                 <div class="h1 text-white pb-5 text_for_info">
                     Контроль качества
                 </div>

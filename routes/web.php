@@ -18,6 +18,13 @@ Route::get('/image', function () {
 Route::post('/image/resize', 'MainController@imageResize')->name('image.resize');
 
 Route::get('/profile', 'UserController@index')->name('profile');
+
+Route::prefix('profile')->name('profile.')->middleware('auth')->group(function () {
+    Route::get('/dashboard', 'UserController@dashboard')->name('dashboard');
+
+    Route::resource('production', 'ProductionController');
+});
+
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
 Route::get('/user/settings', 'UserController@settings')->name('user.settings');
 Route::get('/user/favorites', 'UserController@favorites')->name('user.favorites');
