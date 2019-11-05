@@ -39,47 +39,48 @@
                     <a href="" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
 
-                <div class="col-12 pl-5 position-relative mt-5">
-                    <ul class="list-inline text-light">
-                        <li class="list-inline-item text-center">
-                            <h4 class="mx-5 folder-sprite waves-effect waves-light "></h4>
-                            <p>
-                                Единая база <br> производителей
-                            </p>
-                        </li>
-                        <li class="list-inline-item text-center">
-                            <h4 class="mx-5 mb-4 medal-sprite waves-effect waves-light"></h4>
-                            <p class="pb-3">Оценка качества</p>
-                        </li>
-                        <li class="list-inline-item text-center">
-                            <h4 class="mx-5 cloth-sprite waves-effect waves-light"></h4>
-                            <p>
-                                Поставка тканей <br>
-                                и фурнитуры
-                            </p>
-                        </li>
-                    </ul>
-                    <ul class="list-inline text-light">
-                        <li class="list-inline-item text-center">
-                            <h4 class="mx-5 production-sprite waves-effect waves-light"></h4>
-                            <p>
-                                Производство <br> одежды  в КР
-                            </p>
-                        </li>
-                        <li class="list-inline-item text-center">
-                            <h4 class="mxmx-5 -3 box-sprite waves-effect waves-light"></h4>
-                            <p>
-                                Доставка
-                            </p>
-                        </li>
-                        <li class="list-inline-item text-center">
-                            <h4 class="mx-5 document-sprite waves-effect waves-light"></h4>
-                            <p>
-                                Оформление <br>
-                                документов
-                            </p>
-                        </li>
-                    </ul>
+                <div class="row justify-content-center pl-5 position-relative mt-5">
+                    <div class="col-3 text-center text-white">
+                        <h4 class="mx-auto folder-sprite waves-effect waves-light "></h4>
+                        <p>
+                            Единая база <br> производителей
+                        </p>
+                    </div>
+                    <div class="col-3 text-center text-white">
+                        <h4 class="mx-auto mb-4 medal-sprite waves-effect waves-light"></h4>
+                        <p class="pb-3">
+                            Оценка качества
+                        </p>
+                    </div>
+                    <div class="col-3 text-center text-white">
+                        <h4 class="mx-auto cloth-sprite waves-effect waves-light"></h4>
+                        <p>
+                            Поставка тканей <br>
+                            и фурнитуры
+                        </p>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-3 text-center text-white">
+                        <h4 class="mx-auto production-sprite waves-effect waves-light"></h4>
+                        <p>
+                            Производство <br> одежды  в КР
+                        </p>
+                    </div>
+
+
+                    <div class="col-3 text-center text-white">
+                        <h4 class="mx-auto -3 box-sprite waves-effect waves-light"></h4>
+                        <p>
+                            Доставка
+                        </p>
+                    </div>
+                    <div class="col-3 text-center text-white">
+                        <h4 class="mx-auto document-sprite waves-effect waves-light"></h4>
+                        <p>
+                            Оформление <br>
+                            документов
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

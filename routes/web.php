@@ -21,6 +21,8 @@ Route::get('/profile', 'UserController@index')->name('profile');
 
 Route::prefix('profile')->name('profile.')->middleware('auth')->group(function () {
     Route::get('/dashboard', 'UserController@dashboard')->name('dashboard');
+
+    Route::resource('production', 'ProductionController');
 });
 
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
