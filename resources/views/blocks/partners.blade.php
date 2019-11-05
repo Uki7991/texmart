@@ -5,21 +5,21 @@
     <div class="row align-items-center justify-content-center justify-content-md-between">
         <div class="col-6 col-md-3 pt-md-1">
             <a target="_blank" href="https://akilbirs.kg/" rel="noopener">
-                <img
-                    src="{{ asset("img/ak-ilbirs.png") }}"
+                <img data-src="{{ asset("img/ak-ilbirs.png") }}"
+                    src=""
                     class="img-fluid lazy grayscale" alt="Компания Ак-Илбирс">
             </a>
         </div>
         <div class="col-6 col-md-3 pt-md-1">
             <a target="_blank" href="https://www.bgi.kg/" rel="noopener">
-                <img src="{{ asset("img/bgi.png") }}"
+                <img data-src="{{ asset("img/bgi.png") }}" src=""
                      class="img-fluid lazy grayscale"  alt="Компания BGI Center">
             </a>
         </div>
         <div class="col-6 col-md-3 pt-4  pt-md-1">
             <a target="_blank" href="https://textile.kg/" rel="noopener">
-                <img class="img-fluid lazy grayscale"
-                     src="{{ asset("img/silk_way.png") }}"  alt="Компания Silk Way">
+                <img class="img-fluid lazy grayscale" data-src="{{ asset("img/silk_way.png") }}"
+                     src=""  alt="Компания Silk Way">
             </a>
         </div>
     </div>
