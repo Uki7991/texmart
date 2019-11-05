@@ -158,6 +158,9 @@ Route::get('/production',function(){
 Route::get('/gds',function(){
     return view('gds');
 })->name('gds');
+Route::get('/blog_show',function(){
+    return view('blog.blog_show');
+})->name('blog_show');
 
 Route::get('/service',function(){
     return view('service');
