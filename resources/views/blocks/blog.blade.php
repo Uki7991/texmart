@@ -28,7 +28,6 @@
                         менее осмысленного текста</p>
                     <div class="row justify-content-center mx-0">
                         <a href="#" class="text-white btn-texmart">Читать>></a>
-
                     </div>
                 </div>
             </div>

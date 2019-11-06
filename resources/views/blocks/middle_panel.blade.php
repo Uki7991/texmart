@@ -1,15 +1,6 @@
 <div class="container-fluid position-relative mt-5 mt-xl-0 vh-100" style="overflow:hidden;">
-    <div class="row pl-xl-5" style="left: 0; top: 0;">
-        <div class="col-12 position-absolute p-0">
-            {{--new carousel but this carousel is slick.js carouse--}}
-            <div class="" id="background-carousel" style="z-index: 0;">
-                <img src="{{ asset('img/main.png') }}" class="" alt="">
-                <img src="{{ asset('img/main.png') }}" class="" alt="">
-                <img src="{{ asset('img/main.png') }}" class="" alt="">
-            </div>
-            {{--end carousel--}}
-        </div>
-        <div class="col-12 pl-5 col-lg-6 position-relative min-vh-100">
+    <div class="row pl-xl-5" style="background-image:  url({{asset('img/main.png')}});background-repeat: no-repeat;background-size: cover; left: 0; top: 0;">
+        <div class="col-12 pl-5 col-lg-6 position-relative min-vh-100" >
             <div class="backdrop h-100"></div>
             <div class="row h-100 position-relative">
                 <div class="col-12">
@@ -39,7 +30,7 @@
                     <a href="" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
 
-                <div class="row justify-content-center pl-5 position-relative mt-5">
+                <div class="row justify-content-center position-relative mt-5">
                     <div class="col-3 text-center text-white">
                         <h4 class="mx-auto folder-sprite waves-effect waves-light "></h4>
                         <p>
@@ -66,8 +57,6 @@
                             Производство <br> одежды  в КР
                         </p>
                     </div>
-
-
                     <div class="col-3 text-center text-white">
                         <h4 class="mx-auto -3 box-sprite waves-effect waves-light"></h4>
                         <p>
