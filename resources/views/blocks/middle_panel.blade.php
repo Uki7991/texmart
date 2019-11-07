@@ -13,28 +13,27 @@
                     <div class="text-left">
                         <div id="owl-text" class="owl-carousel owl-theme">
                             <div class="item text-white">
-                                <p class="h3">Первая интернерт платформа швейной и <br>текстильной промышленности Кыргызстана</p>
+                                <p class="h3">Первая интернерт платформа швейной и текстильной промышленности Кыргызстана</p>
                             </div>
                             <div class="item text-white">
-                                <p class="h3">Консалтинг,оформление всех<br> бухлагтерских и юридических документов</p>
+                                <p class="h3">Консалтинг,оформление всех бухлагтерских и юридических документов</p>
                             </div>
                             <div class="item text-white">
-                                <p class="h3">Оценка качества пошива одежды и<br> производтсва от Texmart.kg для<br> уверенности на растоянии </p>
+                                <p class="h3">Оценка качества пошива одежды и производтсва от Texmart.kg для уверенности на растоянии </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 {{--end carousel--}}
                 {{-- button for create new advertisement--}}
-                <div class="add_announcement col-12 position-relative text-left pl-5">
+                <div class="add_announcement col-12 position-relative text-left pl-5 pt-3">
                     <a href="" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
-
                 <div class="row justify-content-center position-relative mt-5">
                     <div class="col-3 text-center text-white">
                         <h4 class="mx-auto folder-sprite waves-effect waves-light "></h4>
                         <p>
-                            Единая база <br> производителей
+                            Единая база производителей
                         </p>
                     </div>
                     <div class="col-3 text-center text-white">
@@ -46,7 +45,7 @@
                     <div class="col-3 text-center text-white">
                         <h4 class="mx-auto cloth-sprite waves-effect waves-light"></h4>
                         <p>
-                            Поставка тканей <br>
+                            Поставка тканей
                             и фурнитуры
                         </p>
                     </div>
@@ -54,7 +53,7 @@
                     <div class="col-3 text-center text-white">
                         <h4 class="mx-auto production-sprite waves-effect waves-light"></h4>
                         <p>
-                            Производство <br> одежды  в КР
+                            Производство  одежды  в КР
                         </p>
                     </div>
                     <div class="col-3 text-center text-white">
@@ -66,7 +65,7 @@
                     <div class="col-3 text-center text-white">
                         <h4 class="mx-auto document-sprite waves-effect waves-light"></h4>
                         <p>
-                            Оформление <br>
+                            Оформление
                             документов
                         </p>
                     </div>
