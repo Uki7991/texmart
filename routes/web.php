@@ -169,6 +169,10 @@ Route::get('/service',function(){
     return view('service');
 })->name('service');
 
+Route::get('/customer_list',function(){
+    return view('customer_list');
+})->name('customer_list');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

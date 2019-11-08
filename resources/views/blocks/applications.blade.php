@@ -7,7 +7,24 @@
                         <div class="app_content">
                             <a href="#"></a>
                             <div class="app_top">
-                                <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
+                                <a href="{{ route('customer_list') }}"><p>Куплю оптом дизайнерские носки оптом 500шт.</p></a>
+                            </div>
+                            <div class="app_bottom">
+                                <div class="app_category">
+                                    <p class="application_text">Женская одежда</p>
+                                </div>
+                                <div class="app_country">
+                                    <img src="{{asset('img/flag.png')}}" alt="Флаг">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_slider">
+                    <div class="application_for">
+                        <div class="app_content">
+                            <div class="app_top">
+                                <a href="{{ route('customer_list') }}"><p class="text-dark">Куплю оптом дизайнерские носки оптом 500шт.</p></a>
                             </div>
                             <div class="app_bottom">
                                 <div class="app_category">
@@ -23,7 +40,7 @@
                 <div class="item_slider">
                     <div class="application_for">
                         <div class="app_content">
-                            <a href="#"></a>
+                            <a href="{{ route('customer_list') }}"></a>
                             <div class="app_top">
                                 <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
                             </div>
@@ -41,25 +58,7 @@
                 <div class="item_slider">
                     <div class="application_for">
                         <div class="app_content">
-                            <a href="#"></a>
-                            <div class="app_top">
-                                <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
-                            </div>
-                            <div class="app_bottom">
-                                <div class="app_category">
-                                    <a href=""><p class="application_text">Женская одежда</p></a>
-                                </div>
-                                <div class="app_country">
-                                    <img src="{{asset('img/flag.png')}}" alt="Флаг">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item_slider">
-                    <div class="application_for">
-                        <div class="app_content">
-                            <a href="#"></a>
+                            <a href="{{ route('customer_list') }}"></a>
                             <div class="app_top">
                                 <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
                             </div>

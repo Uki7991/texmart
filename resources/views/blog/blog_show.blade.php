@@ -16,7 +16,7 @@
                 <div class="">
                     <img src="{{ asset('img/production.png') }}" alt="">
                 </div>
-                <p class="description_blog">Поправка: это всё ещё обсуждение, и конечного подтверждения по принятой
+                <p class="description_blog pt-3">Поправка: это всё ещё обсуждение, и конечного подтверждения по принятой
                     политике нет.
                     В групповом обсуждении, состоявшемся в понедельник 15 октября 2019, мы приняли решение активировать
                     «блокировку рабочих мест по принадлежности к стране» для членов команды, у которых есть доступ к
@@ -45,13 +45,56 @@
                     Примечание: вдобавок к команде поддержки (Support), это изменение также затрагивает SRE-инженеров по
                     инфраструктуре (Infra), а также SecOps и Anti-Abuse в отделе безопасности (Security) — см.
                     соответствующий issue.</p>
+                <div class="row ">
+                    <p class="" style="font-weight: 700">Теги:</p>
+                    <p class="tegs" style="font-weight: 500;margin-left:6px"> брюки,текстиль, брюки,текстиль, брюки,текстиль, брюки,текстиль,
+                        junit</p>
+                </div>
             </div>
             <div class="col-3">
                 <div class="default-block">
                     <div class="default-block__header">
                         <h2 class="default-block__header-title">Блог в Texmart</h2>
                     </div>
-
+                    <div class="default-block__content">
+                        <ul class="content-list">
+                            <li>
+                                <h3 class="post-info__title">
+                                    <a href="#" class="post-info__title">Автоматизация End-2-End тестирования комплексной информационной системы. Часть 1. Организационная</a>
+                                </h3>
+                                <div class="post_info__meta d-flex p-3">
+                                    <p class="p-3">просмотры</p>
+                                    <p>коменты</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="post-info__title">
+                                    <a href="#" class="post-info__title">Автоматизация End-2-End тестирования комплексной информационной системы. Часть 1. Организационная</a>
+                                </h3>
+                                <div class="post_info__meta d-flex p-3">
+                                    <p class="p-3">просмотры</p>
+                                    <p>коменты</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="post-info__title">
+                                    <a href="#" class="post-info__title">Автоматизация End-2-End тестирования комплексной информационной системы. Часть 1. Организационная</a>
+                                </h3>
+                                <div class="post_info__meta d-flex p-3">
+                                    <p class="p-3">просмотры</p>
+                                    <p>коменты</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="post-info__title">
+                                    <a href="#" class="post-info__title">Автоматизация End-2-End тестирования комплексной информационной системы. Часть 1. Организационная</a>
+                                </h3>
+                                <div class="post_info__meta d-flex p-3">
+                                    <p class="p-3">просмотры</p>
+                                    <p>коменты</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
