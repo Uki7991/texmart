@@ -285,6 +285,9 @@
     width: 220px!important;
     height: 220px;
 }
+.progress {
+    height: .2rem !important;
+}
 /*style for owl carousel 2*/
 .owl-theme .owl-dot span {
     background: none repeat scroll 0 0 rgba(186, 205, 199, 0);

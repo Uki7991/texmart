@@ -9,28 +9,24 @@
                 </button>
             </div>
             <div class="modal-body mx-3">
-                <div class="md-form mb-5">
-                    <i class="fas fa-user prefix grey-text"></i>
-                    <input type="text" id="form34" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form34">Ваше имя</label>
-                </div>
-                <div class="md-form mb-5">
-{{--                    <i class="fas fa-phone-alt prefix grey-text"></i>--}}
-                    <input type="text" class="form-control @error('phone') is-invalid @enderror"  id="phone-number_2">
-{{--                    <input type="hidden" name="code">--}}
-{{--                    <input type="text"--}}
-{{--                           class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"--}}
-{{--                           name="phone" required autocomplete="phone"--}}
-{{--                           id="phone-number_2">--}}
-                </div>
-                <div class="md-form">
-                    <i class="fas fa-pencil prefix grey-text"></i>
-                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-                    <label data-error="wrong" data-success="right" for="form8">Ваше сообщение</label>
-                </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-texmart-orange text-white">Отправить <i class="fas fa-paper-plane-o ml-1"></i></button>
+                <form action="#" class="col-8">
+                    @csrf
+                    <div class="md-form mb-5">
+                        <input type="text" id="form34" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form34">Ваше имя</label>
+                    </div>
+                    <div class="md-form mb-5">
+                        <input type="text" class="form-control @error('phone') is-invalid @enderror"  id="phone-number_2">
+                        <input type="hidden" name="code">
+                    </div>
+                    <div class="md-form">
+                        <i class="fas fa-pencil prefix grey-text"></i>
+                        <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                        <label data-error="wrong" data-success="right" for="form8">Ваше сообщение</label>
+                    </div>
+                    <button class="btn btn-texmart-orange text-white">Отправить <i class="fas fa-paper-plane-o ml-1"></i></button>
+
+                </form>
             </div>
         </div>
     </div>

@@ -112,7 +112,7 @@ class UserController extends Controller
 
     public function settings(Request $request)
     {
-        return view('user-production.profile-tabs.settings', [
+        return view('profile.settings', [
             'user' => $request->user(),
         ]);
     }
