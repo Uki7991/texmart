@@ -849,7 +849,7 @@
 .btn-blue, .btn-green:hover {
     color: #fff!important;
 }
-.btn {
+.btn-c {
     display: inline-block;
     vertical-align: middle;
     padding: 0 20px;

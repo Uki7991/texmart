@@ -22,7 +22,7 @@
             <div class="right-customer col-4">
                 <div class="block-top-block">
                     <div class="buttons_customer">
-                        <a href="#" class="btn btn btn-blue btn-h48 btn-block btn-with-label">
+                        <a href="#" class="btn-c btn-c btn-blue btn-h48 btn-block btn-with-label">
                             <span class="btn-text">Показать контакты</span>
                         </a>
                     </div>
