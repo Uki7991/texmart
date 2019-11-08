@@ -29,7 +29,7 @@
                 <div class="add_announcement col-12 position-relative text-left pl-5 pt-3">
                     <a href="" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
-                <div class="row justify-content-center position-relative mt-5">
+                <div class="row  position-relative mt-5">
                     <div class="col-3 text-center text-white">
                         <h4 class="mx-auto folder-sprite waves-effect waves-light "></h4>
                         <p>
@@ -82,7 +82,7 @@
     <script>
         $('#owl-text').owlCarousel({
             items: 1,
-            loop: false,
+            loop: true,
             margin: 10,
             mouseDrag: false,
             touchDrag: true,

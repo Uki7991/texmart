@@ -26,16 +26,24 @@
                             <span class="btn-text">Показать контакты</span>
                         </a>
                     </div>
-                    <div class="share_customer">
-                        <span>Поделиться:</span>
-                        <div class="social_buttons">
-
+                    <div class="share_customer" >
+                        <span class="span_share">Поделиться:</span>
+                        <div class="social_buttons" style="padding: 4px">
+                            <a href="" title="vk" style="width: 30px;height: 30px;">
+                                <i class="fab fa-vk mr-3 fa-lg nav-scale"></i>
+                            </a>
+                            <a href="" title="insta" style="width: 30px;height: 30px;">
+                                <i class="fab fa-instagram mr-3 fa-lg nav-scale"></i>
+                            </a>
+                            <a href="" title="facebook" style="width: 30px;height: 30px;">
+                                <i class="fab fa-facebook mr-3 fa-lg nav-scale"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="block-middle-block">
                     <ul class="customer_ul">
-                        <li class="customer_ul_li">
+                        <li class="customer_ul_li" style="display: flex;flex-wrap: nowrap;">
                             <div style="margin-right: 30px;">
                                 <img src="{{ asset('icons/eye_for_customer.png') }}" alt="" class="img_customer">
                             </div>
