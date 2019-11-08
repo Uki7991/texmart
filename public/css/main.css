@@ -737,7 +737,7 @@
     height: 100vh;
 }
 /*end*/
-/**/
+/*customer_list*/
 .customer-title h1 {
     padding-bottom: 30px;
     font-weight: 700!important;
@@ -884,4 +884,9 @@
     padding-top: 25px;
 }
 
-/**/
+/*end*/
+/*change input telephone*/
+.iti {
+    display: none;
+}
+/*end*/
