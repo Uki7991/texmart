@@ -49,7 +49,7 @@
             <div class="col-6 col-md-3 mb-5">
                 <a href="#" class="card  shadow " style="border-radius: 10px;">
                     <img class="w-25 mx-auto pt-3" src="{{ asset('icons/service_dress_category.png') }}" alt="Card image cap">
-                    <p class="card-title mt-4 text-dark text-center pb-4">Услуги</p>
+                    <p class="card-title mt-4 text-dark text-center pb-1">Услуги</p>
                 </a>
             </div>
         </div>
