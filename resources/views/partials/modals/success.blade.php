@@ -33,7 +33,7 @@
 @push('scripts')
     <script>
             let button = $('#buttonModalClick');
-            button.onclick(function () {
+            button.click(function () {
                 setTimeout(function () {
                     $('#modalSuccess').modal('show');
                 },1000);

@@ -27,7 +27,7 @@
                 {{--end carousel--}}
                 {{-- button for create new advertisement--}}
                 <div class="add_announcement col-12 position-relative text-left pl-5 pt-3">
-                    <a href="http://texmart/profile/production?type=productions" class="text-white" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
+                    <a href="http://texmart/profile/production?type=productions" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                 </div>
                 <div class="row  position-relative mt-5">
                     <div class="col-3 text-center text-white">
