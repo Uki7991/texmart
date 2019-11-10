@@ -47,11 +47,11 @@
         </ul>
     </div>
 </div>
-<nav id="menu">
+<nav id="menu" class="btn-submit-your-application">
     <ul>
         <li><a href="">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
-        <li><a href="">Оставить заявку</a></li>
+        <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>
         <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>
         <li><span>Объявления</span>
             <ul>
@@ -81,7 +81,7 @@
 
 @push("scripts")
     <script>
-        new Mmenu("#menu", {
+        new Mmenu("nav#menu", {
             "extensions": [
                 "pagedim-black"
             ],
@@ -99,7 +99,20 @@
                         "title"
                     ]
                 },
-            ]
+            ],
+            onClick : {
+                close          : true,
+                preventDefault : false,
+            }
         });
+    </script>
+    <script>
+        $('.btn-submit-your-application').hover(function () {
+            $('.btn-submit-your-application-child').addClass('active');
+            $('.btn-submit-your-application-child').addClass('animated slideInRight');
+        },function () {
+            $('.btn-submit-your-application-child').removeClass('active animated slideInRight');
+        });
+
     </script>
 @endpush

@@ -4,7 +4,7 @@
             Отзывы
         </a>
     </h2>
-    <div class="row justify-content-center bg-grey-blog">
+    <div class="row justify-content-center position-relative ">
         <div id="owl-otzivi" class="owl-carousel owl-theme col-12 col-md-8">
             <div class="item">
                 <div class="card justify-content-center">
@@ -174,6 +174,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="position-absolute" style="bottom: -30%; right: 0;">
+            <img src="{{ asset('images/grey-block.png') }}" alt="">
         </div>
     </div>
 </div>
