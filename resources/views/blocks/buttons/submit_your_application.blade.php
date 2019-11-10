@@ -1,8 +1,8 @@
 @include('blocks.buttons.button_request')
 
-<ul class="list-unstyled  btn-submit-your-application d-md-block none father" data-toggle="modal">
+<ul class="list-unstyled  btn-submit-your-application father" data-toggle="modal">
     <li>
-        <a href="#" class="form-call">
+        <a href="#" class="form-call d-md-block d-none">
             <img src="{{asset('icons/submit_your_application.png')}}" class="icon_form" alt="оставить заявку">
         </a>
         <ul class="list-unstyled btn-submit-your-application-child">

@@ -1,8 +1,6 @@
 <div class="container mt-5">
-    <h2 class="text-center" style="color: #e99b33 !important;">
-        <a name="reviews">
+    <h2 id="reviews" class="text-center" style="color: #e99b33 !important;">
             Отзывы
-        </a>
     </h2>
     <div class="row justify-content-center position-relative ">
         <div id="owl-otzivi" class="owl-carousel owl-theme col-12 col-md-8">

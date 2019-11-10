@@ -1,5 +1,5 @@
 <div class="list-group">
-    <a href="{{ route('profile.dashboard') }}" class="list-group-item list-group-item-action {{ request()->is('profile/dashboard*') ? 'active' : '' }}">{{ __('Dashboard') }}</a>
+    <a href="{{ route('profile.dashboard') }}" class="list-group-item list-group-item-action {{ request()->is('profile/dashboard*') ? 'active' : '' }}">{{ __('Лента') }}</a>
     {{--    <a href="{{ route('admin.category.datatable') }}" class="list-group-item list-group-item-action {{ request()->is('admin/category*') ? 'active' : '' }}">{{ __('Категории') }}</a>--}}
     {{--    <a href="{{ route('admin.product.datatable') }}" class="list-group-item list-group-item-action {{ request()->is('admin/product*') ? 'active' : '' }}">{{ __('Товары') }}</a>--}}
     <a href="{{ route('profile.production.index', ['type' => 'productions']) }}" class="list-group-item list-group-item-action {{ request()->query('type') == 'productions' ? 'active' : '' }}">Цеха</a>

@@ -74,7 +74,7 @@
                 <li><a href="{{ route('quality') }}">Проверка качества</a></li>
             </ul>
         </li>
-        <li><a href="">Отзывы</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
         <li><a href="{{ route('contacts') }}">Контакты</a></li>
     </ul>
 </nav>
