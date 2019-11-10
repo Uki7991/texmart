@@ -154,9 +154,7 @@ Route::get('/logistics',function(){
     return view('logistics');
 })->name('logistics');
 
-Route::get('/production',function(){
-    return view('production');
-})->name('production');
+Route::get('/production', 'ProductionController@index2')->name('production');
 
 Route::get('/gds',function(){
     return view('gds');
