@@ -333,7 +333,7 @@
 /*background for form.blade.php*/
 
 .bg-form-images{
-    background: url('../images/dogovor.png')no-repeat  center left;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/dogovor.png')no-repeat  center left;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
