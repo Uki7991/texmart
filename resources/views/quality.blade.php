@@ -39,15 +39,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 justify-content-end text-right">
+                <div class="col-6 justify-content-end text-right d-none d-md-block">
                     <img src="{{asset('img/arrow_left.png')}}" alt="arrow_left">
                 </div>
-                <div class="col-6 justify-content-start">
+                <div class="col-6 justify-content-start d-none d-md-block">
                     <img src="{{asset('img/arrow_right.png')}}" alt="arrow_right">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-6 text-for-clq">
+                <div class="col-12 col-md-6 text-for-clq">
                     <p class="h5 text-orange text-center">“In-line inspection”</p>
                     <p>“In-line inspection” - это контроль качества на этапе производства продукции, чаще всего, мы
                         осуществляем подобные проверки, когда производство только запущено в серию. Первые единицы
@@ -61,7 +61,7 @@
                         зрения
                         заказчика, такая услуга экономически оправдана почти всегда.</p>
                 </div>
-                <div class="col-6 text-for-clq">
+                <div class="col-12 col-md-6 text-for-clq">
                     <p class="h5 text-orange text-center">“Pre-shipment inspection”</p>
                     <p>“Pre-shipment inspection” - это контроль качества перед отгрузкой товара. Как правило, мы
                         проводим
@@ -79,10 +79,10 @@
                 </div>
             </div>
             <div class="row justify-content-center align-items-center">
-                <div class="col-6 text-center">
-                    <img src="{{asset('img/quality_1.png')}}" class="img-fluid text-center" alt="">
+                <div class="col-12 col-md-6 text-center">
+                    <img src="{{asset('img/quality_1.png')}}" class="img-fluid text-center" style="min-height: 200px;" alt="">
                 </div>
-                <div class="col-6 text-for-clq">
+                <div class="col-12 col-md-6 text-for-clq">
                     <p>
                         Тексмарт предоставляет возможность заказчику предложить свой вариант проведения контроля качества,
                         которую специалисты Тексмарт выполнить в надлежащем порядке.
