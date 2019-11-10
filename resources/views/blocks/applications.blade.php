@@ -60,29 +60,11 @@
                         <div class="app_content">
                             <a href="{{ route('customer_list') }}"></a>
                             <div class="app_top">
-                                <p style="margin: 0em 0">Куплю оптом дизайнерские носки оптом 500шт.</p>
+                                <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
                             </div>
                             <div class="app_bottom">
                                 <div class="app_category">
-                                    <a href=""><p class="application_text" style="margin: 0em 0">Женская одежда</p></a>
-                                </div>
-                                <div class="app_country">
-                                    <img src="{{asset('img/flag.png')}}" alt="Флаг">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item_slider">
-                    <div class="application_for">
-                        <div class="app_content">
-                            <a href="#"></a>
-                            <div class="app_top" >
-                                <p style="margin: 0em 0">Куплю оптом дизайнерские носки оптом 500шт.</p>
-                            </div>
-                            <div class="app_bottom">
-                                <div class="app_category">
-                                    <a href=""><p class="application_text" style="margin: 0em 0">Женская одежда</p></a>
+                                    <a href=""><p class="application_text">Женская одежда</p></a>
                                 </div>
                                 <div class="app_country">
                                     <img src="{{asset('img/flag.png')}}" alt="Флаг">
@@ -96,11 +78,11 @@
                         <div class="app_content">
                             <a href="#"></a>
                             <div class="app_top">
-                                <p style="margin: 0em 0">Куплю оптом дизайнерские носки оптом 500шт.</p>
+                                <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
                             </div>
                             <div class="app_bottom">
                                 <div class="app_category">
-                                    <a href=""><p class="application_text" style="margin: 0em 0">Женская одежда</p></a>
+                                    <a href=""><p class="application_text">Женская одежда</p></a>
                                 </div>
                                 <div class="app_country">
                                     <img src="{{asset('img/flag.png')}}" alt="Флаг">
@@ -114,11 +96,29 @@
                         <div class="app_content">
                             <a href="#"></a>
                             <div class="app_top">
-                                <p style="margin: 0em 0">Куплю оптом дизайнерские носки оптом 500шт.</p>
+                                <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
                             </div>
                             <div class="app_bottom">
                                 <div class="app_category">
-                                    <a href=""><p class="application_text" style="margin: 0em 0">Женская одежда</p></a>
+                                    <a href=""><p class="application_text">Женская одежда</p></a>
+                                </div>
+                                <div class="app_country">
+                                    <img src="{{asset('img/flag.png')}}" alt="Флаг">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_slider">
+                    <div class="application_for">
+                        <div class="app_content">
+                            <a href="#"></a>
+                            <div class="app_top">
+                                <p>Куплю оптом дизайнерские носки оптом 500шт.</p>
+                            </div>
+                            <div class="app_bottom">
+                                <div class="app_category">
+                                    <a href=""><p class="application_text">Женская одежда</p></a>
                                 </div>
                                 <div class="app_country">
                                     <img src="{{asset('img/flag.png')}}" alt="Флаг">
