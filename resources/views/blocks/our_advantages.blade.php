@@ -1,35 +1,35 @@
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center align-items-center">
         <div class="col-12">
             <h2 class="text-center" style="color: #e99b33 !important;">
                 Наши преимущества
             </h2>
         </div>
         <div class="col-sm-11 col-lg-6 py-5">
-            <div class="media mt-4 px-1 text-md-left">
-                <div class="sprite-community d-flex mr-3" alt="Generic placeholder image"></div>
+            <div class="media mt-4 align-items-center px-1 text-md-left">
+                <div class="sprite-community mr-3" alt="Generic placeholder image"></div>
 
-                <div class="media-body">
+                <div class="media-body h5">
 
                     Новая платформа ориентированная на поиске заказчиков и производителей текстильной и швейной продукции.
                 </div>
             </div>
-            <div class="media mt-4 px-1 text-md-left">
-                <div class="sprite-cardStar d-flex mr-3" alt="Generic placeholder image"></div>
-                <div class="media-body">
+            <div class="media mt-4 align-items-center px-1 text-md-left">
+                <div class="sprite-cardStar mr-3" alt="Generic placeholder image"></div>
+                <div class="media-body h5">
 
                     Рыночный проект от дешевого до качественного, дорогого продукта швейной и текстильной индустрии
                 </div>
             </div>
-            <div class="media mt-4 px-1 text-md-left">
-                <div class="sprite-like d-flex mr-3" alt="Generic placeholder image"></div>
-                <div class="media-body">
+            <div class="media mt-4 align-items-center px-1 text-md-left">
+                <div class="sprite-like mr-3" alt="Generic placeholder image"></div>
+                <div class="media-body h5">
 
                     Технология отслеживания контроля качества продукций
                 </div>
-            </div><div class="media mt-4 px-1 text-md-left">
-                <div class="sprite-disOrLike d-flex mr-3" alt="Generic placeholder image"></div>
-                <div class="media-body">
+            </div><div class="media mt-4 align-items-center px-1 text-md-left">
+                <div class="sprite-disOrLike mr-3" alt="Generic placeholder image"></div>
+                <div class="media-body h5">
 
                     Реальные отзывы и рейтинги участников.
                 </div>

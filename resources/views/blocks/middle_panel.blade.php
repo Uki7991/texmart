@@ -1,11 +1,11 @@
 <div class="container-fluid position-relative mt-5 mt-xl-0 vh-100" style="overflow:hidden;">
-    <div class="row pl-xl-5" style="background-image:  url({{asset('img/main.png')}});background-repeat: no-repeat;background-size: cover; left: 0; top: 0;">
+    <div class="row pl-xl-5" style="background-image:  url({{ asset('img/main.png') }});background-repeat: no-repeat;background-size: cover; left: 0; top: 0;">
         <div class="col-12 pl-5 col-lg-6 position-relative min-vh-100" >
             <div class="backdrop h-100"></div>
             <div class="row h-100 position-relative">
                 <div class="col-12">
                     <div class="pt-4 mb-5 position-relative text-left pl-5 ">
-                        <img src="{{asset('img/logo3.png')}}" class="img-fluid" alt="logo">
+                        <img src="{{ asset('img/logo3.png') }}" class="img-fluid" alt="logo">
                     </div>
                 </div>
                 {{--owl carousel for text--}}
