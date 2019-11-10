@@ -18,7 +18,7 @@
                      style="background-image: url({{asset('img/goods.png')}});background-repeat: no-repeat;background-size: cover;height: 402px;border-radius: 10px">
                     <div class="text-white justify-content-center row align-items-end  py-5 px-4" style="height: 100%">
                         <div>
-                            <a href=""><h3 class="card-title text-white"><strong>Товары</strong></h3></a>
+                            <a href="{{ route('production', ['type' => 'product']) }}"><h3 class="card-title text-white"><strong>Товары</strong></h3></a>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                      style="background-image: url({{asset('img/service.png')}});background-repeat: no-repeat;background-size: cover;height: 402px;border-radius: 10px">
                     <div class="text-white  row align-items-end justify-content-center py-5 px-4" style="height: 100%">
                         <div class="">
-                            <a href=""><h3 class="card-title text-white"><strong>Услуги</strong></h3></a>
+                            <a href="{{ route('production', ['type' => 'service']) }}"><h3 class="card-title text-white"><strong>Услуги</strong></h3></a>
                         </div>
                     </div>
                 </div>
