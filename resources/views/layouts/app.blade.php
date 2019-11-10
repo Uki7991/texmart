@@ -111,10 +111,8 @@
     <script src="{{ asset('js/jquery.rateyo.js') }}"></script>
     {{--connect chart.js with CDN--}}
     <script src="{{ asset('js/jquerySteps/modernizr-2.6.2.min.js') }}"></script>
-    <script src="{{ asset('js/jquerySteps/jquery-1.9.1.min.js') }}"></script>
     <script src="{{ asset('js/jquerySteps/jquery.cookie-1.3.1.js') }}"></script>
     <script src="{{ asset('js/jquerySteps/jquery.steps.js') }}"></script>
-    <script src="{{asset('js/jquery.steps.js')}}"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
