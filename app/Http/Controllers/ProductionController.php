@@ -291,9 +291,19 @@ class ProductionController extends Controller
             $productions = $productions->where('type', $type);
         }
 
+        $productions = $productions->map(function ($item) {
+            return new Production($item->only(['id', 'slug', 'logo', 'title', 'views']));
+        });
 
-        return response()->json(view('productions.list', [
-            'productions' => $productions->shuffle(),
-        ])->render());
+        $productions = $productions->paginate(3);
+
+        return response()->json([
+            'html' => view('productions.list', [
+                'productions' => $productions,
+            ])->render(),
+            'productions' => $productions,
+            'count' => count($productions),
+            'filters' => $request->query->all(),
+        ]);
     }
 }

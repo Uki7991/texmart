@@ -24,7 +24,7 @@ class Production extends Model
         'title', 'address', 'excerpt', 'description', 'phone1',
         'phone2', 'email', 'site', 'type', 'tools', 'amount_production', 'brand',
         'expert', 'minimum_order', 'from_amount_production', 'before_amount_prod',
-        'price', 'user_id',
+        'price', 'user_id', 'slug', 'logo', 'views', 'id',
     ];
 
     protected $spatial = ['coordinates'];
