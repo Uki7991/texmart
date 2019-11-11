@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="row pt-5">
-            <div class="col-3">
+            <div class="col-3 d-none d-lg-block">
                 @include('profile.partials.sidebar')
             </div>
             <div class="col">
@@ -31,8 +31,12 @@
         </div>
     </div>
 @endsection
+@push('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css">
+@endpush
 
 @push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var chart = new Chart(ctx, {
@@ -53,5 +57,14 @@
             // Configuration options go here
             options: {}
         });
+    </script>
+    <script>
+        $('#clickLogin').click(function (e) {
+            e.preventDefault();
+            $('#sidebar').addClass('d-block animate fadeInDown');
+        })
+    </script>
+    <script>
+        introJs().start();
     </script>
 @endpush

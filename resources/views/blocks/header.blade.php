@@ -9,9 +9,12 @@
             <li class="nav-item">
                 <a href="#" class="search-sprite waves-effect waves-light mt-3"></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="clickLogin">
                 <a href="{{ auth()->check() ? route('profile') : route('login') }}"
                    class="user-sprite my-3 waves-effect waves-light mx-3 mx-md-5"></a>
+                <div id="sidebar-header" style="position: absolute;top: 50px;display:none;">
+                    @include('profile.partials.sidebar')
+                </div>
             </li>
             <li class="nav-item">
                 <a href="#menu2"
@@ -77,6 +80,12 @@
                 preventDefault : false,
             }
         });
+    </script>
+    <script>
+        $('#clickLogin').click(e => {
+            e.preventDefault();
+            $('#sidebar-header').toggle(200);
+        })
     </script>
 @endpush
 

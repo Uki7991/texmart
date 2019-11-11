@@ -2,12 +2,12 @@
 
 <ul class="list-unstyled  btn-submit-your-application father" data-toggle="modal">
     <li>
-        <a href="#" class="form-call d-md-block d-none">
+        <a class="form-call d-md-block d-none">
             <img src="{{asset('icons/submit_your_application.png')}}" class="icon_form" alt="оставить заявку">
         </a>
         <ul class="list-unstyled btn-submit-your-application-child">
             <li>
-                <a href="" data-toggle="modal" data-target="#modalContactForm">оставить заявку</a>
+                <a href="" data-toggle="modal" data-target="#modalContactForm">Задать вопрос</a>
             </li>
         </ul>
     </li>

@@ -49,15 +49,15 @@
 </div>
 <nav id="menu" class="btn-submit-your-application">
     <ul>
-        <li><a href="">Главная</a></li>
+        <li><a href="{{ route('welcome') }}">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
-        <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>
+        <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm" >Задать вопрос</a></li>
         <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>
         <li><span>Объявления</span>
             <ul>
-                <li><a href="{{ route('production') }}">Производственные цеха и фабрики</a></li>
-                <li><a href="{{ route('gds') }}">Товары</a></li>
-                <li><a href="{{ route('service') }}">Услуги</a></li>
+                <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
+                <li><a href="{{ route('production', ['type' => 'product']) }}">Товары</a></li>
+                <li><a href="{{ route('production', ['type' => 'service']) }}">Услуги</a></li>
             </ul>
         </li>
         <li><span>О компании</span>
