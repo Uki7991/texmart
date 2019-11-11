@@ -2,7 +2,12 @@
 
 @section('content')
 
-    <div class="container-fluid py-4">
+    <section class="bg-texmart-sidebar fixed-top">
+        <div class="container">
+            @include('blocks.header')
+        </div>
+    </section>
+    <div class="container-fluid py-4 pt-5 mt-5">
         <div class="row">
             <div class="col-lg-3">
                 @include('partials.left_sidebar', ['toggle' => true])
