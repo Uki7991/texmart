@@ -56,30 +56,30 @@ class UserController extends Controller
     public function dashboard(Request $request)
     {
         $productions = Production::where('user_id', auth()->user()->id)->get();
-        $categories = Category::where('parent_id', null)->get(['id', 'title']);
-        $types = Type::all();
-        $productionCats = collect();
-        $productCats = collect();
-        $serviceCats = collect();
-        foreach ($types as $type) {
-            if ($type->title == 'Производство') {
-                $productionCats = $productionCats->merge($type->categories);
-            }
-            if ($type->title == 'Услуги') {
-                $serviceCats = $serviceCats->merge($type->categories);
-            }
-            if ($type->title == 'Товары') {
-                $productCats = $productCats->merge($type->categories);
-            }
-        }
+//        $categories = Category::where('parent_id', null)->get(['id', 'title']);
+//        $types = Type::all();
+//        $productionCats = collect();
+//        $productCats = collect();
+//        $serviceCats = collect();
+//        foreach ($types as $type) {
+//            if ($type->title == 'Производство') {
+//                $productionCats = $productionCats->merge($type->categories);
+//            }
+//            if ($type->title == 'Услуги') {
+//                $serviceCats = $serviceCats->merge($type->categories);
+//            }
+//            if ($type->title == 'Товары') {
+//                $productCats = $productCats->merge($type->categories);
+//            }
+//        }
 
         $user = auth()->user();
         return view('profile.profile', [
             'user' => $user,
             'productions' => $productions,
-            'productionCats' => $productionCats->sortBy('order'),
-            'productCats' => $productCats->sortBy('order'),
-            'serviceCats' => $serviceCats->sortBy('order'),
+//            'productionCats' => $productionCats->sortBy('order'),
+//            'productCats' => $productCats->sortBy('order'),
+//            'serviceCats' => $serviceCats->sortBy('order'),
         ]);
     }
 

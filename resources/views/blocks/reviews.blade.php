@@ -3,7 +3,7 @@
             Отзывы
     </h2>
     <div class="row justify-content-center position-relative ">
-        <div id="owl-otzivi" class="owl-carousel owl-theme col-12 col-md-8">
+        <div id="owl-otzivi" class="owl-carousel owl-theme col-12 col-md-10 col-lg-8">
             <div class="item">
                 <div class="card justify-content-center">
                     <div class="card-body row justify-content-center p-5">
