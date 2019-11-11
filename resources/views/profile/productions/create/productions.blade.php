@@ -1,6 +1,5 @@
 <div class="container">
     <div class="row">
-
         <div class="col-12 mb-5">
             <h2>Создание объявления производственного цеха</h2>
         </div>
