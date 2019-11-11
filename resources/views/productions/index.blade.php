@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-12">
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
+                    <ul class="pagination pg-amber justify-content-center">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                         </li>
@@ -109,7 +109,7 @@
                             console.log(item, data.productions.current_page);
                             if (item == '...') {
                                 console.log(item == '...');
-                                pagination.append('<li class="disabled"><a class="page-link disabled" disabled onclick="event.preventDefault()">' + item + '</a></li>');
+                                pagination.append('<li class="page-item disabled"><a class="page-link disabled" disabled onclick="event.preventDefault()">' + item + '</a></li>');
                             } else if (item == data.productions.current_page) {
                                 pagination.append('<li class="page-item active"><a class="page-link" data-page="' + item + '" href="#">' + item + '</a></li>');
                             } else {
