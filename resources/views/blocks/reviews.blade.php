@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-5 ">
     <h2 id="reviews" class="text-center" style="color: #e99b33 !important;">
             Отзывы
     </h2>
