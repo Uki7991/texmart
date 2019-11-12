@@ -269,12 +269,15 @@ class ProductionController extends Controller
 
     public function filter(Request $request)
     {
+
+
         $params = $request->params;
         $type = $request->type;
         $cats = Category::all();
         if ($params) {
             $cats = $cats->whereIn('id', $params);
         }
+
         $productions = collect();
         foreach ($cats as $cat) {
             $productions = $productions->merge($cat->productions);
@@ -283,19 +286,22 @@ class ProductionController extends Controller
 
         if ($type == 'productions') {
             $productions = $productions->where('type', $type);
+//            $products = $products->where('type', $type);
         }
         if ($type == 'service') {
             $productions = $productions->where('type', $type);
+//            $products = $products->where('type', $type);
         }
         if ($type == 'product') {
             $productions = $productions->where('type', $type);
+//            $products = $products->where('type', $type);
         }
 
         $productions = $productions->map(function ($item) {
             return new Production($item->only(['id', 'slug', 'logo', 'title', 'views']));
         });
 
-        $productions = $productions->paginate(3);
+        $productions = $productions->paginate(16);
 
         return response()->json([
             'html' => view('productions.list', [
@@ -304,6 +310,7 @@ class ProductionController extends Controller
             'productions' => $productions,
             'count' => count($productions),
             'filters' => $request->query->all(),
+//            'products' => $products,
         ]);
     }
 }

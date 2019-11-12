@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic;
+use TCG\Voyager\Traits\Spatial;
 
 
 class Production extends Model
@@ -19,6 +20,7 @@ class Production extends Model
     use Sluggable;
     use Favoriteable;
     use RateableTrait;
+    use Spatial;
 
     protected $fillable = [
         'title', 'address', 'excerpt', 'description', 'phone1',

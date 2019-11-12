@@ -7,49 +7,47 @@
     </section>
     <section class="mt-5 pt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-3">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-4">
                     <div id="sync1" class="owl-carousel owl-theme">
                         <div class="item">
-                            <h1>1</h1></div>
-                        <div class="item">
-                            <h1>2</h1></div>
-                        <div class="item">
-                            <h1>3</h1></div>
-                        <div class="item">
-                            <h1>4</h1></div>
-                        <div class="item">
-                            <h1>5</h1></div>
-                        <div class="item">
-                            <h1>6</h1></div>
-                        <div class="item">
-                            <h1>7</h1></div>
-                        <div class="item">
-                            <h1>8</h1></div>
+                            <a href="{{ asset('storage/'.$production->logo) }}" data-fancybox="gallery">
+                                <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" alt="">
+                            </a>
+                        </div>
+                        @foreach(json_decode($production->images) as $image)
+                            <div class="item">
+                                <a href="{{ asset('storage/'.$image) }}" data-fancybox="gallery">
+                                    <img src="{{ $production->logo && file_exists('storage/'.$image) ? asset('storage/'.$image) : asset('img/2 lg.jpg') }}" alt="">
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
 
                     <div id="sync2" class="owl-carousel owl-theme">
                         <div class="item">
-                            <h1>1</h1></div>
-                        <div class="item">
-                            <h1>2</h1></div>
-                        <div class="item">
-                            <h1>3</h1></div>
-                        <div class="item">
-                            <h1>4</h1></div>
-                        <div class="item">
-                            <h1>5</h1></div>
-                        <div class="item">
-                            <h1>6</h1></div>
-                        <div class="item">
-                            <h1>7</h1></div>
-                        <div class="item">
-                            <h1>8</h1></div>
+                            <a href="{{ asset('storage/'.$production->logo) }}" data-fancybox="gallery">
+                                <img src="{{ $production->logo && file_exists('storage/'.$production->logo) ? asset('storage/'.$production->logo) : asset('img/2 lg.jpg') }}" alt="">
+                            </a>
+                        </div>
+                        @foreach(json_decode($production->images) as $image)
+                            <div class="item">
+                                <a href="{{ asset('storage/'.$image) }}" data-fancybox="gallery">
+                                    <img src="{{ $production->logo && file_exists('storage/'.$image) ? asset('storage/'.$image) : asset('img/2 lg.jpg') }}" alt="">
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
 
                 </div>
+                <div class="col">
+                    <p class="h4 mb-5">
+                        Мужские толстовки
+                        <a href="#" class="btn border-0 shadow-none p-0">
+                            <img src="{{ asset('icons/likeIcon.png') }}" alt="">
+                        </a>
 
-                <div class="col-lg-9 pt-2 mt-1">
+                    </p>
                     <a class="border border-texmart rounded-pill bg-texmart-sidebar text-white py-2 px-2 ">
                         Ветровки и толстовки
                     </a>
@@ -58,7 +56,7 @@
                             <div class="my-3" id="rateYo"></div>
                         </li>
                         <li class="list-inline-item">
-                            <a href="" class="text-dark">
+                            <a href="#reviews-show" class="text-dark text-dashed">
                                 25 отзывов
                             </a>
                         </li>
@@ -68,79 +66,103 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="col-12">
-                        <p class="h4">
-                            Мужские толстовки <a href="#" class="btn border-0 shadow-none p-0">
-                                <img src="{{ asset('icons/likeIcon.png') }}" alt="">
-                            </a>
+                </div>
 
-                        </p>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 pt-2 mt-1">
+
+                    <div class="col-12">
+
                         <div class="card">
 
 
                             <div class="card-body">
-                                <div class="row d-none d-md-block">
-                                    <div class="col-6">
-                                        <p>
-                                            Бренд: <br> Какой-то
-                                        </p>
+                                <div class="row mb-5 justify-content-end">
+                                    <div class="col-auto">
+                                        <span class="small">Проверено администрацией Texmart.kg</span>
 
-                                    </div>
-                                    <div class="col-6">
-                                        <p>
                                         <div id="rateYo1"></div>
-                                        Проверено администрацией Texmart.kg
-                                        </p>
                                     </div>
                                 </div>
-                                <div class="d-block d-md-none">
-                                    <p>
-                                    <div id="rateYo2" class="py-2"></div>
-                                    Проверено администрацией Texmart.kg
-                                    </p>
-                                    <p>
-                                        Бренд: <br> Какой-то
-                                    </p>
+                                <div class="row">
+                                    <div class="col-4 mb-4">
+                                        <p class="mb-1">
+                                            Бренд:
+                                        </p>
+                                        {{ $production->brand }}
+                                    </div>
+                                    <div class="col-4 mb-4">
+                                        <p class="mb-1">
+                                            Адрес:
+                                        </p>
+                                        {{ $production->address }}
+                                    </div>
+
+
+
+                                    <div class="col-4 mb-4">
+                                        <p class="mb-1">
+                                            Дата создания объявления:
+                                        </p>
+                                        {{ \Carbon\Carbon::make($production->created_at)->formatLocalized('%d %B %Y') }}
+
+                                    </div>
+
+                                    <hr class="w-100 mt-0">
+                                    <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                        <p class="mb-1">
+                                            E-mail:
+                                        </p>
+                                        {{ $production->email ?? 'Нет Email' }}
+
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                        <p class="mb-1">
+                                            Телефон №1:
+                                        </p>
+                                        {{ $production->phone1 ?? 'Нет телефона №1' }}
+
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                        <p class="mb-1">
+                                            Телефон №2:
+                                        </p>
+                                        {{ $production->phone2 ?? 'Нет телефона №2' }}
+
+                                    </div>
+                                    <div class="col-12 col-md-4 col-lg-3 mb-4">
+                                        <p class="mb-1">
+                                            Личный сайт:
+                                        </p>
+                                        {{ $production->site ?? 'Нет сайта' }}
+
+                                    </div>
+
+
+                                    <div class="col-12 mb-4">
+                                        <p>
+                                            Описание:
+                                        </p>
+                                        {!! $production->description !!}
+
+                                    </div>
+                                    <div class="col-12">
+                                        @if(count($production->getCoordinates()))
+                                            <h3>Местонахождение на карте:</h3>
+                                            <div id="map" style="width: auto; height: 200px;"></div>
+                                        @endif
+                                    </div>
                                 </div>
-                                <p>
-                                    Адрес: <br> г.Бишкек рынок Дордой 1 проход, 80/4 контейнер
-                                </p>
 
-                                <p>
-                                    Описание: <br>
-                                    г.Бишкек рынок Дордой 1 проход, 80/4 контейнер
-
-                                </p>
-
-                                <p>
-                                    Дата создания объявления: <br>
-                                    10 Октябрь 2019
-
-                                </p>
-                                <p>
-                                    E-mail: <br>
-                                    gbabatayeva@bk.ru
-
-                                </p>
-                                <p>
-                                    Телефон №1: <br>
-                                    +996 704 142 013
-
-                                </p>
-                                <p>
-                                    Телефон №2: <br>
-
-                                </p>
-                                <p>
-                                    Личный сайт: <br>
-
-                                </p>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <section>
@@ -155,11 +177,12 @@
 @endsection
 
 @push('styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     {{--style for owl carousel--}}
     <style>
         #sync1 .item {
             background: gold;
-            padding: 80px 0px;
+            padding: 1px 0px;
             margin: 5px;
             color: #FFF;
             border-radius: 3px;
@@ -168,7 +191,7 @@
 
         #sync2 .item {
             background: red;
-            padding: 10px 0px;
+            padding: 5px 0px;
             margin: 5px;
             color: #FFF;
             border-radius: 3px;
@@ -217,7 +240,28 @@
 @endpush
 
 @push('scripts')
-
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU"
+            type="text/javascript"></script>
+    @if(count($production->getCoordinates()))
+        <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU"
+                type="text/javascript"></script>
+        <script type="text/javascript">
+            ymaps.ready(init);
+            function init() {
+                let production = new ymaps.Placemark(['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
+                    {}, {
+                        preset: 'islands#icon',
+                        color: '#0095b6'
+                    });
+                var myMap = new ymaps.Map("map", {
+                    center: ['{{ $production->getCoordinates()[0]["lng"] }}', '{{ $production->getCoordinates()[0]["lat"] }}'],
+                    zoom: 13
+                });
+                myMap.geoObjects.add(production);
+            }
+        </script>
+    @endif
     {{--two owl carousels--}}}
     <script>
         $(document).ready(function () {

@@ -518,7 +518,9 @@
     -o-background-size: 350px 290px;
     -webkit-background-size: 350px 290px;
 }
-
+.text-dashed {
+    border-bottom: 1px dashed #000;
+}
 @media (min-width: 768px) {
     .about-us-block {
         display: flex;
