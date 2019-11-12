@@ -65,6 +65,56 @@
         })
     </script>
     <script>
-        introJs().start();
+            var intro = introJs();
+            if (introJs.step(4)){
+                $(#accordion).accordion('option',)
+            }
+            intro.setOptions({
+                steps: [
+                    {
+                        element: '.col-3.d-none.d-lg-block .step1',
+                        intro: "Добро пожаловать в профиль, в раздел ленты "
+                    },
+                    {
+                        element: '.blog-components',
+                        intro: "Здесь вы можете просматривать топ 10 объявлений от закзачиков!",
+                    },
+                    {
+                        element: '.step3',
+                        intro: 'На этом графике вы можете просматривать статистику показов ваших объявлений',
+                    },
+                    {
+                        element: '.col-3.d-none.d-lg-block .step4',
+                        intro: "Нажмите на кнопку подать объявления",
+
+                    },
+                    {
+                        element: '.col-3.d-none.d-lg-block .step5',
+                        intro: 'Три вида объявлений:'
+                    },
+                    {
+                        element: '.col-3.d-none.d-lg-block .step6',
+                        intro: 'Здесь вы можете просмотреть и создать объявления по категории производственных цехов и фабрик'
+                    },
+                    {
+                        element: '#step5',
+                        intro: '<strong>Get</strong> it, <strong>use</strong> it.'
+                    },
+                    {
+                        element: '#step5',
+                        intro: '<strong>Get</strong> it, <strong>use</strong> it.'
+                    },
+                    {
+                        element: '#step5',
+                        intro: '<strong>Get</strong> it, <strong>use</strong> it.'
+                    },
+                    {
+                        element: '#step5',
+                        intro: '<strong>Get</strong> it, <strong>use</strong> it.'
+                    }
+                ]
+            });
+            intro.start();
+
     </script>
 @endpush

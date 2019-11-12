@@ -1,7 +1,7 @@
 @extends('profile.dashboard')
 
 @section('profile_content')
-    <section id="blog-components" class="text-center" data-step="2" data-intro="Здесь вы можете просматривать топ 10 объявлений от закзачиков!">
+    <section class="text-center blog-components">
         <h3 class="section-heading mb-5 h1">Объявления заказчиков</h3>
         <section class="my-5">
             <div class="media mt-4 px-1 text-md-left">

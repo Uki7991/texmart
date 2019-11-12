@@ -18,7 +18,7 @@
 
 {{--</div>--}}
 {{--<!-- Card -->--}}
-<div class="" data-intro="На этом графике вы можете просматривать статистику показов ваших объявлений">
+<div class="step3">
     <div class=" my-5" data-step="3" >
         <canvas id="myChart"></canvas>
     </div>
