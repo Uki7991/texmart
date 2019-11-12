@@ -17,14 +17,14 @@
             </div>
         </div>
         <div class="row pt-5">
-            <div class="col-3 d-none d-lg-block">
+            <div class="col-12 col-lg-3 d-none d-lg-block">
                 @include('profile.partials.sidebar')
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 @yield('profile_content')
             </div>
             @if(request()->is('profile/dashboard*'))
-                <div class="col-3">
+                <div class="col-12 col-lg-3">
                     @include('profile.partials.right-sidebar')
                 </div>
             @endif
@@ -112,6 +112,9 @@
                 ]
             });
             intro.start();
+            introJs().onexit(function() {
+                alert("exit of introduction");
+            });
 
     </script>
 @endpush
