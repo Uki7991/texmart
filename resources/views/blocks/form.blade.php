@@ -1,4 +1,4 @@
-<section class="bg-form-images lazy">
+<section id="form-review" class="bg-form-images lazy">
     <div class="container py-5">
         <div class="row justify-content-center align-items-center  py-2">
             <div class="col-12 col-lg-5">
@@ -101,6 +101,8 @@
             input.parent().siblings('input[name="code"]').val(code);
             let $this = $(e.currentTarget);
             $this.removeAttr('maxlength');
+            $this.val('');
+
             let
                 // Get active country's phone number format from input placeholder attribute
                 activePlaceholder = $this.attr('placeholder'),
@@ -110,6 +112,7 @@
 
             // Init new mask for focused input
             $this.mask(newMask);
+            $this.val('');
         });
         console.log(iti);
 
@@ -117,6 +120,7 @@
             console.log('changed')
             let $this = $(e.currentTarget);
             $this.removeAttr('maxlength');
+            $this.val('');
         });
 
         let reset = function() {

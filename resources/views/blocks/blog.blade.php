@@ -12,7 +12,7 @@
                     <p class="card-text">Сайт рыбатекст поможет дизайнеру,
                         верстальщику, вебмастеру</p>
                     <div class="row justify-content-end" style="padding-right: 20px">
-                        <a href="#" class="text-white btn-texmart">Читать>></a>
+                        <a href="#" class="text-white btn-texmart">Читать</a>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         вебмастеру сгенерировать несколько абзацев более
                         менее осмысленного текста</p>
                     <div class="row justify-content-center mx-0">
-                        <a href="#" class="text-white btn-texmart">Читать>></a>
+                        <a href="#" class="text-white btn-texmart">Читать</a>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         <p>Сайт рыбатекст поможет дизайнеру, верстальщику,
                             вебмастеру сгенерировать несколько абзацев более
                             менее осмысленного текста</p>
-                        <a href="#" class="text-white rounded-pill border border-white btn-texmart-info ">Читать>></a>
+                        <a href="#" class="text-white rounded-pill border border-white btn-texmart-info ">Читать</a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <p class="card-text">Сайт рыбатекст поможет дизайнеру,
                         верстальщику, вебмастеру</p>
                     <div class="row justify-content-end" style="padding-right: 20px">
-                        <a href="#" class="text-white btn-texmart">Читать>></a>
+                        <a href="#" class="text-white btn-texmart">Читать</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                         <p>Сайт рыбатекст поможет дизайнеру, верстальщику,
                             вебмастеру сгенерировать несколько абзацев более
                             менее осмысленного текста</p>
-                        <a href="#" class="text-white rounded-pill border border-white btn-texmart-info">Читать>></a>
+                        <a href="#" class="text-white rounded-pill border border-white btn-texmart-info">Читать</a>
                     </div>
                 </div>
             </div>
@@ -77,6 +77,6 @@
     </div>
     <div class="pt-3">
         <a href="{{ route('blog_index') }}"><button type="submit"
-                class="btn btn-texmart-orange text-white btn-lg px-5 py-2 scale-on-hover "> Все новости>></button></a>
+                class="btn btn-texmart-orange text-white btn-lg px-5 py-2 scale-on-hover "> Все новости</button></a>
     </div>
 </div>

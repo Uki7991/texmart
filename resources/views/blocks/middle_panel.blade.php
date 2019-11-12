@@ -28,6 +28,7 @@
                 {{-- button for create new advertisement--}}
                 <div class="add_announcement col-12 position-relative text-left pl-lg-5 pt-3">
                     <a href="http://texmart/profile/production?type=productions" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
+                    <a href="#form-review" class="text-white btn btn-danger ml-5 btn-sm" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Предложить заказ</a>
                 </div>
                 <div class="row justify-content-center position-relative mt-5">
                     <div class="col-6 col-md-4 col-lg-3 text-center text-white">
