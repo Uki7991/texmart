@@ -65,7 +65,7 @@
         })
     </script>
     <script>
-            var intro = introJs();
+            let intro = introJs();
             intro.setOptions({
                 steps: [
                     {
