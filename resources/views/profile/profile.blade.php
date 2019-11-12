@@ -10,7 +10,12 @@
                     <h5 class="font-weight-bold mt-0">
                         <a href="">Danny Newman</a>
                     </h5>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consectetur accusamus velit nostrum et magnam.
+                    <div class="block-customer">
+                        <div class="date-customer">12.09.2019</div>
+                        <h1 class="customer-title" style="font-size: 1.5rem">Куплю ткани для оптового закупа. Особенно
+                            интересуют трикотаж, лён, кашемир. Интересует
+                            также женская одежда и обувь</h1>
+                    </div>
                 </div>
             </div>
         </section>

@@ -66,9 +66,6 @@
     </script>
     <script>
             let intro = introJs();
-            if (introJs.step(4)){
-                $(#accordion).accordion('option',)
-            }
             intro.setOptions({
                 steps: [
                     {
