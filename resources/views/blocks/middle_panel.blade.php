@@ -31,7 +31,7 @@
                         <a href="http://texmart/profile/production?type=productions" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                     </div>
                     <div class="col-12 col-md-4 ">
-                        <a href="#form-review" class="text-white ml-lg-5 btn-sm btn-texmart-orange" style="border-radius: 10px;padding:8px 30px;">Предложить заказ</a>
+                        <a href="#form-review" class="text-white ml-lg-5 btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Предложить заказ</a>
                     </div>
                 </div>
                 <div class="row justify-content-center position-relative mt-5">

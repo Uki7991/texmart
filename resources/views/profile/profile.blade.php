@@ -5,16 +5,26 @@
         <h3 class="section-heading mb-5 h1">Объявления заказчиков</h3>
         <section class="my-5">
             <div class="media mt-4 px-1 text-md-left">
-                <img class="card-img-100 d-flex z-depth-1 mr-3" src="{{ asset('img/logo.png') }}" alt="Generic placeholder image">
                 <div class="media-body">
                     <h5 class="font-weight-bold mt-0">
                         <a href="">Danny Newman</a>
                     </h5>
-                    <div class="block-customer">
-                        <div class="date-customer">12.09.2019</div>
-                        <h1 class="customer-title" style="font-size: 1.5rem">Куплю ткани для оптового закупа. Особенно
-                            интересуют трикотаж, лён, кашемир. Интересует
-                            также женская одежда и обувь</h1>
+                    <div class="application_for">
+                        <div class="app_content">
+                            <a href="#"></a>
+                            <div class="app_top" style="display: flex;flex-wrap: nowrap;justify-content: space-between;">
+                                <a href="{{ route('customer_list') }}"><p class="" style="margin: 0em 0">Куплю оптом дизайнерские носки оптом 500шт.</p></a>
+                                <div class="">12.09.2019</div>
+                            </div>
+                            <div class="app_bottom">
+                                <div class="app_category">
+                                    <p class="application_text" style="margin: 0em 0">Женская одежда</p>
+                                </div>
+                                <div class="app_country">
+                                    <img src="{{asset('img/flag.png')}}" alt="Флаг">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
