@@ -84,16 +84,19 @@
     background: url('../images/sprite.png') no-repeat 0 -2px;
     width: 28px;
     height: 18px;
+    display: block;
 }
 .user-sprite{
     background: url('../images/sprite.png') no-repeat -41px 0;
     width: 22px;
     height: 22px;
+    display: block;
 }
 .search-sprite{
     background: url('../images/sprite.png') no-repeat -77px -1px;
     width: 22px;
     height: 21px;
+    display: block;
 }
 .vk-sprite{
     background: url('../images/sprite.png') no-repeat -110px -7px;
