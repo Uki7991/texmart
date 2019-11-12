@@ -30,13 +30,13 @@
                     <div class="share_customer">
                         <span class="span_share">Поделиться:</span>
                         <div class="social_buttons" style="padding: 4px">
-                            <a href="javascript:void(0)" title="vk" class="social-share-btn" data-url="{{ request()->url() }}" data-social="vk" data-text="{{ $production->title }}" style="width: 30px;height: 30px;">
+                            <a href="javascript:void(0)" title="vk" class="social-share-btn" data-url="{{ request()->url() }}" data-social="vk" data-text="{{ $production->title ?? 'awdawd' }}" style="width: 30px;height: 30px;">
                                 <i class="fab fa-vk mr-3 fa-lg nav-scale"></i>
                             </a>
                             {{--                            <a href="javascript:void(0)" title="instagram" class="social-share-btn" data-url="{{ request()->url() }}" data-social="instagram" data-text="{{ $production->title }}" style="width: 30px;height: 30px;">--}}
                             {{--                                <i class="fab fa-instagram mr-3 fa-lg nav-scale"></i>--}}
                             {{--                            </a>--}}
-                            <a href="javascript:void(0)" title="facebook" class="social-share-btn" data-url="{{ request()->url() }}" data-social="facebook" data-text="{{ $production->title }}" style="width: 30px;height: 30px;">
+                            <a href="javascript:void(0)" title="facebook" class="social-share-btn" data-url="{{ request()->url() }}" data-social="facebook" data-text="{{ $production->title ?? 'awdawd' }}" style="width: 30px;height: 30px;">
                                 <i class="fab fa-facebook mr-3 fa-lg nav-scale"></i>
                             </a>
                         </div>

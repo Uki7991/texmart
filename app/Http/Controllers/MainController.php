@@ -10,19 +10,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Intervention\Image\ImageManagerStatic;
+use Midnite81\GeoLocation\Services\GeoLocation;
 
 class MainController extends Controller
 {
     public function index()
     {
-        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo', 'views']);
-        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo', 'views']);
-        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);
+//        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo', 'views']);
+//        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo', 'views']);
+//        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);
 
+        $this->address(new GeoLocation());
         return view('welcome', [
-            'productions' => $productions->sortByDesc('id'),
-            'services' => $services->sortByDesc('id'),
-            'products' => $products->sortByDesc('id'),
+//            'productions' => $productions->sortByDesc('id'),
+//            'services' => $services->sortByDesc('id'),
+//            'products' => $products->sortByDesc('id'),
         ]);
     }
 

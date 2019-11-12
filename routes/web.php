@@ -29,6 +29,7 @@ Route::prefix('profile')->name('profile.')->middleware('auth')->group(function (
     Route::resource('production', 'ProductionController');
 });
 
+Route::resource('announce', 'AnnounceController');
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
 Route::get('/user/favorites', 'UserController@favorites')->name('user.favorites');
 Route::get('/user/announce', 'UserController@productions')->name('user.announce');
