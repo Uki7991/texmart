@@ -5,7 +5,7 @@
     <div class="row pt-3">
         <div class="col-12 col-md-4 col-lg-4 col-sm-12 pb-sm-5 mb-4 mb-md-1">
             <div class="card">
-                <img class="card-img-top lazy" data-src="{{ asset('img/blog_1.png') }}" src="" alt="Card image cap">
+                <img class="card-img-top div-lazy" data-src="{{ asset('img/blog_1.png') }}" src="" alt="Card image cap">
                 <div class="card-body pb-3 pb-md-4">
                     <p class="h5">28.09.19</p>
                     <h4 class="card-title"><a>Какая-то тема</a></h4>
@@ -19,7 +19,7 @@
         </div>
         <div class="col-12 col-md-8 mb-md-4 mb-sm-2">
             <div class="card mb-3">
-                <img src="" data-src="{{ asset('img/blog_2.png') }}" class="card-img-top lazy" alt="...">
+                <img src="" data-src="{{ asset('img/blog_2.png') }}" class="card-img-top div-lazy" alt="...">
                 <div class="card-body mb-3 mb-md-2 pb-md-3 pb-lg-3">
                     <p class="card-text h5"><small class="text-muted">28.09.19</small></p>
                     <h4 class="card-title text-center">Какая-то тема</h4>
@@ -35,7 +35,7 @@
     </div>
     <div>
         <div class="card-deck">
-            <div class="card card-image lazy"
+            <div class="card card-image div-lazy"
                  style="background-image: url({{asset('img/blog_3.png')}});background-repeat: no-repeat;background-size: cover">
                 <div class="text-white text-center d-flex align-items-center  py-5 px-4">
                     <div>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="card card-image">
-                <img class="card-img-top lazy" data-src="{{ asset('img/blog_4.png') }}" src="" alt="Card image cap">
+                <img class="card-img-top div-lazy" data-src="{{ asset('img/blog_4.png') }}" src="" alt="Card image cap">
                 <div class="card-body">
                     <p class="h5">28.09.19</p>
                     <h4 class="card-title"><a>Какая-то тема</a></h4>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card card-image lazy"
+            <div class="card card-image div-lazy"
                  style="background-image: url({{asset('img/blog_5.png')}});background-repeat: no-repeat;background-size: cover">
                 <div class="text-white text-center d-flex align-items-center  py-5 px-4">
                     <div>

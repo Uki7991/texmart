@@ -1,4 +1,14 @@
 @extends('layouts.app')
+@section('seo_content')
+    <meta name="description" content="Texmart.kg это первая интернет-платформа оптовых производителей текстильной и швейной продукции Кыргызской Республики. Вы можете заказать одежду оптом по очень низким ценам! Ведение бизнеса в формате В2В. Услуга логистики и доставки. Оформление документов экспортно-импортных документов.">
+    <meta name="keywords" content="texmart, техмарт, оптом, одежда, оптовая, бишкек, киргизия, кыргызстан, детская, мужская, женская, батальные, размеры, купить, купить одежду, оптовики, оптовая одежда, купить оптом, одежда оптом, {{ $production->title }}">
+@endsection
+@section('og_content')
+    <meta property="og:title" content="Texmart.kg - {{ $production->title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request()->url() }}" />
+    <meta property="og:image" content="{{ asset('storage/'. $production->logo) }}" />
+@endsection
 @section('content')
     <section class="bg-texmart-sidebar fixed-top">
         <div class="container">
@@ -65,8 +75,22 @@
                         </li>
                     </ul>
                 </div>
-
-
+                <div class="col-auto align-self-start">
+                    <div class="share_customer">
+                        <span class="span_share font-weight-bold">Поделиться:</span>
+                        <div class="social_buttons" style="padding: 4px">
+                            <a href="javascript:void(0)" title="vk" class="social-share-btn" data-url="{{ request()->url() }}" data-social="vk" data-text="{{ $production->title }}" style="width: 30px;height: 30px;">
+                                <i class="fab fa-vk mr-3 fa-lg nav-scale"></i>
+                            </a>
+{{--                            <a href="javascript:void(0)" title="instagram" class="social-share-btn" data-url="{{ request()->url() }}" data-social="instagram" data-text="{{ $production->title }}" style="width: 30px;height: 30px;">--}}
+{{--                                <i class="fab fa-instagram mr-3 fa-lg nav-scale"></i>--}}
+{{--                            </a>--}}
+                            <a href="javascript:void(0)" title="facebook" class="social-share-btn" data-url="{{ request()->url() }}" data-social="facebook" data-text="{{ $production->title }}" style="width: 30px;height: 30px;">
+                                <i class="fab fa-facebook mr-3 fa-lg nav-scale"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 pt-2 mt-1">
@@ -238,6 +262,26 @@
 @endpush
 
 @push('scripts')
+    <script>
+            $('.social-share-btn').click(e => {
+                let btn = $(e.currentTarget);
+                let social = btn.data('social');
+                let url = btn.data('url');
+                let text = btn.data('text');
+
+                if (social == 'facebook') {
+                    url = 'https://facebook.com/sharer/sharer.php?u=' + url;
+                    window.open(url, "popupWindow", "width=600,height=600,scrollbars=yes");
+                }
+                if (social == 'vk') {
+                    url = 'https://vk.com/share.php?url=' + url;
+                    window.open(url, "popupWindow", "width=600,height=600,scrollbars=yes");
+                }
+                // if (social == 'instagram') {
+                //     window.open($(this).attr("href", 'https://vk.com/share.php?url=' + url), "popupWindow", "width=600,height=600,scrollbars=yes");
+                // }
+            })
+    </script>
     @includeWhen(auth()->check(), 'partials.scripts.favorite_click')
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU"

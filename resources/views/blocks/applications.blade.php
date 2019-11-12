@@ -132,7 +132,7 @@
             <div class="card-deck">
                 <div class="card mb-4" style="margin-right: 0;">
                     <div class="view overlay">
-                        <img class="card-img-top lazy" data-src="{{ asset('img/consulting_texmart.png') }}" src="" alt="Card image cap">
+                        <img class="card-img-top div-lazy" data-src="{{ asset('img/consulting_texmart.png') }}" src="" alt="Card image cap">
                     </div>
                     <div class="">
                         <a class="h5 text-white position-absolute text-center w-75 bg-texmart-service py-2 m-0 "
@@ -141,7 +141,7 @@
                 </div>
                 <div class="card mb-4" style="margin-right: 0;">
                     <div class="view overlay">
-                        <img class="card-img-top lazy" data-src="{{ asset('img/logistik_texmart.png') }}" src="" alt="Card image cap">
+                        <img class="card-img-top div-lazy" data-src="{{ asset('img/logistik_texmart.png') }}" src="" alt="Card image cap">
                     </div>
                     <div class="">
                         <a class="h5 text-white position-absolute text-center w-75 bg-texmart-service  py-2 m-0"
@@ -150,7 +150,7 @@
                 </div>
                 <div class="card mb-4" style="margin-right: 0;">
                     <div class="view overlay">
-                        <img class="card-img-top lazy" data-src="{{ asset('img/quality_texmart.png') }}" src="" alt="Card image cap">
+                        <img class="card-img-top div-lazy" data-src="{{ asset('img/quality_texmart.png') }}" src="" alt="Card image cap">
                     </div>
                     <div class="">
                         <a class="h5 text-white position-absolute text-center w-75 bg-texmart-service  py-2 m-0"

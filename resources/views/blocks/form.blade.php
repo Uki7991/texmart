@@ -1,4 +1,4 @@
-<section id="form-review" class="bg-form-images lazy">
+<section id="form-review" class="bg-form-images div-lazy">
     <div class="container py-5">
         <div class="row justify-content-center align-items-center  py-2">
             <div class="col-12 col-lg-5">
