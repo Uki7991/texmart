@@ -43,9 +43,7 @@
                 <div class="col">
                     <p class="h4 mb-5">
                         Мужские толстовки
-                        <a href="#" class="btn border-0 shadow-none p-0">
-                            <img src="{{ asset('icons/likeIcon.png') }}" alt="">
-                        </a>
+                        @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])
 
                     </p>
                     <a class="border border-texmart rounded-pill bg-texmart-sidebar text-white py-2 px-2 ">
@@ -240,6 +238,7 @@
 @endpush
 
 @push('scripts')
+    @includeWhen(auth()->check(), 'partials.scripts.favorite_click')
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey={{ env('YANDEX_MAPS_API_KEY') }}&lang=ru_RU"
             type="text/javascript"></script>

@@ -31,6 +31,8 @@
                                class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
                                name="phone" required autocomplete="phone"
                                id="phone-number">
+                        <span id="valid-msg" class="hide">✓ Valid</span>
+                        <span id="error-msg" class="hide"></span>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1"><i
@@ -56,17 +58,27 @@
         </div>
     </div>
 
-    @push('styles')
-        <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
-    @endpush
+
 </section>
+@push('styles')
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+@endpush
 @push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
-    <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
     <script>
         /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
+        let inputPhone = $('#phone-number'),
+            errorMsg = $("#error-msg"),
+            validMsg = $("#valid-msg");
 
-        $("#phone-number").intlTelInput({
+        // here, the index maps to the error code returned from getValidationError - see readme
+        let errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+        // initialise plugin
+        let iti = inputPhone.intlTelInput({
             initialCountry: "kg",
             preferredCountries: ["ru", "kg", "kz"],
             separateDialCode: true,
@@ -74,18 +86,22 @@
             geoIpLookup: function (callback) {
                 $.get('https://ipinfo.io', function () {
                 }, "jsonp").always(function (resp) {
-                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    let countryCode = (resp && resp.country) ? resp.country : "";
                     console.log(countryCode);
                     callback(countryCode);
                 });
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
         });
-        $('#phone-number').on('focus', function(e) {
+        inputPhone.on('focus', function(e) {
+            console.log('focused')
+
             let input = $(e.currentTarget);
             let code = input.siblings('.iti__flag-container').find('.iti__selected-dial-code').html();
             input.parent().siblings('input[name="code"]').val(code);
-            var $this = $(this),
+            let $this = $(e.currentTarget);
+            $this.removeAttr('maxlength');
+            let
                 // Get active country's phone number format from input placeholder attribute
                 activePlaceholder = $this.attr('placeholder'),
                 // Convert placeholder as exploitable mask by replacing all 1-9 numbers with 0s
@@ -95,10 +111,40 @@
             // Init new mask for focused input
             $this.mask(newMask);
         });
+        console.log(iti);
 
-        $('#phone-number').on('countrychange', (e, c) => {
+        inputPhone.on('countrychange', (e, c) => {
+            console.log('changed')
             let $this = $(e.currentTarget);
             $this.removeAttr('maxlength');
         });
+
+        let reset = function() {
+            inputPhone.removeClass("error");
+            errorMsg.innerHTML = "";
+            errorMsg.addClass("hide");
+            validMsg.addClass("hide");
+        };
+
+        // on blur: validate
+        inputPhone.on('blur', function() {
+            console.log(iti);
+            reset();
+            if (inputPhone.val().trim()) {
+                if (iti.isValidNumber()) {
+                    validMsg.removeClass("hide");
+                } else {
+                    inputPhone.addClass("error");
+                    let errorCode = iti.getValidationError();
+                    errorMsg.innerHTML = errorMap[errorCode];
+                    errorMsg.removeClass("hide");
+                }
+            }
+        });
+
+        // on keyup / change flag: reset
+        inputPhone.on('change', reset);
+        inputPhone.on('keyup', reset);
+
     </script>
 @endpush

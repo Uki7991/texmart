@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body mx-3">
-                <form action="#" class="col-12 text-center" >
+                <form action="{{ route('bid.store') }}" class="col-12 text-center" >
                     @csrf
                     <div class="md-form mb-5">
                         <input type="text" id="form34" class="form-control validate">
@@ -30,12 +30,8 @@
         </div>
     </div>
 </div>
-@push('styles')
-    <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
-@endpush
 @push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
-    <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
+
     <script>
         /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
 
@@ -47,7 +43,7 @@
             geoIpLookup: function (callback) {
                 $.get('https://ipinfo.io', function () {
                 }, "jsonp").always(function (resp) {
-                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    let countryCode = (resp && resp.country) ? resp.country : "";
                     console.log(countryCode);
                     callback(countryCode);
                 });
@@ -58,7 +54,7 @@
             let input = $(e.currentTarget);
             let code = input.siblings('.iti__flag-container').find('.iti__selected-dial-code').html();
             input.parent().siblings('input[name="code"]').val(code);
-            var $this = $(this),
+            let $this = input,
                 // Get active country's phone number format from input placeholder attribute
                 activePlaceholder = $this.attr('placeholder'),
                 // Convert placeholder as exploitable mask by replacing all 1-9 numbers with 0s

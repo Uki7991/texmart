@@ -3,6 +3,13 @@
 @section('title')
     Texmart - онлайн платформа
 @endsection
+@push('styles')
+    <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
+@endpush
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+    <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
+@endpush
 
 @section('content')
     <section class="bg-texmart-sidebar fixed-top">
