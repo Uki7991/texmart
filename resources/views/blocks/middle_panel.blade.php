@@ -26,9 +26,13 @@
                 </div>
                 {{--end carousel--}}
                 {{-- button for create new advertisement--}}
-                <div class="add_announcement col-12 position-relative text-left pl-lg-5 pt-3">
-                    <a href="http://texmart/profile/production?type=productions" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
-                    <a href="#form-review" class="text-white ml-5 btn-sm btn-texmart-orange" style="border-radius: 10px;padding:8px 30px;">Предложить заказ</a>
+                <div class="add_announcement col-12 row position-relative text-left pl-lg-5 pt-3">
+                    <div class="col-12 col-md-4 mb-3 mb-md-0">
+                        <a href="http://texmart/profile/production?type=productions" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
+                    </div>
+                    <div class="col-12 col-md-4 ">
+                        <a href="#form-review" class="text-white ml-lg-5 btn-sm btn-texmart-orange" style="border-radius: 10px;padding:8px 30px;">Предложить заказ</a>
+                    </div>
                 </div>
                 <div class="row justify-content-center position-relative mt-5">
                     <div class="col-6 col-md-4 col-lg-3 text-center text-white">
