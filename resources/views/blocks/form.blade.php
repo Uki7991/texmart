@@ -69,16 +69,7 @@
 @endpush
 @push('scripts')
     <script>
-        /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
-        let inputPhone = $('#phone-number'),
-            errorMsg = $("#error-msg"),
-            validMsg = $("#valid-msg");
-
-        // here, the index maps to the error code returned from getValidationError - see readme
-        let errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
-
-        // initialise plugin
-        let iti = inputPhone.intlTelInput({
+        $("#phone-number").intlTelInput({
             initialCountry: "kg",
             preferredCountries: ["ru", "kg", "kz"],
             separateDialCode: true,
@@ -93,17 +84,11 @@
             },
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
         });
-        inputPhone.on('focus', function(e) {
-            console.log('focused')
-
+        $('#phone-number').on('focus', function(e) {
             let input = $(e.currentTarget);
             let code = input.siblings('.iti__flag-container').find('.iti__selected-dial-code').html();
             input.parent().siblings('input[name="code"]').val(code);
-            let $this = $(e.currentTarget);
-            $this.removeAttr('maxlength');
-            $this.val('');
-
-            let
+            let $this = input,
                 // Get active country's phone number format from input placeholder attribute
                 activePlaceholder = $this.attr('placeholder'),
                 // Convert placeholder as exploitable mask by replacing all 1-9 numbers with 0s
@@ -112,43 +97,11 @@
 
             // Init new mask for focused input
             $this.mask(newMask);
-            $this.val('');
         });
-        console.log(iti);
 
-        inputPhone.on('countrychange', (e, c) => {
-            console.log('changed')
+        $('#phone-number').on('countrychange', (e, c) => {
             let $this = $(e.currentTarget);
             $this.removeAttr('maxlength');
-            $this.val('');
         });
-
-        let reset = function() {
-            inputPhone.removeClass("error");
-            errorMsg.innerHTML = "";
-            errorMsg.addClass("hide");
-            validMsg.addClass("hide");
-        };
-
-        // on blur: validate
-        inputPhone.on('blur', function() {
-            console.log(iti);
-            reset();
-            if (inputPhone.val().trim()) {
-                if (iti.isValidNumber()) {
-                    validMsg.removeClass("hide");
-                } else {
-                    inputPhone.addClass("error");
-                    let errorCode = iti.getValidationError();
-                    errorMsg.innerHTML = errorMap[errorCode];
-                    errorMsg.removeClass("hide");
-                }
-            }
-        });
-
-        // on keyup / change flag: reset
-        inputPhone.on('change', reset);
-        inputPhone.on('keyup', reset);
-
     </script>
 @endpush
