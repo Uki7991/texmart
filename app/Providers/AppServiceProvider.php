@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Address;
+use App\Blog;
+use App\Observers\BlogObserver;
 use App\Observers\ProductionObserver;
 use App\Production;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -33,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
         setlocale(LC_TIME, 'ru_RU.UTF-8');
         Schema::defaultStringLength(191);
         Production::observe(ProductionObserver::class);
+        Blog::observe(BlogObserver::class);
 //        new Address();
 
         /**

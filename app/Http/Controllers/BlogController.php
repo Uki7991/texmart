@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic;
+use Yajra\DataTables\Facades\DataTables;
 
 class BlogController extends Controller
 {
@@ -14,9 +17,29 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.blog.index',
+        [
+            'blogs' => Blog::all(),
+        ]);
+    }
+    public function index2()
+    {
+        return view('blog.blog_index', ['blogs' => Blog::all(), 'blog' => Blog::all()]);
     }
 
+    public function upload(Request $request, Blog $blog)
+    {
+
+        if ($logo = request('logo')) {
+            $fileName = 'blogs/'.uniqid('Blog_logo_').'.jpg';
+            $image = ImageManagerStatic::make($logo);
+
+            $image->stream('jpg', 40);
+
+            Storage::disk('local')->put('public/'.$fileName, $image);
+            $blog->logo = $fileName;
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -24,8 +47,11 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('user-production.form-tabs.blog-create', [
-            'user' => auth()->user(),
+//        return view('user-production.form-tabs.blog-create', [
+//            'user' => auth()->user(),
+//        ]);
+        return view('admin.blog.create', [
+            'blog'=>Blog::all(),
         ]);
     }
 
@@ -37,7 +63,9 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $blog = new Blog($request->all());
+        $blog->save();
+        return redirect()->back();
     }
 
     /**
@@ -48,18 +76,18 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('blog.blog_show', ['blog'=>$blog, 'blogs' => Blog::all()]);
     }
 
     /**
-     * Show the form for editing the specified resource.
      *
+     * Show the form for editing the specified resource.
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('admin.blog.edit', ['blog'=>$blog]);
     }
 
     /**
@@ -71,7 +99,8 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $blog->update($request->all());
+        return redirect()->back();
     }
 
     /**
@@ -82,6 +111,16 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+        return redirect()->back();
+    }
+
+    public function datatable(Request $request)
+    {
+        return view('admin.blog.index', ['blogs'=>Blog::all()]);
+    }
+    public function datatableData(Request $request)
+    {
+        return DataTables::of(Blog::query())->make(true);
     }
 }

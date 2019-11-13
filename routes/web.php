@@ -33,7 +33,7 @@ Route::resource('announce', 'AnnounceController');
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
 Route::get('/user/favorites', 'UserController@favorites')->name('user.favorites');
 Route::get('/user/announce', 'UserController@productions')->name('user.announce');
-Route::resource('blog', 'BlogController');
+//Route::resource('blog', 'BlogController');
 Route::get('/user/production/create', 'UserController@productionCreate')->name('user.production.create');
 Route::get('/user/service/create', 'UserController@serviceCreate')->name('user.service.create');
 Route::get('/user/product/create', 'UserController@productCreate')->name('user.product.create');
@@ -57,6 +57,9 @@ Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
     Route::get('/message', 'HomeController@message')->name('message');
 
     Route::get('/favorite', 'FavoriteController@index')->name('favorite');
+
+    Route::get('/blog/datatable', 'BlogController@datatableData')->name('blog.datatable.data');
+    Route::resource('blog', 'BlogController');
 });
 
 Route::get('/search', 'MainController@search')->name('search');
@@ -147,9 +150,7 @@ Route::get('/delivery',function(){
     return view('delivery');
 })->name('delivery');
 
-Route::get('/blog_index',function(){
-    return view('blog.blog_index');
-})->name('blog_index');
+Route::get('/blog_index', 'BlogController@index2')->name('blog_index');
 
 Route::get('/logistics',function(){
     return view('logistics');
@@ -160,9 +161,8 @@ Route::get('/production', 'ProductionController@index2')->name('production');
 Route::get('/gds',function(){
     return view('gds');
 })->name('gds');
-Route::get('/blog_show',function(){
-    return view('blog.blog_show');
-})->name('blog_show');
+
+Route::get('/blog/{blog}', 'BlogController@show')->name('blog_show');
 
 Route::get('/service',function(){
     return view('service');
