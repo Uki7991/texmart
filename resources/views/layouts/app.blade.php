@@ -100,6 +100,8 @@
 @endif
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <!-- jquery steps -->
+    <script src="{{ asset('js/jquery.steps.js') }}"></script>
     <script src="{{ asset('js/mmenu.js') }}"></script>
     <script src="{{asset('js/slick.min.js')}}" defer></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>

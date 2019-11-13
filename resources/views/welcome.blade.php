@@ -31,13 +31,12 @@
         @include('blocks.side_panel')
     </div>
     @include('blocks.middle_panel')
+    <div class="container">
+        <div class="row justify-content-center">
+            @include('partials.modals.registration-form')
+        </div>
+    </div>
     @include('blocks.category')
-    {{--    <div class="jumbotron">--}}
-    {{--        <h1 data-step="1" data-intro="This is a tooltip!">Basic Usage</h1>--}}
-    {{--        <p class="lead" data-step="4" data-intro="Another step.">This is the basic usage of IntroJs, with <code>data-step</code> and <code>data-intro</code> attributes.</p>--}}
-    {{--        <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Show me how</a>--}}
-    {{--    </div>--}}
-
     @include('blocks.our_advantages')
     @include('blocks.applications')
     @include('blocks.announcement')
@@ -48,6 +47,7 @@
 
     @include('blocks.buttons.submit_your_application')
     @include('blocks.buttons.scroll-top')
+
     {{--@include('partials.modals.modal_for_registration')--}}
 {{--    <div class="container">--}}
 {{--        <div id="wizard" role="application" class="wizard clearfix">--}}

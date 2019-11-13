@@ -399,58 +399,25 @@
         $(function () {
 
             $("#rateYo").rateYo({
-                normalFill: "#A0A0A0",
+                rating: '{{ $rating ? $rating : '4' }}',
+                halfStar: true,
+                readOnly: true,
                 starWidth: "20px"
             });
 
         });
-        // Getter
-        var normalFill = $("#rateYo").rateYo("option", "normalFill"); //returns "#A0A0A0"
-
-        // Setter
-        $("#rateYo").rateYo("option", "normalFill", "#B0B0B0"); //returns a jQuery Element
-        // Getter
-        var starWidth = $("#rateYo").rateYo("option", "starWidth"); //returns 40px
-
-        // Setter
-        $("#rateYo").rateYo("option", "starWidth", "20px"); //returns a jQuery Element
     </script>
     <script>
         $(function () {
 
             $("#rateYo1").rateYo({
-                ratedFill: "#E74C3C",
+                rating: '{{ $rating ? $rating : '4' }}',
+                halfStar: true,
+                readOnly: true,
                 starWidth: "20px"
             });
-
         });
-        // Getter
-        var ratedFill = $("#rateYo1").rateYo("option", "ratedFill"); //returns "#E74C3C"
 
-        // Setter
-        $("#rateYo1").rateYo("option", "ratedFill", "#E74C3C"); //returns a jQuery Element
-        var starWidth = $("#rateYo1").rateYo("option", "starWidth"); //returns 40px
-
-        // Setter
-        $("#rateYo1").rateYo("option", "starWidth", "20px"); //returns a jQuery Element
     </script>
-    <script>
-        $(function () {
 
-            $("#rateYo2").rateYo({
-                ratedFill: "#E74C3C",
-                starWidth: "20px"
-            });
-
-        });
-        // Getter
-        var ratedFill = $("#rateYo2").rateYo("option", "ratedFill"); //returns "#E74C3C"
-
-        // Setter
-        $("#rateYo2").rateYo("option", "ratedFill", "#E74C3C"); //returns a jQuery Element
-        var starWidth = $("#rateYo2").rateYo("option", "starWidth"); //returns 40px
-
-        // Setter
-        $("#rateYo2").rateYo("option", "starWidth", "20px"); //returns a jQuery Element
-    </script>
 @endpush
