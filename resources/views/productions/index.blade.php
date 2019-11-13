@@ -1,5 +1,14 @@
 @extends('layouts.app')
-
+@section('seo_content')
+    <meta name="description" content="Texmart.kg это первая интернет-платформа оптовых производителей текстильной и швейной продукции Кыргызской Республики. Вы можете заказать одежду оптом по очень низким ценам! Ведение бизнеса в формате В2В. Услуга логистики и доставки. Оформление документов экспортно-импортных документов.">
+    <meta name="keywords" content="texmart, техмарт, оптом, одежда, оптовая, бишкек, киргизия, кыргызстан, детская, мужская, женская, батальные, размеры, купить, купить одежду, оптовики, оптовая одежда, купить оптом, одежда оптом">
+@endsection
+@section('og_content')
+    <meta property="og:title" content="Texmart.kg - онлайн платформа оптовых производителей в Киргизии" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request()->url() }}" />
+    <meta property="og:image" content="{{ asset('img/logo.png') }}" />
+@endsection
 @section('content')
 
     <section class="bg-texmart-sidebar fixed-top">

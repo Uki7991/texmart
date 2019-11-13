@@ -3,23 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Texmart.kg это первая интернет платформа производителей текстильной и швейной продукции Кыргызской Республики. Ведение бизнеса в формате В2В.Услуга логистики и доставки.Оформление документов экспортно ипортных документов.">
-    <meta property="og:title" content="The Rock" />
-    <meta property="og:type" content="video.movie" />
-    <meta property="og:url" content="//www.imdb.com/title/tt0117500/" />
-    <meta property="og:image" content="//ia.media-imdb.com/images/rock.jpg" />
+    @if(env('APP_ENV') == 'production')
+        @yield('seo_content')
+    @endif
+@yield('og_content')
 
-    <!-- CSRF Token -->
+
+<!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" href="{{ asset('img/favi.png') }}" />
     <link rel="apple-touch-icon" href="{{ asset('img/favi.png') }}"/>
     <title>@yield('title')</title>
-    <meta name="keywords" content="texmart.kg, texmart, тексмарт, текстиль, ткани, производство в Кыргызстане, Бишкек, Кыргызстан, цеха, футболки, брюки, блузки, текстильное производство">
-    <meta name="description" content="Texmart.kg это первая интернет платформа производителей текстильной и швейной продукции Кыргызской Республики. Ведение бизнеса в формате В2В.">
 
     @if(env('APP_ENV') == 'production')
         <!-- Yandex.Metrika counter -->
-            <script type="text/javascript" >
+            <script type="text/javascript" defer>
                 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
                 (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
@@ -35,7 +33,7 @@
             <noscript><div><img src="https://mc.yandex.ru/watch/55482520" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
             <!-- /Yandex.Metrika counter -->
             <!-- Google Tag Manager -->
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -43,7 +41,7 @@
             <!-- End Google Tag Manager -->
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148741731-1"></script>
-            <script>
+            <script defer>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -53,9 +51,6 @@
             <meta name="google-site-verification" content="gQhpGRoPuGE72Ov_f3SoLPgO5gYjVJPAb6JvcvpJJh8" />
 
     @endif
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     @laravelPWA
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -106,10 +101,10 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/mmenu.js') }}"></script>
-    <script src="{{asset('js/slick.min.js')}}"></script>
+    <script src="{{asset('js/slick.min.js')}}" defer></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     {{--connect rateyo.js--}}
-    <script src="{{ asset('js/jquery.rateyo.js') }}"></script>
+    <script src="{{ asset('js/jquery.rateyo.js') }}" defer></script>
     {{--connect chart.js with CDN--}}
 <script>
     document.addEventListener("DOMContentLoaded", function() {
