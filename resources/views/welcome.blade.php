@@ -1,7 +1,17 @@
 @extends('layouts.app')
 
 @section('title')
-    Texmart - онлайн платформа
+    Texmart.kg - онлайн платформа оптовых производителей в Киргизии
+@endsection
+@section('seo_content')
+    <meta name="description" content="Texmart.kg это первая интернет-платформа оптовых производителей текстильной и швейной продукции Кыргызской Республики. Вы можете заказать одежду оптом по очень низким ценам! Ведение бизнеса в формате В2В. Услуга логистики и доставки. Оформление документов экспортно-импортных документов.">
+    <meta name="keywords" content="texmart, техмарт, оптом, одежда, оптовая, бишкек, киргизия, кыргызстан, детская, мужская, женская, батальные, размеры, купить, купить одежду, оптовики, оптовая одежда, купить оптом, одежда оптом">
+@endsection
+@section('og_content')
+    <meta property="og:title" content="Texmart.kg - онлайн платформа оптовых производителей в Киргизии" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request()->url() }}" />
+    <meta property="og:image" content="{{ asset('img/logo.png') }}" />
 @endsection
 @push('styles')
     <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">
@@ -27,12 +37,6 @@
         </div>
     </div>
     @include('blocks.category')
-    {{--    <div class="jumbotron">--}}
-    {{--        <h1 data-step="1" data-intro="This is a tooltip!">Basic Usage</h1>--}}
-    {{--        <p class="lead" data-step="4" data-intro="Another step.">This is the basic usage of IntroJs, with <code>data-step</code> and <code>data-intro</code> attributes.</p>--}}
-    {{--        <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Show me how</a>--}}
-    {{--    </div>--}}
-
     @include('blocks.our_advantages')
     @include('blocks.applications')
     @include('blocks.announcement')

@@ -15,7 +15,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function __construct(GeoLocation $geoLocation)
+    public function address(GeoLocation $geoLocation)
     {
         $address = request()->server('REMOTE_ADDR');
 
@@ -27,10 +27,10 @@ class Controller extends BaseController
             Log::alert($exception->getMessage());
         }
 
-        $addressFinded = DB::table('addresses')->where('address', $address)->get();
+        $addressFinded = Address::where('address', $address)->get();
 
         if (!$addressFinded->isEmpty()) {
-            $this->userAddress($addressFinded);
+            $this->userAddress($addressFinded->first());
         } else {
             $addressNew = new Address();
             $addressNew->address = $address;
@@ -44,11 +44,11 @@ class Controller extends BaseController
     public function userAddress($address)
     {
         if (auth()->check()) {
-            $this->user_id = auth()->id();
-            $this->save();
-            return $this;
+            $address->user_id = auth()->id();
+            $address->save();
+            return $address;
         }
 
-        return $this;
+        return $address;
     }
 }

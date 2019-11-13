@@ -1,4 +1,4 @@
-<section id="form-review" class="bg-form-images lazy">
+<section id="form-review" class="bg-form-images div-lazy">
     <div class="container py-5">
         <div class="row justify-content-center align-items-center  py-2">
             <div class="col-12 col-lg-5">
@@ -10,7 +10,7 @@
                 </p>
             </div>
             <div class="col-12 col-lg-5 py-5 border-0 shadow-0 col-sm-12 bg-white-50 rounded text-light">
-                <form action="{{ route('bid.store') }}" method="POST">
+                <form action="{{ route('announce.store') }}" method="POST">
                     @csrf
                     <div class="form-row">
                         <div class="col">

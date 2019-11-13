@@ -10,7 +10,6 @@ class AdminController extends Controller
     public function __construct(GeoLocation $geoLocation)
     {
         $this->middleware('admin');
-        parent::__construct($geoLocation);
     }
 
     public function admin()
