@@ -144,7 +144,7 @@
                 </div>
                 <div class="form-group">
                     <label for="categories-product">Выберите категорию товара <span class="text-danger">*</span></label>
-                    <ul id="tree2">
+                    <ul id="tree2" style="list-style: none">
                         @foreach($productCats as $category)
                             <li>
                                 @if(count($category->childs))
