@@ -22,12 +22,6 @@
     </div>
     @include('blocks.middle_panel')
     @include('blocks.category')
-    {{--    <div class="jumbotron">--}}
-    {{--        <h1 data-step="1" data-intro="This is a tooltip!">Basic Usage</h1>--}}
-    {{--        <p class="lead" data-step="4" data-intro="Another step.">This is the basic usage of IntroJs, with <code>data-step</code> and <code>data-intro</code> attributes.</p>--}}
-    {{--        <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Show me how</a>--}}
-    {{--    </div>--}}
-
     @include('blocks.our_advantages')
     @include('blocks.applications')
     @include('blocks.announcement')
