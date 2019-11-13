@@ -38,5 +38,5 @@
 
 @push('scripts')
     <script src="{{asset('js/field.js')}}"></script>
-{{--    <script src--}}
+    <script src="{{ asset('js/editor.js') }}"></script>
 @endpush
