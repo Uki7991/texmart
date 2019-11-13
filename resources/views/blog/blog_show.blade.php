@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="bg-texmart-sidebar fixed-top">
+    <section class="bg-texmart-sidebar fixed-top" style="position: relative">
         <div class="container">
             @include('blocks.header')
         </div>
@@ -15,15 +15,13 @@
 {{--                    IT-компании</p>--}}
                 <div class="">
 {{--                    <img src="{{ asset('img/production.png') }}" alt="">--}}
-                    <img src="{{ asset('storage/'.$blog->logo) }}" alt="">
+                    <img class="img-fluid" src="{{ asset('storage/'.$blog->logo) }}" alt="">
                 </div>
                 <p class="description_blog pt-3">
                     {{$blog->excerpt}}
                 </p>
                 <div class="row ">
-{{--                    <p class="" style="font-weight: 700">Теги:</p>--}}
-{{--                    <p class="tegs" style="font-weight: 500;margin-left:6px"> брюки,текстиль, брюки,текстиль, брюки,текстиль, брюки,текстиль,--}}
-                        junit</p>
+                    {!! $blog->content !!}
                 </div>
             </div>
             <div class="col-3">
