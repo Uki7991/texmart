@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Announce;
+use App\Notifications\UserCreated;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class AnnounceController extends Controller
@@ -43,8 +46,31 @@ class AnnounceController extends Controller
             'name' => 'string',
             'phone' => 'unique:users',
         ]);
+        $pass = rand(11111111, 99999999);
+        $verification = rand(111111, 999999);
+        $user = User::create([
+            'role_id' => 4,
+            'phone' => $data['phone'],
+            'email' => $data['email'],
+            'name' => $data['name'],
+            'password' => Hash::make($pass),
+            'phone_verification' => $verification,
+        ]);
 
-        $user = new User();
+        $announce = Announce::create([
+            'name' => $data['name'],
+            'content' => $data['bid'],
+            'phone' => $data['phone'],
+            'code' => $data['code'],
+            'email' => $data['email'],
+            'user_id' => $user->id,
+        ]);
+
+        $user->notify(new UserCreated($pass, $verification, $data['phone']));
+
+        Session::flash('status', ['status' => 'success', 'message' => 'Мы создали для вас аккаунт! Вам отправлено письмо с данными на вашу электронную почту']);
+
+        return redirect()->back();
     }
 
     /**

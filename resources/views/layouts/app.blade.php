@@ -91,7 +91,7 @@
     </div>
 @includeWhen(auth()->check() && (auth()->user()->phone == null || auth()->user()->phone_verification != null), 'profile.modals.register_phone')
 @if(\Illuminate\Support\Facades\Session::has('status'))
-    <div class="alert alert-warning alert-dismissible bg-warning fade show" role="alert" style="position:fixed; top: 5%; right: 1%; z-index: 9999;">
+    <div class="alert alert-warning alert-dismissible bg-warning fade text-white font-weight-bold show" role="alert" style="position:fixed; top: 5%; right: 1%; z-index: 9999;">
         {{ \Illuminate\Support\Facades\Session::get('status')['message'] }}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
