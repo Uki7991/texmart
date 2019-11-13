@@ -21,6 +21,11 @@
         @include('blocks.side_panel')
     </div>
     @include('blocks.middle_panel')
+    <div class="container">
+        <div class="row justify-content-center">
+            @include('partials.modals.registration-form')
+        </div>
+    </div>
     @include('blocks.category')
     {{--    <div class="jumbotron">--}}
     {{--        <h1 data-step="1" data-intro="This is a tooltip!">Basic Usage</h1>--}}
@@ -38,6 +43,7 @@
 
     @include('blocks.buttons.submit_your_application')
     @include('blocks.buttons.scroll-top')
+
     {{--@include('partials.modals.modal_for_registration')--}}
 {{--    <div class="container">--}}
 {{--        <div id="wizard" role="application" class="wizard clearfix">--}}

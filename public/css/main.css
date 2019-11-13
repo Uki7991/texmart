@@ -986,3 +986,25 @@
     display: none;
 }
 /*end*/
+
+/*for card*/
+.check-icon{
+    top: 0;
+}
+.card-dress .check-icon{
+    display: none;
+}
+.card-dress.active .check-icon{
+    display: block;
+}
+/*end card style*/
+/*for modal registration*/
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-content{
+    height: 800px;
+    overflow-y: auto;
+}
+/*content end*/
