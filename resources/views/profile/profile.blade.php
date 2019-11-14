@@ -106,6 +106,5 @@
                 $('.col-12.col-lg-3.d-none.d-lg-block .step4').trigger("click")
             }
         });
-
     </script>
 @endpush

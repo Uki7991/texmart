@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<div class="container step_productions_2">
+    <div class="row ">
         <div class="col-12 mb-5">
             <h2>Создание объявления товара</h2>
         </div>
@@ -197,7 +197,12 @@
         </div>
     </div>
 </div>
-
+@push('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css">
+@endpush
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
+@endpush
 
 @push('styles')
     <link rel="stylesheet" href="{{asset("css/intlTelInput.min.css")}}">
@@ -404,6 +409,24 @@
             console.log(cropper2.getImageData());
             $('#dataImage2').val(cropper2.getImageData().rotate);
         });
+    </script>
+
+    <script>
+        let intro = introJsproduct();
+        intro.setOptions({
+            prevLabel:"Назад",
+            nextLabel:"Вперед",
+            skipLabel:"Пропустить",
+            doneLabel:"Готово",
+            showProgress:true,
+            steps: [
+                {
+                    element: '.container.step_productions_2',
+                    intro: "Форма создание объявления товара.Заполните форму."
+                },
+            ]
+        });
+        intro.start();
     </script>
 @endpush
 

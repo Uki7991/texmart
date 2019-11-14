@@ -1,6 +1,5 @@
-<div class="container">
-    <div class="row">
-
+<div class="container step_productions_3">
+    <div class="row ">
         <div class="col-12 mb-5">
             <h2>Создание объявления услуги</h2>
         </div>
@@ -13,7 +12,6 @@
                 @endif
                 @csrf
                 <input type="hidden" name="type" value="{{ $type }}">
-
                 <div class="form-row">
                     <div class="form-group col-6">
                         <label>
@@ -40,7 +38,6 @@
                         @enderror
                     </div>
                 </div>
-
                 <h3>Укажите ваши контактные данные:</h3>
                 <div class="form-row">
                     <div class="col-12 col-sm-12 col-md-4">
@@ -82,8 +79,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="form-row">
                     <div class="col-12 col-sm-10 col-md-6">
                         <div class="form-group">
@@ -191,6 +186,12 @@
 @push('styles')
     <link rel="stylesheet" href="{{asset("css/intlTelInput.min.css")}}">
     <link rel="stylesheet" href="{{ asset('css/main.css')}}">
+@endpush
+@push('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css">
+@endpush
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
 @endpush
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
@@ -393,5 +394,22 @@
             console.log(cropper2.getImageData());
             $('#dataImage2').val(cropper2.getImageData().rotate);
         });
+    </script>
+    <script>
+        let intro = introJservice();
+        intro.setOptions({
+            prevLabel:"Назад",
+            nextLabel:"Вперед",
+            skipLabel:"Пропустить",
+            doneLabel:"Готово",
+            showProgress:true,
+            steps: [
+                {
+                    element: '.container.step_productions_3',
+                    intro: "Форма создание объявления услуги.Заполните форму."
+                },
+            ]
+        });
+        intro.start();
     </script>
 @endpush

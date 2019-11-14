@@ -1,6 +1,6 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12 mb-5">
+<div class="container step_productions_1">
+    <div class="row ">
+        <div class="col-12 mb-5 ">
             <h2>Создание объявления производственного цеха</h2>
         </div>
         <div class="col-12 col-sm-10 col-lg-10 col-md-10">
@@ -266,8 +266,11 @@
 @endpush
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/cropper.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css">
 @endpush
-
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
+@endpush
 @push('scripts')
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -392,4 +395,21 @@
             $('#dataImage2').val(cropper2.getImageData().rotate);
         });
     </script>
+    <script>
+        let intro = introJs();
+        intro.setOptions({
+            prevLabel:"Назад",
+            nextLabel:"Вперед",
+            skipLabel:"Пропустить",
+            doneLabel:"Готово",
+            steps: [
+                {
+                    element: '.container.step_productions_1',
+                    intro: "Форма создание объявления производственного цеха.Заполните форму."
+                },
+            ]
+        });
+        intro.start();
+    </script>
+
 @endpush
