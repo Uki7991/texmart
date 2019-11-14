@@ -54,13 +54,12 @@
     @laravelPWA
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{asset('css/slick-theme.css')}}"/>
-    <link rel="stylesheet" href="{{asset('css/slick.css')}}"/>
-    <link rel="stylesheet" href="{{ asset('css/mmenu.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" href="{{asset('css/slick.min.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('css/mmenu.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery.rateyo.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.rateyo.min.css') }}">
     @stack('styles')
 </head>
 <body>
@@ -178,14 +177,14 @@
 </script>
 
 <!-- cdnjs -->
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.lazy.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.lazy.plugins.min.js') }}"></script>
 
 <script>
     $('.div-lazy').lazy();
 </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="{{ asset('js/chart.min.js') }}"></script>
     @stack('scripts')
 </body>
 </html>

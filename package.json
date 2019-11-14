@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "jquery-lazy": "^1.7.10",
-        "mdbootstrap": "^4.8.11"
+        "mdbootstrap": "^4.8.11",
+        "mmenu-js": "^8.4.1"
     }
 }
