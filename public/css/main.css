@@ -979,14 +979,13 @@
     flex-wrap: nowrap;
     padding-top: 25px;
 }
-
-/*end*/
-/*change input telephone*/
-.iti {
-    display: none;
+.first-uppercase {
+    text-transform: lowercase !important;
+}
+.first-uppercase::first-letter {
+    text-transform: uppercase !important;
 }
 /*end*/
-
 /*for card*/
 .check-icon{
     top: 0;
@@ -997,7 +996,16 @@
 .card-dress.active .check-icon{
     display: block;
 }
-/*end card style*/
+#registration-steps .steps ul li {
+    width: 50%;
+}
+#registration-steps .content {
+    min-height: auto;
+}
+#registration-steps.wizard > .content > .body {
+    position: relative;
+}
+    /*end card style*/
 /*for modal registration*/
 /* Important part */
 .modal-dialog{
