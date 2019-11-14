@@ -36,86 +36,118 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-10 col-md-6 shadow-lg bg-white p-4">
-                            <form method="POST" action="{{ route('register') }}">
-                                @csrf
+                        <div class="col-10 col-md-6 shadow-lg bg-white p-0">
 
-                                <div class="form-group">
-                                    <div class="row justify-content-around">
-                                        <label>
-                                            <input name="user_type" type="radio" value="0" checked>
-                                            <span class="text-dotted text-underline font-weight-bold">Заказчик</span>
-                                        </label>
-                                        <label class="">
-                                            <input name="user_type" type="radio" value="1">
-                                            <span class="text-dotted">Производство</span>
-                                        </label>
+
+
+
+
+                            <div id="registration-steps">
+                                <h3>Выберите роль</h3>
+                                <section>
+                                    <div class="container">
+                                        <div class="row justify-content-around my-4">
+                                            <div class="col-auto">
+                                                <a href="#" class="btn btn-success role_btn" data-role="4">Я - заказчик</a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" class="btn btn-success role_btn" data-role="5">Я - производитель</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label for="name" class="text-md-right"><i
-                                            class="fas fa-user text-primary"></i> {{ __('ФИО') }}</label>
+                                </section>
+                                <h3>Заполните данные</h3>
+                                <section>
+                                    <form method="POST" action="{{ route('register') }}">
+                                        @csrf
 
-                                    <input id="name" type="text"
-                                           class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror"
-                                           name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                        <div class="form-group d-none">
+                                            <div class="row justify-content-around">
+                                                <label>
+                                                    <input id="radio_customer" name="user_type" type="radio" value="0">
+                                                    <span class="text-dotted text-underline font-weight-bold">Заказчик</span>
+                                                </label>
+                                                <label class="">
+                                                    <input id="radio_production" name="user_type" type="radio" value="1">
+                                                    <span class="text-dotted">Производство</span>
+                                                </label>
+                                            </div>
+                                        </div>
 
-                                    @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <div class="form-group">
+                                            <label for="name" class="text-md-right"><i
+                                                    class="fas fa-user text-primary"></i> {{ __('ФИО') }}</label>
+
+                                            <input id="name" type="text"
+                                                   class="form-control rounded-pill shadow-sm @error('name') is-invalid @enderror"
+                                                   name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                            @error('name')
+                                            <span class="invalid-feedback first-uppercase" role="alert">
+                                        <strong class="first-uppercase">{{ $message }}</strong>
                                         </span>
-                                    @enderror
-                                </div>
+                                            @enderror
+                                        </div>
 
 
-                                <div class="form-group">
-                                    <label for="phone-number" class="d-block"><i
-                                            class="fas fa-phone-alt text-primary pt-3"></i> {{ __('Ваш телефонный номер:') }}
-                                    </label>
-                                    <input type="hidden" name="code">
-                                    <input type="text"
-                                           class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
-                                           name="phone" required autocomplete="phone"
-                                           id="phone-number">
-                                    @error('phone')
-                                    <span class="invalid-feedback d-block" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <div class="form-group">
+                                            <label for="phone-number" class="d-block"><i
+                                                    class="fas fa-phone-alt text-primary pt-3"></i> {{ __('Ваш телефонный номер:') }}
+                                            </label>
+                                            <input type="hidden" name="code">
+                                            <input type="text"
+                                                   class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
+                                                   name="phone" required autocomplete="phone"
+                                                   id="phone-number">
+                                            @error('phone')
+                                            <span class="invalid-feedback d-block first-uppercase" role="alert">
+                                        <strong class="">{{ $message }}</strong>
                                     </span>
-                                    @enderror
-                                </div>
+                                            @enderror
+                                        </div>
 
-                                <div class="form-group">
-                                    <label for="password" class="col-form-label text-md-right"><i
-                                            class="fas fa-key text-primary"></i> {{ __('Пароль') }}</label>
+                                        <div class="form-group">
+                                            <label for="password" class="col-form-label text-md-right"><i
+                                                    class="fas fa-key text-primary"></i> {{ __('Пароль') }}</label>
 
-                                    <input id="password" type="password"
-                                           class="form-control rounded-pill shadow-sm @error('password') is-invalid @enderror"
-                                           name="password" required autocomplete="new-password">
+                                            <input id="password" type="password"
+                                                   class="form-control rounded-pill shadow-sm @error('password') is-invalid @enderror"
+                                                   name="password" required autocomplete="new-password">
 
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                            @error('password')
+                                            <span class="invalid-feedback first-uppercase" role="alert">
+                                        <strong class="first-uppercase">{{ $message }}</strong>
                                         </span>
-                                    @enderror
-                                </div>
+                                            @enderror
+                                        </div>
 
-                                <div class="form-group">
-                                    <label for="password-confirm" class=" col-form-label text-md-right"><i
-                                            class="fas fa-key text-primary"></i> {{ __('Подтвердите пароль') }}</label>
+                                        <div class="form-group">
+                                            <label for="password-confirm" class=" col-form-label text-md-right"><i
+                                                    class="fas fa-key text-primary"></i> {{ __('Подтвердите пароль') }}</label>
 
-                                    <input id="password-confirm" type="password"
-                                           class="form-control rounded-pill shadow-sm" name="password_confirmation"
-                                           required autocomplete="new-password">
-                                </div>
+                                            <input id="password-confirm" type="password"
+                                                   class="form-control rounded-pill shadow-sm" name="password_confirmation"
+                                                   required autocomplete="new-password">
+                                        </div>
 
-                                <div class="form-group mb-0 mx-auto text-center">
-                                    @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Регистрация'])
-                                </div>
-                                <div class="form-group small text-dark text-center mt-1">
-                                    Уже есть логин? <a href="{{ route('login') }}" class="text-primary">Вход</a>
-                                </div>
-                            </form>
+                                        <div class="form-group mb-0 mx-auto text-center">
+                                            @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Регистрация'])
+                                        </div>
+                                        <div class="form-group small text-dark text-center mt-1">
+                                            Уже есть логин? <a href="{{ route('login') }}" class="text-primary">Вход</a>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+
+
+
+
+
+
+
+
                         </div>
                         <div
                             class="col d-flex align-items-center justify-content-center bg-info text-white p-2 rounded-right">
@@ -152,7 +184,41 @@
     <style>
 
     </style>
+    <link rel="stylesheet" href="{{asset('css/jquery.steps.css')}}">
 @endpush
+@push('scripts')
+    <script src="{{ asset('js/jquery.steps.js') }}"></script>
+
+    <script>
+        $("#registration-steps").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true,
+            enablePagination: false
+        });
+
+        $('.role_btn').click(e => {
+            e.preventDefault();
+            let role = $(e.currentTarget).data('role');
+            console.log(role);
+
+            if (role == 4) {
+                $('#radio_customer').attr('checked', 'checked');
+                $('#radio_production').removeAttr('checked', 'checked');
+            } else if (role == 5) {
+                $('#radio_production').attr('checked', 'checked');
+                $('#radio_customer').removeAttr('checked', 'checked');
+            } else {
+                $('#radio_customer').attr('checked', 'checked');
+                $('#radio_production').removeAttr('checked', 'checked');
+            }
+
+            $('#registration-steps').steps("next");
+        })
+    </script>
+@endpush
+
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
     <script src="{{ asset('js/intlTelInput-jquery.min.js') }}"></script>
