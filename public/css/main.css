@@ -291,9 +291,7 @@
 .progress {
     height: .2rem !important;
 }
-#owl-otzivi .owl-item {
-    height: 100%;
-}
+
 
 #owl-otzivi .owl-stage-outer {
     box-shadow: 0 16px 28px 0 rgba(0,0,0,.22),0 25px 55px 0 rgba(0,0,0,.21)!important;

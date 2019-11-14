@@ -4,8 +4,8 @@
     </h2>
     <div class="row justify-content-center position-relative ">
         <div id="owl-otzivi" class="owl-carousel owl-theme col-12 col-md-10 col-lg-8">
-            <div class="item h-100">
-                <div class="card shadow-none row h-100 align-items-center justify-content-center">
+            <div class="item ">
+                <div class="card shadow-none row">
                     <div class="card-body justify-content-center p-5">
                         <p class="card-text text-center">Большое Спасибо компании "Texmart" по привлечению клиентов.
                             Очень нравится ваш профессионализм. С помощью "Texmart" нашла новых клиентов. Сейчас с
@@ -16,8 +16,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item h-100">
-                <div class="card shadow-none row h-100 align-items-center justify-content-center">
+            <div class="item ">
+                <div class="card shadow-none row ">
                     <div class="card-body justify-content-center p-5">
                         <p class="card-text text-center">Выражаю огромную благодарность компании Texmart.kg ! Они
                             оказали помощь в обработке большого заказа на который у меня не выходила рентабельность
@@ -28,8 +28,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item h-100">
-                <div class="card shadow-none row h-100 align-items-center justify-content-center">
+            <div class="item ">
+                <div class="card shadow-none row ">
                     <div class="card-body text-center justify-content-center p-5">
                         <p class="card-text text-center">Меня зовут Екатерина, руководитель швейного производства "Moda
                             Mi". Сегодня хочу высказать свою благодарность компании "Texmart" и сказать, что очень рады
@@ -43,8 +43,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item h-100">
-                <div class="card shadow-none justify-con row h-100 align-items-centertent-center">
+            <div class="item ">
+                <div class="card shadow-none row ">
                     <div class="card-body text-center justify-content-center p-5">
                         <p class="card-text text-center">Спасибо огромное вашему дружному коллективу Texmart.kg .
                             Благодаря вам я нашла много новых клиентов и заказчиков. Раньше у меня клиенты были только
@@ -54,8 +54,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item h-100">
-                <div class="card shadow-none justify-con row h-100 align-items-centertent-center">
+            <div class="item ">
+                <div class="card shadow-none row ">
                     <div class="card-body text-center justify-content-center p-5">
                         <p class="card-text text-center">Спасибо коллективу Техmart.kg. Спасибо вам за такую возможность
                             благодаря вам у меня в данный момент очень много заказчиков и покупателей. Я очень рада что
@@ -64,8 +64,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item h-100">
-                <div class="card shadow-none row h-100 align-items-center justify-content-center">
+            <div class="item ">
+                <div class="card shadow-none row ">
                     <div class="card-body justify-content-center p-5">
                         <p class="card-text text-center">Я могу ответственно сказать что компания texmart.kg является
                             компанией с высокой ценностью. Я думаю, что самое главное-это понимание своего дела. В
@@ -74,9 +74,9 @@
                     </div>
                 </div>
             </div>
-            <div class="item h-100">
-                <div class="card shadow-none row h-100 align-items-center">
-                    <div class="card-body justify-content-center p-5">
+            <div class="item ">
+                <div class="card shadow-none row  ">
+                    <div class="card-body p-5">
                         <p class="card-text text-center">Очень довольны сотрудничеством! Видно, что сайт texmart
                             разработан с умом и с душой, а не абы как. Очень всё красивое и даже самим хочется заказать
                             или купить что-то. Дизайн вдохновляет на новые эксперименты). Начинали с не большого
@@ -87,6 +87,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 @push('scripts')
