@@ -19,7 +19,9 @@ class AnnounceController extends Controller
      */
     public function index()
     {
-        //
+        return view('profile.announce.index', [
+            'announces' => auth()->user()->announces,
+        ]);
     }
 
     /**
@@ -29,7 +31,7 @@ class AnnounceController extends Controller
      */
     public function create()
     {
-        //
+        return view('profile.announce.create');
     }
 
     /**
@@ -40,6 +42,20 @@ class AnnounceController extends Controller
      */
     public function store(Request $request)
     {
+        $type = $request->type;
+
+        if ($type == 'profile') {
+            $announce = Announce::create([
+                'name' => auth()->user()->name,
+                'content' => $request->bid,
+                'code' => '',
+                'phone' => auth()->user()->phone,
+                'email' => auth()->user()->email ? auth()->user()->email : ' ',
+                'user_id' => auth()->id(),
+            ]);
+
+            return redirect()->route('profile.announce.index');
+        }
         $data = $request->all();
         $data['phone'] = str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']);
         $validated = Validator::make($data, [

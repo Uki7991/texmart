@@ -30,9 +30,15 @@
                     <div class="col-12 col-xl-6 mb-3 mb-xl-0">
                         <a href="{{ route('profile.production.index', ['type' => 'productions']) }}" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                     </div>
-                    <div class="col-12 col-xl-6">
-                        <a href="#form-review" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Заказать оптом</a>
-                    </div>
+                    @if(!auth()->check())
+                        <div class="col-12 col-xl-6">
+                            <a href="#form-review" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Заказать оптом</a>
+                        </div>
+                    @else
+                        <div class="col-12 col-xl-6">
+                            <a href="{{ route('profile.announce.create') }}" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Заказать оптом</a>
+                        </div>
+                    @endif
                 </div>
                 <div class="row justify-content-center position-relative mt-5">
                     <div class="col-6 col-md-4 col-lg-3 text-center text-white">

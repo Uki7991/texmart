@@ -13,7 +13,7 @@
                 <a href="{{ auth()->check() ? route('profile') : route('login') }}"
                    class="user-sprite my-3 waves-effect waves-light mx-3 mx-md-5"></a>
                 <div id="sidebar-header" style="position: absolute;top: 50px;display:none;">
-                    @include('profile.partials.sidebar')
+                    @includeWhen(auth()->check(), 'profile.partials.sidebar')
                 </div>
             </li>
             <li class="nav-item">
