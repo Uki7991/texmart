@@ -36,8 +36,9 @@
                                     <a href="{{ route('blog_show', $blog) }}" class="post-info__title">{{ $blog->title }}</a>
                                 </h3>
                                 <div class="post_info__meta d-flex p-3">
-                                    <p class="p-3">просмотры</p>
-                                    <p>коменты</p>
+                                    <i class="far fa-eye pr-2"><span>22,k</span></i>
+{{--                                    <p class="p-3">просмотры</p>--}}
+{{--                                    <p>коменты</p>--}}
                                 </div>
                             </li>
                             @endforeach
