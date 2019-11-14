@@ -29,16 +29,18 @@ class BlogController extends Controller
 
     public function upload(Request $request, Blog $blog)
     {
-
-        if ($logo = request('logo')) {
-            $fileName = 'blogs/'.uniqid('Blog_logo_').'.jpg';
+        $fileName = "";
+        if ($logo = request('file')) {
+            $fileName = 'blogs/'.uniqid('tinymce_').'.jpg';
             $image = ImageManagerStatic::make($logo);
 
             $image->stream('jpg', 40);
 
             Storage::disk('local')->put('public/'.$fileName, $image);
-            $blog->logo = $fileName;
         }
+        return response()->json([
+            'location' => asset('storage/'.$fileName),
+        ]);
     }
     /**
      * Show the form for creating a new resource.

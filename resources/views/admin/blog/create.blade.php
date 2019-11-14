@@ -19,17 +19,17 @@
                 </div>
             </div>
             <div class="col-6">
-                <!-- Material input -->
-                <div class="md-form">
-{{--                    <input type="text" id="price" name="content" class="form-control">--}}
-                    <textarea name="content" id="content_id" cols="30" rows="10"></textarea>
-                    <label for="price">{{ __('Контент') }}</label>
-                </div>
-            </div>
-            <div class="col-6">
                 <label>Выберите фото</label>
                 <input type="file" name="logo">
             </div>
+            <div class="col-12">
+                <!-- Material input -->
+                <div class="md-form">
+{{--                    <input type="text" id="price" name="content" class="form-control">--}}
+                    <textarea name="content" id="content_id" cols="30" rows="10" class="form-control richTextBox" style="height: 10px;"></textarea>
+                </div>
+            </div>
+
         </div>
         <button type="submit" title="{{ __('Создать') }}" class="bt n btn-success">{{ __('Создать') }}</button>
     </form>
@@ -38,5 +38,6 @@
 
 @push('scripts')
     <script src="{{asset('js/field.js')}}"></script>
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
     <script src="{{ asset('js/editor.js') }}"></script>
 @endpush

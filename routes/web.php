@@ -164,6 +164,8 @@ Route::get('/gds',function(){
 
 Route::get('/blog/{blog}', 'BlogController@show')->name('blog_show');
 
+Route::post('/image-upload', 'BlogController@upload');
+
 Route::get('/service',function(){
     return view('service');
 })->name('service');
