@@ -25,11 +25,11 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUpBig;">
                         <a href="#" class="post-thumbnail"><img src="{{asset('storage/'.$blog->logo)}}" alt=""></a>
-                        <a href="#" class="btn post-catagory">Camera</a>
+{{--                        <a href="#" class="btn post-catagory">Camera</a>--}}
                         <div class="post-content">
                             <div class="post-meta">
-                                <a href="#">May 19, 2019</a>
-                                <a href="#">3 Comment</a>
+                                <p class="oclock text-white">{{ $blog->created_at }}</p>
+{{--                                <a href="#">3 Comment</a>--}}
                             </div>
                             <a href="{{ route('blog_show', $blog) }}" class="post-title">{{ $blog->title }}</a>
                         </div>
