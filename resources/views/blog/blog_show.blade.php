@@ -1,25 +1,24 @@
 @extends('layouts.app')
 @section('content')
-    <section class="bg-texmart-sidebar fixed-top" style="position: relative">
+    <section class="bg-texmart-sidebar fixed-top">
         <div class="container">
             @include('blocks.header')
         </div>
     </section>
-    <div class="container pt-5 mt-5">
+    <section class="mt-5" style="position: relative; height: 200px; background-image: url('{{ asset('storage/'.$blog->logo) }}'); background-size: cover; background-repeat: no-repeat;">
+        <div class="backdrop"></div>
+        <div class="container h-100 position-relative">
+            <div class="row h-100 align-items-end justify-content-center">
+                <div class="col-auto pb-4">
+                    <h1 class="text-center text-white">{{ $blog->title }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container pt-5">
         <div class="row">
             <div class="col-9">
-                <h1>{{ $blog->title }}</h1>
                 <p class="oclock">{{ $blog->created_at }}</p>
-{{--                <p class="tegi">Блог компании Флант,--}}
-{{--                    Карьера в IT-индустрии,--}}
-{{--                    IT-компании</p>--}}
-                <div class="">
-{{--                    <img src="{{ asset('img/production.png') }}" alt="">--}}
-                    <img class="img-fluid" src="{{ asset('storage/'.$blog->logo) }}" alt="">
-                </div>
-                <p class="description_blog pt-3">
-                    {{$blog->excerpt}}
-                </p>
                 <div class="row ">
                     {!! $blog->content !!}
                 </div>
