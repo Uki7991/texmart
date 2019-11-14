@@ -42,7 +42,7 @@
     @include('blocks.announcement')
     @include('blocks.reviews')
     @include('blocks.blog')
-    @include('blocks.form')
+    @includeWhen(!auth()->check(), 'blocks.form')
     @include('blocks.partners')
 
     @include('blocks.buttons.submit_your_application')

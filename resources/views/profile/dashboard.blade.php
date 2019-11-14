@@ -20,7 +20,7 @@
             <div class="col-12 col-lg-3 d-none d-lg-block">
                 @include('profile.partials.sidebar')
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col">
                 @yield('profile_content')
             </div>
             @if(request()->is('profile/dashboard*'))

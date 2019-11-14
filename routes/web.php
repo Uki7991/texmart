@@ -27,6 +27,7 @@ Route::prefix('profile')->name('profile.')->middleware('auth')->group(function (
     Route::get('/settings', 'UserController@settings')->name('settings');
 
     Route::resource('production', 'ProductionController');
+    Route::resource('announce', 'AnnounceController');
 });
 
 Route::resource('announce', 'AnnounceController');
