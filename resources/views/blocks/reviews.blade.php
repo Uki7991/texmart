@@ -4,7 +4,7 @@
     </h2>
     <div class="row justify-content-center position-relative ">
         <div id="owl-otzivi" class="owl-carousel owl-theme col-12 col-md-10 col-lg-8">
-            <div class="item ">
+            <div class="item">
                 <div class="card shadow-none row">
                     <div class="card-body justify-content-center p-5">
                         <p class="card-text text-center">Большое Спасибо компании "Texmart" по привлечению клиентов.
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item ">
+            <div class="item">
                 <div class="card shadow-none row ">
                     <div class="card-body justify-content-center p-5">
                         <p class="card-text text-center">Выражаю огромную благодарность компании Texmart.kg ! Они
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item ">
+            <div class="item">
                 <div class="card shadow-none row ">
                     <div class="card-body text-center justify-content-center p-5">
                         <p class="card-text text-center">Меня зовут Екатерина, руководитель швейного производства "Moda
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item ">
+            <div class="item">
                 <div class="card shadow-none row ">
                     <div class="card-body text-center justify-content-center p-5">
                         <p class="card-text text-center">Спасибо огромное вашему дружному коллективу Texmart.kg .
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item ">
+            <div class="item">
                 <div class="card shadow-none row ">
                     <div class="card-body justify-content-center p-5">
                         <p class="card-text text-center">Я могу ответственно сказать что компания texmart.kg является
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item ">
+            <div class="item">
                 <div class="card shadow-none row  ">
                     <div class="card-body p-5">
                         <p class="card-text text-center">Очень довольны сотрудничеством! Видно, что сайт texmart

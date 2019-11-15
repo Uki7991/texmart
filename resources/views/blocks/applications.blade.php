@@ -130,7 +130,7 @@
             </div>
         <div class="col-12 col-md-8">
             <div class="card-deck">
-                <div class="card mb-4" style="margin-right: 0;">
+                <div class="card mb-4 mt-5 mt-sm-0" style="margin-right: 0;">
                     <div class="view overlay">
                         <img class="card-img-top div-lazy" data-src="{{ asset('img/consulting_texmart.png') }}" src="" alt="Card image cap">
                     </div>
@@ -174,8 +174,13 @@
                 autoplaySpeed: 3000,
                 slidesToShow: 3,
                 slidesToScroll: 1,
+                touchmove:false,
+                swipeToSlide:false,
+                touchThreshold:false,
+                draggable:false,
                 verticalSwiping: true,
             });
+
         });
     </script>
 @endpush
