@@ -6,9 +6,6 @@
             <div class="col-auto">
                 <h2>Объявления</h2>
             </div>
-            <div class="col-auto">
-                <a href="{{ route('profile.production.create', ['type' => $type]) }}" class="btn btn-success">Создать</a>
-            </div>
         </div>
         <div class="row">
             @forelse($productions as $production)

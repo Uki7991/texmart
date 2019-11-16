@@ -21,11 +21,15 @@ class ProductionController extends Controller
 {
     public function index(Request $request)
     {
-        $type = $request->type;
-        $productions = \auth()->user()->productions->where('type', $type);
+//        $type = $request->type;
+        $productions = \auth()->user()->productions/*->where('type', $type)*/;
+
+        $productions->map(function ($item) {
+
+        });
 
         return view('profile.productions.index', [
-            'type' => $type,
+//            'type' => $type,
             'productions' => $productions,
         ]);
     }

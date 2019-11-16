@@ -12,12 +12,13 @@
         </a>
         <div class="collapse step5 {{ request()->query('type') == 'service' || request()->query('type') == 'productions' || request()->query('type') == 'product' ? "show" : "" }}" id="addrequest">
 
-            <a href="{{ route('profile.production.index', ['type' => 'productions']) }}" class="list-group-item list-group-item-action step6  {{ request()->query('type') == 'productions' ? 'active' : 'grey lighten-2' }}" style="padding-left: 15%;">Цеха</a>
-            <a href="{{ route('profile.production.index', ['type' => 'service']) }}" class="list-group-item list-group-item-action step7 {{ request()->query('type') == 'service' ? 'active' : 'grey lighten-2' }}" style="padding-left: 15%">Услуги</a>
-            <a href="{{ route('profile.production.index', ['type' => 'product']) }}" class="list-group-item list-group-item-action step8 {{ request()->query('type') == 'product' ? 'active' : 'grey lighten-2' }}" style="padding-left: 15%">Товары</a>
+            <a href="{{ route('profile.production.create', ['type' => 'productions']) }}" class="list-group-item list-group-item-action step6  {{ request()->query('type') == 'productions' ? 'active' : 'grey lighten-2' }}" style="padding-left: 15%;">Цеха</a>
+            <a href="{{ route('profile.production.create', ['type' => 'service']) }}" class="list-group-item list-group-item-action step7 {{ request()->query('type') == 'service' ? 'active' : 'grey lighten-2' }}" style="padding-left: 15%">Услуги</a>
+            <a href="{{ route('profile.production.create', ['type' => 'product']) }}" class="list-group-item list-group-item-action step8 {{ request()->query('type') == 'product' ? 'active' : 'grey lighten-2' }}" style="padding-left: 15%">Товары</a>
         </div>
     @endif
 
+    <a href="{{ route('profile.production.index') }}" class="list-group-item list-group-item-action {{ request()->is('profile/production') ? 'active' : '' }}">{{ __('Мои объявления') }}</a>
     <a href="{{ route('profile.settings') }}" class="list-group-item list-group-item-action step9 {{ request()->is('profile/settings*') ? 'active' : '' }}">{{ __('Настройки аккаунта') }}</a>
     <a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class="list-group-item list-group-item-action text-danger step10">{{ __('Выход') }}</a>
 </div>

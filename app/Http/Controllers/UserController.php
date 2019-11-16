@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Aloha\Twilio\Support\Laravel\Facade;
+use App\Announce;
 use App\Category;
 use App\Http\Requests\UpdateUserPassword;
 use App\Production;
@@ -73,10 +74,13 @@ class UserController extends Controller
 //            }
 //        }
 
+        $announces = Announce::all();
+
         $user = auth()->user();
         return view('profile.profile', [
             'user' => $user,
             'productions' => $productions,
+            'announces' => $announces->paginate(5),
 //            'productionCats' => $productionCats->sortBy('order'),
 //            'productCats' => $productCats->sortBy('order'),
 //            'serviceCats' => $serviceCats->sortBy('order'),
