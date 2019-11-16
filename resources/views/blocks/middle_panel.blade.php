@@ -1,5 +1,5 @@
 <div class="container-fluid position-relative mt-5 mt-xl-0" style="overflow:hidden;">
-    <div class="row pl-xl-5" style="background-image:  url({{ asset('img/main.png') }});background-repeat: no-repeat;background-size: cover; left: 0; top: 0;">
+    <div class="row pl-xl-5" style="background-image:  url({{ asset('img/main_pravka.png') }});background-repeat: no-repeat;background-size: cover; left: 0; top: 0;">
         <div class="col-12 pl-lg-5 col-lg-6 position-relative min-vh-100" >
             <div class="backdrop h-100"></div>
             <div class="row h-100 position-relative">

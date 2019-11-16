@@ -89,14 +89,8 @@
                 {
                     "position": "top",
                     "content": [
-                        "searchfield"
-                    ]
-                },
-                {
-                    "position": "top",
-                    "content": [
                         "prev",
-                        "title"
+                        "title",
                     ]
                 },
             ],
