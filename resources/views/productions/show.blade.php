@@ -33,7 +33,6 @@
                             </div>
                         @endforeach
                     </div>
-
                     <div id="sync2" class="owl-carousel owl-theme">
                         <div class="item">
                             <a href="{{ asset('storage/'.$production->logo) }}" data-fancybox="gallery">
@@ -94,12 +93,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 pt-2 mt-1">
-
                     <div class="col-12">
-
                         <div class="card">
-
-
                             <div class="card-body">
                                 <div class="row mb-5 justify-content-end">
                                     <div class="col-auto">
@@ -121,9 +116,6 @@
                                         </p>
                                         {{ $production->address }}
                                     </div>
-
-
-
                                     <div class="col-4 mb-4">
                                         <p class="mb-1">
                                             Дата создания объявления:
@@ -159,16 +151,19 @@
                                             Личный сайт:
                                         </p>
                                         {{ $production->site ?? 'Нет сайта' }}
-
                                     </div>
-
-
                                     <div class="col-12 mb-4">
                                         <p>
                                             Описание:
                                         </p>
                                         {!! $production->description !!}
 
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <p class="mb-1">
+                                            Цена:
+                                        </p>
+                                        {!! $production->price !!}
                                     </div>
                                     <div class="col-12">
                                         @if(count($production->getCoordinates()))
@@ -177,7 +172,6 @@
                                         @endif
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 

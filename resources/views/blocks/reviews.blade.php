@@ -46,7 +46,7 @@
             <div class="item">
                 <div class="card shadow-none row ">
                     <div class="card-body text-center justify-content-center p-5">
-                        <p class="card-text text-center">Спасибо огромное вашему дружному коллективу Texmart.kg .
+                        <p class="card-text text-center justify-content-center ">Спасибо огромное вашему дружному коллективу Texmart.kg .
                             Благодаря вам я нашла много новых клиентов и заказчиков. Раньше у меня клиенты были только
                             из Кыргызстана а теперь и на территории России нашла клиентов. Процветание и удачи вашей
                             компании!!!</p>
@@ -57,7 +57,7 @@
             <div class="item ">
                 <div class="card shadow-none row ">
                     <div class="card-body text-center justify-content-center p-5">
-                        <p class="card-text text-center">Спасибо коллективу Техmart.kg. Спасибо вам за такую возможность
+                        <p class="card-text text-center justify-content-center ">Спасибо коллективу Техmart.kg. Спасибо вам за такую возможность
                             благодаря вам у меня в данный момент очень много заказчиков и покупателей. Я очень рада что
                             судьба свела меня с вами. После встречи у меня работа пошла в горы </p>
                         <p class="card-title text-center font-weight-bold">Гульзат</p>
