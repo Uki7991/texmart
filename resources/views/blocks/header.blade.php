@@ -59,9 +59,9 @@
         <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
         <li><span>Подать объявления</span>
             <ul>
-                <li><a href="{{ route('production') }}">Производственные цеха и фабрики</a></li>
-                <li><a href="{{ route('production', ['type' => 'product']) }}">Товары</a></li>
-                <li><a href="{{ route('production', ['type' => 'service']) }}">Услуги</a></li>
+                <li><a href="{{ route('profile.production.create', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
+                <li><a href="{{ route('profile.production.create', ['type' => 'product']) }}">Товары</a></li>
+                <li><a href="{{ route('profile.production.create', ['type' => 'service']) }}">Услуги</a></li>
             </ul>
         </li>
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>

@@ -4,7 +4,7 @@
             <h2>Создание объявления услуги</h2>
         </div>
         <div class="col-12 col-sm-10 col-lg-10 col-md-10">
-            <form action="{{ route('admin.production.store') }}" enctype="multipart/form-data" method="POST">
+            <form action="{{ route('profile.production.store') }}" enctype="multipart/form-data" method="POST">
                 @if($errors->any())
                     <span class="invalid-feedback d-block">
                                 <strong>У вас есть ошибки при заполнении</strong>
