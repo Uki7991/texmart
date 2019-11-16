@@ -31,11 +31,6 @@
         @include('blocks.side_panel')
     </div>
     @include('blocks.middle_panel')
-    <div class="container">
-        <div class="row justify-content-center">
-            @include('partials.modals.registration-form')
-        </div>
-    </div>
     @include('blocks.category')
     @include('blocks.our_advantages')
     @include('blocks.applications')

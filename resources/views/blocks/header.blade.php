@@ -10,11 +10,8 @@
                 <a href="#" class="search-sprite waves-effect waves-light mt-3"></a>
             </li>
             <li class="nav-item" id="clickLogin">
-                <a href="{{ auth()->check() ? route('profile') : route('login') }}"
+                <a href="{{ auth()->check() ? '#leftsidebarAva' : route('login') }}"
                    class="user-sprite my-3 waves-effect waves-light mx-3 mx-md-5"></a>
-                <div id="sidebar-header" style="position: absolute;top: 50px;display:none;">
-                    @includeWhen(auth()->check(), 'profile.partials.sidebar')
-                </div>
             </li>
             <li class="nav-item">
                 <a href="#menu2"
@@ -31,9 +28,9 @@
         <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>
         <li><span>Объявления</span>
             <ul>
-                <li><a href="{{ route('production') }}">Производственные цеха и фабрики</a></li>
-                <li><a href="{{ route('gds') }}">Товары</a></li>
-                <li><a href="{{ route('service') }}">Услуги</a></li>
+                <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
+                <li><a href="{{ route('production', ['type' => 'product']) }}">Товары</a></li>
+                <li><a href="{{ route('production', ['type' => 'service']) }}">Услуги</a></li>
             </ul>
         </li>
         <li><span>О компании</span>
@@ -54,6 +51,26 @@
         <li><a href="{{ route('contacts') }}">Контакты</a></li>
     </ul>
 </nav>
+
+<nav id="leftsidebarAva" class="btn-submit-your-application">
+    <ul>
+        <li><a href="{{ route('welcome') }}">Главная</a></li>
+        <li><a href="{{ route('profile.dashboard') }}">Лента</a></li>
+        <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
+        <li><span>Подать объявления</span>
+            <ul>
+                <li><a href="{{ route('production') }}">Производственные цеха и фабрики</a></li>
+                <li><a href="{{ route('production', ['type' => 'product']) }}">Товары</a></li>
+                <li><a href="{{ route('production', ['type' => 'service']) }}">Услуги</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>
+        <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
+    </ul>
+</nav>
+<form action="{{ route('logout') }}" method="POST" class="d-none logout-form">
+    @csrf
+</form>
 @push("scripts")
     <script>
         new Mmenu("#menu2", {
@@ -77,11 +94,28 @@
             }
         });
     </script>
+
     <script>
-        $('#clickLogin').click(e => {
-            e.preventDefault();
-            $('#sidebar-header').toggle(200);
-        })
+        new Mmenu("#leftsidebarAva", {
+            extensions: {
+                "all": ["pagedim-black", "shadow-panels", "fx-panels-slide-100", "border-none", "position-left"],
+                "(max-width: 600px)": ["fullscreen"]
+            },
+            "navbars": [
+                {
+                    "position": "top",
+                    "content": [
+                        "prev",
+                        "title",
+                        "close"
+                    ]
+                },
+            ],
+            onClick : {
+                close          : true,
+                preventDefault : false,
+            }
+        });
     </script>
 @endpush
 
