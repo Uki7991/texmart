@@ -37,7 +37,7 @@
 
 
         </div>
-        <div class="col-12 col-lg-6 py-5 bg-img">
+        <div class="col-12 col-md-9 col-lg-6 py-5 bg-img">
 
             {{--<iframe  frameborder="0" allow="></iframe>--}}
 

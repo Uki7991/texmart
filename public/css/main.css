@@ -1,5 +1,5 @@
 *{
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'OpenSans', sans-serif !important;
 }
 .maxw-content {
     max-width: min-content!important;

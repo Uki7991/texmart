@@ -2,7 +2,7 @@
 
 <ul class="list-unstyled  btn-submit-your-application father" data-toggle="modal">
     <li>
-        <a class="form-call d-md-block d-none">
+        <a class="form-call d-lg-block d-none">
             <img src="{{asset('icons/submit_your_application.png')}}" class="icon_form" alt="оставить заявку">
         </a>
         <ul class="list-unstyled btn-submit-your-application-child">
