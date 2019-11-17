@@ -23,10 +23,12 @@
             <div class="col">
                 @yield('profile_content')
             </div>
-            @if(request()->is('profile/dashboard*'))
-                <div class="col-12 col-lg-3">
-                    @include('profile.partials.right-sidebar')
-                </div>
+            @if(false)
+                @if(request()->is('profile/dashboard*'))
+                    <div class="col-12 col-lg-3">
+                        @include('profile.partials.right-sidebar')
+                    </div>
+                @endif
             @endif
         </div>
     </div>

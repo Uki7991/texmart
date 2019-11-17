@@ -13,15 +13,15 @@
                     <h1 class="customer-title" style="font-size: 1.5rem">
                         {{ $announce->content }}
                     </h1>
-                    <div class="footer_block">
-                        <div class="item-detail_tags">
-                            <div class="tags">
-                                <a href="#" class="tag-lg">Женская одежда</a>
-                                <a href="#" class="tag-lg">Ткани и фурнитура</a>
-                                <a href="#" class="tag-lg">Женская обувь</a>
-                            </div>
-                        </div>
-                    </div>
+{{--                    <div class="footer_block">--}}
+{{--                        <div class="item-detail_tags">--}}
+{{--                            <div class="tags">--}}
+{{--                                <a href="#" class="tag-lg">Женская одежда</a>--}}
+{{--                                <a href="#" class="tag-lg">Ткани и фурнитура</a>--}}
+{{--                                <a href="#" class="tag-lg">Женская обувь</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
             <div class="right-customer col-12 col-lg-4">
@@ -52,28 +52,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="block-middle-block">
-                    <ul class="customer_ul">
-                        <li class="customer_ul_li" style="display: flex;flex-wrap: nowrap;">
-                            <div style="margin-right: 30px;">
-                                <img src="{{ asset('icons/eye_for_customer.png') }}" alt="" class="img_customer">
-                            </div>
-                            <div>
-                                <span class="col_eye">250</span>
-                                <p class="customer_text">пользователя просматривали заказ</p>
-                            </div>
-                        </li>
-                        <li style="display: flex;flex-wrap: nowrap;">
-                            <div style="margin-right: 30px;">
-                                <img src="{{ asset('icons/user_for_customer.png') }}" alt="" class="img_customer">
-                            </div>
-                            <div>
-                                <span class="col_request">3986</span>
-                                <p class="customer_text">уведомлены о заказе</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+{{--                <div class="block-middle-block">--}}
+{{--                    <ul class="customer_ul">--}}
+{{--                        <li class="customer_ul_li" style="display: flex;flex-wrap: nowrap;">--}}
+{{--                            <div style="margin-right: 30px;">--}}
+{{--                                <img src="{{ asset('icons/eye_for_customer.png') }}" alt="" class="img_customer">--}}
+{{--                            </div>--}}
+{{--                            <div>--}}
+{{--                                <span class="col_eye">250</span>--}}
+{{--                                <p class="customer_text">пользователя просматривали заказ</p>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li style="display: flex;flex-wrap: nowrap;">--}}
+{{--                            <div style="margin-right: 30px;">--}}
+{{--                                <img src="{{ asset('icons/user_for_customer.png') }}" alt="" class="img_customer">--}}
+{{--                            </div>--}}
+{{--                            <div>--}}
+{{--                                <span class="col_request">3986</span>--}}
+{{--                                <p class="customer_text">уведомлены о заказе</p>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <a href="{{ route('blog_index') }}" class="text-center h2 " style="color: #e99b33 !important;padding-bottom: 25px;text-align: center">
         Наш Блог
     </a>
-    <div class="row pt-3">
+    <div class="row justify-content-center pt-3">
         @foreach($blogs as $blog)
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUpBig;">

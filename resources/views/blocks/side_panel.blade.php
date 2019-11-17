@@ -34,10 +34,10 @@
 
                 </a>
             </li>
-            <li class="nav-item mr-3 ">
-                <a href="" class="telegram-sprite waves-effect waves-light text-muted my-3" title="Ссылка на telegram">
-                </a>
-            </li>
+{{--            <li class="nav-item mr-3 ">--}}
+{{--                <a href="" class="telegram-sprite waves-effect waves-light text-muted my-3" title="Ссылка на telegram">--}}
+{{--                </a>--}}
+{{--            </li>--}}
             <li class="nav-item mr-3 ">
                 <a href="https://vk.com/texmartkg" class="vk-sprite waves-effect waves-light text-muted pb-4"
                    title="Ссылка на vk">
@@ -52,7 +52,7 @@
         <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
         <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm" >Задать вопрос</a></li>
-        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>
+{{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
         <li><span>Объявления</span>
             <ul>
                 <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
