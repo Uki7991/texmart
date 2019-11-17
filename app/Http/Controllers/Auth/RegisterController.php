@@ -48,7 +48,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        $data['phone'] = str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']);
+        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[-\s]/', '', $data['phone']);
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:255', 'unique:users'],
@@ -69,7 +69,7 @@ class RegisterController extends Controller
         return User::create([
             'role_id' => $data['user_type'] == 1 ? 5 : 4,
             'name' => $data['name'],
-            'phone' => str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']),
+            'phone' => str_replace('+', '', $data['code']).preg_replace('/[-\s]/', '', $data['phone']),
             'password' => Hash::make($data['password']),
             'phone_verification' => rand(111111, 999999),
         ]);

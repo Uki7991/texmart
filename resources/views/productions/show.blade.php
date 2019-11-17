@@ -57,7 +57,7 @@
                     </p>
                         @if($production->price)
                         <p class="mb-4">
-                            Цена: {!! $production->price !!}
+                            Цена: <span class="font-weight-bold">{!! $production->price !!}</span>
                         </p>
                         @endif
                     @if(false)
@@ -115,19 +115,19 @@
                                         <p class="mb-1">
                                             Бренд:
                                         </p>
-                                        {{ $production->brand }}
+                                        <span class="font-weight-bold">{{ $production->brand }}</span>
                                     </div>
                                     <div class="col-12 col-md-4 mb-4">
                                         <p class="mb-1">
                                             Адрес:
                                         </p>
-                                        {{ $production->address }}
+                                        <span class="font-weight-bold">{{ $production->address }}</span>
                                     </div>
                                     <div class="col-12 col-md-4 mb-4">
                                         <p class="mb-1">
                                             Дата создания объявления:
                                         </p>
-                                        {{ \Carbon\Carbon::make($production->created_at)->formatLocalized('%d %B %Y') }}
+                                        <span class="font-weight-bold">{{ \Carbon\Carbon::make($production->created_at)->formatLocalized('%d %B %Y') }}</span>
 
                                     </div>
 
@@ -137,13 +137,13 @@
                                         <div class="col-12 col-md-6 py-3">
                                             <p class="h5">Количество сотрудников:</p>
                                             <div class="amount_production">
-                                                {!! $production->amount_production !!}
+                                                <span class="font-weight-bold">{!! $production->amount_production !!}</span>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6 py-3">
                                             <p class="font-weight-light h5">Оборудование:</p>
                                             <div class="tools">
-                                                {!! $production->tools !!}
+                                                <span class="font-weight-bold">{!! $production->tools !!}</span>
                                             </div>
                                         </div>
                                     @endif
@@ -155,21 +155,21 @@
                                         <div class="col-12 col-md-6 col-lg-6 py-3">
                                             <p class="font-weight-light h5">Минимальный заказ:</p>
                                             <div class="minimum_order">
-                                                {!! $production->minimum_order !!}
+                                                <span class="font-weight-bold">{!! $production->minimum_order !!}</span>
                                             </div>
                                         </div>
 
                                         <div class="col-12 col-md-6 col-lg-6 py-3">
                                             <p class="h5 text-center">Объем прозводства в месяц:</p>
-                                            <div class="d-flex justify-content-between">
+                                            <div class="d-flex justify-content-around">
                                                 <p class="font-weight-light h6">От:
                                                     <span class="from_amount_production">
-                                                {!! $production->from_amount_production !!}
+                                                <span class="font-weight-bold">{!! $production->from_amount_production !!}</span>
                                             </span> шт.
                                                 </p>
                                                 <p class="font-weight-light h6">До:
                                                     <span class="before_amount_prod">
-                                                {!! $production->before_amount_prod !!}
+                                                <span class="font-weight-bold">{!! $production->before_amount_prod !!}</span>
                                             </span> шт.
                                                 </p>
                                             </div>
@@ -180,31 +180,31 @@
                                         <p class="mb-1">
                                             E-mail:
                                         </p>
-                                        {{ $production->email ?? 'Нет Email' }}
+                                        <span class="font-weight-bold">{{ $production->email ?? 'Нет Email' }}</span>
 
                                     </div>
                                     <div class="col-12 col-md-4 col-lg-3 mb-4">
                                         <p class="mb-1">
                                             Телефон №1:
                                         </p>
-                                        {{ $production->phone1 ?? 'Нет телефона №1' }}
+                                        <span class="font-weight-bold">{{ $production->phone1 ?? 'Нет телефона №1' }}</span>
 
                                     </div>
                                     <div class="col-12 col-md-4 col-lg-3 mb-4">
                                         <p class="mb-1">
                                             Телефон №2:
                                         </p>
-                                        {{ $production->phone2 ?? 'Нет телефона №2' }}
+                                        <span class="font-weight-bold">{{ $production->phone2 ?? 'Нет телефона №2' }}</span>
 
                                     </div>
                                     <div class="col-12 col-md-4 col-lg-3 mb-4">
                                         <p class="mb-1">
                                             Личный сайт:
                                         </p>
-                                        {{ $production->site ?? 'Нет сайта' }}
+                                        <span class="font-weight-bold">{{ $production->site ?? 'Нет сайта' }}</span>
                                     </div>
                                     <div class="col-12 mb-4">
-                                        <p>
+                                        <p class="font-weight-bold">
                                             Описание:
                                         </p>
                                         {!! $production->description !!}
@@ -479,7 +479,7 @@
         $(function () {
 
             $("#rateYo").rateYo({
-                rating: '{{ $rating ? $rating : '4' }}',
+                rating: '{{ $production->rating ? $production->rating : '0' }}',
                 halfStar: true,
                 readOnly: true,
                 starWidth: "20px"
@@ -491,7 +491,7 @@
         $(function () {
 
             $("#rateYo1").rateYo({
-                rating: '{{ $rating ? $rating : '4' }}',
+                rating: '{{ $production->expert ? $production->expert : '0' }}',
                 halfStar: true,
                 readOnly: true,
                 starWidth: "20px"

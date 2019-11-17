@@ -57,7 +57,7 @@ class AnnounceController extends Controller
             return redirect()->route('profile.announce.index');
         }
         $data = $request->all();
-        $data['phone'] = str_replace('+', '', $data['code']).str_replace(' ', '', $data['phone']);
+        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[-\s]/', '', $data['phone']);
         $validated = Validator::make($data, [
             'name' => 'string',
             'phone' => 'unique:users',
