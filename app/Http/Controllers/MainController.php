@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Announce;
 use App\Bid;
+use App\Blog;
 use App\Category;
 use App\Mail\BidAccept;
 use App\Production;
@@ -22,11 +23,13 @@ class MainController extends Controller
 //        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);
         $announces = Announce::all();
         $this->address(new GeoLocation());
+        $blogs = Blog::all()->sortByDesc('id')->take(4);
         return view('welcome', [
 //            'productions' => $productions->sortByDesc('id'),
 //            'services' => $services->sortByDesc('id'),
 //            'products' => $products->sortByDesc('id'),
             'announces' => $announces,
+            'blogs' => $blogs,
         ]);
     }
 

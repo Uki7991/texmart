@@ -24,7 +24,10 @@ class BlogController extends Controller
     }
     public function index2()
     {
-        return view('blog.blog_index', ['blogs' => Blog::all(), 'blog' => Blog::all()]);
+        $blogs = Blog::all()->paginate(10);
+        return view('blog.blog_index', [
+            'blogs' => $blogs
+        ]);
     }
 
     public function upload(Request $request, Blog $blog)

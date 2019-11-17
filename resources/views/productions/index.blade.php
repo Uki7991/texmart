@@ -96,6 +96,7 @@
             let isChecked = input.is(':checked') ? true : false;
             let id = input.data('id');
             isChecked ? params.push(id) : params.splice($.inArray(id, params), 1);
+            params.page = 1;
             console.log(params);
             fetchProductions(params);
         });

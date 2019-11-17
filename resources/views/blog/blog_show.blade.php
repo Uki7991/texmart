@@ -13,63 +13,41 @@
                     <h1 class="text-center text-white">{{ $blog->title }}</h1>
                 </div>
             </div>
+            <div class="row justify-content-start mt-2">
+                <div class="col-auto">
+                    <p class="font-weight-bold">{{ \Carbon\Carbon::make($blog->created_at)->format('d.m.Y') }}</p>
+                </div>
+            </div>
         </div>
     </section>
     <div class="container pt-5">
         <div class="row">
-            <div class="col-9">
-                <p class="oclock">{{ $blog->created_at }}</p>
-                <div class="row ">
-                    {!! $blog->content !!}
+            <div class="col-12 col-lg-9">
+                <div class="row">
+                    <div class="col-12">
+                        {!! $blog->content !!}
+                    </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-lg-3">
                 <div class="default-block">
                     <div class="default-block__header">
                         <h2 class="default-block__header-title">Блог в Texmart</h2>
                     </div>
                     <div class="default-block__content">
-                        <ul class="content-list">
                             @foreach($blogs as $blog)
-                            <li>
-                                <h3 class="post-info__title">
-                                    <a href="{{ route('blog_show', $blog) }}" class="post-info__title">{{ $blog->title }}</a>
-                                </h3>
-                                <div class="post_info__meta d-flex p-3">
-                                    <i class="far fa-eye pr-2"><span>22,k</span></i>
-{{--                                    <p class="p-3">просмотры</p>--}}
-{{--                                    <p>коменты</p>--}}
+                            <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUpBig;">
+                                <a href="{{ route('blog_show', $blog) }}" class="post-thumbnail"><img src="{{asset('storage/'.$blog->logo)}}" alt=""></a>
+                                {{--                        <a href="#" class="btn post-catagory">Camera</a>--}}
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <p class="oclock text-white">{{ \Carbon\Carbon::make($blog->created_at)->format('d.m.Y') }}</p>
+                                        {{--                                <a href="#">3 Comment</a>--}}
+                                    </div>
+                                    <a href="{{ route('blog_show', $blog) }}" class="post-title">{{ $blog->title }}</a>
                                 </div>
-                            </li>
+                            </div>
                             @endforeach
-{{--                            <li>--}}
-{{--                                <h3 class="post-info__title">--}}
-{{--                                    <a href="#" class="post-info__title">Автоматизация End-2-End тестирования комплексной информационной системы. Часть 1. Организационная</a>--}}
-{{--                                </h3>--}}
-{{--                                <div class="post_info__meta d-flex p-3">--}}
-{{--                                    <p class="p-3">просмотры</p>--}}
-{{--                                    <p>коменты</p>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <h3 class="post-info__title">--}}
-{{--                                    <a href="#" class="post-info__title">Автоматизация End-2-End тестирования комплексной информационной системы. Часть 1. Организационная</a>--}}
-{{--                                </h3>--}}
-{{--                                <div class="post_info__meta d-flex p-3">--}}
-{{--                                    <p class="p-3">просмотры</p>--}}
-{{--                                    <p>коменты</p>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <h3 class="post-info__title">--}}
-{{--                                    <a href="#" class="post-info__title">Автоматизация End-2-End тестирования комплексной информационной системы. Часть 1. Организационная</a>--}}
-{{--                                </h3>--}}
-{{--                                <div class="post_info__meta d-flex p-3">--}}
-{{--                                    <p class="p-3">просмотры</p>--}}
-{{--                                    <p>коменты</p>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-                        </ul>
                     </div>
                 </div>
             </div>
