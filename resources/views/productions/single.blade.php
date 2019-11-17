@@ -22,7 +22,7 @@
             </div>
         </div>
     </a>
-    @if(auth()->check() && auth()->id() == $production->user->id)
+    @if(auth()->check() && auth()->id() == $production->user_id)
         <div class="card-footer">
             <div class="d-flex">
                 @includeWhen(auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('profile.production.edit', ['type' => $production->type, 'production' => $production])])

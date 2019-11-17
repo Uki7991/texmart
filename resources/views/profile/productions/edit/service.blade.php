@@ -10,6 +10,7 @@
                                 <strong>У вас есть ошибки при заполнении</strong>
                             </span>
                 @endif
+                @method("PUT")
                 @csrf
                 <input type="hidden" name="type" value="{{ $type }}">
                 <div class="form-row">
@@ -18,7 +19,7 @@
                             Название товара <span class="text-danger">*</span>
                         </label>
                         <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
-                               value="{{ old('title') }}" required>
+                               value="{{ $production->title }}" required>
                         @error('title')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -30,7 +31,7 @@
                             Бренд <span class="text-danger">*</span>
                         </label>
                         <input type="text" name="brand" class="form-control @error('brand') is-invalid @enderror"
-                               value="{{ old('brand') }}">
+                               value="{{ $production->brand }}">
                         @error('brand')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -70,7 +71,7 @@
                         <div class="form-group">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                                   id="email">
+                                   id="email" value="{{ $production->email }}">
                             @error('email')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -84,7 +85,7 @@
                         <div class="form-group">
                             <label for="site">Личный сайт (если он есть)</label>
                             <input type="text" class="form-control @error('site') is-invalid @enderror"
-                                   value="{{ old('site') }}" name="site" id="site" placeholder="Сайт">
+                                   value="{{ $production->site }}" name="site" id="site" placeholder="Сайт">
                             {{--                                @error('site')--}}
                             {{--                                <span class="invalid-feedback" role="alert">--}}
                             {{--                                        <strong>{{ $message }}</strong>--}}
@@ -96,7 +97,7 @@
                         <div class="form-group">
                             <label for="address">Укажите адрес <span class="text-danger">*</span></label>
                             <input type="text" class="form-control @error('address') is-invalid @enderror"
-                                   value="{{ old('address') }}" name="address" id="address" required>
+                                   value="{{ $production->address }}" name="address" id="address" required>
                             @error('address')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -140,14 +141,14 @@
                 <div class="form-group">
                     <label for="categories-product">Выберите категорию товара <span class="text-danger">*</span></label>
                     <ul id="tree2" style="list-style: none">
-                        @foreach($productCats as $category)
+                        @foreach($serviceCats as $category)
                             <li>
                                 @if(count($category->childs))
                                     <i class="fas fa-plus"></i>
                                 @endif
                                 <a href="#" class="text-dark">{{ $category->title }}</a>
                                 @if(count($category->childs))
-                                    @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
+                                    @include('partials.manage_childs',['childs' => $category->childs->sortBy('order'), 'input' => [true, 'radio']])
                                 @endif
                             </li>
                         @endforeach
@@ -163,7 +164,7 @@
                     <label for="richtextDescription">Опишите свой товар <span class="text-danger">*</span></label>
                     <textarea class="form-control richTextBox @error('description') is-invalid @enderror"
                               name="description" id="richtextDescription">
-                                {{ old('description') }}
+                                {{ $production->description }}
                         </textarea>
                     @error('description')
                     <span class="invalid-feedback" role="alert">
@@ -176,7 +177,7 @@
                 @include('partials.formFields.coordinates', ['idMap' => 'map3'])
 
                 <button type="submit" class="btn btn-green text-white">Подать</button>
-                <a href="{{ route('admin.production.index', ['type' => $type]) }}" class="btn">Назад</a>
+                <a href="{{ route('profile.production.index', ['type' => $type]) }}" class="btn">Назад</a>
             </form>
         </div>
     </div>

@@ -179,7 +179,7 @@
                 @include('partials.formFields.coordinates', ['idMap' => 'map3'])
 
                 <button type="submit" class="btn btn-green text-white">Подать</button>
-                <a href="{{ route('admin.production.index', ['type' => $type]) }}" class="btn">Назад</a>
+                <a href="{{ route('profile.production.index', ['type' => $type]) }}" class="btn">Назад</a>
             </form>
         </div>
     </div>

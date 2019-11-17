@@ -10,6 +10,7 @@
                                 <strong>У вас есть ошибки при заполнении</strong>
                             </span>
                 @endif
+                @method("PUT")
                 @csrf
                 <input type="hidden" name="type" value="{{ $type }}">
 
@@ -19,7 +20,7 @@
                             Название товара <span class="text-danger">*</span>
                         </label>
                         <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
-                               value="{{ old('title') }}" required>
+                               value="{{ $production->title }}" required>
                         @error('title')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -31,7 +32,7 @@
                             Бренд <span class="text-danger">*</span>
                         </label>
                         <input type="text" name="brand" class="form-control @error('brand') is-invalid @enderror"
-                               value="{{ old('brand') }}">
+                               value="{{ $production->brand }}">
                         @error('brand')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -43,7 +44,7 @@
                             Цена <span class="text-danger">*</span>
                         </label>
                         <input type="number" name="price" class="form-control @error('price') is-invalid @enderror"
-                               value="{{ old('price') }}">
+                               value="{{ $production->price }}">
                         @error('price')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -84,7 +85,7 @@
                         <div class="form-group">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                                   id="email">
+                                   id="email" value="{{ $production->email }}">
                             @error('email')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -100,7 +101,7 @@
                         <div class="form-group">
                             <label for="site">Личный сайт (если он есть)</label>
                             <input type="text" class="form-control @error('site') is-invalid @enderror"
-                                   value="{{ old('site') }}" name="site" id="site" placeholder="Сайт">
+                                   value="{{ $production->site }}" name="site" id="site" placeholder="Сайт">
                             {{--                                @error('site')--}}
                             {{--                                <span class="invalid-feedback" role="alert">--}}
                             {{--                                        <strong>{{ $message }}</strong>--}}
@@ -112,7 +113,7 @@
                         <div class="form-group">
                             <label for="address">Укажите адрес <span class="text-danger">*</span></label>
                             <input type="text" class="form-control @error('address') is-invalid @enderror"
-                                   value="{{ old('address') }}" name="address" id="address" required>
+                                   value="{{ $production->address }}" name="address" id="address" required>
                             @error('address')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -192,7 +193,7 @@
                 @include('partials.formFields.coordinates', ['idMap' => 'map3'])
 
                 <button type="submit" class="btn btn-green text-white">Подать</button>
-                <a href="{{ route('admin.production.index', ['type' => $type]) }}" class="btn">Назад</a>
+                <a href="{{ route('profile.production.index', ['type' => $type]) }}" class="btn">Назад</a>
             </form>
         </div>
     </div>

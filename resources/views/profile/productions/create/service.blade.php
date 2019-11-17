@@ -140,14 +140,14 @@
                 <div class="form-group">
                     <label for="categories-product">Выберите категорию товара <span class="text-danger">*</span></label>
                     <ul id="tree2" style="list-style: none">
-                        @foreach($productCats as $category)
+                        @foreach($serviceCats as $category)
                             <li>
                                 @if(count($category->childs))
                                     <i class="fas fa-plus"></i>
                                 @endif
                                 <a href="#" class="text-dark">{{ $category->title }}</a>
                                 @if(count($category->childs))
-                                    @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
+                                    @include('partials.manage_childs',['childs' => $category->childs->sortBy('order'), 'input' => [true, 'checkbox']])
                                 @endif
                             </li>
                         @endforeach
@@ -176,7 +176,7 @@
                 @include('partials.formFields.coordinates', ['idMap' => 'map3'])
 
                 <button type="submit" class="btn btn-green text-white">Подать</button>
-                <a href="{{ route('admin.production.index', ['type' => $type]) }}" class="btn">Назад</a>
+                <a href="{{ route('profile.production.index', ['type' => $type]) }}" class="btn">Назад</a>
             </form>
         </div>
     </div>

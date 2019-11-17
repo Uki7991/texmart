@@ -171,6 +171,8 @@ class ProductionController extends Controller
             'user' => \auth()->user(),
             'productionCats' => $productionCats,
             'productCats' => $productCats,
+            'serviceCats' => $serviceCats,
+            'production' => $production,
         ]);
     }
 
