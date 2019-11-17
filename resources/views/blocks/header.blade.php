@@ -55,10 +55,10 @@
 <nav id="leftsidebarAva" class="btn-submit-your-application">
     <ul>
         <li><a href="{{ route('profile.dashboard') }}">Лента</a></li>
-        @if(auth()->user()->role_id == 4 || auth()->user()->role_id == 1)
+        @if((auth()->check() && auth()->user()->role_id == 4) || (auth()->check() && auth()->user()->role_id == 1))
         <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
         @endif
-        @if(auth()->user()->role_id == 5 || auth()->user()->role_id == 1)
+        @if((auth()->check() && auth()->user()->role_id == 5) || (auth()->check() && auth()->user()->role_id == 1))
         <li><span>Подать объявления</span>
             <ul>
                 <li><a href="{{ route('profile.production.create', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
