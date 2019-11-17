@@ -147,8 +147,9 @@ class ProductionController extends Controller
      * @param  \App\Production  $production
      * @return \Illuminate\Http\Response
      */
-    public function edit(Production $production)
+    public function edit(Request $request, Production $production)
     {
+        $requestType = $request->type;
         $types = Type::all();
         $productionCats = collect();
         $productCats = collect();
@@ -165,29 +166,11 @@ class ProductionController extends Controller
             }
         }
 
-        if ($production->type == 'productions') {
-            return view('user-production.form-tabs.production-edit', [
-                'user' => \auth()->user(),
-                'production' => $production,
-                'productionCats' => $productionCats,
-            ]);
-        } elseif ($production->type == 'service') {
-            return view('user-production.form-tabs.service-edit', [
-                'user' => \auth()->user(),
-                'production' => $production,
-                'serviceCats' => $serviceCats,
-            ]);
-        } elseif ($production->type == 'product') {
-            return view('user-production.form-tabs.product-edit', [
-                'user' => \auth()->user(),
-                'production' => $production,
-                'productCats' => $productCats,
-            ]);
-        }
-        return view('user-production.form-tabs.production-edit', [
+        return view('profile.productions.edit', [
+            'type' => $requestType,
             'user' => \auth()->user(),
-            'production' => $production,
             'productionCats' => $productionCats,
+            'productCats' => $productCats,
         ]);
     }
 

@@ -22,23 +22,12 @@
             </div>
         </div>
     </a>
-    @if(isset($profile) && auth()->check())
+    @if(auth()->check() && auth()->id() == $production->user->id)
         <div class="card-footer">
             <div class="d-flex">
-                @includeWhen(isset($profile) && auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('productions.edit', $production)])
-                @includeWhen(isset($profile) && auth()->check() && auth()->id() == $production->user->id, 'partials.btn.delete', ['route' => route('productions.destroy', $production)])
+                @includeWhen(auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('profile.production.edit', ['type' => $production->type, 'production' => $production])])
+                @includeWhen(auth()->check() && auth()->id() == $production->user->id, 'partials.btn.delete', ['route' => route('productions.destroy', $production)])
             </div>
-        </div>
-        <div class="card-footer">
-            @if($production->type == 'productions')
-                <p class="m-0">Производство</p>
-            @endif
-            @if($production->type == 'service')
-                <p class="m-0">Услуга</p>
-            @endif
-            @if($production->type == 'product')
-                <p class="m-0">Товар</p>
-            @endif
         </div>
     @endif
 
