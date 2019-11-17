@@ -15,7 +15,7 @@
             @include('blocks.header')
         </div>
     </section>
-    <section class="mt-5 pt-5">
+    <section class="mt-5 py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-4">
@@ -50,27 +50,35 @@
 
                 </div>
                 <div class="col">
-                    <p class="h4 mb-5">
-                        Мужские толстовки
+                    <p class="h4 mb-3">
+                        {{ $production->title }}
                         @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])
 
                     </p>
-                    <a class="border border-texmart rounded-pill bg-texmart-sidebar text-white py-2 px-2 ">
-                        Ветровки и толстовки
-                    </a>
+                        @if($production->price)
+                        <p class="mb-4">
+                            Цена: {!! $production->price !!}
+                        </p>
+                        @endif
+                    @if(false)
+                        <a class="border border-texmart rounded-pill bg-texmart-sidebar text-white py-2 px-2 ">
+                            Ветровки и толстовки
+                        </a>
+                    @endif
                     <ul class="list-inline">
                         <li class="list-inline-item">
                             <div class="my-3" id="rateYo"></div>
                         </li>
+                        @if(count($production->feedbacks))
+                            <li class="list-inline-item">
+                                <a href="#reviews_show" class="text-dark text-dashed">
+                                    {{ count($production->feedbacks) }} отзывов
+                                </a>
+                            </li>
+                        @endif
                         <li class="list-inline-item">
-                            <a href="#reviews-show" class="text-dark text-dashed">
-                                25 отзывов
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="" class="text-dark">
-                                написать отзыв
-                            </a>
+                            @include('partials.modals.comment')
+
                         </li>
                     </ul>
                 </div>
@@ -93,10 +101,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 pt-2 mt-1">
-                    <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="row mb-5 justify-content-end">
+                                <div class="row mb-5 justify-content-md-end justify-content-center">
                                     <div class="col-auto">
                                         <span class="small">Проверено администрацией Texmart.kg</span>
 
@@ -124,6 +131,50 @@
 
                                     </div>
 
+                                    @if($production->type == 'productions')
+                                        <hr class="w-100 mt-0">
+
+                                        <div class="col-12 col-md-6 py-3">
+                                            <p class="h5">Количество сотрудников:</p>
+                                            <div class="amount_production">
+                                                {!! $production->amount_production !!}
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 py-3">
+                                            <p class="font-weight-light h5">Оборудование:</p>
+                                            <div class="tools">
+                                                {!! $production->tools !!}
+                                            </div>
+                                        </div>
+                                    @endif
+
+
+                                    @if($production->type == 'productions')
+                                        <hr class="w-100 mt-0">
+
+                                        <div class="col-12 col-md-6 col-lg-6 py-3">
+                                            <p class="font-weight-light h5">Минимальный заказ:</p>
+                                            <div class="minimum_order">
+                                                {!! $production->minimum_order !!}
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 col-lg-6 py-3">
+                                            <p class="h5 text-center">Объем прозводства в месяц:</p>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="font-weight-light h6">От:
+                                                    <span class="from_amount_production">
+                                                {!! $production->from_amount_production !!}
+                                            </span> шт.
+                                                </p>
+                                                <p class="font-weight-light h6">До:
+                                                    <span class="before_amount_prod">
+                                                {!! $production->before_amount_prod !!}
+                                            </span> шт.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    @endif
                                     <hr class="w-100 mt-0">
                                     <div class="col-12 col-md-4 col-lg-3 mb-4">
                                         <p class="mb-1">
@@ -159,12 +210,7 @@
                                         {!! $production->description !!}
 
                                     </div>
-                                    <div class="col-12 mb-4">
-                                        <p class="mb-1">
-                                            Цена:
-                                        </p>
-                                        {!! $production->price !!}
-                                    </div>
+
                                     <div class="col-12">
                                         @if(count($production->getCoordinates()))
                                             <h3>Местонахождение на карте:</h3>
@@ -175,21 +221,48 @@
                             </div>
                         </div>
 
+                </div>
+            </div>
+
+            @if(count($production->feedbacks))
+                <div class="row mt-5" id="reviews_show">
+                    <div class="col-12">
+                        <h2>Отзывы</h2>
                     </div>
                 </div>
-            </div>
+                @php($less = false)
+                @foreach($production->feedbacks as $feedback)
+                    @if($loop->index > 2 && $less == false)
+                        <div id="show-more" class="" style="">
+                            <a href="#" class="show-more text-dark font-weight-bold">Показать больше</a>
+                        </div>
+                        @php($less = true)
+                    @endif
+                    <div class="row ty-compact-list">
+                        <div class="col-12 my-3">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    @if($feedback->user->role->name == 'admin')
+                                        <p class="small text-muted">
+                                            <i class="fas fa-star text-warning"></i>
+                                            &nbsp;Проверено администрацией Texmart.kg
+                                        </p>
+                                    @endif
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0">{{ $feedback->feedback }}</p>
+                                        <div class="ml-auto" id="rateYo-{{ $feedback->id }}"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            @endif
 
         </div>
     </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
 
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
 
 @push('styles')
@@ -256,6 +329,19 @@
 @endpush
 
 @push('scripts')
+    <script>
+        if ($('.ty-compact-list').length > 3) {
+            $('.ty-compact-list:gt(2)').hide();
+            $('.show-more').show();
+        }
+        $('.show-more').on('click', function (e) {
+            e.preventDefault();
+            //toggle elements with class .ty-compact-list that their index is bigger than 2
+            $('.ty-compact-list:gt(2)').toggle(300);
+            //change text of show more element just for demonstration purposes to this demo
+            $(this).text() === 'Показать больше' ? $(this).text('Показать меньше') : $(this).text('Показать больше');
+        });
+    </script>
     <script>
             $('.social-share-btn').click(e => {
                 let btn = $(e.currentTarget);
@@ -413,5 +499,31 @@
         });
 
     </script>
-
+    <script>
+        $(function () {
+            @if(count($production->feedbacks))
+            @foreach($production->feedbacks as $feedback)
+            $("#rateYo-{{ $feedback->id }}").rateYo({
+                rating: '{{ $feedback->rating ? $feedback->rating : '0' }}',
+                halfStar: true,
+                readOnly: true,
+                starWidth: "20px"
+            });
+            @endforeach
+            @endif
+        })
+    </script>
+    <script>
+        $(function () {
+            $("#rateYo-comment").rateYo({
+                rating: '0',
+                fullStar: true,
+                starWidth: "20px"
+            }).on("rateyo.set", function (e, data) {
+                let rating = data.rating;
+                console.log(rating);
+                $('#input_rating').val(rating);
+            });
+        })
+    </script>
 @endpush

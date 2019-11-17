@@ -15,7 +15,7 @@
                 <input type="hidden" name="type" value="{{ $type }}">
 
                 <div class="form-row">
-                    <div class="form-group col-4">
+                    <div class="form-group col-12 col-md-4">
                         <label>
                             Название товара <span class="text-danger">*</span>
                         </label>
@@ -27,7 +27,7 @@
                                         </span>
                         @enderror
                     </div>
-                    <div class="form-group col-4">
+                    <div class="form-group col-12 col-md-4">
                         <label>
                             Бренд <span class="text-danger">*</span>
                         </label>
@@ -39,7 +39,7 @@
                                         </span>
                         @enderror
                     </div>
-                    <div class="form-group col-4">
+                    <div class="form-group col-12 col-md-4">
                         <label>
                             Цена <span class="text-danger">*</span>
                         </label>

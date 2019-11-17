@@ -161,7 +161,65 @@
                                         </span>
                     @enderror
                 </div>
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-6">
+                            <label for="employee">Количество сотрудников <span class="text-danger">*</span></label>
+                            <input type="number" value="{{ old('amount_production') }}" min="1" max="1000" class="form-control @error('amount_production') is-invalid @enderror" name="amount_production"
+                                   id="employee" required>
+                            @error('amount_production')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                            @enderror
+                        </div>
+                        <div class="form-group col-12 col-md-6">
+                            <label for="minimum_order">Минимальный заказ <span class="text-danger">*</span></label>
+                            <input type="number" min="1" {!! old('minimum_order') !!} max="10000" class="form-control @error('minimum_order') is-invalid @enderror" name="minimum_order"
+                                   id="minimum" required>
+                            @error('minimum_order')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="equipment">Оборудование (количество машинок и т.д.)</label>
+                        <input type="text" value="{{ old('tools') }}" class="form-control @error('tools') is-invalid @enderror" name="tools" id="equipment">
+                        @error('tools')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                        @enderror
+                    </div>
 
+                    <h3>Объем прозводства в месяц</h3>
+                    <div class="form-row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="from">От <span class="text-danger">*</span>   </label>
+                                <input type="number" {!! old('from_amount_production') !!} min="1" class="form-control @error('from_amount_production') is-invalid @enderror" name="from_amount_production"
+                                       id="from" required>
+                                @error('from_amount_production')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="before">До <span class="text-danger">*</span></label>
+                                <input type="number" {!! old('before_amount_prod') !!} max="10000000" class="form-control @error('before_amount_prod') is-invalid @enderror" name="before_amount_prod"
+                                       id="before" required>
+                                @error('before_amount_prod')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
                 <div class="form-group">
                     <label for="richtextDescription">Опишите свой товар <span class="text-danger">*</span></label>
                     <textarea class="form-control richTextBox @error('description') is-invalid @enderror"
