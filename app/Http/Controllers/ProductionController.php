@@ -21,12 +21,16 @@ class ProductionController extends Controller
 {
     public function index(Request $request)
     {
-        $type = $request->type;
-        $productions = \auth()->user()->productions->where('type', $type);
+//        $type = $request->type;
+        $productions = \auth()->user()->productions->where('type', 'productions');
+        $products = \auth()->user()->productions->where('type', 'product');
+        $services = \auth()->user()->productions->where('type', 'service');
 
         return view('profile.productions.index', [
-            'type' => $type,
+//            'type' => $type,
             'productions' => $productions,
+            'products' => $products,
+            'services' => $services,
         ]);
     }
 
@@ -143,8 +147,9 @@ class ProductionController extends Controller
      * @param  \App\Production  $production
      * @return \Illuminate\Http\Response
      */
-    public function edit(Production $production)
+    public function edit(Request $request, Production $production)
     {
+        $requestType = $request->type;
         $types = Type::all();
         $productionCats = collect();
         $productCats = collect();
@@ -161,29 +166,13 @@ class ProductionController extends Controller
             }
         }
 
-        if ($production->type == 'productions') {
-            return view('user-production.form-tabs.production-edit', [
-                'user' => \auth()->user(),
-                'production' => $production,
-                'productionCats' => $productionCats,
-            ]);
-        } elseif ($production->type == 'service') {
-            return view('user-production.form-tabs.service-edit', [
-                'user' => \auth()->user(),
-                'production' => $production,
-                'serviceCats' => $serviceCats,
-            ]);
-        } elseif ($production->type == 'product') {
-            return view('user-production.form-tabs.product-edit', [
-                'user' => \auth()->user(),
-                'production' => $production,
-                'productCats' => $productCats,
-            ]);
-        }
-        return view('user-production.form-tabs.production-edit', [
+        return view('profile.productions.edit', [
+            'type' => $requestType,
             'user' => \auth()->user(),
-            'production' => $production,
             'productionCats' => $productionCats,
+            'productCats' => $productCats,
+            'serviceCats' => $serviceCats,
+            'production' => $production,
         ]);
     }
 

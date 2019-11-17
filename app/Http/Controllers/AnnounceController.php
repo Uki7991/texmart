@@ -97,7 +97,9 @@ class AnnounceController extends Controller
      */
     public function show(Announce $announce)
     {
-        //
+        return view('announce.show', [
+            'announce' => $announce,
+        ]);
     }
 
     /**

@@ -22,7 +22,7 @@
 </div>
 <nav id="menu2" class="btn-submit-your-application">
     <ul>
-        <li><a href="">Главная</a></li>
+        <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
         <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>
         <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>
@@ -54,14 +54,14 @@
 
 <nav id="leftsidebarAva" class="btn-submit-your-application">
     <ul>
-        <li><a href="{{ route('welcome') }}">Главная</a></li>
+        <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile.dashboard') }}">Лента</a></li>
         <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
         <li><span>Подать объявления</span>
             <ul>
-                <li><a href="{{ route('production') }}">Производственные цеха и фабрики</a></li>
-                <li><a href="{{ route('production', ['type' => 'product']) }}">Товары</a></li>
-                <li><a href="{{ route('production', ['type' => 'service']) }}">Услуги</a></li>
+                <li><a href="{{ route('profile.production.create', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
+                <li><a href="{{ route('profile.production.create', ['type' => 'product']) }}">Товары</a></li>
+                <li><a href="{{ route('profile.production.create', ['type' => 'service']) }}">Услуги</a></li>
             </ul>
         </li>
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>

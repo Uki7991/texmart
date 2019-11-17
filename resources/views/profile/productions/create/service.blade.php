@@ -4,7 +4,7 @@
             <h2>Создание объявления услуги</h2>
         </div>
         <div class="col-12 col-sm-10 col-lg-10 col-md-10">
-            <form action="{{ route('admin.production.store') }}" enctype="multipart/form-data" method="POST">
+            <form action="{{ route('profile.production.store') }}" enctype="multipart/form-data" method="POST">
                 @if($errors->any())
                     <span class="invalid-feedback d-block">
                                 <strong>У вас есть ошибки при заполнении</strong>
@@ -140,14 +140,14 @@
                 <div class="form-group">
                     <label for="categories-product">Выберите категорию товара <span class="text-danger">*</span></label>
                     <ul id="tree2" style="list-style: none">
-                        @foreach($productCats as $category)
+                        @foreach($serviceCats as $category)
                             <li>
                                 @if(count($category->childs))
                                     <i class="fas fa-plus"></i>
                                 @endif
                                 <a href="#" class="text-dark">{{ $category->title }}</a>
                                 @if(count($category->childs))
-                                    @include('partials.manage_childs',['childs' => $category->childs, 'input' => [true, 'radio']])
+                                    @include('partials.manage_childs',['childs' => $category->childs->sortBy('order'), 'input' => [true, 'checkbox']])
                                 @endif
                             </li>
                         @endforeach
@@ -176,7 +176,7 @@
                 @include('partials.formFields.coordinates', ['idMap' => 'map3'])
 
                 <button type="submit" class="btn btn-green text-white">Подать</button>
-                <a href="{{ route('admin.production.index', ['type' => $type]) }}" class="btn">Назад</a>
+                <a href="{{ route('profile.production.index', ['type' => $type]) }}" class="btn">Назад</a>
             </form>
         </div>
     </div>

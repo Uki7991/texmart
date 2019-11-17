@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Announce;
 use App\Bid;
 use App\Category;
 use App\Mail\BidAccept;
@@ -19,12 +20,13 @@ class MainController extends Controller
 //        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo', 'views']);
 //        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo', 'views']);
 //        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);
-
+        $announces = Announce::all();
         $this->address(new GeoLocation());
         return view('welcome', [
 //            'productions' => $productions->sortByDesc('id'),
 //            'services' => $services->sortByDesc('id'),
 //            'products' => $products->sortByDesc('id'),
+            'announces' => $announces,
         ]);
     }
 

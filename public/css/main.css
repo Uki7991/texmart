@@ -1,6 +1,9 @@
 *{
     font-family: 'OpenSans', sans-serif;
 }
+.mce-widget.mce-notification.mce-notification-warning {
+    display: none !important;
+}
 .maxw-content {
     max-width: min-content!important;
 }
