@@ -1,4 +1,4 @@
-<ul class="nav flex-column">
+<ul class="nav flex-column pl-4">
     @if(isset($input) && isset($input[0]) && $input[0] === true)
         @foreach($childs as $child)
             <li>

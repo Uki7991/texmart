@@ -23,10 +23,15 @@
         </div>
     </a>
     @if(auth()->check() && auth()->id() == $production->user_id)
-        <div class="card-footer">
-            <div class="d-flex">
-                @includeWhen(auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('profile.production.edit', ['type' => $production->type, 'production' => $production])])
-                @includeWhen(auth()->check() && auth()->id() == $production->user->id, 'partials.btn.delete', ['route' => route('productions.destroy', $production)])
+        <div class="card-footer p-0 p-md-2">
+            <div class="d-flex justify-content-center">
+                <div class="col-6 px-0 px-md-2">
+                    @includeWhen(auth()->check() && auth()->id() == $production->user->id, 'partials.btn.edit', ['route' => route('profile.production.edit', ['type' => $production->type, 'production' => $production])])
+                </div>
+                <div class="col-6 px-0 px-md-2">
+                    @includeWhen(auth()->check() && auth()->id() == $production->user->id, 'partials.btn.delete', ['route' => route('productions.destroy', $production)])
+
+                </div>
             </div>
         </div>
     @endif

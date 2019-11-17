@@ -54,7 +54,6 @@
 
 <nav id="leftsidebarAva" class="btn-submit-your-application">
     <ul>
-        <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile.dashboard') }}">Лента</a></li>
         <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
         <li><span>Подать объявления</span>
@@ -64,6 +63,7 @@
                 <li><a href="{{ route('profile.production.create', ['type' => 'service']) }}">Услуги</a></li>
             </ul>
         </li>
+        <li><a href="{{ route('profile.production.index') }}">Мои объявления</a></li>
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>
         <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
     </ul>

@@ -15,7 +15,7 @@
                 <h2>Производственные цеха</h2>
             </div>
             @forelse($productions as $production)
-                <div class="col-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     @include('productions.single', ['production' => $production])
                 </div>
             @empty
@@ -29,7 +29,7 @@
                 <h2>Товары</h2>
             </div>
             @forelse($products as $product)
-                <div class="col-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     @include('productions.single', ['production' => $product])
                 </div>
             @empty
@@ -43,7 +43,7 @@
                 <h2>Услуги</h2>
             </div>
             @forelse($services as $service)
-                <div class="col-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     @include('productions.single', ['production' => $service])
                 </div>
             @empty
