@@ -558,7 +558,7 @@
         position: absolute;
         color:white;
         font-size: 35px;
-        left: 15px;
+        left: 30%;
         top: unset;
         transform: translate(0, 0%);
         background: rgba(205, 136, 45, 0.99);
@@ -569,7 +569,7 @@
         z-index: 2;
     }
     #owl-otzivi .owl-nav .owl-next {
-        left: 80px;
+        left: 50%!important;
         text-align: right!important;
         right: -6%;
     }

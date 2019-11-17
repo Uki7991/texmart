@@ -106,6 +106,7 @@
             },
             autoplay: true,
             autoplayTimeout: 6000,
+            adaptiveHeight: true,
         })
     </script>
 @endpush
