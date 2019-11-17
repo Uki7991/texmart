@@ -642,7 +642,7 @@
         position: absolute;
         color: #fff;
         font-size: 35px;
-        left: 30%!important;
+        left: 35%!important;
         top: unset;
         transform: translate(0, 0);
         background: rgba(205, 136, 45, .99);
@@ -654,7 +654,7 @@
     }
 
     #owl-otzivi .owl-nav .owl-next {
-        left: 50%!important;
+        left: 53%!important;
         text-align: right !important;
         right: -6%
     }
