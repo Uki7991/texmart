@@ -104,19 +104,19 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4 mb-4">
+                                    <div class="col-12 col-md-4 mb-4">
                                         <p class="mb-1">
                                             Бренд:
                                         </p>
                                         {{ $production->brand }}
                                     </div>
-                                    <div class="col-4 mb-4">
+                                    <div class="col-12 col-md-4 mb-4">
                                         <p class="mb-1">
                                             Адрес:
                                         </p>
                                         {{ $production->address }}
                                     </div>
-                                    <div class="col-4 mb-4">
+                                    <div class="col-12 col-md-4 mb-4">
                                         <p class="mb-1">
                                             Дата создания объявления:
                                         </p>
