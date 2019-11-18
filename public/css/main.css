@@ -192,32 +192,6 @@
     width: 57px;
     height: 57px;
 }
-@media all and (min-width: 0px) and (max-width: 576px) {
-    .sprite-community {
-        background: url('../images/sprite.png') no-repeat 50% 100%;
-        background-size: 228px 50px;
-        width: 28px;
-        height: 29px;
-    }
-    .sprite-cardStar{
-        background: url('../images/sprite.png') no-repeat 66.667% 82%;
-        background-size: 228px 50px;
-        width: 29px;
-        height: 25px;
-    }
-    .sprite-like{
-        background: url('../images/sprite.png') no-repeat 83.208% 88.095%;
-        background-size: 228px 50px;
-        width: 29px;
-        height: 29px;
-    }
-    .sprite-disOrLike{
-        background: url('../images/sprite.png') no-repeat 100% 100%;
-        background-size: 228px 50px;
-        width: 29px;
-        height: 29px;
-    }
-}
 /*end style sprite image*/
 
 .slider{

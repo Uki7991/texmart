@@ -47,7 +47,7 @@
                 <li><a href="{{ route('quality') }}">Проверка качества</a></li>
             </ul>
         </li>
-        <li><a href="#">Отзывы</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
         <li><a href="{{ route('contacts') }}">Контакты</a></li>
     </ul>
 </nav>
@@ -69,7 +69,9 @@
         <li><a href="{{ route('profile.production.index') }}">Мои объявления</a></li>
         @endif
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>
-        <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
+        @if(auth()->check())
+            <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
+        @endif
     </ul>
 </nav>
 <form action="{{ route('logout') }}" method="POST" class="d-none logout-form">
@@ -120,6 +122,15 @@
                 preventDefault : false,
             }
         });
+    </script>
+    <script>
+        $('.btn-submit-your-application').hover(function () {
+            $('.btn-submit-your-application-child').addClass('active');
+            $('.btn-submit-your-application-child').addClass('animated slideInRight');
+        },function () {
+            $('.btn-submit-your-application-child').removeClass('active animated slideInRight');
+        });
+
     </script>
 @endpush
 
