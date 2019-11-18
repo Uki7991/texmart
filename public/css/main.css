@@ -593,7 +593,7 @@
         height: auto!important;
     }
     /*.mar-medium-tablet{*/
-        /*margin-bottom: ;*/
+    /*margin-bottom: ;*/
     /*}*/
 
     #owl-otzivi .owl-nav .owl-prev,
@@ -638,7 +638,7 @@
         height: 60px;
     }
     #owl-otzivi .owl-nav .owl-next {
-        left: 94%!important;
+        left: 95%!important;
         text-align: right!important;
         right: -6%;
     }

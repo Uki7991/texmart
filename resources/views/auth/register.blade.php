@@ -39,6 +39,7 @@
                         {{--Register form start--}}
                         <div class="col-12 col-md-6 shadow-lg bg-white p-0">
                             <div id="registration-steps">
+                                {{-- First step --}}
                                 <h3>Выберите роль</h3>
                                 <section>
                                     <div class="container">
@@ -51,8 +52,8 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </section>
+                                {{--Second step--}}
                                 <h3>Заполните данные</h3>
                                 <section>
                                     <form method="POST" action="{{ route('register') }}">
