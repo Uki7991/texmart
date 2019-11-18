@@ -980,7 +980,8 @@
     width: 50%;
 }
 #registration-steps .content {
-    min-height: auto;
+    min-height: auto !important;
+    width: 100% !important;
 }
 #registration-steps.wizard > .content > .body {
     position: relative;
