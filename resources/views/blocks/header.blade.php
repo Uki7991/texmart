@@ -65,7 +65,9 @@
         </li>
         <li><a href="{{ route('profile.production.index') }}">Мои объявления</a></li>
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>
-        <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
+        @if(auth()->check())
+            <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
+        @endif
     </ul>
 </nav>
 <form action="{{ route('logout') }}" method="POST" class="d-none logout-form">
