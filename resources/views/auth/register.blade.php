@@ -7,9 +7,9 @@
             <div class="row h-100 min-vh-100 justify-content-center align-items-center">
                 <div class="col-12 col-lg-10 shadow-lg">
                     <div class="row">
-                        <div class="col-md-auto col-2 bg-light rounded-left py-3 text-secondary">
-                            <ul class="nav flex-column">
-                                <li class="nav-item my-2">
+                        <div class="col-md-auto col-12 bg-light rounded-left  py-3 text-secondary">
+                            <ul class="nav flex-md-column">
+                                <li class="nav-item mx-auto my-2">
                                     <a href="{{ route('google.redirect', 'facebook') }}" class="text-secondary">
                                         <i class="fab fa-facebook fa-lg"></i>
                                     </a>
@@ -19,7 +19,7 @@
                                         <i class="fab fa-vk fa-lg"></i>
                                     </a>
                                 </li>
-                                <li class="nav-item my-2">
+                                <li class="nav-item mx-auto my-2">
                                     <a href="{{ route('google.redirect', 'google') }}" class="text-secondary">
                                         <i class="fab fa-google fa-lg"></i>
                                     </a>
@@ -36,12 +36,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-10 col-md-6 shadow-lg bg-white p-0">
-
-
-
-
-
+                        {{--Register form start--}}
+                        <div class="col-12 col-md-6 shadow-lg bg-white p-0">
                             <div id="registration-steps">
                                 <h3>Выберите роль</h3>
                                 <section>
@@ -140,17 +136,10 @@
                                     </form>
                                 </section>
                             </div>
-
-
-
-
-
-
-
-
                         </div>
-                        <div
-                            class="col d-flex align-items-center justify-content-center bg-info text-white p-2 rounded-right">
+
+                        {{--Registration finish--}}
+                        <div class="col d-flex align-items-center justify-content-center bg-info text-white p-2 rounded-right ">
                             <div>
                                 <div class="mb-3 mx-auto">
                                     <a href="{{ url('/') }}" class="h1 text-white text-center">

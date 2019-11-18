@@ -47,7 +47,7 @@
                 <li><a href="{{ route('quality') }}">Проверка качества</a></li>
             </ul>
         </li>
-        <li><a href="">Отзывы</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
         <li><a href="{{ route('contacts') }}">Контакты</a></li>
     </ul>
 </nav>
@@ -116,6 +116,15 @@
                 preventDefault : false,
             }
         });
+    </script>
+    <script>
+        $('.btn-submit-your-application').hover(function () {
+            $('.btn-submit-your-application-child').addClass('active');
+            $('.btn-submit-your-application-child').addClass('animated slideInRight');
+        },function () {
+            $('.btn-submit-your-application-child').removeClass('active animated slideInRight');
+        });
+
     </script>
 @endpush
 
