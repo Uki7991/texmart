@@ -8,9 +8,7 @@
         <div class="col-sm-11 col-lg-6 py-5">
             <div class="media mt-4 align-items-center px-1 text-md-left">
                 <div class="sprite-community div-lazy mr-3" alt="Generic placeholder image"></div>
-
                 <div class="media-body h5">
-
                     Новая платформа ориентированная на поиске заказчиков и производителей текстильной и швейной продукции.
                 </div>
             </div>

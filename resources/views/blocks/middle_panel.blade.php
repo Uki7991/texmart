@@ -4,12 +4,12 @@
             <div class="backdrop h-100"></div>
             <div class="row h-100 position-relative">
                 <div class="col-12">
-                    <div class="pt-4 mb-5 position-relative text-left pl-lg-5">
+                    <div class="pt-4 mb-5 position-relative text-left pl-lg-5 d-none d-xl-block">
                         <img src="{{ asset('img/logo3.png') }}" class="img-fluid" alt="logo">
                     </div>
                 </div>
                 {{--owl carousel for text--}}
-                <div class="col-12 pl-lg-5">
+                <div class="col-12 pt-4 pt-xl-0 pl-lg-5">
                     <div class="text-left">
                         <div id="owl-text" class="owl-carousel owl-theme">
                             <div class="item text-white">
@@ -98,15 +98,13 @@
             mouseDrag: false,
             touchDrag: true,
             autoplay: true,
-            autoplayTimeout: 3000,
+            autoplayTimeout: 5000,
             dots:true,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut'
         });
         $('#background-carousel').slick({
             dots: true,
             infinite: true,
-            speed: 500,
+            speed: 700,
             fade: true,
             cssEase: 'linear'
         });

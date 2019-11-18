@@ -1,7 +1,7 @@
 <div class="row justify-content-between ">
     <div class="col-auto m-0">
         <a href="{{ route('homepage') }}" >
-            <img src="{{asset('img/logo3.png')}}" class="img-header pt-3 pt-md-2" alt="logo">
+            <img src="{{asset('img/logo3.png')}}" class="img-header pt-2 pt-md-2" alt="logo">
         </a>
     </div>
     <div class="col-auto col-md-4 m-0">

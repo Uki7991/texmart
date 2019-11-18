@@ -1,8 +1,4 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/slick.min.css": "/css/slick.min.css",
-    "/css/main.min.css": "/css/main.min.css",
-    "/css/mmenu.min.css": "/css/mmenu.min.css",
-    "/css/jquery.rateyo.min.css": "/css/jquery.rateyo.min.css"
+    "/css/app.css": "/css/app.css"
 }
