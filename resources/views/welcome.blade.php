@@ -37,7 +37,7 @@
     @include('blocks.announcement')
     @include('blocks.reviews')
     @include('blocks.blog')
-    @includeWhen(!auth()->check(), 'blocks.form')
+    @include('blocks.form')
     @include('blocks.partners')
     @include('blocks.buttons.submit_your_application')
     @include('blocks.buttons.scroll-top')

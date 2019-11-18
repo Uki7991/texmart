@@ -12,9 +12,10 @@ require('laravel-mix-purgecss');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .purgeCss();
 
-mix.styles(['public/css/slick-theme.css', 'public/css/slick.css'], 'public/css/slick.min.css');
-mix.styles(['public/css/main.css'], 'public/css/main.min.css');
-mix.styles(['public/css/mmenu.css'], 'public/css/mmenu.min.css');
-mix.styles(['public/css/jquery.rateyo.css'], 'public/css/jquery.rateyo.min.css');
+mix.styles(['public/css/slick-theme.css', 'public/css/slick.css'], 'public/css/slick.min.css').purgeCss();
+mix.styles(['public/css/main.css'], 'public/css/main.min.css').purgeCss();
+mix.styles(['public/css/mmenu.css'], 'public/css/mmenu.min.css').purgeCss();
+mix.styles(['public/css/jquery.rateyo.css'], 'public/css/jquery.rateyo.min.css').purgeCss();

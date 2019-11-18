@@ -24,8 +24,8 @@
     <ul>
         <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
-        <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>
-        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>
+{{--        <li class="btn-submit-your-application"><a href="#modalContactForm" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>--}}
+{{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
         <li><span>Объявления</span>
             <ul>
                 <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
@@ -55,7 +55,10 @@
 <nav id="leftsidebarAva" class="btn-submit-your-application">
     <ul>
         <li><a href="{{ route('profile.dashboard') }}">Лента</a></li>
+        @if((auth()->check() && auth()->user()->role_id == 4) || (auth()->check() && auth()->user()->role_id == 1))
         <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
+        @endif
+        @if((auth()->check() && auth()->user()->role_id == 5) || (auth()->check() && auth()->user()->role_id == 1))
         <li><span>Подать объявления</span>
             <ul>
                 <li><a href="{{ route('profile.production.create', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
@@ -64,6 +67,7 @@
             </ul>
         </li>
         <li><a href="{{ route('profile.production.index') }}">Мои объявления</a></li>
+        @endif
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>
         @if(auth()->check())
             <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>

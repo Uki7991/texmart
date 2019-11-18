@@ -7,17 +7,19 @@
                     <div class="application_for">
                         <div class="app_content">
                             <div class="app_top">
-                                <p class="m-0" title="{{ $announce->content }}">
-                                    {{ \Illuminate\Support\Str::limit($announce->content, 150) }}
-                                </p>
+                                <a class="text-dark" href="{{ route('announce.show', $announce) }}">
+                                    <p class="m-0" title="{{ $announce->content }}">
+                                        {{ \Illuminate\Support\Str::limit($announce->content, 150) }}
+                                    </p>
+                                </a>
                             </div>
                             <div class="app_bottom">
-                                <div class="app_category">
-                                    <p class="application_text m-0">Женская одежда</p>
-                                </div>
-                                <div class="app_country">
-                                    <img src="{{asset('img/flag.png')}}" alt="Флаг">
-                                </div>
+{{--                                <div class="app_category">--}}
+{{--                                    <p class="application_text m-0">Женская одежда</p>--}}
+{{--                                </div>--}}
+{{--                                <div class="app_country">--}}
+{{--                                    <img src="{{asset('img/flag.png')}}" alt="Флаг">--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
