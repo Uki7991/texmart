@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body mx-3">
-                <form action="{{ route('bid.store') }}" class="col-12 text-center" >
+                <form action="{{ route('bid.store') }}" method="post" class="col-12 text-center" >
                     @csrf
                     <div class="md-form mb-5">
                         <input type="text" id="form34" class="form-control validate">
