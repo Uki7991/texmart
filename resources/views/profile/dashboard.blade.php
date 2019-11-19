@@ -57,10 +57,4 @@
             options: {}
         });
     </script>
-    <script>
-        $('#clickLogin').click(function (e) {
-            e.preventDefault();
-            $('#sidebar').addClass('d-block animate fadeInDown');
-        })
-    </script>
 @endpush

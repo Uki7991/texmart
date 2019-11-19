@@ -9,7 +9,7 @@
             <li class="nav-item">
                 <a href="#" class="search-sprite waves-effect waves-light mt-3"></a>
             </li>
-            <li class="nav-item" id="clickLogin">
+            <li class="nav-item">
                 <a href="{{ auth()->check() ? '#leftsidebarAva' : route('login') }}"
                    class="user-sprite my-3 waves-effect waves-light mx-3 mx-md-5"></a>
             </li>
