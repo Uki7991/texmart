@@ -12,7 +12,6 @@
             <li class="nav-item">
                 <a href="#" class="search-sprite"></a>
             </li>
-
         </ul>
     </div>
     <div class="align-self-end col-12 px-0 px-sm-0 p-lg-1" style="padding-bottom: 20px;">
@@ -25,23 +24,20 @@
             <li class="nav-item mr-3">
                 <a href="https://www.instagram.com/texmart.kg/"
                    class="instagram-sprite waves-effect waves-light text-muted my-3">
-
                 </a>
             </li>
             <li class="nav-item mr-3">
                 <a href="https://www.facebook.com/texmart.kg" class="fb-sprite waves-effect waves-light text-muted"
                    title="Ссылка на facebook">
-
                 </a>
             </li>
-{{--            <li class="nav-item mr-3 ">--}}
-{{--                <a href="" class="telegram-sprite waves-effect waves-light text-muted my-3" title="Ссылка на telegram">--}}
-{{--                </a>--}}
-{{--            </li>--}}
+            <li class="nav-item mr-3 ">
+                <a href="" class="telegram-sprite waves-effect waves-light text-muted my-3" title="Ссылка на telegram">
+                </a>
+            </li>
             <li class="nav-item mr-3 ">
                 <a href="https://vk.com/texmartkg" class="vk-sprite waves-effect waves-light text-muted pb-4"
                    title="Ссылка на vk">
-
                 </a>
             </li>
         </ul>

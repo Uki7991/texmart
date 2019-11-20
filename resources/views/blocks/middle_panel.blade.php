@@ -36,7 +36,7 @@
                         </div>
                     @else
                         <div class="col-12 col-xl-6">
-                            <a href="{{ route('profile.announce.create') }}" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Заказать оптом</a>
+                            <a href="{{ route('profile.announce.create') }}" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Разместить заказ</a>
                         </div>
                     @endif
                 </div>
