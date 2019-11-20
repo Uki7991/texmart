@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Aloha\Twilio\Support\Laravel\Facade;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -66,12 +67,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'role_id' => $data['user_type'] == 1 ? 5 : 4,
             'name' => $data['name'],
             'phone' => str_replace('+', '', $data['code']).preg_replace('/[-\s]/', '', $data['phone']),
             'password' => Hash::make($data['password']),
             'phone_verification' => rand(111111, 999999),
         ]);
+
+        Facade::message('+'.str_replace('+', '', $data['code']).preg_replace('/[-\s]/', '', $data['phone']), 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+
+        return $user;
     }
 }
