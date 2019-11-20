@@ -1,4 +1,5 @@
 <div class="pb-4">
+    <a href='#/'><i class='fab fa-facebook'></i></a>
     <a href="https://www.facebook.com/texmartkg-100345324706597/" class="text-muted" title="Ссылка на страницу в Facebook">
         <i class="fab fa-facebook mr-3 fa-lg nav-scale"></i>
     </a>
