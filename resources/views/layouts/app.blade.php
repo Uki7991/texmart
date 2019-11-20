@@ -53,13 +53,13 @@
     @endif
     @laravelPWA
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
-    <link rel="stylesheet" href="{{asset('css/slick.min.css')}}"/>
-    <link rel="stylesheet" href="{{ asset('css/mmenu.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery.rateyo.min.css') }}">
+    <link href="{{ asset('css/app.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
+    <link rel="stylesheet" href="{{asset('css/slick.min.css')}}?v={{ filemtime(public_path('css/main.min.css')) }}"/>
+    <link rel="stylesheet" href="{{ asset('css/mmenu.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.rateyo.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
     @stack('styles')
 </head>
 <body>
@@ -98,14 +98,14 @@
     </div>
 @endif
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}?v={{ filemtime(public_path('css/main.min.css')) }}"></script>
     <!-- jquery steps -->
-    <script src="{{ asset('js/jquery.steps.js') }}"></script>
-    <script src="{{ asset('js/mmenu.js') }}"></script>
-    <script src="{{asset('js/slick.min.js')}}" defer></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.steps.js') }}?v={{ filemtime(public_path('css/main.min.css')) }}"></script>
+    <script src="{{ asset('js/mmenu.js') }}?v={{ filemtime(public_path('css/main.min.css')) }}"></script>
+    <script src="{{asset('js/slick.min.js')}}?v={{ filemtime(public_path('css/main.min.css')) }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}?v={{ filemtime(public_path('css/main.min.css')) }}"></script>
     {{--connect rateyo.js--}}
-    <script src="{{ asset('js/jquery.rateyo.js') }}" defer></script>
+    <script src="{{ asset('js/jquery.rateyo.js') }}?v={{ filemtime(public_path('css/main.min.css')) }}"></script>
     {{--connect chart.js with CDN--}}
 <script>
     document.addEventListener("DOMContentLoaded", function() {

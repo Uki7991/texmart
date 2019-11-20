@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Aloha\Twilio\Support\Laravel\Facade;
 use App\Announce;
 use App\Notifications\UserCreated;
 use App\User;
@@ -81,6 +82,8 @@ class AnnounceController extends Controller
             'email' => $data['email'],
             'user_id' => $user->id,
         ]);
+
+        Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
 
         $user->notify(new UserCreated($pass, $verification, $data['phone']));
 

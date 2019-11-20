@@ -1,6 +1,5 @@
 let staticCacheName = "pwa-v-texmart" + new Date().getTime();
 let filesToCache = [
-    '/',
     '/offline',
     '/css/app.css',
     '/js/app.js',
