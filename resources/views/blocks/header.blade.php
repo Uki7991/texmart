@@ -1,6 +1,6 @@
 <div class="row justify-content-between ">
     <div class="col-auto m-0">
-        <a href="{{ route('homepage') }}" >
+        <a href="{{ route('homepage') }}">
             <img src="{{asset('img/logo3.png')}}" class="img-header pt-2 pt-md-2" alt="logo">
         </a>
     </div>
@@ -24,11 +24,12 @@
     <ul>
         <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
-{{--        <li class="btn-submit-your-application"><a href="#modalContactForm" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>--}}
-{{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
+        {{--        <li class="btn-submit-your-application"><a href="#modalContactForm" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>--}}
+        {{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
         <li><span>Объявления</span>
             <ul>
-                <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
+                <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a>
+                </li>
                 <li><a href="{{ route('production', ['type' => 'product']) }}">Товары</a></li>
                 <li><a href="{{ route('production', ['type' => 'service']) }}">Услуги</a></li>
             </ul>
@@ -56,21 +57,23 @@
     <ul>
         <li><a href="{{ route('profile.dashboard') }}">Лента</a></li>
         @if((auth()->check() && auth()->user()->role_id == 4) || (auth()->check() && auth()->user()->role_id == 1))
-        <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
+            <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
         @endif
         @if((auth()->check() && auth()->user()->role_id == 5) || (auth()->check() && auth()->user()->role_id == 1))
-        <li><span>Подать объявления</span>
-            <ul>
-                <li><a href="{{ route('profile.production.create', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
-                <li><a href="{{ route('profile.production.create', ['type' => 'product']) }}">Товары</a></li>
-                <li><a href="{{ route('profile.production.create', ['type' => 'service']) }}">Услуги</a></li>
-            </ul>
-        </li>
-        <li><a href="{{ route('profile.production.index') }}">Мои объявления</a></li>
+            <li><span>Подать объявления</span>
+                <ul>
+                    <li><a href="{{ route('profile.production.create', ['type' => 'productions']) }}">Производственные
+                            цеха и фабрики</a></li>
+                    <li><a href="{{ route('profile.production.create', ['type' => 'product']) }}">Товары</a></li>
+                    <li><a href="{{ route('profile.production.create', ['type' => 'service']) }}">Услуги</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ route('profile.production.index') }}">Мои объявления</a></li>
         @endif
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>
         @if(auth()->check())
-            <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
+            <li><a href="#" onclick="event.preventDefault();$('.logout-form').submit();"
+                   class=" list-group-item-action text-danger ">{{ __('Выход') }}</a></li>
         @endif
     </ul>
 </nav>
@@ -94,9 +97,23 @@
                     ]
                 },
             ],
-            onClick : {
-                close          : true,
-                preventDefault : false,
+            "iconbar": {
+                "use": true,
+                "top": [
+                    "<a href='{{ route('homepage') }}'><i class='fa fa-home'></i></a>",
+                    "<a href='{{ route('profile.dashboard') }}'><i class='fa fa-user'></i></a>"
+                ],
+                "bottom": [
+                    "<a href='https://api.whatsapp.com/send?phone=996502900500'><i class='fab fa-whatsapp fa-lg'></i></a>",
+                    "<a href='https://www.facebook.com/texmart.kg'><i class='fab fa-facebook fa-lg'></i></a>",
+                    "<a href='https://vk.com/texmartkg'><i class='fab fa-vk fa-lg'></i></a>",
+                    "<a href='https://www.instagram.com/texmart.kg/'><i class='fab fa-instagram fa-lg'></i></a>",
+                    "<a href='https://t.me/txmrt'><i class='fab fa-telegram fa-lg'></i></a>"
+                ]
+            },
+            onClick: {
+                close: true,
+                preventDefault: false,
             }
         });
     </script>
@@ -117,9 +134,9 @@
                     ]
                 },
             ],
-            onClick : {
-                close          : true,
-                preventDefault : false,
+            onClick: {
+                close: true,
+                preventDefault: false,
             }
         });
     </script>
@@ -127,7 +144,7 @@
         $('.btn-submit-your-application').hover(function () {
             $('.btn-submit-your-application-child').addClass('active');
             $('.btn-submit-your-application-child').addClass('animated slideInRight');
-        },function () {
+        }, function () {
             $('.btn-submit-your-application-child').removeClass('active animated slideInRight');
         });
 

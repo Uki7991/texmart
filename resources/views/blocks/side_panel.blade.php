@@ -32,7 +32,8 @@
                 </a>
             </li>
             <li class="nav-item mr-3 ">
-                <a href="" class="telegram-sprite waves-effect waves-light text-muted my-3" title="Ссылка на telegram">
+                <a href="https://t.me/txmrt" class="telegram-sprite waves-effect waves-light text-muted my-3"
+                   title="Ссылка на telegram">
                 </a>
             </li>
             <li class="nav-item mr-3 ">
@@ -47,11 +48,13 @@
     <ul>
         <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
-        <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm" >Задать вопрос</a></li>
-{{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
+        <li class="btn-submit-your-application"><a href="" data-toggle="modal" data-target="#modalContactForm">Задать
+                вопрос</a></li>
+        {{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
         <li><span>Объявления</span>
             <ul>
-                <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a></li>
+                <li><a href="{{ route('production', ['type' => 'productions']) }}">Производственные цеха и фабрики</a>
+                </li>
                 <li><a href="{{ route('production', ['type' => 'product']) }}">Товары</a></li>
                 <li><a href="{{ route('production', ['type' => 'service']) }}">Услуги</a></li>
             </ul>
@@ -90,9 +93,23 @@
                     ]
                 },
             ],
-            onClick : {
-                close          : true,
-                preventDefault : false,
+            "iconbar": {
+                "use": true,
+                "top": [
+                    "<a href='{{ route('homepage') }}'><i class='fa fa-home'></i></a>",
+                    "<a href='{{ route('profile.dashboard') }}'><i class='fa fa-user'></i></a>"
+                ],
+                "bottom": [
+                    "<a href='https://api.whatsapp.com/send?phone=996502900500'><i class='fab fa-whatsapp fa-lg'></i></a>",
+                    "<a href='https://www.facebook.com/texmart.kg'><i class='fab fa-facebook fa-lg'></i></a>",
+                    "<a href='https://vk.com/texmartkg'><i class='fab fa-vk fa-lg'></i></a>",
+                    "<a href='https://www.instagram.com/texmart.kg/'><i class='fab fa-instagram fa-lg'></i></a>",
+                    "<a href='https://t.me/txmrt'><i class='fab fa-telegram fa-lg'></i></a>"
+                ]
+            },
+            onClick: {
+                close: true,
+                preventDefault: false,
             }
         });
     </script>
@@ -100,7 +117,7 @@
         $('.btn-submit-your-application').hover(function () {
             $('.btn-submit-your-application-child').addClass('active');
             $('.btn-submit-your-application-child').addClass('animated slideInRight');
-        },function () {
+        }, function () {
             $('.btn-submit-your-application-child').removeClass('active animated slideInRight');
         });
 
