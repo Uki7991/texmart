@@ -57,7 +57,7 @@
     <ul>
         <li><a href="{{ route('profile.dashboard') }}">Лента</a></li>
         @if((auth()->check() && auth()->user()->role_id == 4) || (auth()->check() && auth()->user()->role_id == 1))
-            <li><a href="{{ route('profile.announce.index') }}">Заказы</a></li>
+            <li><a href="{{ route('profile.announce.index') }}">Разместить заказ</a></li>
         @endif
         @if((auth()->check() && auth()->user()->role_id == 5) || (auth()->check() && auth()->user()->role_id == 1))
             <li><span>Подать объявления</span>
@@ -134,6 +134,20 @@
                     ]
                 },
             ],
+            "iconbar": {
+                "use": true,
+                "top": [
+                    "<a href='{{ route('homepage') }}'><i class='fa fa-home'></i></a>",
+                    "<a href='{{ route('profile.dashboard') }}'><i class='fa fa-user'></i></a>"
+                ],
+                "bottom": [
+                    "<a href='https://api.whatsapp.com/send?phone=996502900500'><i class='fab fa-whatsapp fa-lg'></i></a>",
+                    "<a href='https://www.facebook.com/texmart.kg'><i class='fab fa-facebook fa-lg'></i></a>",
+                    "<a href='https://vk.com/texmartkg'><i class='fab fa-vk fa-lg'></i></a>",
+                    "<a href='https://www.instagram.com/texmart.kg/'><i class='fab fa-instagram fa-lg'></i></a>",
+                    "<a href='https://t.me/txmrt'><i class='fab fa-telegram fa-lg'></i></a>"
+                ]
+            },
             onClick: {
                 close: true,
                 preventDefault: false,
