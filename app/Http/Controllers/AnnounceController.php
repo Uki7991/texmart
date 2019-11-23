@@ -8,8 +8,10 @@ use App\Notifications\UserCreated;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Twilio\Exceptions\TwilioException;
 
 class AnnounceController extends Controller
 {
@@ -63,6 +65,10 @@ class AnnounceController extends Controller
             'name' => 'string',
             'phone' => 'unique:users',
         ]);
+
+        if ($validated->fails()) {
+            return redirect()->back()->withErrors($validated);
+        }
         $pass = rand(11111111, 99999999);
         $verification = rand(111111, 999999);
         $user = User::create([
@@ -83,8 +89,11 @@ class AnnounceController extends Controller
             'user_id' => $user->id,
         ]);
 
-        Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
-
+        try {
+            Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+        } catch (TwilioException $exception) {
+            Log::alert($exception->getMessage());
+        }
         $user->notify(new UserCreated($pass, $verification, $data['phone']));
 
         Session::flash('status', ['status' => 'success', 'message' => 'Мы создали для вас аккаунт! Вам отправлено письмо с данными на вашу электронную почту']);

@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Aloha\Twilio\Support\Laravel\Facade;
+use App\Notifications\UserCreated;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -21,9 +27,14 @@ class UserController extends Controller
 
     public function datatable(Request $request)
     {
-        $productions = User::all();
+        $users = User::all();
 
-        return DataTables::of($productions)->make(true);
+        return Datatables::of($users)
+            ->addColumn('action', function ($model) {
+                return '<a href="'.route('admin.user.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
+                        <a href="'.route('admin.user.destroy', $model->id).'" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+            })
+            ->make(true);
     }
 
     /**
@@ -33,7 +44,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create');
     }
 
     /**
@@ -44,7 +55,36 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[-\s]/', '', $data['phone']);
+
+        $validated = Validator::make($data, [
+            'name' => 'string',
+            'phone' => 'unique:users',
+        ]);
+
+        if ($validated->fails()) {
+            return redirect()->back()->withErrors($validated);
+        }
+        $pass = rand(11111111, 99999999);
+        $verification = rand(111111, 999999);
+        $user = User::create([
+            'role_id' => 4,
+            'phone' => $data['phone'],
+            'email' => $data['email'],
+            'name' => $data['name'],
+            'password' => Hash::make($pass),
+            'phone_verification' => $verification,
+        ]);
+        try {
+            Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+        } catch (TwilioException $exception) {
+            Log::alert($exception->getMessage());
+        }
+        Notification::send($user, new UserCreated($pass, $verification, $data['phone']));
+        Session::flash('status', ['status' => 'success', 'message' => 'Пользователь создан! Пароль пользователя: '.$pass]);
+
+        return redirect()->route('admin.user.index');
     }
 
     /**
@@ -89,6 +129,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->back();
     }
 }

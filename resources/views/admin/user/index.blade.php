@@ -14,9 +14,11 @@
             <th>{{ __('Телефон') }}</th>
             <th>{{ __('Код верификации') }}</th>
             <th>Created At</th>
+            <th>Действия</th>
         </tr>
         </thead>
     </table>
+    @include('partials.modals.delete_modal')
 
 @endsection
 
@@ -37,9 +39,16 @@
                     { data: 'name', name: 'name' },
                     { data: 'phone', name: 'phone' },
                     { data: 'phone_verification', name: 'phone_verification' },
-                    { data: 'created_at', name: 'created_at' },
+                    { data: 'created_at', name: 'created_at', searchable: false },
+                    { data: 'action', name: 'action', orderable: false, searchable: false }
                 ]
             });
         });
+    </script>
+    <script>
+        $('#delete-confirmation').on('show.bs.modal', function (e) {
+            let btn = $(e.relatedTarget);
+            $('#delete-confirmation').find('form').attr('action', btn.attr('href'));
+        })
     </script>
 @endpush
