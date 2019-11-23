@@ -28,11 +28,11 @@
                 <div class="block-top-block">
                     @if(auth()->check())
                         <div class="buttons_customer font-weight-bold h4">
-                            <a href="tel:">  {{ $announce->phone }}</a>
+                            <a href="tel:{{ $announce->phone }}">  {{ $announce->phone }}</a>
                         </div>
                     @else
                         <div class="buttons_customer">
-                            <a href="#" class="btn-c btn-c btn-blue btn-h48 btn-block btn-with-label">
+                            <a href="{{ route('login') }}" class="btn-c btn-c btn-blue btn-h48 btn-block btn-with-label">
                                 <span class="btn-text">Показать контакты</span>
                             </a>
                         </div>
