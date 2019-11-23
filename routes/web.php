@@ -50,6 +50,7 @@ Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
     /**
      * Production routes
      */
+    Route::get('/user/datatable', 'Admin\UserController@datatable')->name('user.datatable');
     Route::get('/production/datatable', 'Admin\ProductionController@datatable')->name('production.datatable');
     Route::resource('production', 'Admin\ProductionController');
 
@@ -61,6 +62,7 @@ Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
 
     Route::get('/blog/datatable', 'BlogController@datatableData')->name('blog.datatable.data');
     Route::resource('blog', 'BlogController');
+    Route::resource('user', 'Admin\UserController');
 });
 
 Route::get('/search', 'MainController@search')->name('search');
