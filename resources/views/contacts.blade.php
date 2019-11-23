@@ -18,8 +18,7 @@
         <div class="row">
             <div class="col-12 col-md-8">
                 <iframe title="Офис Texmart.kg"
-                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A95d8395382f6f742cb4d5dca4a8aa599cc96f478858d19aa2106e15d67bd6cd0&amp;source=constructor"
-                        frameborder="0" style="width: 100%; height: 300px;">
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A8f14883aacac58e42437389b3b88e0c12d069fcb9a008855113b2ecfa5cf0599&amp;source=constructor"  frameborder="0" style="width: 100%; height: 300px;">
                 </iframe>
             </div>
             <div class="info-contacts col-12 col-md-4">

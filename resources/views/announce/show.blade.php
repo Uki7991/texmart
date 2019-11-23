@@ -28,7 +28,7 @@
                 <div class="block-top-block">
                     @if(auth()->check())
                         <div class="buttons_customer font-weight-bold h4">
-                            {{ $announce->phone }}
+                            <a href="tel:">  {{ $announce->phone }}</a>
                         </div>
                     @else
                         <div class="buttons_customer">
