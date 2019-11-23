@@ -12,11 +12,11 @@
                 <form action="{{ route('bid.store') }}" method="post" class="col-12 text-center" >
                     @csrf
                     <div class="md-form mb-5">
-                        <input type="text" id="form34" class="form-control validate">
+                        <input type="name" id="form34" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="form34">Ваше имя</label>
                     </div>
                     <div class="md-form mb-5 d-flex justify-content-start">
-                        <input type="text" class="form-control @error('phone') is-invalid @enderror"  id="phone-number_2" style=" ">
+                        <input type="pnone" class="form-control @error('phone') is-invalid @enderror"  id="phone-number_2" style=" ">
                         <input type="hidden" name="code">
                     </div>
                     <div class="md-form">
