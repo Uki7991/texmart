@@ -24,7 +24,7 @@
     <ul>
         <li><a href="{{ route('homepage') }}">Главная</a></li>
         <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
-        {{--        <li class="btn-submit-your-application"><a href="#modalContactForm" data-toggle="modal" data-target="#modalContactForm" >Оставить заявку</a></li>--}}
+        <li class="btn-submit-your-application"><a href="#modalContactForm" data-toggle="modal" data-target="#modalContactForm" >Задать вопрос</a></li>
         {{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
         <li><span>Объявления</span>
             <ul>
