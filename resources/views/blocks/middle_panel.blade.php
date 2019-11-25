@@ -27,16 +27,18 @@
                 {{--end carousel--}}
                 {{-- button for create new advertisement--}}
                 <div class="add_announcement col-12 row position-relative text-left pl-lg-5 pt-3">
+                    @if(auth()->check() && auth()->user()->role_id == 4)
                     <div class="col-12 col-xl-6 mb-3 mb-xl-0">
                         <a href="{{ route('profile.production.index', ['type' => 'productions']) }}" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                     </div>
-                    @if(!auth()->check())
+                    @endif
+                    @if(auth()->check() && auth()->user()->role_id == 5)
                         <div class="col-12 col-xl-6">
-                            <a href="#form-review" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Разместить заказ</a>
+                            <a href="{{ route('profile.announce.create') }}" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Разместить заказ</a>
                         </div>
                     @else
                         <div class="col-12 col-xl-6">
-                            <a href="{{ route('profile.announce.create') }}" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Разместить заказ</a>
+                            <a href="#form-review" class="text-white btn-sm btn-texmart-orange" style="border-radius: 10px;padding:9px 32px;">Разместить заказ</a>
                         </div>
                     @endif
                 </div>
