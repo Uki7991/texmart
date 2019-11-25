@@ -23,7 +23,12 @@
 <nav id="menu2" class="btn-submit-your-application">
     <ul>
         <li><a href="{{ route('homepage') }}">Главная</a></li>
-        <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
+        @if(auth()->check() && auth()->user()->role_id == 4)
+            <li><a href="{{ route('profile') }}">Добавить объявления</a></li>
+        @endif
+        @if(auth()->check() && auth()->user()->role_id == 5)
+            <li><a href="{{ route('profile.announce.create') }}">Разместить заказ</a></li>
+        @endif
         <li class="btn-submit-your-application"><a href="#modalContactForm" data-toggle="modal" data-target="#modalContactForm" >Задать вопрос</a></li>
         {{--        <li><a href="{{ route('customer_list') }}">Список заявок от заказчиков</a></li>--}}
         <li><span>Объявления</span>

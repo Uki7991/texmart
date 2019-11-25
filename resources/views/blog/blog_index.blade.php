@@ -7,6 +7,7 @@
     </section>
     <div class="alime-blog-area section-padding-80-0 mb-70 pt-5 mt-5">
         <div class="container">
+            <h1 class="text-center">Все статьи</h1>
             <div class="row">
 {{--                <div class="col-12 col-lg-6">--}}
 {{--                    <div class="single-post-area wow fadeInUpBig" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUpBig;">--}}
@@ -23,6 +24,7 @@
 {{--                </div>--}}
                 @foreach($blogs as $blog)
                 <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="{{ route('blog_show', $blog) }}"></a>
                     <div class="single-post-area wow fadeInUpBig" data-wow-delay="400ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUpBig;">
                         <a href="{{ route('blog_show', $blog) }}" class="post-thumbnail"><img src="{{asset('storage/'.$blog->logo)}}" alt=""></a>
 {{--                        <a href="#" class="btn post-catagory">Camera</a>--}}
