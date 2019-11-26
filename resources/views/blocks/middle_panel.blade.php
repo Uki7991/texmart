@@ -31,6 +31,10 @@
                     <div class="col-12 col-xl-6 mb-3 mb-xl-0">
                         <a href="{{ route('profile.production.index', ['type' => 'productions']) }}" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
                     </div>
+                    @else
+                        <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                            <a href="{{ route('login') }}" class="text-white small" style="border-radius: 10px;border:1px solid #d0d7dd; padding:8px 30px;">Добавить объявление</a>
+                        </div>
                     @endif
                     @if(auth()->check() && auth()->user()->role_id == 5)
                         <div class="col-12 col-xl-6">

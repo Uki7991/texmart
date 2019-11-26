@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ProductionStoreRequest extends FormRequest
 {
@@ -44,6 +45,7 @@ class ProductionStoreRequest extends FormRequest
             'from_amount_production' => '',
             'before_amount_prod' => '',
             'categories' => 'required',
+            'price' => Rule::requiredIf(request('type') == 'product'),
         ];
     }
 
