@@ -6,6 +6,7 @@
     <a href="{{ route('admin.production.index', ['type' => 'service']) }}" class="list-group-item list-group-item-action {{ request()->query('type') == 'service' ? 'active' : '' }}">Услуги</a>
     <a href="{{ route('admin.production.index', ['type' => 'product']) }}" class="list-group-item list-group-item-action {{ request()->query('type') == 'product' ? 'active' : '' }}">Товары</a>
     <a href="{{ route('admin.blog.index') }}" class="list-group-item list-group-item-action" {{ request()->is('admin/blog*') ? 'active' : '' }}>Блог</a>
+    <a href="{{ route('admin.announce.index') }}" class="list-group-item list-group-item-action" {{ request()->is('admin/announce*') ? 'active' : '' }}>Заказы</a>
     <a href="{{ route('admin.user.index') }}" class="list-group-item list-group-item-action" {{ request()->is('admin/user*') ? 'active' : '' }}>Пользователи</a>
     <a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class="list-group-item list-group-item-action text-danger">{{ __('Выход') }}</a>
 </div>

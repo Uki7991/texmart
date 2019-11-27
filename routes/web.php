@@ -20,6 +20,31 @@ Route::post('/user/register/phonecode', 'UserController@codeVerification')->name
 Route::post('/user/reregister/phonecode', 'UserController@reRegisterPhone')->name('reregister.phone');
 Route::post('/image/resize', 'MainController@imageResize')->name('image.resize');
 
+Route::get('/admin', 'AdminController@admin')->name('admin.admin');
+
+Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
+    /**
+     * Production routes
+     */
+    Route::get('/user/datatable', 'Admin\UserController@datatable')->name('user.datatable');
+    Route::get('/production/datatable', 'Admin\ProductionController@datatable')->name('production.datatable');
+    Route::get('/announce/datatable', 'Admin\AnnounceController@datatable')->name('announce.datatable');
+    Route::resource('production', 'Admin\ProductionController');
+
+    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+
+    Route::get('/message', 'HomeController@message')->name('message');
+
+    Route::get('/favorite', 'FavoriteController@index')->name('favorite');
+
+    Route::get('/blog/datatable', 'BlogController@datatableData')->name('blog.datatable.data');
+    Route::resource('blog', 'BlogController');
+    Route::resource('announce', 'Admin\AnnounceController');
+    Route::resource('user', 'Admin\UserController');
+});
+
+
+
 Route::get('/profile', 'UserController@index')->name('profile');
 
 Route::prefix('profile')->name('profile.')->middleware('auth')->group(function () {
@@ -44,26 +69,7 @@ Route::get('/get-categories', 'UserController@getCategories')->name('get.categor
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('google.redirect');
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
 
-Route::get('/admin', 'AdminController@admin')->name('admin.admin');
 
-Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
-    /**
-     * Production routes
-     */
-    Route::get('/user/datatable', 'Admin\UserController@datatable')->name('user.datatable');
-    Route::get('/production/datatable', 'Admin\ProductionController@datatable')->name('production.datatable');
-    Route::resource('production', 'Admin\ProductionController');
-
-    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
-
-    Route::get('/message', 'HomeController@message')->name('message');
-
-    Route::get('/favorite', 'FavoriteController@index')->name('favorite');
-
-    Route::get('/blog/datatable', 'BlogController@datatableData')->name('blog.datatable.data');
-    Route::resource('blog', 'BlogController');
-    Route::resource('user', 'Admin\UserController');
-});
 
 Route::get('/search', 'MainController@search')->name('search');
 
