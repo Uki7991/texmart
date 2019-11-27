@@ -11,6 +11,7 @@
         <tr>
             <th>Id</th>
             <th>{{ __('Название') }}</th>
+            <th>{{ __('Контент') }}</th>
             <th>{{ __('Телефон') }}</th>
             <th>Created At</th>
             <th>Действия</th>
@@ -36,6 +37,7 @@
                 columns: [
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
+                    { data: 'content', name: 'content' },
                     { data: 'user.phone', name: 'user.phone' },
                     { data: 'created_at', name: 'created_at', searchable: false },
                     { data: 'action', name: 'action', orderable: false, searchable: false }
