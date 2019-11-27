@@ -46,6 +46,7 @@ class ProductionStoreRequest extends FormRequest
             'before_amount_prod' => '',
             'categories' => 'required',
             'price' => Rule::requiredIf(request('type') == 'product'),
+            'currency' => Rule::requiredIf(request('type') == 'product'),
         ];
     }
 

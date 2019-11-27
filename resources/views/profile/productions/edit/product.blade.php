@@ -1,10 +1,10 @@
 <div class="container step_productions_2">
     <div class="row ">
         <div class="col-12 mb-5">
-            <h2>Создание объявления товара</h2>
+            <h2>Редактирование объявления товара</h2>
         </div>
         <div class="col-12 col-sm-10 col-lg-10 col-md-10">
-            <form action="{{ route('profile.production.store') }}" enctype="multipart/form-data" method="POST">
+            <form action="{{ route('profile.production.update', $production) }}" enctype="multipart/form-data" method="POST">
                 @if($errors->any())
                     <span class="invalid-feedback d-block">
                                 <strong>У вас есть ошибки при заполнении</strong>
@@ -43,8 +43,15 @@
                         <label>
                             Цена <span class="text-danger">*</span>
                         </label>
-                        <input type="number" name="price" class="form-control @error('price') is-invalid @enderror"
-                               value="{{ $production->price }}">
+                        <div class="input-group">
+                            <input type="number" name="price" class="input-group-prepend form-control @error('price') is-invalid @enderror"
+                                   value="{{ $production->price }}">
+                            <select class="" name="currency" id="inputGroupSelect01">
+                                @foreach(['$', 'сом', 'руб'] as $currency)
+                                    <option value="{{ $currency }}" {{ $currency == $production->currency ? 'selected' : '' }}>{{ $currency }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         @error('price')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -60,7 +67,7 @@
                             <label for="phone1">Телефон #1 <span class="text-danger">*</span></label>
                             <input type="hidden" name="code">
                             <input type="text" name="phone1"
-                                   class="form-control phone1 @error('phone1') ' is-invalid ' @enderror" required>
+                                   class="form-control phone1 @error('phone1') ' is-invalid ' @enderror" value="{{ $production->phone1 }}" required>
                             @error('phone1')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -73,7 +80,7 @@
                             <label for="phone2">Телефон #2</label>
                             <input type="hidden" name="code2">
                             <input type="text" name="phone2"
-                                   class="form-control phone2 @error('phone2') is-invalid @enderror">
+                                   class="form-control phone2 @error('phone2') is-invalid @enderror" value="{{ $production->phone2 }}">
                             @error('phone2')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -127,7 +134,7 @@
                         Выберите главную картинку для объявления <span class="text-danger">*</span>
                     </label>
                     <input type="file" name="logo" id="image-input2"
-                           class="form-control @error('logo') is-invalid @enderror" value="{{ old('logo') }}" required>
+                           class="form-control @error('logo') is-invalid @enderror">
                     @error('logo')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -136,13 +143,7 @@
                 </div>
                 <div class="form-group">
                     <div>
-                        <img id="image2" class="w-100 img-preview" src="">
-                        <a id="rotate-left2" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
-                        <a id="rotate-right2" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
-                        <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
-
-                        <input type="text" name="rotate" id="dataImage2">
-                        <div id="cropped2" class="position-relative"></div>
+                        <img id="image2" class="w-100 img-preview" src="{{ asset('storage/'.$production->logo) }}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -180,7 +181,7 @@
                     <label for="richtextDescription">Опишите свой товар <span class="text-danger">*</span></label>
                     <textarea class="form-control richTextBox @error('description') is-invalid @enderror"
                               name="description" id="richtextDescription">
-                                {{ old('description') }}
+                                {{ $production->description }}
                         </textarea>
                     @error('description')
                     <span class="invalid-feedback" role="alert">
@@ -361,7 +362,7 @@
         });
     </script>
     <script src="{{ asset('js/cropper.min.js') }}"></script>
-    {{--    <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
+{{--        <script src="{{ asset('js/jquery-cropper.js') }}"></script>--}}
 
     <script>
         let input2 = $('#image-input2');
@@ -386,6 +387,7 @@
                 });
                 cropper2 = container2.data('cropper');
                 setTimeout(rotateImage2, 1000);
+                cropper2.destroy()
             };
         });
 
@@ -393,23 +395,8 @@
             cropper2.rotate(0);
             $('#dataImage2').val(cropper2.getImageData().rotate);
         }
+        cropper2.destroy();
 
-        $('#crop2').click(e => {
-            let image2 = $(cropper2.getCroppedCanvas()).addClass('img-fluid');
-            $('#cropped2').html(image2);
-        });
-        $('#rotate-right2').click(e => {
-            let btn2 = $(e.currentTarget);
-            cropper2.rotate(90);
-            console.log(cropper2.getImageData());
-            $('#dataImage2').val(cropper2.getImageData().rotate);
-        });
-        $('#rotate-left2').click(e => {
-            let btn2 = $(e.currentTarget);
-            cropper2.rotate(-90);
-            console.log(cropper2.getImageData());
-            $('#dataImage2').val(cropper2.getImageData().rotate);
-        });
     </script>
 
     <script>

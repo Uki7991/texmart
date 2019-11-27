@@ -120,12 +120,6 @@
                 <div class="form-group">
                     <div>
                         <img id="image2" class="w-100 img-preview" src="">
-                        <a id="rotate-left2" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
-                        <a id="rotate-right2" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
-                        <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
-
-                        <input type="text" name="rotate" id="dataImage2">
-                        <div id="cropped2" class="position-relative"></div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -370,6 +364,8 @@
                 });
                 cropper2 = container2.data('cropper');
                 setTimeout(rotateImage2, 1000);
+                cropper2.destroy();
+
             };
         });
 

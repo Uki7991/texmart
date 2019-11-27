@@ -42,8 +42,15 @@
                         <label>
                             Цена <span class="text-danger">*</span>
                         </label>
-                        <input type="number" name="price" class="form-control @error('price') is-invalid @enderror"
-                               value="{{ old('price') }}">
+                        <div class="input-group">
+                            <input type="number" name="price" class="input-group-prepend form-control @error('price') is-invalid @enderror"
+                                   value="{{ old('price') }}">
+                            <select class="" name="currency" id="inputGroupSelect01">
+                                @foreach(['$', 'сом', 'руб'] as $currency)
+                                    <option value="{{ $currency }}" {{ $currency == old('currency') ? 'selected' : '' }}>{{ $currency }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         @error('price')
                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -136,12 +143,6 @@
                 <div class="form-group">
                     <div>
                         <img id="image2" class="w-100 img-preview" src="">
-                        <a id="rotate-left2" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
-                        <a id="rotate-right2" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
-                        <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
-
-                        <input type="text" name="rotate" id="dataImage2">
-                        <div id="cropped2" class="position-relative"></div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -385,6 +386,7 @@
                 });
                 cropper2 = container2.data('cropper');
                 setTimeout(rotateImage2, 1000);
+                cropper2.destroy();
             };
         });
 

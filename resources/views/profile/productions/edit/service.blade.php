@@ -1,7 +1,7 @@
 <div class="container step_productions_3">
     <div class="row ">
         <div class="col-12 mb-5">
-            <h2>Создание объявления услуги</h2>
+            <h2>Редактирование объявления услуги</h2>
         </div>
         <div class="col-12 col-sm-10 col-lg-10 col-md-10">
             <form action="{{ route('profile.production.store') }}" enctype="multipart/form-data" method="POST">
@@ -111,7 +111,7 @@
                         Выберите главную картинку для объявления <span class="text-danger">*</span>
                     </label>
                     <input type="file" name="logo" id="image-input2"
-                           class="form-control @error('logo') is-invalid @enderror" value="{{ old('logo') }}" required>
+                           class="form-control @error('logo') is-invalid @enderror">
                     @error('logo')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -120,13 +120,7 @@
                 </div>
                 <div class="form-group">
                     <div>
-                        <img id="image2" class="w-100 img-preview" src="">
-                        <a id="rotate-left2" class="btn btn-success"><i class="fas fa-redo-alt fa-flip-horizontal"></i></a>
-                        <a id="rotate-right2" class="btn btn-success"><i class="fas fa-redo-alt"></i></a>
-                        <a id="crop3" class="btn btn-success"><i class="fas fa-crop"></i></a>
-
-                        <input type="text" name="rotate" id="dataImage2">
-                        <div id="cropped2" class="position-relative"></div>
+                        <img id="image2" class="w-100 img-preview" src="{{ asset('storage/'.$production->logo) }}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -371,6 +365,7 @@
                 });
                 cropper2 = container2.data('cropper');
                 setTimeout(rotateImage2, 1000);
+                cropper2.destroy()
             };
         });
 
@@ -378,23 +373,8 @@
             cropper2.rotate(0);
             $('#dataImage2').val(cropper2.getImageData().rotate);
         }
+        cropper2.destroy();
 
-        $('#crop2').click(e => {
-            let image2 = $(cropper2.getCroppedCanvas()).addClass('img-fluid');
-            $('#cropped2').html(image2);
-        });
-        $('#rotate-right2').click(e => {
-            let btn2 = $(e.currentTarget);
-            cropper2.rotate(90);
-            console.log(cropper2.getImageData());
-            $('#dataImage2').val(cropper2.getImageData().rotate);
-        });
-        $('#rotate-left2').click(e => {
-            let btn2 = $(e.currentTarget);
-            cropper2.rotate(-90);
-            console.log(cropper2.getImageData());
-            $('#dataImage2').val(cropper2.getImageData().rotate);
-        });
     </script>
     <script>
         let intro = introJservice();

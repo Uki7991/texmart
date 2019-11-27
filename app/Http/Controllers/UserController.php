@@ -74,9 +74,12 @@ class UserController extends Controller
 //            }
 //        }
 
+        $announces = collect();
         if (auth()->user()->role_id == 4) {
             $announces = Announce::all()->sortByDesc('id');
-        } else {
+        }
+
+        if (auth()->user()->role_id == 5) {
             $announces = Production::all()->sortByDesc('id');
         }
 

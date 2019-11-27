@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ProductionUpdateRequest extends FormRequest
 {
@@ -39,6 +40,8 @@ class ProductionUpdateRequest extends FormRequest
             'amount_production' => '',
             'brand' => '',
             'categories' => 'required',
+            'price' => Rule::requiredIf(request('type') == 'product'),
+            'currency' => Rule::requiredIf(request('type') == 'product'),
         ];
     }
 }
