@@ -12,16 +12,19 @@
                 <form action="{{ route('bid.store') }}" method="post" class="col-12 text-center" >
                     @csrf
                     <div class="md-form mb-5">
-                        <input type="name" id="form34" class="form-control validate">
+                        <input type="text" id="form34" name="name" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="form34">Ваше имя</label>
                     </div>
                     <div class="md-form mb-5 d-flex justify-content-start">
-                        <input type="pnone" class="form-control @error('phone') is-invalid @enderror"  id="phone-number_2" style=" ">
                         <input type="hidden" name="code">
+                        <input type="text"
+                               class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
+                               name="phone" required autocomplete="phone"
+                               id="phone-number_2">
                     </div>
                     <div class="md-form">
                         <i class="fas fa-pencil prefix grey-text"></i>
-                        <textarea type="text" id="form8" class="md-textarea form-control" rows="4" style="width: calc(100% - 0.0rem);margin-left: 0.0rem;"></textarea>
+                        <textarea id="form8" name="bid" class="md-textarea form-control" rows="4" style="width: calc(100% - 0.0rem);margin-left: 0.0rem;"></textarea>
                         <label data-error="wrong" data-success="right" for="form8" style="margin-left: 0.0rem;">Ваше сообщение</label>
                     </div>
                     <button class="btn btn-texmart-orange text-white">Отправить<i class="fas fa-paper-plane-o ml-1"></i></button>
@@ -33,8 +36,6 @@
 @push('scripts')
 
     <script>
-        /* INITIALIZE BOTH INPUTS WITH THE intlTelInput FEATURE*/
-
         $("#phone-number_2").intlTelInput({
             initialCountry: "kg",
             preferredCountries: ["ru", "kg", "kz"],

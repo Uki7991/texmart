@@ -31,8 +31,6 @@
                                class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
                                name="phone" required autocomplete="phone"
                                id="phone-number">
-                        <span id="valid-msg" class="hide">✓ Valid</span>
-                        <span id="error-msg" class="hide"></span>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1"><i
