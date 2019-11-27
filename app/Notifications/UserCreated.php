@@ -48,7 +48,7 @@ class UserCreated extends Notification
     {
         return (new MailMessage)
                     ->line('Вы оставили заказ на нашем сайте.')
-                    ->line('Мы зарегистрировали Вас на сайте '.url('texmart.kg').'.')
+                    ->line('Мы зарегистрировали Вас на сайте '.url('/').'.')
                     ->line('Ваши данные для входа в учетную запись:')
                     ->line('Номер телефона: '. $this->phone)
                     ->line('Пароль: '. $this->pass)

@@ -90,7 +90,7 @@ class AnnounceController extends Controller
         ]);
 
         try {
-            Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+            Facade::message('+'.$data['phone'], "Ваш активационный код для сайта ".url('/').": ".$user->phone_verification."\n Ваш пароль: $pass". "\n Ваш логин: ".$data['phone']);
         } catch (TwilioException $exception) {
             Log::alert($exception->getMessage());
         }
