@@ -27,11 +27,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ request()->url() }}" />
     <meta property="og:image" content="{{ asset('img/logo.png') }}" />
-    @if($production->type == 'productions')
+    @if(request('type') == 'productions')
         <meta property="og:description" content="Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
-    @elseif($production->type == 'product')
+    @elseif(request('type') == 'product')
         <meta property="og:description" content="Купить одежду оптом в Киргизии по низким ценам от Тексмарт">
-    @elseif($production->type == 'service')
+    @elseif(request('type') == 'service')
         <meta property="og:description" content="Заказать услугу в Киргизии по низким ценам от Тексмарт">
     @else
         <meta property="og:description" content="Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
