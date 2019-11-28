@@ -108,6 +108,11 @@
     <script src="{{ asset('js/jquery.rateyo.js') }}?v={{ filemtime(public_path('css/main.min.css')) }}"></script>
     {{--connect chart.js with CDN--}}
 <script>
+    $(document).ready(() => {
+        $('.mm-menu').css('max-width', $(window).width());
+    })
+</script>
+<script>
     document.addEventListener("DOMContentLoaded", function() {
         let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
         let active = false;
