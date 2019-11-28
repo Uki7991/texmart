@@ -110,6 +110,7 @@
 <script>
     $(document).ready(() => {
         $('.mm-menu').css('max-width', $(window).width());
+        $('.mm-menu').css('max-height', $(window).height());
     })
 </script>
 <script>
