@@ -1,17 +1,18 @@
 @extends('layouts.app')
 
 @section('title')
-    Texmart.kg - онлайн платформа оптовых производителей в Киргизии
+    Все швейные фабрики Киргизии на texmart.kg | texmart.kg
 @endsection
 @section('seo_content')
-    <meta name="description" content="Texmart.kg это первая интернет-платформа оптовых производителей текстильной и швейной продукции Кыргызской Республики. Вы можете заказать одежду оптом по очень низким ценам! Ведение бизнеса в формате В2В. Услуга логистики и доставки. Оформление документов экспортно-импортных документов.">
+    <meta name="description" content="Купить одежду на фабриках или заказать производство в Киргизии по самым низзким ценам. Все фабрики и цеха на одном сайте Тексмарт.">
     <meta name="keywords" content="texmart, техмарт, оптом, одежда, оптовая, бишкек, киргизия, кыргызстан, детская, мужская, женская, батальные, размеры, купить, купить одежду, оптовики, оптовая одежда, купить оптом, одежда оптом">
 @endsection
 @section('og_content')
-    <meta property="og:title" content="Texmart.kg - онлайн платформа оптовых производителей в Киргизии" />
+    <meta property="og:title" content="Все швейные фабрики Киргизии на texmart.kg | texmart.kg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ request()->url() }}" />
     <meta property="og:image" content="{{ asset('img/logo.png') }}" />
+    <meta property="og:description" content="Купить одежду на фабриках или заказать производство в Киргизии по самым низзким ценам. Все фабрики и цеха на одном сайте Тексмарт.">
 @endsection
 @push('styles')
     <link  rel="stylesheet"  href = "{{asset("css/intlTelInput.min.css")}}">

@@ -1,13 +1,50 @@
 @extends('layouts.app')
+@section('title')
+    @if($production->type == 'productions')
+        Производство одежды в Киргизии по низким ценам - {{ $production->title }} | texmart.kg
+    @elseif($production->type == 'product')
+        Одежда оптом в Киргизии по низким ценам - {{ $production->title }} | texmart.kg
+    @elseif($production->type == 'service')
+        Услуга в Киргизии по низким ценам - {{ $production->title }} | texmart.kg
+    @else
+        Производство одежды в Киргизии по низким ценам - {{ $production->title }} | texmart.kg
+    @endif
+@endsection
 @section('seo_content')
-    <meta name="description" content="Texmart.kg это первая интернет-платформа оптовых производителей текстильной и швейной продукции Кыргызской Республики. Вы можете заказать одежду оптом по очень низким ценам! Ведение бизнеса в формате В2В. Услуга логистики и доставки. Оформление документов экспортно-импортных документов.">
+
+    @if($production->type == 'productions')
+        <meta name="description" content="{{ strip_tags($production->description) }}. Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif($production->type == 'product')
+        <meta name="description" content="{{ strip_tags($production->description) }}. Купить одежду оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif($production->type == 'service')
+        <meta name="description" content="{{ strip_tags($production->description) }}. Заказать услугу в Киргизии по низким ценам от Тексмарт">
+    @else
+        <meta name="description" content="{{ strip_tags($production->description) }}. Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @endif
     <meta name="keywords" content="texmart, техмарт, оптом, одежда, оптовая, бишкек, киргизия, кыргызстан, детская, мужская, женская, батальные, размеры, купить, купить одежду, оптовики, оптовая одежда, купить оптом, одежда оптом, {{ $production->title }}">
 @endsection
 @section('og_content')
-    <meta property="og:title" content="Texmart.kg - {{ $production->title }}" />
+    @if($production->type == 'productions')
+        <meta property="og:title" content="Производство одежды в Киргизии по низким ценам - {{ $production->title }} | texmart.kg">
+    @elseif($production->type == 'product')
+        <meta property="og:title" content="Одежда оптом в Киргизии по низким ценам - {{ $production->title }} | texmart.kg">
+    @elseif($production->type == 'service')
+        <meta property="og:title" content="Услуга в Киргизии по низким ценам - {{ $production->title }} | texmart.kg">
+    @else
+        <meta property="og:title" content="Производство одежды в Киргизии по низким ценам - {{ $production->title }} | texmart.kg">
+    @endif
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ request()->url() }}" />
     <meta property="og:image" content="{{ asset('storage/'. $production->logo) }}" />
+    @if($production->type == 'productions')
+        <meta property="og:description" content="{{ strip_tags($production->description) }}. Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif($production->type == 'product')
+        <meta property="og:description" content="{{ strip_tags($production->description) }}. Купить одежду оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif($production->type == 'service')
+        <meta property="og:description" content="{{ strip_tags($production->description) }}. Заказать услугу в Киргизии по низким ценам от Тексмарт">
+    @else
+        <meta property="og:description" content="{{ strip_tags($production->description) }}. Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @endif
 @endsection
 @section('content')
     <section class="bg-texmart-sidebar fixed-top">
@@ -242,11 +279,13 @@
                         <div class="col-12 my-3">
                             <div class="card shadow-sm">
                                 <div class="card-body">
-                                    @if($feedback->user->role->name == 'admin')
-                                        <p class="small text-muted">
-                                            <i class="fas fa-star text-warning"></i>
-                                            &nbsp;Проверено администрацией Texmart.kg
-                                        </p>
+                                    @if($feedback->user)
+                                        @if($feedback->user->role_id == 1)
+                                            <p class="small text-muted">
+                                                <i class="fas fa-star text-warning"></i>
+                                                &nbsp;Проверено администрацией Texmart.kg
+                                            </p>
+                                        @endif
                                     @endif
                                     <div class="d-flex align-items-center">
                                         <p class="m-0">{{ $feedback->feedback }}</p>

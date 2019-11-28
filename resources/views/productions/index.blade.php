@@ -1,13 +1,41 @@
 @extends('layouts.app')
+@section('title')
+    @if(request('type') == 'productions')
+        Производство одежды в Киргизии по низким ценам | texmart.kg
+    @elseif(request('type') == 'product')
+        Одежда оптом в Киргизии по низким ценам | texmart.kg
+    @elseif(request('type') == 'service')
+        Услуга в Киргизии по низким ценам | texmart.kg
+    @else
+        Производство одежды в Киргизии по низким ценам | texmart.kg
+    @endif
+@endsection
 @section('seo_content')
     <meta name="description" content="Texmart.kg это первая интернет-платформа оптовых производителей текстильной и швейной продукции Кыргызской Республики. Вы можете заказать одежду оптом по очень низким ценам! Ведение бизнеса в формате В2В. Услуга логистики и доставки. Оформление документов экспортно-импортных документов.">
     <meta name="keywords" content="texmart, техмарт, оптом, одежда, оптовая, бишкек, киргизия, кыргызстан, детская, мужская, женская, батальные, размеры, купить, купить одежду, оптовики, оптовая одежда, купить оптом, одежда оптом">
 @endsection
 @section('og_content')
-    <meta property="og:title" content="Texmart.kg - онлайн платформа оптовых производителей в Киргизии" />
+    @if(request('type') == 'productions')
+        <meta name="description" content="Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif(request('type') == 'product')
+        <meta name="description" content="Купить одежду оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif(request('type') == 'service')
+        <meta name="description" content="Заказать услугу в Киргизии по низким ценам от Тексмарт">
+    @else
+        <meta name="description" content="Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @endif
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ request()->url() }}" />
     <meta property="og:image" content="{{ asset('img/logo.png') }}" />
+    @if($production->type == 'productions')
+        <meta property="og:description" content="Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif($production->type == 'product')
+        <meta property="og:description" content="Купить одежду оптом в Киргизии по низким ценам от Тексмарт">
+    @elseif($production->type == 'service')
+        <meta property="og:description" content="Заказать услугу в Киргизии по низким ценам от Тексмарт">
+    @else
+        <meta property="og:description" content="Заказать производство одежды оптом в Киргизии по низким ценам от Тексмарт">
+    @endif
 @endsection
 @section('content')
 
