@@ -7,7 +7,7 @@
             <section class="my-5">
                 @foreach($announces as $announce)
                     <div class="media mt-4 px-1 text-md-left">
-                        <a title="{{ $announce->title }}" href="{{ route('announce.show', $announce) }}" class="media-body text-dark hoverable rounded-circle">
+                        <a title="{{ $announce->title }}" href="{{ route('productions.show', $announce->slug) }}" class="media-body text-dark hoverable rounded-circle">
                             <div class="application_for">
                                 <div class="app_content">
                                     <div class="app_top" style="display: flex;flex-wrap: nowrap;justify-content: space-between;">
