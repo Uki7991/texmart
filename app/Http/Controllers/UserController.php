@@ -130,8 +130,14 @@ class UserController extends Controller
 
     public function favorites(Request $request)
     {
-        return view('user-production.profile-tabs.favorite', [
-            'user' => $request->user(),
+        $productions = $request->user()->favorite(Production::class)->where('type', 'productions');
+        $products = $request->user()->favorite(Production::class)->where('type', 'product');
+        $services = $request->user()->favorite(Production::class)->where('type', 'service');
+
+        return view('profile.favorites', [
+            'productions' => $productions,
+            'products' => $products,
+            'services' => $services,
         ]);
     }
 

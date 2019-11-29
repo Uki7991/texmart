@@ -120,9 +120,20 @@
     {{--connect chart.js with CDN--}}
 <script>
     $(document).ready(() => {
-        $('.mm-menu').css('max-width', $(window).width());
-        $('.mm-menu').css('max-height', $(window).height());
-    })
+        const mmenuFunction = function() {
+            if ($('.mm-menu').hasClass('mm-menu_fullscreen')) {
+                $('.mm-menu_fullscreen').css('max-width', $(window).width());
+            } else {
+                $('.mm-menu').css('max-width', '');
+            }
+            // $('.mm-menu_fullscreen').css('max-height', $(window).height());
+        };
+
+        mmenuFunction();
+        window.addEventListener("resize", mmenuFunction);
+        window.addEventListener("orientationchange", mmenuFunction);
+    });
+
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {

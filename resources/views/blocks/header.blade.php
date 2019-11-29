@@ -74,7 +74,7 @@
                 </ul>
             </li>
             <li><a href="{{ route('profile.production.index') }}">Мои объявления</a></li>
-            <li><a href="">Избранные объявления</a></li>
+            <li><a href="{{ route('profile.user.favorites') }}">Избранные объявления</a></li>
         @endif
         <li><a href="{{ route('profile.settings') }}">Настройки аккаунта</a></li>
         @if(auth()->check())

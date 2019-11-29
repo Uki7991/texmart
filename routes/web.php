@@ -51,13 +51,13 @@ Route::prefix('profile')->name('profile.')->middleware('auth')->group(function (
     Route::get('/dashboard', 'UserController@dashboard')->name('dashboard');
     Route::get('/settings', 'UserController@settings')->name('settings');
 
+    Route::get('/user/favorites', 'UserController@favorites')->name('user.favorites');
     Route::resource('production', 'ProductionController');
     Route::resource('announce', 'AnnounceController');
 });
 
 Route::resource('announce', 'AnnounceController');
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');
-Route::get('/user/favorites', 'UserController@favorites')->name('user.favorites');
 Route::get('/user/announce', 'UserController@productions')->name('user.announce');
 //Route::resource('blog', 'BlogController');
 Route::get('/user/production/create', 'UserController@productionCreate')->name('user.production.create');

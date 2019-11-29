@@ -19,6 +19,7 @@
     @endif
 
     <a href="{{ route('profile.production.index') }}" class="list-group-item list-group-item-action {{ request()->is('profile/production') ? 'active' : '' }}">{{ __('Мои объявления') }}</a>
+    <a href="{{ route('profile.user.favorites') }}" class="list-group-item list-group-item-action {{ request()->is('profile/user/favorites') ? 'active' : '' }}">{{ __('Мои избранные') }}</a>
     <a href="{{ route('profile.settings') }}" class="list-group-item list-group-item-action step9 {{ request()->is('profile/settings*') ? 'active' : '' }}">{{ __('Настройки аккаунта') }}</a>
     <a href="#" onclick="event.preventDefault();$('.logout-form').submit();" class="list-group-item list-group-item-action text-danger step10">{{ __('Выход') }}</a>
 </div>
