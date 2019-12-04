@@ -10,6 +10,12 @@
 .bg-texmart-sidebar {
     background-color: #e99b33 !important;
 }
+.icon_form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 .bg-img-header {
     background: url("../img/main.png") no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
@@ -338,7 +344,7 @@
     text-align: center;
     width: 60px;
     position: fixed;
-    right: 1%;
+    right: 20px;
     bottom: 83px;
     padding: 1%;
     transition: .3s;
@@ -556,6 +562,10 @@
     #preim {
         width: 37px!important;
         height: auto!important;
+    }
+    .form-call{
+        height: 46px;
+        width: 46px;
     }
     .pad-micro-mob{
         padding-top: 0.7rem!important;
@@ -988,13 +998,3 @@
 }
     /*end card style*/
 /*for modal registration*/
-/* Important part */
-.modal-dialog{
-    overflow-y: initial !important
-}
-.modal-content{
-    height: 800px;
-    overflow-y: auto;
-}
-/*content end*/
-

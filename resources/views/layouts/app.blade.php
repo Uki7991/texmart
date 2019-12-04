@@ -64,13 +64,13 @@
     @endif
     @laravelPWA
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?v={{ filemtime(public_path('css/app.css')) }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
-    <link rel="stylesheet" href="{{asset('css/slick.min.css')}}?v={{ filemtime(public_path('css/main.min.css')) }}"/>
-    <link rel="stylesheet" href="{{ asset('css/mmenu.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
-    <link rel="stylesheet" href="{{ asset('css/jquery.rateyo.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">
+    <link rel="stylesheet" href="{{asset('css/slick.min.css')}}?v={{ filemtime(public_path('css/slick.min.css')) }}"/>
+    <link rel="stylesheet" href="{{ asset('css/mmenu.min.css') }}?v={{ filemtime(public_path('css/mmenu.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}?v={{ filemtime(public_path('css/jquery.fancybox.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}?v={{ filemtime(public_path('css/owl.carousel.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.rateyo.min.css') }}?v={{ filemtime(public_path('css/jquery.rateyo.min.css')) }}">
     @stack('styles')
 </head>
 <body>

@@ -1,5 +1,12 @@
 <div class="container py-5">
-    <h2 class="mb-5" style="color:#CD882D ">Заявки от заказчиков </h2>
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+            <h2 class="mb-5" style="color:#CD882D; ">Заявки от заказчиков </h2>
+        </div>
+        <div class="col-12 col-md-12 col-lg-8">
+            <h2 class="mb-5 text-center" style="color:#CD882D; ">Объявления</h2>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12 col-md-12 col-lg-4 slider">
             @foreach($announces as $announce)
@@ -29,36 +36,43 @@
         </div>
         <div class="col-12 col-md-12 col-lg-8 mt-5 pt-5 mt-lg-0 pt-lg-0">
             <div class="card-deck">
-                <a href="{{ route('consulting') }}" class="card mb-4 mt-5 mt-sm-0" style="margin-right: 0;">
-                    <div class="view overlay">
-                        <img class="card-img-top div-lazy" data-src="{{ asset('img/consulting_texmart.png') }}" src=""
-                             alt="Card image cap">
-                    </div>
-                    <div class="">
-                        <div class="h5 text-white position-absolute text-center w-75 bg-texmart-service py-2 m-0 "
-                           style="bottom: 10%;">Консультация</div>
-                    </div>
-                </a>
-                <a href="{{ route('logistics') }}" class="card mb-4" style="margin-right: 0;">
-                    <div class="view overlay">
-                        <img class="card-img-top div-lazy" data-src="{{ asset('img/logistik_texmart.png') }}" src=""
-                             alt="Card image cap">
-                    </div>
-                    <div class="">
-                        <p class="h5 text-white position-absolute text-center w-75 bg-texmart-service  py-2 m-0"
-                           style="bottom: 10%;">Логистика</p>
-                    </div>
-                </a>
-                <a href="{{ route('quality') }}" class="card mb-4" style="margin-right: 0;">
-                    <div class="view overlay">
-                        <img class="card-img-top div-lazy" data-src="{{ asset('img/quality_texmart.png') }}" src=""
-                             alt="Card image cap">
-                    </div>
-                    <div class="">
-                        <p class="h5 text-white position-absolute text-center w-75 bg-texmart-service  py-2 m-0"
-                           style="bottom: 10%;">Проверка качества</p>
-                    </div>
-                </a>
+                <div class="col-12 col-md-6 col-lg-4 mx-auto my-4 my-md-2">
+                    <a href="{{ route('production', ['type' => 'productions']) }}">
+                        <div class="div-lazy card-image"
+                             style="background-image: url({{asset('img/production.png')}});background-repeat: no-repeat;background-size: cover;height: 350px;">
+                            <div class="text-white text-center row align-items-end px-4  pt-5 pb-4" style="height: 100%">
+                                <h4 class="card-title text-center text-white"><strong>Производственные цеха и
+                                        фабрики</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mx-auto my-4 my-md-2">
+                    <a href="{{ route('production', ['type' => 'product']) }}">
+                        <div class="div-lazy card-image"
+                             style="background-image: url({{asset('img/goods.png')}});background-repeat: no-repeat;background-size: cover;height: 350px;">
+                            <div class="text-white justify-content-center row align-items-end  py-5 px-4"
+                                 style="height: 100%">
+                                <div>
+                                    <h3 class="card-title text-white"><strong>Товары</strong></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mx-auto my-4 my-md-2">
+                    <a href="{{ route('production', ['type' => 'service']) }}">
+                        <div class="div-lazy card-image"
+                             style="background-image: url({{asset('img/service.png')}});background-repeat: no-repeat;background-size: cover;height: 350px;">
+                            <div class="text-white  row align-items-end justify-content-center py-5 px-4"
+                                 style="height: 100%">
+                                <div class="">
+                                    <h3 class="card-title text-white"><strong>Услуги</strong></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -32,9 +32,9 @@
         @include('blocks.side_panel')
     </div>
     @include('blocks.middle_panel')
+    @include('blocks.applications')
     @include('blocks.category')
     @include('blocks.our_advantages')
-    @include('blocks.applications')
     @include('blocks.announcement')
     @include('blocks.reviews')
     @include('blocks.blog')

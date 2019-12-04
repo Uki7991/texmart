@@ -12,8 +12,7 @@ require('laravel-mix-purgecss');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .purgeCss();
+    .sass('resources/sass/app.scss', 'public/css');
 
 mix.styles(['public/css/slick-theme.css', 'public/css/slick.css'], 'public/css/slick.min.css').purgeCss();
 mix.styles(['public/css/main.css'], 'public/css/main.min.css').purgeCss();
