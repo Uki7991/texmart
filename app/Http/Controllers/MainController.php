@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Intervention\Image\ImageManagerStatic;
 use Midnite81\GeoLocation\Services\GeoLocation;
+use Rodenastyle\StreamParser\StreamParser;
+use Tightenco\Collect\Support\Collection;
 
 class MainController extends Controller
 {

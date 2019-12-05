@@ -94,7 +94,13 @@
                     </p>
                         @if($production->price)
                         <p class="mb-4">
-                            Цена: <span class="font-weight-bold">{!! $production->price !!}</span>
+                            Цена в сомах: <span class="font-weight-bold">{!! round($production->priceKGS, 2) !!}</span> <span>сом</span>
+                        </p>
+                        <p class="mb-4">
+                            Цена в рублях: <span class="font-weight-bold">{!! round($production->priceRUB, 2) !!}</span> <span>руб.</span>
+                        </p>
+                        <p class="mb-4">
+                            Цена в долларах (США): <span class="font-weight-bold">${!! round($production->priceUSD, 2) !!}</span>
                         </p>
                         @endif
                     @if(false)
