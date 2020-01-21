@@ -40,7 +40,7 @@
                         <div class="col-12 col-md-6 shadow-lg bg-white p-0">
                             <div id="registration-steps">
                                 {{-- First step --}}
-                                <h3>Выберите роль</h3>
+                                <h3 class="d-none">Выберите роль</h3>
                                 <section>
                                     <div class="container">
                                         <div class="row justify-content-around my-4">
@@ -54,7 +54,7 @@
                                     </div>
                                 </section>
                                 {{--Second step--}}
-                                <h3>Заполните данные</h3>
+                                <h3 class="d-none">Заполните данные</h3>
                                 <section>
                                     <form method="POST" action="{{ route('register') }}">
                                         @csrf
