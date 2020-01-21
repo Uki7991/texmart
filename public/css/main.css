@@ -29,6 +29,9 @@
 .text-texmart{
     color: #f8fafc!important;
 }
+ul[role="tablist"] {
+    display: none;
+}
 .backdrop {
     position: absolute;
     width: 100%;
