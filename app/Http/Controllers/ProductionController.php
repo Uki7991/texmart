@@ -115,6 +115,28 @@ class ProductionController extends Controller
         $production = Production::whereSlug($slug)->firstOrFail();
         $categories = $production->categories;
 
+<<<<<<< Updated upstream
+=======
+        $currencies = [];
+        $xml = StreamParser::xml('https://www.nbkr.kg/XML/daily.xml')->each(function (Collection $currency) use (& $currencies) {
+            $currencies[] = $currency;
+        });
+
+
+        if ($production->currency == 'сом') {
+            $production->priceUSD = $production->price / floatval(str_replace(',', '.', $currencies[0]->get('Value')));
+            $production->priceRUB = $production->price / floatval(str_replace(',', '.', $currencies[3]->get('Value')));
+            $production->priceKGS = $production->price;
+        } elseif ($production->currency == 'руб') {
+            $production->priceUSD = $production->price * floatval(str_replace(',', '.', $currencies[3]->get('Value'))) / floatval(str_replace(',', '.', $currencies[0]->get('Value')));
+            $production->priceKGS = $production->price * floatval(str_replace(',', '.', $currencies[3]->get('Value')));
+            $production->priceRUB = $production->price;
+        } elseif ($production->currency == '$') {
+            $production->priceUSD = $production->price;
+            $production->priceRUB = $production->price * floatval(str_replace(',', '.', $currencies[0]->get('Value'))) / floatval(str_replace(',', '.', $categories[3]->get('Value')));
+            $production->priceKGS = $production->price * floatval(str_replace(',', '.', $currencies[0]->get('Value')));
+        }
+>>>>>>> Stashed changes
         foreach ($categories as $index => $category) {
             $category->parent = $category->hasParent();
         }
@@ -258,8 +280,6 @@ class ProductionController extends Controller
 
     public function filter(Request $request)
     {
-
-
         $params = $request->params;
         $type = $request->type;
         $cats = Category::all();

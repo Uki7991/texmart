@@ -26,7 +26,12 @@ class Production extends Model
         'title', 'address', 'excerpt', 'description', 'phone1',
         'phone2', 'email', 'site', 'type', 'tools', 'amount_production', 'brand',
         'expert', 'minimum_order', 'from_amount_production', 'before_amount_prod',
+<<<<<<< Updated upstream
         'price', 'user_id', 'slug', 'logo', 'views', 'id',
+=======
+        'price', 'user_id', 'slug', 'logo', 'views', 'id', 'currency',
+        'priceUSD', 'priceRUB', 'priceKGS'
+>>>>>>> Stashed changes
     ];
 
     protected $spatial = ['coordinates'];
