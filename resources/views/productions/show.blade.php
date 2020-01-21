@@ -90,7 +90,6 @@
                     <p class="h4 mb-3">
                         {{ $production->title }}
                         @include('partials.btn.favorite', ['route' => \Illuminate\Support\Facades\Auth::check() ? '' : route('login'), 'data' => 'data-id='.$production->id.''])
-
                     </p>
                         @if($production->price)
                         <p class="mb-4">

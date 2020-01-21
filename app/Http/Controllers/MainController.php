@@ -23,7 +23,7 @@ class MainController extends Controller
 //        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo', 'views']);
 //        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo', 'views']);
 //        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);
-        $announces = Announce::all();
+        $announces = Announce::all()->reverse();
         $this->address(new GeoLocation());
         $blogs = Blog::all()->sortByDesc('id')->take(4);
         return view('welcome', [

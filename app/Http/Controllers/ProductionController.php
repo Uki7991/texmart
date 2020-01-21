@@ -278,8 +278,6 @@ class ProductionController extends Controller
 
     public function filter(Request $request)
     {
-
-
         $params = $request->params;
         $type = $request->type;
         $cats = Category::all();
