@@ -138,7 +138,7 @@ class ProductionController extends Controller
             $production->priceRUB = $production->price;
         } elseif ($production->currency == '$') {
             $production->priceUSD = $production->price;
-            $production->priceRUB = $production->price * floatval(str_replace(',', '.', $currencies[0]->get('Value'))) / floatval(str_replace(',', '.', $categories[3]->get('Value')));
+            $production->priceRUB = $production->price * floatval(str_replace(',', '.', $currencies[0]->get('Value'))) / floatval(str_replace(',', '.', $currencies[3]->get('Value')));
             $production->priceKGS = $production->price * floatval(str_replace(',', '.', $currencies[0]->get('Value')));
         }
         foreach ($categories as $index => $category) {
