@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Announce::class);
     }
+
+    public static function phoneReplacement($code, $phone)
+    {
+        return str_replace('+', '', $code).preg_replace('/[-\s]/', '', $phone);
+    }
 }

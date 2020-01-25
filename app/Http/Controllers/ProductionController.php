@@ -116,6 +116,12 @@ class ProductionController extends Controller
     {
         $production = Production::whereSlug($slug)->firstOrFail();
         $categories = $production->categories;
+        $viewed = Production::getProductionViews($production->id);
+
+        if (!$viewed) {
+            $production->views = $production->views + 1;
+            $production->save();
+        }
 
         $currencies = [];
         StreamParser::xml('https://www.nbkr.kg/XML/daily.xml')->each(function (Collection $currency) use (& $currencies) {
@@ -143,13 +149,6 @@ class ProductionController extends Controller
 //        $categories = $categories->map(function ($item, $index) {
 //            $item->childs = $item->childs->has('productions');
 //        });
-
-        $viewed = Production::getProductionViews($production->id);
-
-        if (!$viewed) {
-            $production->views = $production->views + 1;
-            $production->save();
-        }
 
         $ratings = Rating::of($production)->get();
         $rating = count($ratings) ? $ratings->avg('rating') : 0;

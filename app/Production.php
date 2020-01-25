@@ -27,7 +27,10 @@ class Production extends Model
         'phone2', 'email', 'site', 'type', 'tools', 'amount_production', 'brand',
         'expert', 'minimum_order', 'from_amount_production', 'before_amount_prod',
         'price', 'user_id', 'slug', 'logo', 'views', 'id', 'currency',
-        'priceUSD', 'priceRUB', 'priceKGS'
+    ];
+
+    protected $guarded = [
+        'priceUSD', 'priceRUB', 'priceKGS',
     ];
 
     protected $spatial = ['coordinates'];
