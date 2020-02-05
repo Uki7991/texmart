@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Номер телефона (email) или пароль не верны',
+    'failed' => 'Номер телефона или пароль не верны',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

@@ -51,10 +51,10 @@ class UserController extends Controller
 
     public function index()
     {
-        return redirect()->route('profile.dashboard');
+        return $this->dashboard();
     }
 
-    public function dashboard(Request $request)
+    public function dashboard()
     {
         $productions = Production::where('user_id', auth()->user()->id)->get();
 //        $categories = Category::where('parent_id', null)->get(['id', 'title']);

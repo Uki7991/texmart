@@ -132,6 +132,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'min' => [
+            'string' => 'Введите не менее :min символов для :attribute'
+        ]
     ],
 
     /*
@@ -146,7 +149,8 @@ return [
     */
 
     'attributes' => [
-        'phone' => 'номер телефона'
+        'phone' => 'номер телефона',
+        'password' => 'номер телефона'
     ],
 
 ];

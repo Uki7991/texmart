@@ -21,5 +21,11 @@
                      alt="Компания Silk Way">
             </a>
         </div>
+        <div class="col-6 col-md-3 pt-4  pt-md-1">
+            <a target="_blank" href="https://express-cargo.kg/" onclick="event.preventDefault();" rel="noopener">
+                <img class="img-fluid div-lazy grayscale" data-src="{{ asset("img/final.png") }}" src=""
+                     alt="Компания Express Cargo" title="Компания Express Cargo">
+            </a>
+        </div>
     </div>
 </div>

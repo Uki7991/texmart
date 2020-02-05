@@ -8,7 +8,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body mx-3">
+            <div class="modal-body px-0 px-md-2 mx-0 mx-md-2">
                 <form action="{{ route('bid.store') }}" method="post" class="col-12 text-center" >
                     @csrf
                     <div class="md-form mb-5">
@@ -18,7 +18,7 @@
                     <div class="md-form mb-5 d-flex justify-content-start">
                         <input type="hidden" name="code">
                         <input type="text"
-                               class="form-control rounded-pill shadow-sm @error('phone') is-invalid @enderror"
+                               class="form-control rounded-pill w-75 shadow-sm @error('phone') is-invalid @enderror"
                                name="phone" required autocomplete="phone"
                                id="phone-number_2">
                     </div>

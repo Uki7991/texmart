@@ -11,12 +11,15 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', 'MainController@index')->name('homepage');
 Route::get('/image', function () {
     return view('image-resizer');
 });
-Route::post('/user/register/phone', 'UserController@registerPhone')->name('register.phone');
-Route::post('/user/register/phonecode', 'UserController@codeVerification')->name('register.code');
+Route::post('/user/register/phone', 'Auth\RegisterController@registerPhone')->name('register.phone');
+Route::post('/user/register/phonecode', 'Auth\RegisterController@codeVerification')->name('register.code');
 Route::post('/user/reregister/phonecode', 'UserController@reRegisterPhone')->name('reregister.phone');
 Route::post('/image/resize', 'MainController@imageResize')->name('image.resize');
 
@@ -74,8 +77,6 @@ Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCal
 Route::get('/search', 'MainController@search')->name('search');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('productions', 'ProductionController@index')->name('productions.index');
 Route::get('productions/filter', 'ProductionController@filter')->name('productions.filter');
@@ -185,5 +186,4 @@ Route::get('/customer_list',function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 

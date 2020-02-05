@@ -56,7 +56,7 @@
                                 {{--Second step--}}
                                 <h3 class="d-none">Заполните данные</h3>
                                 <section>
-                                    <form method="POST" action="{{ route('register') }}">
+                                    <form id="registration-form" method="POST" action="{{ route('register') }}">
                                         @csrf
 
                                         <div class="form-group d-none">
@@ -72,6 +72,9 @@
                                             </div>
                                         </div>
 
+                                        <div class="form-group mb-5">
+                                            <a href="#" id="toFirstStep" class="text-muted border bg-white py-2 px-2 rounded"><i class="fas fa-arrow-circle-left text-primary"></i> &nbsp;Назад к выбору роли</a>
+                                        </div>
                                         <div class="form-group">
                                             <label for="name" class="text-md-right"><i
                                                     class="fas fa-user text-primary"></i> {{ __('ФИО') }}</label>
@@ -129,7 +132,38 @@
                                         </div>
 
                                         <div class="form-group mb-0 mx-auto text-center">
-                                            @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Регистрация'])
+                                            @include('partials.btn.submit_btn', ['class' => 'rounded-pill registerToVerification', 'title' => 'Регистрация'])
+                                        </div>
+                                        <div class="form-group small text-dark text-center mt-1">
+                                            Уже есть логин? <a href="{{ route('login') }}" class="text-primary">Вход</a>
+                                        </div>
+                                    </form>
+                                </section>
+                                {{--Second step--}}
+                                <h3 class="d-none">Введите код смс подтверждения</h3>
+                                <section>
+                                    <form id="phoneRegisterForm" method="POST" action="{{ route('register') }}">
+                                        @csrf
+
+                                        <div class="form-group">
+                                            <label for="verification" class="text-md-right"><i
+                                                    class="fas fa-user text-primary"></i> {{ __('СМС-код') }}</label>
+
+                                            <input id="verification" type="text"
+                                                   class="form-control rounded-pill shadow-sm @error('verification') is-invalid @enderror"
+                                                   name="verification" value="{{ old('verification') }}" autocomplete="verification" autofocus>
+                                        </div>
+                                        <small>Время до следующего смс: <span class="verification-timer"></span> сек &nbsp;&nbsp;&nbsp;&nbsp;</small>
+                                        <small><a id="restart" href="#" class="text-dashed disabled text-muted">отправить снова</a></small>
+                                        @error('verification')
+                                        <span class="invalid-feedback first-uppercase" role="alert">
+                                        <strong class="first-uppercase">{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+
+
+                                        <div class="form-group mb-0 mx-auto text-center mt-3">
+                                            @include('partials.btn.submit_btn', ['class' => 'rounded-pill', 'title' => 'Подтвердить', 'id' => 'id=phoneRegister'])
                                         </div>
                                         <div class="form-group small text-dark text-center mt-1">
                                             Уже есть логин? <a href="{{ route('login') }}" class="text-primary">Вход</a>
@@ -177,16 +211,133 @@
     <link rel="stylesheet" href="{{asset('css/jquery.steps.css')}}">
 @endpush
 @push('scripts')
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
     <script src="{{ asset('js/jquery.steps.js') }}"></script>
 
     <script>
+        function startTimer() {
+            let timer = 30;
+            let timerId = setInterval(() => {
+                $('.verification-timer').html(timer--);
+            }, 1000);
+            setTimeout(() => {
+                clearInterval(timerId);
+                $('#restart').removeClass('disabled');
+                $('#restart').removeClass('text-muted');
+                $('#restart').addClass('text-primary');
+            }, 31 * 1000);
+
+        }
+
         $("#registration-steps").steps({
             headerTag: "h3",
             bodyTag: "section",
-            transitionEffect: "slideLeft",
+            transitionEffect: 2,
             autoFocus: true,
-            enablePagination: false
+            enablePagination: false,
         });
+        $('#toFirstStep').click(e => {
+            e.preventDefault();
+
+            $('#registration-steps').steps('previous');
+        });
+
+        $('.registerToVerification').click(e => {
+            e.preventDefault();
+            console.log($(e.currentTarget));
+            const form = $( "#registration-form" );
+            form.validate({
+                errorPlacement: function(error, element) {
+                    error.appendTo( element.parents(".form-group") );
+                },
+                rules: {
+                    name: "required",
+                    phone: "required",
+                    password: {
+                        required: true,
+                        minlength: 8,
+                    },
+                    password_confirmation: {
+                        required: true,
+                        equalTo: "#password",
+                        minlength: 8
+                    }
+                },
+                messages: {
+                    name: "Введите ваше ФИО",
+                    phone: "Введите ваш номер телефона",
+                    password: {
+                        required: "Введите пароль",
+                        minlength: "Введите не менее 8 символов"
+                    },
+                    password_confirmation: {
+                        required: "Введите повторно пароль",
+                        equalTo: "Пароли должны совпадать",
+                        minlength: "Введите не менее 8 символов"
+                    }
+                }
+            });
+            if (form.valid()) {
+                let val = $('#registration-form').serializeArray();
+                let data = {};
+                for(let item of val) {
+                    data[item.name] = item.value;
+                }
+                console.log(data);
+                $.ajax({
+                    url: '{{ route('register') }}',
+                    method: 'post',
+                    data: data,
+                    success: data => {
+                        validatePhone(data);
+                        startTimer();
+
+                        setTimeout(() => {
+                            $('#registration-steps').steps('next');
+                        }, 100);
+                    },
+                    error: (data) => {
+                        let errors = [];
+                        for(let el in data.responseJSON.errors) {
+                            errors[el] = data.responseJSON.errors[el][0];
+                        }
+                        form.validate().showErrors(errors);
+                    }
+                });
+
+            }
+        });
+
+        function validatePhone(user) {
+            $('#phoneRegister').click(e => {
+                e.preventDefault();
+                let btn = $(e.currentTarget);
+                console.log(user);
+
+                let formVerification = $('#phoneRegisterForm');
+                console.log(formVerification.find('#verification').val());
+                if (user.phone_verification != formVerification.find('#verification').val()) {
+                    formVerification.validate().showErrors({verification: 'Введеный вами код не совпадает'});
+                } else {
+                    $.ajax({
+                        url: '{{ route('register.code') }}',
+                        type: 'post',
+                        data: {
+                            user: user,
+                            code: formVerification.find('#verification').val()
+                        },
+                        success: data => {
+                            console.log(data);
+                            window.location = '{{ route('profile') }}';
+                        },
+                        error: data => {
+                            formVerification.validate().showErrors({verification: 'Введеный вами код не совпадает'});;
+                        }
+                    })
+                }
+            });
+        }
 
         $('.role_btn').click(e => {
             e.preventDefault();
@@ -205,7 +356,21 @@
             }
 
             $('#registration-steps').steps("next");
-        })
+        });
+
+        $('#restart').click(e => {
+            e.preventDefault();
+
+            let btn = $(e.currentTarget);
+            console.log(btn);
+
+            if (!btn.hasClass('disabled')) {
+                btn.addClass('disabled');
+                btn.addClass('text-muted');
+                btn.removeClass('text-primary');
+                startTimer();
+            }
+        });
     </script>
 @endpush
 
