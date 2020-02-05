@@ -20,7 +20,7 @@ Route::get('/image', function () {
 });
 Route::post('/user/register/phone', 'Auth\RegisterController@registerPhone')->name('register.phone');
 Route::post('/user/register/phonecode', 'Auth\RegisterController@codeVerification')->name('register.code');
-Route::post('/user/reregister/phonecode', 'UserController@reRegisterPhone')->name('reregister.phone');
+Route::post('/user/reregister/phonecode', 'Auth\RegisterController@reRegisterCode')->name('reregister.code');
 Route::post('/image/resize', 'MainController@imageResize')->name('image.resize');
 
 Route::get('/admin', 'AdminController@admin')->name('admin.admin');

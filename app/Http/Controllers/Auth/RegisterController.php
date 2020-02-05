@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Twilio\Exceptions\TwilioException;
 
 class RegisterController extends Controller
 {
@@ -70,15 +71,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $phoneVerification = rand(111111, 999999);
+        try {
+            Facade::message('+'.User::phoneReplacement($data['code'], $data['phone']), "Ваш активационный код для сайта ".url('/').": ".$phoneVerification."\n Ваш пароль: ".$data['password']."\n Ваш логин: ".User::phoneReplacement($data['code'], $data['phone']));
+
+        } catch (TwilioException $exception) {
+            return response()->json(['message' => 'Невозможно отправить СМС'], 502);
+        }
+
         $user = User::create([
             'role_id' => $data['user_type'] == 1 ? 5 : 4,
             'name' => $data['name'],
             'phone' => User::phoneReplacement($data['code'], $data['phone']),
             'password' => Hash::make($data['password']),
-            'phone_verification' => rand(111111, 999999),
+            'phone_verification' => $phoneVerification,
         ]);
-
-        Facade::message('+'.User::phoneReplacement($data['code'], $data['phone']), 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
 
         return $user;
     }
@@ -92,7 +99,11 @@ class RegisterController extends Controller
 
 //        $this->guard()->login($user);
 
-        return response()->json($user);
+        if ($user instanceof User) {
+            return response()->json(['user' => $user, 'pass' => $request->password]);
+        }
+
+        return response()->json($user, '502');
     }
 
     public function codeVerification(Request $request)
@@ -109,5 +120,22 @@ class RegisterController extends Controller
         $this->guard()->login($user);
 
         return response()->json('success');
+    }
+
+    public function reRegisterCode(Request $request)
+    {
+        $user = User::find($request->user['id']);
+        $phoneVerification = rand(111111, 999999);
+        $user->phone_verification = $phoneVerification;
+        $user->save();
+
+        try {
+            Facade::message('+'.$user->phone, "Ваш активационный код для сайта ".url('/').": ".$user->phone_verification."\n Ваш пароль: ".$request->pass."\n Ваш логин: ".$user->phone);
+            return response()->json(['user' => $user, 'pass' => $request->pass]);
+
+        } catch (TwilioException $exception) {
+            return response()->json('error', 502);
+        }
+
     }
 }

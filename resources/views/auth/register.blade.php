@@ -290,7 +290,8 @@
                     method: 'post',
                     data: data,
                     success: data => {
-                        validatePhone(data);
+                        validatePhone(data.user);
+                        registerRestartBtn(data.user, data.pass);
                         startTimer();
 
                         setTimeout(() => {
@@ -298,6 +299,12 @@
                         }, 100);
                     },
                     error: (data) => {
+                        console.log(data);
+                        if (data.responseJSON.original) {
+                            form.validate().showErrors({
+                                phone: data.responseJSON.original.message
+                            });
+                        }
                         let errors = [];
                         for(let el in data.responseJSON.errors) {
                             errors[el] = data.responseJSON.errors[el][0];
@@ -308,6 +315,7 @@
 
             }
         });
+        let formVerification = $('#phoneRegisterForm');
 
         function validatePhone(user) {
             $('#phoneRegister').click(e => {
@@ -315,7 +323,6 @@
                 let btn = $(e.currentTarget);
                 console.log(user);
 
-                let formVerification = $('#phoneRegisterForm');
                 console.log(formVerification.find('#verification').val());
                 if (user.phone_verification != formVerification.find('#verification').val()) {
                     formVerification.validate().showErrors({verification: 'Введеный вами код не совпадает'});
@@ -358,19 +365,45 @@
             $('#registration-steps').steps("next");
         });
 
-        $('#restart').click(e => {
-            e.preventDefault();
+        function registerRestartBtn(user, pass) {
+            $('#restart').click(e => {
+                e.preventDefault();
 
-            let btn = $(e.currentTarget);
-            console.log(btn);
+                let btn = $(e.currentTarget);
+                console.log(user, pass);
 
-            if (!btn.hasClass('disabled')) {
-                btn.addClass('disabled');
-                btn.addClass('text-muted');
-                btn.removeClass('text-primary');
-                startTimer();
-            }
-        });
+                if (!btn.hasClass('disabled')) {
+                    btn.addClass('disabled');
+                    btn.addClass('text-muted');
+                    btn.removeClass('text-primary');
+                    $.ajax({
+                        url: '{{ route('reregister.code') }}',
+                        type: 'post',
+                        data: {
+                            user: user,
+                            pass: pass
+                        },
+                        success: data => {
+                            formVerification.validate().showErrors({
+                                verification: 'СМС отправлен заново'
+                            });
+                            $('#restart').unbind('click');
+                            $('#phoneRegister').unbind('click');
+                            registerRestartBtn(data.user, data.pass);
+                            validatePhone(data.user);
+                        },
+                        error: data => {
+                            if (data.responseJSON.original) {
+                                formVerification.validate().showErrors({
+                                    verification: data.responseJSON.original.message
+                                });
+                            }
+                        }
+                    });
+                    startTimer();
+                }
+            });
+        }
     </script>
 @endpush
 

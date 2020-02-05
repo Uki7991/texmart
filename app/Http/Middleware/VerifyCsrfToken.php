@@ -22,5 +22,6 @@ class VerifyCsrfToken extends Middleware
         '/image-upload',
         '/user/register/phone',
         '/user/register/phonecode',
+        '/user/reregister/phonecode',
     ];
 }
