@@ -137,7 +137,7 @@ Route::get('/user',function (){
 
 
 Route::get('/logistic',function(){
-    return view('logistic');
+    return redirect()->route('logistics');
 })->name('logistic');
 
 Route::get('/quality',function(){
