@@ -112,6 +112,7 @@
                 let page = btn.data('page');
                 if (page) {
                     params.page = page;
+                    window.localStorage.setItem('productionsPage', page);
                     fetchProductions(params);
                 }
             })
@@ -119,17 +120,19 @@
     </script>
     <script>
         let params = [];
+        let productionsPage = window.localStorage.getItem('productionsPage');
+        if (productionsPage) {
+            params.page = productionsPage;
+        }
         $('input[name="categories[]"]').change(e => {
             let input = $(e.currentTarget);
             let isChecked = input.is(':checked') ? true : false;
             let id = input.data('id');
             isChecked ? params.push(id) : params.splice($.inArray(id, params), 1);
             params.page = 1;
-            console.log(params);
             fetchProductions(params);
         });
         function fetchProductions(params) {
-            console.log(params);
             $.ajax({
                 url: '{{ route('productions.filter') }}',
                 data: {
@@ -149,9 +152,7 @@
                             }
                         }
                         for (let item of paginationDots) {
-                            console.log(item, data.productions.current_page);
                             if (item == '...') {
-                                console.log(item == '...');
                                 pagination.append('<li class="page-item disabled"><a class="page-link disabled" disabled onclick="event.preventDefault()">' + item + '</a></li>');
                             } else if (item == data.productions.current_page) {
                                 pagination.append('<li class="page-item active"><a class="page-link" data-page="' + item + '" href="#">' + item + '</a></li>');
@@ -184,7 +185,6 @@
                     })
                 },
                 error: () => {
-                    console.log('error');
                 }
             })
         }
@@ -197,7 +197,6 @@
                 e.preventDefault();
                 let btn = $(e.currentTarget);
                 let id = btn.data('id');
-                console.log(id);
                 $.ajax({
                     method: "POST",
                     url: '{{ route('production.favorite') }}',
@@ -206,7 +205,6 @@
                         'user_id': '{{ \Illuminate\Support\Facades\Auth::user()->id }}'
                     },
                     success: data => {
-                        console.log(data);
                         if (data.status === 'success') {
                             if (data.isFavorited) {
                                 btn.find('.fa-heart').removeClass('far').addClass('fas');
@@ -216,7 +214,6 @@
                         }
                     },
                     error: () => {
-                        console.log('error');
                     }
                 })
             });
