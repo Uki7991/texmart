@@ -16,6 +16,9 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+#sync1 .owl-stage-outer {
+    max-height: 300px !important;
+}
 .bg-img-header {
     background: url("../img/main.png") no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
