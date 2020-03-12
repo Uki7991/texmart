@@ -80,7 +80,7 @@ class RegisterController extends Controller
         }
 
         $user = User::create([
-            'role_id' => $data['user_type'] == 1 ? 5 : 4,
+            'role_id' => $data['user_type'],
             'name' => $data['name'],
             'phone' => User::phoneReplacement($data['code'], $data['phone']),
             'password' => Hash::make($data['password']),

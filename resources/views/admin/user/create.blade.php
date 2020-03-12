@@ -15,11 +15,11 @@
         <div class="form-group">
             <div class="row justify-content-around">
                 <label>
-                    <input id="radio_customer" name="user_type" type="radio" value="0" checked>
+                    <input id="radio_customer" name="user_type" type="radio" value="{{ \App\User::$CUSTOMER }}" checked>
                     <span class="text-dotted text-underline font-weight-bold">Заказчик</span>
                 </label>
                 <label class="">
-                    <input id="radio_production" name="user_type" type="radio" value="1">
+                    <input id="radio_production" name="user_type" type="radio" value="{{ \App\User::$PRODUCTION }}">
                     <span class="text-dotted">Производство</span>
                 </label>
             </div>

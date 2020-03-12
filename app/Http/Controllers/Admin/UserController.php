@@ -72,7 +72,7 @@ class UserController extends Controller
         $password = Hash::make($pass);
         $verification = rand(111111, 999999);
         $user = User::create([
-            'role_id' => 4,
+            'role_id' => $request->user_type,
             'phone' => $data['phone'],
             'email' => $data['email'],
             'name' => $data['name'],
