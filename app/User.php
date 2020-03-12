@@ -4,6 +4,7 @@ namespace App;
 
 use ChristianKuri\LaravelFavorite\Traits\Favoriteability;
 use Dorvidas\Ratings\Models\RateableTrait;
+use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -14,6 +15,11 @@ class User extends Authenticatable
     use Notifiable;
     use Favoriteability;
     use RateableTrait;
+    use CanResetPassword;
+
+    public static $CUSTOMER = 4;
+    public static $PRODUCTION = 5;
+    public static $OPERATOR = 3;
 
     /**
      * The attributes that are mass assignable.
