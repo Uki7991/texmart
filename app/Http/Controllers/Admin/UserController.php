@@ -8,9 +8,11 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Twilio\Exceptions\TwilioException;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -56,7 +58,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['phone'] = str_replace('+', '', $data['code']).preg_replace('/[-\s]/', '', $data['phone']);
+        $data['phone'] = User::phoneReplacement($data['code'], $data['phone']);
 
         $validated = Validator::make($data, [
             'name' => 'string',
@@ -67,24 +69,25 @@ class UserController extends Controller
             return redirect()->back()->withErrors($validated);
         }
         $pass = rand(11111111, 99999999);
+        $password = Hash::make($pass);
         $verification = rand(111111, 999999);
         $user = User::create([
             'role_id' => 4,
             'phone' => $data['phone'],
             'email' => $data['email'],
             'name' => $data['name'],
-            'password' => Hash::make($pass),
+            'password' => $password,
             'phone_verification' => $verification,
         ]);
         try {
-            Facade::message('+'.$data['phone'], 'Ваш активационный код для сайта texmart.kg: '.$user->phone_verification.'');
+            Facade::message('+'.$data['phone'], "Ваш активационный код для сайта ".url('/').": ".$verification."\n Ваш пароль: ".$pass."\n Ваш логин: ".$data['phone']);
         } catch (TwilioException $exception) {
             Log::alert($exception->getMessage());
         }
         Notification::send($user, new UserCreated($pass, $verification, $data['phone']));
         Session::flash('status', ['status' => 'success', 'message' => 'Пользователь создан! Пароль пользователя: '.$pass]);
 
-        return redirect()->route('admin.user.index');
+        return redirect()->route('admin.user.create');
     }
 
     /**

@@ -1,6 +1,14 @@
 @extends('admin.dashboard')
 
 @section('dashboard_content')
+    @if(\Illuminate\Support\Facades\Session::has('status'))
+        <div class="alert alert-success fixed-top w-50 alert-dismissible fade show" role="alert">
+            <strong>{{ \Illuminate\Support\Facades\Session::get('status')['message'] }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
     <form class="container" method="POST" action="{{ route('admin.user.store') }}">
         @csrf
 
@@ -38,7 +46,7 @@
 
             <input id="email" type="email"
                    class="form-control rounded-pill shadow-sm @error('email') is-invalid @enderror"
-                   name="email" value="{{ old('email') }}" required autocomplete="name" autofocus>
+                   name="email" value="{{ old('email') }}" autocomplete="name" autofocus>
 
             @error('email')
             <span class="invalid-feedback first-uppercase" role="alert">
