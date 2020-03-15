@@ -27,6 +27,18 @@ class AnnounceController extends Controller
         ]);
     }
 
+    public function ajax(Request $request)
+    {
+        $announces = Announce::all()->reverse();
+        return response()->json([
+            'html' => view('announce.list', [
+                'announces' => $announces,
+            ])->render(),
+            'announces' => $announces,
+            'announce_last' => $announces->first(),
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

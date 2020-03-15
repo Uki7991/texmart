@@ -62,7 +62,7 @@
             <meta name="google-site-verification" content="gQhpGRoPuGE72Ov_f3SoLPgO5gYjVJPAb6JvcvpJJh8" />
 
     @endif
-    @laravelPWA
+{{--    @laravelPWA--}}
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}?v={{ filemtime(public_path('css/app.css')) }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.min.css') }}?v={{ filemtime(public_path('css/main.min.css')) }}">

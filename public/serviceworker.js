@@ -1,12 +1,15 @@
 let staticCacheName = "pwa-v-texmart" + new Date().getTime();
 let filesToCache = [
     '/',
+    '/new-design',
     '/offline',
     '/css/app.css',
     '/js/app.js',
     '/js/mmenu.js',
+    '/js/announces.js',
     '/js/owl.carousel.min.js',
     '/css/main.css',
+    '/manifest.json',
     '/css/owl.carousel.min.css',
     '/images/icons/icon-72x72.png',
     '/images/icons/icon-96x96.png',
@@ -16,6 +19,8 @@ let filesToCache = [
     '/images/icons/icon-192x192.png',
     '/images/icons/icon-384x384.png',
     '/images/icons/icon-512x512.png',
+    '/production',
+    '/announce/ajax',
 ];
 
 // Cache on install
@@ -37,7 +42,9 @@ self.addEventListener('activate', event => {
                 cacheNames
                     .filter(cacheName => (cacheName.startsWith("pwa-")))
                     .filter(cacheName => (cacheName !== staticCacheName))
-                    .map(cacheName => caches.delete(cacheName))
+                    .map(cacheName => {
+                        caches.delete(cacheName)
+                    })
             );
         })
     );
@@ -48,7 +55,6 @@ self.addEventListener("fetch", event => {
     event.respondWith(
         caches.match(event.request)
             .then(response => {
-                console.log(response);
                 return response || fetch(event.request);
             })
             .catch(() => {

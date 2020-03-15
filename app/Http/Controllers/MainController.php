@@ -18,8 +18,12 @@ use Tightenco\Collect\Support\Collection;
 
 class MainController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->ajax()) {
+            dd('ajax');
+        }
+
 //        $productions = Production::where('type', 'productions')->get(['id', 'title', 'slug', 'logo', 'views']);
 //        $services = Production::where('type', 'service')->get(['id', 'title', 'slug', 'logo', 'views']);
 //        $products = Production::where('type', 'product')->get(['id', 'title', 'slug', 'logo', 'views']);

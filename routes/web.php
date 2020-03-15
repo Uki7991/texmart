@@ -14,6 +14,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+Route::get('/new-design', function () {
+    return view('design.welcome');
+});
 Route::get('/', 'MainController@index')->name('homepage');
 Route::get('/image', function () {
     return view('image-resizer');
@@ -58,6 +61,7 @@ Route::prefix('profile')->name('profile.')->middleware('auth')->group(function (
     Route::resource('production', 'ProductionController');
     Route::resource('announce', 'AnnounceController');
 });
+Route::get('announce/ajax', 'AnnounceController@ajax')->name('announce.ajax');
 
 Route::resource('announce', 'AnnounceController');
 Route::put('/user/edit/{user}', 'UserController@edit')->name('user.edit');

@@ -84,4 +84,22 @@
 
 
     </script>
+
+    <script>
+        function announces() {
+            $.ajax({
+                url: '/announce/ajax/',
+                type: 'get',
+                success: (data) => {
+                },
+                error: () => {
+                    console.log('error');
+                }
+            })
+        }
+
+        $(document).ready(() => {
+            announces();
+        });
+    </script>
 @endpush
