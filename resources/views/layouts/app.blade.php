@@ -136,6 +136,22 @@
 
 </script>
 <script>
+    if ('serviceWorker' in navigator) {
+
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+
+            for(let registration of registrations) {
+
+                registration.unregister()
+
+            }}).catch(function(err) {
+
+            console.log('Service Worker registration failed: ', err);
+
+        });
+    }
+</script>
+<script>
     document.addEventListener("DOMContentLoaded", function() {
         let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
         let active = false;
