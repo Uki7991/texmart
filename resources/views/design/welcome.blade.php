@@ -4,62 +4,7 @@
 @section('content')
     <section class="min-vh-100"
              style="background-image: url('{{ asset('design/back.jpg') }}'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg shadow-none navbar-dark px-0">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('img/logo3.png') }}" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto flex-row justify-content-around mb-3 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Покупателю
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Поставщику
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link btn border border-white rounded py-2 px-3" href="#">Создать тендер</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn border border-white rounded py-2 px-3" href="#">Добавить компанию</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn border texmart-border-primary texmart-bg-primary rounded py-2 px-3"
-                               href="#">Войти</a>
-                        </li>
-                        {{--                        <li class="nav-item d-flex align-items-center">--}}
-                        {{--                            <a class="nav-link" href="#"><i class="fas fa-bars fa-lg"></i></a>--}}
-                        {{--                        </li>--}}
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        @include('design.partials.header')
         <div class="container text-white my-lg-5 py-lg-5">
             <div class="row justify-content-center align-items-center position-relative py-lg-5 my-5">
                 <div class="col-lg-2 col-12 position-lg-absolute position-relative d-flex d-lg-block justify-content-center"
@@ -260,99 +205,11 @@
     </section>
 
     <section>
-        <div class="container py-5">
-            <div class="row py-5">
-                <div class="col-12">
-                    <h2 class="text-center texmart-text-primary">Наши услуги</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="card-deck">
-                        <div class="card shadow border-0 texmart-border-radius">
-                            <div class="card-body text-center px-5">
-                                <p class="mb-0">
-                                    <i class="fas fa-people-carry fa-3x texmart-text-primary"></i>
-                                </p>
-                                <h3 class="mb-4">Отдел контроля качества</h3>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                            </div>
-                            <div class="card-footer text-center border-0 rounded-10 bg-white rounded-bottom" style="background: url('{{ asset('design/card-bottom.png') }}'); background-size: cover; background-repeat: no-repeat;">
-                                <a href="#" class="btn btn-white texmart-border-radius mt-5 mb-2">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="card shadow border-0 texmart-border-radius">
-                            <div class="card-body text-center px-5">
-                                <p class="mb-0">
-                                    <i class="fas fa-people-carry fa-3x texmart-text-primary"></i>
-                                </p>
-                                <h3 class="mb-4">Отдел контроля качества</h3>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                            </div>
-                            <div class="card-footer text-center border-0 rounded-10 bg-white rounded-bottom" style="background: url('{{ asset('design/card-bottom.png') }}'); background-size: cover; background-repeat: no-repeat;">
-                                <a href="#" class="btn btn-white texmart-border-radius mt-5 mb-2">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="card shadow border-0 texmart-border-radius">
-                            <div class="card-body text-center px-5">
-                                <p class="mb-0">
-                                    <i class="fas fa-people-carry fa-3x texmart-text-primary"></i>
-                                </p>
-                                <h3 class="mb-4">Отдел контроля качества</h3>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                                <p class="card-text mb-1">-какая-то услуга</p>
-                            </div>
-                            <div class="card-footer text-center border-0 rounded-10 bg-white rounded-bottom" style="background: url('{{ asset('design/card-bottom.png') }}'); background-size: cover; background-repeat: no-repeat;">
-                                <a href="#" class="btn btn-white texmart-border-radius mt-5 mb-2">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('design.partials.our_services')
     </section>
 
     <section>
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 py-5">
-                    <h2 class="h1 texmart-text-primary text-center">Отзывы</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-9">
-                    <div class="row" id="reviews-carousel">
-                        @for($i = 0; $i < 4; $i++)
-                            <div class="col-12 col-lg-10">
-                                <div class="card shadow-none border-0 mb-3">
-                                    <div class="row align-items-center justify-content-center no-gutters">
-                                        <div class="col-md-4 col-8">
-                                            <img src="{{ asset('design/quote_img.png') }}" class="card-img rounded-0" alt="...">
-                                        </div>
-                                        <div class="col-md-8 col-12 px-0 px-md-5">
-                                            <div class="card-body text-dark position-relative h-100">
-                                                <p class="card-text pb-0 pb-md-2">
-                                                    <img src="{{ asset('design/quote.png') }}" alt="">
-                                                </p>
-                                                <p class="card-title my-2 my-md-4 text-muted">
-                                                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы
-                                                </p>
-                                                <p class="card-text text-dark pt-0 pt-md-2 font-weight-bolder">Аида, директор швейного цеха Заря</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endfor
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('design.partials.reviews')
     </section>
 
     <section>
@@ -421,35 +278,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="card-deck">
-                        <a href="#" class="card text-dark shadow-none border-0">
-                            <img src="{{ asset('design/first_article.png') }}" class="rounded-0 card-img-top" style="object-fit: cover; min-height: 340px; max-height: 340px;" alt="...">
-                            <div class="card-body px-0 pb-0">
-                                <h3 class="card-title h4" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                            </div>
-                            <div class="card-footer px-0 pt-0 border-0 bg-white">
-                                <p class="text-black">Читать больше >></p>
-                            </div>
-                        </a>
-                        <a href="#" class="card text-dark shadow-none border-0">
-                            <img src="{{ asset('design/second_article.png') }}" class="rounded-0 card-img-top" style="object-fit: cover; min-height: 340px; max-height: 340px;" alt="...">
-                            <div class="card-body px-0 pb-0">
-                                <h3 class="card-title h4" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                            </div>
-                            <div class="card-footer px-0 pt-0 border-0 bg-white">
-                                <p class="text-black">Читать больше >></p>
-                            </div>
-                        </a>
-                        <a href="#" class="card text-dark shadow-none border-0">
-                            <img src="{{ asset('design/third_article.png') }}" class="rounded-0 card-img-top" style="object-fit: cover; min-height: 340px; max-height: 340px;" alt="...">
-                            <div class="card-body px-0 pb-0">
-                                <h3 class="card-title h4" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                            </div>
-                            <div class="card-footer px-0 pt-0 border-0 bg-white">
-                                <p class="text-black">Читать больше >></p>
-                            </div>
-                        </a>
-                    </div>
+                    @include('design.posts.list', ['count' => 3, 'rowCols' => 3])
                 </div>
             </div>
         </div>
@@ -475,90 +304,7 @@
         </div>
     </section>
 
-    <footer class="border-top">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 col-lg-6 mb-5 mb-md-5 mt-lg-0">
-                    <img src="{{ asset('design/map.png') }}" class="img-fluid" alt="">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mt-5 mt-md-0 text-center text-md-left">
-                            <h2>О компании</h2>
-                            <ul class="nav flex-column mt-4">
-                                <li class="nav-item mb-1">
-                                    <a href="#" class="text-muted">О Texmart</a>
-                                </li>
-                                <li class="nav-item mb-1">
-                                    <a href="#" class="text-muted">Новости</a>
-                                </li>
-                                <li class="nav-item mb-1">
-                                    <a href="#" class="text-muted">Полезные статьи</a>
-                                </li>
-                                <li class="nav-item mb-1">
-                                    <a href="#" class="text-muted">Отзывы</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-md-6 mt-5 mt-md-0 text-center text-md-left">
-                            <h2>Сервисы</h2>
-                            <ul class="nav flex-column mt-4">
-                                <li class="nav-item mb-1">
-                                    <a href="#" class="text-muted">Наши услуги</a>
-                                </li>
-                                <li class="nav-item mb-1">
-                                    <a href="#" class="text-muted">Создать тендер</a>
-                                </li>
-                                <li class="nav-item mb-1">
-                                    <a href="#" class="text-muted">Добавить компанию</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row py-5">
-                        <div class="col-12">
-                            <h2>Социальные</h2>
-                            <ul class="nav">
-                                <li class="nav-item mr-3 new-box row no-gutters justify-content-center align-items-center">
-                                    <a href="#" class="text-warning"><i class="fab fa-whatsapp fa-lg"></i></a>
-                                </li>
-                                <li class="nav-item mr-3 new-box row no-gutters justify-content-center align-items-center">
-                                    <a href="#" class="text-warning"><i class="fab fa-telegram-plane fa-lg"></i></a>
-                                </li>
-                                <li class="nav-item mr-3 new-box row no-gutters justify-content-center align-items-center">
-                                    <a href="#" class="text-warning"><i class="fab fa-instagram fa-lg"></i></a>
-                                </li>
-                                <li class="nav-item mr-3 new-box row no-gutters justify-content-center align-items-center">
-                                    <a href="#" class="text-warning"><i class="fab fa-facebook-f fa-lg"></i></a>
-                                </li>
-                                <li class="nav-item mr-3 new-box row no-gutters justify-content-center align-items-center">
-                                    <a href="#" class="text-warning"><i class="fab fa-vk fa-lg"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <label class="text-muted">Узнавате о выгодных предложениях <br> и новостях первыми</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <form action="#" method="get" class="position-relative">
-                                <input type="email" placeholder="Email" class="form-control pr-5">
-                                <i class="fas fa-envelope text-white position-absolute shadow texmart-bg-primary rounded"
-                                   style="right: 0;top: 50%;transform: translateY(-50%);border: 1px solid #3e3e3e20;padding: 11px;"></i>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-12 mt-5 text-center">
-                    <a href="#" class="text-muted small">Made with <span class="text-danger">&hearts;</span> by Mount</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('design.partials.footer')
 
 @endsection
 

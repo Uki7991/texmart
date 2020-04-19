@@ -21,6 +21,12 @@ Route::get('/new-design', function () {
         'announces' => $announces,
     ]);
 });
+Route::get('/new-design/productions', function () {
+    $productions = \App\Production::all()->reverse();
+    return view('design.productions.index', [
+        'productions' => $productions,
+    ]);
+});
 Route::get('/', 'MainController@index')->name('homepage');
 Route::get('/image', function () {
     return view('image-resizer');
