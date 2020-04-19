@@ -11,11 +11,15 @@
 |
 */
 
+use App\Announce;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/new-design', function () {
-    return view('design.welcome');
+    $announces = Announce::all()->reverse();
+    return view('design.welcome', [
+        'announces' => $announces,
+    ]);
 });
 Route::get('/', 'MainController@index')->name('homepage');
 Route::get('/image', function () {

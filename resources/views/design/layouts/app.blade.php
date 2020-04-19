@@ -9,14 +9,20 @@
 
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/new.css') }}">
+    <link rel="stylesheet" href="{{asset('css/slick.min.css')}}"/>
+
     @stack('styles')
 </head>
-<body>
+<body style="overflow-x:hidden;">
 
     @yield('content')
 
 
 <script src="{{ asset('js/app.js') }}"></script>
-@stack('scripts')
+    <script src="{{asset('js/slick.min.js')}}"></script>
+
+    @stack('scripts')
 </body>
 </html>
